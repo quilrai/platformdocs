@@ -3,6 +3,9 @@
 LLM Gateway lets teams route LLM application traffic through QuilrAI so they can apply guardrails,
 monitor behavior, manage providers, and validate applications before broad deployment.
 
+For detailed setup and reference documentation, see the
+[LLM Gateway docs](https://docs.quilrai.dev/category/llm-gateway).
+
 ## When To Use It
 
 Use LLM Gateway when you need to:

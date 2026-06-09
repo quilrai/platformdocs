@@ -9,15 +9,15 @@ export default [
   },
   {
     path: '/',
-    component: ComponentCreator('/', '222'),
+    component: ComponentCreator('/', '677'),
     routes: [
       {
         path: '/',
-        component: ComponentCreator('/', '886'),
+        component: ComponentCreator('/', 'e13'),
         routes: [
           {
             path: '/',
-            component: ComponentCreator('/', 'a2f'),
+            component: ComponentCreator('/', 'ef9'),
             routes: [
               {
                 path: '/category/platform-areas',
@@ -106,6 +106,12 @@ export default [
               {
                 path: '/platform-areas/users-accounts-applications',
                 component: ComponentCreator('/platform-areas/users-accounts-applications', 'fae'),
+                exact: true,
+                sidebar: "docsSidebar"
+              },
+              {
+                path: '/release-notes',
+                component: ComponentCreator('/release-notes', '4bd'),
                 exact: true,
                 sidebar: "docsSidebar"
               },

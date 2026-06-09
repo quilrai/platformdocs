@@ -3,6 +3,9 @@
 MCP Gateway helps teams govern Model Context Protocol servers and tools. It provides a managed way
 to add MCP backends, control access, configure tools, apply guardrails, and inspect MCP activity.
 
+For detailed setup and reference documentation, see the
+[MCP Gateway docs](https://docs.quilrai.dev/category/mcp-gateway).
+
 ## When To Use It
 
 Use MCP Gateway when you need to:

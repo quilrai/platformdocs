@@ -4,7 +4,7 @@
   "link": {
     "type": "generated-index",
     "title": "Release Notes",
-    "description": "Guidelines and source context for generating customer-facing release notes."
+    "description": "Customer-facing product updates, listed newest first."
   },
   "customProps": {
     "icon": "Newspaper"

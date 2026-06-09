@@ -8,6 +8,7 @@ export default {
   "1db64337": [() => import(/* webpackChunkName: "1db64337" */ "@site/docs/overview.md"), "@site/docs/overview.md", require.resolveWeak("@site/docs/overview.md")],
   "22dd74f7": [() => import(/* webpackChunkName: "22dd74f7" */ "@generated/docusaurus-plugin-content-docs/default/p/index-466.json"), "@generated/docusaurus-plugin-content-docs/default/p/index-466.json", require.resolveWeak("@generated/docusaurus-plugin-content-docs/default/p/index-466.json")],
   "24fe61b2": [() => import(/* webpackChunkName: "24fe61b2" */ "@site/docs/platform-areas/ai-inventory.md"), "@site/docs/platform-areas/ai-inventory.md", require.resolveWeak("@site/docs/platform-areas/ai-inventory.md")],
+  "29cf976d": [() => import(/* webpackChunkName: "29cf976d" */ "@site/docs/release-notes/index.md"), "@site/docs/release-notes/index.md", require.resolveWeak("@site/docs/release-notes/index.md")],
   "46eee015": [() => import(/* webpackChunkName: "46eee015" */ "@site/docs/platform-areas/mcp-gateway.md"), "@site/docs/platform-areas/mcp-gateway.md", require.resolveWeak("@site/docs/platform-areas/mcp-gateway.md")],
   "4ca8875a": [() => import(/* webpackChunkName: "4ca8875a" */ "@site/docs/platform-areas/insights.md"), "@site/docs/platform-areas/insights.md", require.resolveWeak("@site/docs/platform-areas/insights.md")],
   "5589a13f": [() => import(/* webpackChunkName: "5589a13f" */ "@site/docs/platform-areas/ai-gateway.md"), "@site/docs/platform-areas/ai-gateway.md", require.resolveWeak("@site/docs/platform-areas/ai-gateway.md")],
