@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkquilrai_platform_docs=globalThis.webpackChunkquilrai_platform_docs||[]).push([[6235],{6235(a,i,l){l.d(i,{createInfoServices:()=>r.v});var r=l(1009);l(6902)}}]);

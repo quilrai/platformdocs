@@ -1,0 +1,12 @@
+{
+  "label": "Platform Areas",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "title": "Platform Areas",
+    "description": "Customer-facing guides for the main QuilrAI product areas."
+  },
+  "customProps": {
+    "icon": "Layers"
+  }
+}
