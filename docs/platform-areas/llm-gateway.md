@@ -18,28 +18,83 @@ Use LLM Gateway when you need to:
 
 - Create a protected LLM application endpoint.
 - Connect one or more model providers.
+- Use QuilrAI as a guardrails-only service when model credentials are managed elsewhere.
 - Configure guardrails for sensitive data and adversarial risks.
 - Apply rate limits, token controls, routing, and provider settings.
-- Review request and response logs.
+- Review request and response logs with analytics and detection details.
 - Investigate LLM Gateway findings.
 - Run red team tests against an app and provider model.
 
 ## Key Capabilities
 
-- Create LLM Gateway apps with provider credentials and selected models.
+- Create LLM Gateway apps through a three-step flow: create app, add guardrails, and integrate.
+- Configure provider credentials, selected models, manual model entries, and additional provider
+  instances.
+- Use provider families for chat completions, Anthropic Messages, Bedrock Runtime, OpenAI
+  Responses, OpenAI Realtime, Vertex AI, embeddings, rerank, and guardrails-only integrations such
+  as Quilr SDK and Microsoft Copilot Studio.
 - Configure default risk actions and enabled guardrail categories.
-- Configure additional data guardrails for specialized data types.
+- Configure additional data guardrails for specialized EDM pattern groups, including device and
+  network, telecom, and employee or HR data types.
+- Create and manage custom detections for precision categories and custom intents.
 - Manage provider instances and model selections.
 - Configure routing groups, token-based routing, and custom routing.
-- Configure rate limits, concurrency, timeouts, and token limits.
+- Configure rate limits, per-model rate limits, concurrency, response timeouts, allowed source IPs,
+  key expiry, and token limits.
 - Enable token saving controls where available.
 - Configure identity-aware and JWT-based access settings.
 - Enforce prompt store settings.
 - Configure Guardian Agent behavior for coding helpers and task adherence.
-- View app-specific or global LLM Gateway logs.
+- View app-specific or global LLM Gateway logs with time range, user, category, subcategory, action,
+  and request or response side filters.
 - Run V2 red team tests and review run history, summaries, and cases.
 - Review LLM Gateway keys from AI Inventory with request, blocked, anonymized, model, last-used,
   DLP action, Guardian Agent, and key-status context.
+
+## Provider And App Setup
+
+The create flow starts with app details, provider selection, provider credentials, and model
+selection. Model-based providers can fetch available models or accept manual model entries. LLM
+Gateway also supports guardrails-only providers for workflows such as LiteLLM callbacks, direct SDK
+usage, Copilot Studio tool execution checks, and custom LLM workflows where upstream model
+credentials are not stored in QuilrAI.
+
+Provider settings can include a primary provider and additional provider instances. Additional
+instances use unique labels so routing rules can target the intended provider instance. Some
+provider families, such as embeddings, rerank, and Bedrock Runtime providers, are available for
+gateway use but are not used as routing targets.
+
+## Settings Areas
+
+Each LLM Gateway app has a settings drawer with focused areas for:
+
+- **LLM Providers:** Primary provider, additional providers, credentials, endpoints, and selected
+  models.
+- **Security Guardrails:** Default risk action, data risks, adversarial risks, scopes, actions, and
+  risk sensitivity.
+- **Additional Guardrails:** Specialized EDM patterns and per-pattern risk levels.
+- **Guardian Agent:** Coding helper checks and task-adherence behavior.
+- **Custom Detections:** Custom precision categories and custom intents.
+- **Rate Limits:** Key expiry, timeout, request limits, allowed source IPs, token limits, and
+  per-model limits.
+- **Token Saving:** JSON, HTML, Markdown, and text compression controls.
+- **Routing Configurations:** Available providers, routing groups, token-based routing groups, and
+  custom routing.
+- **Identity Aware:** Header identity, JWT identity, identity enforcement, and allowed domains.
+- **Prompt Store:** Prompt creation, prompt management, required system prompts, and usage
+  guidance.
+- **API Integration:** API key and client integration instructions.
+
+## Logs And Investigation
+
+The current LLM Gateway logs view uses V2 logs. It supports app-specific and global analysis, quick
+time range review, top users, token usage by model, action counts, category distribution, and recent
+log rows. Recent logs can be narrowed by user, category, subcategory, action, and request or
+response side so filtered totals match the visible log set.
+
+Log details show request and response content alongside detected entities and detection outcomes.
+When available, the details view includes both triggered detections and all enabled detections so an
+admin can see what was active even when a category did not trigger an action.
 
 ## Red Teaming
 
