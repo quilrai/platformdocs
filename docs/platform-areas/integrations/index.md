@@ -37,7 +37,9 @@ Use Integrations when you need to:
 3. Search or filter by connector category.
 4. Select a connector.
 5. Follow configuration guidance and complete required scopes or credentials.
-6. Return to Connected integrations to monitor or update the instance.
+6. Complete the OAuth redirect when prompted. Your scope selections are preserved through the
+   redirect and displayed accurately when you return to the connected instance.
+7. Return to Connected integrations to monitor or update the instance.
 
 ## Advanced Integration Areas
 

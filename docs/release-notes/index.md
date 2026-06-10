@@ -10,6 +10,12 @@ hide_copy_dropdown: true
 
 ## June 10, 2026
 
+- [Integrations](/platform-areas/integrations): Fixed OAuth scope selections not being preserved
+  after completing the OAuth redirect. Selected scopes are now saved before the provider redirect
+  and correctly restored when you return to the connected integration instance.
+- [Integrations](/platform-areas/integrations): Fixed the scopes panel for connected integration
+  instances incorrectly showing all scopes as active. The panel now shows a checkmark only next to
+  scopes that were selected during setup; unselected scopes show an inactive state.
 - [MCP Gateway](/platform-areas/mcp-gateway): MCP server creation dates on gateway server cards
   now follow the tenant timezone preference (UTC or local browser time) and show the alternate time
   on hover, consistent with other timestamps across the platform.
