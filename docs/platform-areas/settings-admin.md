@@ -39,6 +39,13 @@ Organizational Context captures tenant-level configuration that helps QuilrAI in
 users, groups, and organizational priorities. It includes general settings, policies, smart groups,
 profile information, and user management where permitted.
 
+### Timezone Display Preference
+
+Administrators can choose to display timestamps in UTC or local browser time. The selected
+preference applies across findings, audit logs, exports, apps, users, settings, gateway logs, MCP
+server cards, and LLM Gateway API key cards. A hover tooltip shows the alternate time for any
+displayed timestamp.
+
 ## User Interaction Hub
 
 User Interaction Hub lets teams customize what end users see in QuilrAI interactions.

@@ -8,6 +8,24 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## June 10, 2026
+
+- [MCP Gateway](/platform-areas/mcp-gateway): MCP server creation dates on gateway server cards
+  now follow the tenant timezone preference (UTC or local browser time) and show the alternate time
+  on hover, consistent with other timestamps across the platform.
+- [LLM Gateway](/platform-areas/llm-gateway): LLM Gateway API key creation dates on key cards now
+  follow the tenant timezone preference (UTC or local browser time) and show the alternate time on
+  hover, consistent with other timestamps across the platform.
+- [Users, Applications, and Accounts](/platform-areas/users-accounts-applications): Inline
+  editable fields in the application table now show a "Saving…" label and spinner while a change
+  is being applied, giving clearer feedback during edits.
+- [Users, Applications, and Accounts](/platform-areas/users-accounts-applications): Fixed app
+  owner names occasionally displaying incorrect values in the application table row tooltip.
+- Fixed a bug where typing in a search or input field inside an open detail drawer could cause the
+  drawer to flicker or close unexpectedly. This affected drawers across multiple platform areas,
+  including [AI Inventory](/platform-areas/ai-inventory),
+  [LLM Gateway](/platform-areas/llm-gateway), and [MCP Gateway](/platform-areas/mcp-gateway).
+
 ## June 9, 2026
 
 - [AI Inventory](/platform-areas/ai-inventory): Added OpenAI Compliance inventory views for
