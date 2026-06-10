@@ -49,7 +49,7 @@ depend on forced login and background tab reading.
 
 - [Findings](./findings.md)
 - [Endpoint Agent](./endpoint-agent.md)
-- [Integrations](./integrations.md)
+- [Integrations](./integrations/index.md)
 - [Audit Log And Exports](./audit-log-and-exports.md)
 
 ## Access Requirements

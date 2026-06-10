@@ -107,7 +107,7 @@ AI Gateway includes LLM Gateway and MCP Gateway.
 
 Browser Extension and Endpoint Agent settings cover deployment, deployment management, deployment status, whitelisting, detection configuration, DLP actions, and browser monitoring behavior.
 
-### [Integrations](./platform-areas/integrations.md)
+### [Integrations](./platform-areas/integrations/index.md)
 
 Integrations help connect QuilrAI to identity providers, device management systems, SaaS platforms, cloud services, and AI services. The current platform includes connected and available connector views, instance configuration, and integration documentation for Okta, Jamf, ChatGPT, and AWS.
 

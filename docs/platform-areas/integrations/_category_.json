@@ -1,0 +1,11 @@
+{
+  "label": "Integrations",
+  "position": 12,
+  "link": {
+    "type": "doc",
+    "id": "platform-areas/integrations/index"
+  },
+  "customProps": {
+    "icon": "Plug"
+  }
+}

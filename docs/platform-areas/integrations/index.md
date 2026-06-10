@@ -1,5 +1,4 @@
 ---
-sidebar_position: 12
 sidebar_custom_props:
   icon: Plug
 ---
@@ -52,10 +51,10 @@ Some integration routes are specialized operational areas and may not be visible
 
 ## Related Platform Areas
 
-- [Browser Extension](./browser-extension.md)
-- [Endpoint Agent](./endpoint-agent.md)
-- [MCP Gateway](./mcp-gateway.md)
-- [Settings And Administration](./settings-admin.md)
+- [Browser Extension](../browser-extension.md)
+- [Endpoint Agent](../endpoint-agent.md)
+- [MCP Gateway](../mcp-gateway.md)
+- [Settings And Administration](../settings-admin.md)
 
 ## Access Requirements
 
