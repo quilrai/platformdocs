@@ -45,6 +45,10 @@ Common use cases:
 - Review endpoint or desktop app activity through the endpoint-source drilldown.
 - Update app classifications or approval-related settings when permitted.
 
+Inline editable fields in the application table (such as category, risk level, or approval status)
+show a "Saving…" label and spinner while a change is being saved, confirming that the edit has
+been submitted.
+
 ## Accounts
 
 The Accounts page focuses on app accounts and account-level interaction data.
