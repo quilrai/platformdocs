@@ -10,12 +10,28 @@ hide_copy_dropdown: true
 
 ## June 10, 2026
 
+- [Settings and Administration](/platform-areas/settings-admin): The timezone display preference
+  is now saved to the database and loaded on sign-in, so the setting persists across browsers and
+  devices. Admins can select any timezone from a searchable dropdown—the preference is no longer
+  limited to UTC or local browser time. A Save button appears when the selection changes, and a
+  toast notification confirms the update.
+- [Users, Applications, and Accounts](/platform-areas/users-accounts-applications): Fixed the AI
+  category filter on the Applications page so it correctly targets the primary app category. The
+  "AI" lens, Generative AI category chip, and AI KPI shortcut now consistently match apps
+  classified as Generative AI. When navigating to Applications from an insight drilldown that
+  applies a business-category filter, the Category chip now shows "Business" instead of a
+  conflicting separate chip.
+- [Users, Applications, and Accounts](/platform-areas/users-accounts-applications): The
+  Applications page now defaults to a 7-day time range instead of 30 days.
+- [Users, Applications, and Accounts](/platform-areas/users-accounts-applications): Fixed a bug
+  where clicking the conversation count icon in an application table row opened the app intelligence
+  panel instead of the app detail drawer.
 - [MCP Gateway](/platform-areas/mcp-gateway): MCP server creation dates on gateway server cards
-  now follow the tenant timezone preference (UTC or local browser time) and show the alternate time
-  on hover, consistent with other timestamps across the platform.
+  now follow the tenant timezone preference and show the alternate time on hover, consistent with
+  other timestamps across the platform.
 - [LLM Gateway](/platform-areas/llm-gateway): LLM Gateway API key creation dates on key cards now
-  follow the tenant timezone preference (UTC or local browser time) and show the alternate time on
-  hover, consistent with other timestamps across the platform.
+  follow the tenant timezone preference and show the alternate time on hover, consistent with other
+  timestamps across the platform.
 - [Users, Applications, and Accounts](/platform-areas/users-accounts-applications): Inline
   editable fields in the application table now show a "Saving…" label and spinner while a change
   is being applied, giving clearer feedback during edits.

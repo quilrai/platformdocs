@@ -41,10 +41,17 @@ profile information, and user management where permitted.
 
 ### Timezone Display Preference
 
-Administrators can choose to display timestamps in UTC or local browser time. The selected
-preference applies across findings, audit logs, exports, apps, users, settings, gateway logs, MCP
-server cards, and LLM Gateway API key cards. A hover tooltip shows the alternate time for any
-displayed timestamp.
+Administrators can select a timezone for displaying timestamps across the platform. The preference
+is saved to the database and loaded on sign-in, so it persists across browsers and devices.
+
+The timezone selector in the Display section of General Settings provides a searchable dropdown of
+all available timezones. A Save button appears when the selection changes, and a toast notification
+confirms the update.
+
+The selected timezone applies across findings, audit logs, exports, apps, users, settings, gateway
+logs, MCP server cards, and LLM Gateway API key cards. A hover tooltip shows the alternate time
+(UTC when a non-UTC timezone is active; local browser time when UTC is selected) for any displayed
+timestamp.
 
 ## User Interaction Hub
 
