@@ -60,7 +60,7 @@ Use MCP Gateway when you need to:
 
 - [AI Gateway](./ai-gateway.md)
 - [Findings](./findings.md)
-- [Integrations](./integrations.md)
+- [Integrations](./integrations/index.md)
 - [Settings And Administration](./settings-admin.md)
 
 ## Access Requirements
