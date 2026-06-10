@@ -1,0 +1,12 @@
+{
+  "label": "Customer Support",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "title": "Customer Support",
+    "description": "Guide for customers filing and managing support tickets with Quilr AI."
+  },
+  "customProps": {
+    "icon": "Handshake"
+  }
+}
