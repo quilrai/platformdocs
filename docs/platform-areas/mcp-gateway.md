@@ -27,7 +27,7 @@ Use MCP Gateway when you need to:
 ## Key Capabilities
 
 - View MCP backends and enable or disable them.
-- Add a custom MCP with automatic auth probing or OAuth passthrough.
+- Add a custom MCP with automatic auth probing, OAuth passthrough, or upstream API key injection.
 - Install MCPs from the MCP Library.
 - Request MCP installs when install permission is not available.
 - Configure MCP general settings, guardrails, and tools.
@@ -44,7 +44,12 @@ Use MCP Gateway when you need to:
 - **OAuth:** Gateway-managed OAuth connection.
 - **OAuth passthrough:** The client bearer token is forwarded directly to the backend. This mode is
   intended for direct-backend use and does not expose API token management.
-- **API key or token:** Token-based access for MCPs that do not use OAuth.
+- **Upstream API key:** The gateway stores an admin-owned API key and injects it when calling the
+  upstream server. Three credential-placement options are available: Bearer token (sent as an
+  `Authorization: Bearer` header), Custom header (a named HTTP request header), and Query parameter
+  (appended to the upstream URL). An optional value-prefix field is available for custom schemes.
+  This mode is selected explicitly or applied automatically when auth probing finds a server that
+  requires credentials without OAuth support.
 - **No auth:** Used when the MCP does not require credentials.
 
 ## Main Workflows

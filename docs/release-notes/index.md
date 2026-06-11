@@ -8,6 +8,19 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## June 12, 2026
+
+- [MCP Gateway](/platform-areas/mcp-gateway): Admins can now add custom MCP servers using
+  **Upstream API Key** authentication. A new **Upstream API Key** option in the Add MCP auth mode
+  selector lets admins provide an admin-owned API key that the gateway stores and injects when
+  calling the upstream server. Three credential-placement options are available: **Bearer token**
+  (sent as an `Authorization: Bearer` header), **Custom header** (a named HTTP request header), and
+  **Query parameter** (appended to the upstream URL). An optional value-prefix field is available
+  for custom schemes. When auto-detection identifies that a server requires auth but does not
+  support OAuth, the Upstream API Key form appears automatically. If an OAuth server rejects
+  dynamic client registration (DCR), the Add MCP form now keeps OAuth fields open, marks client
+  credentials as required, and prompts the admin to retry with a custom OAuth app.
+
 ## June 11, 2026
 
 - [Settings and Administration](/platform-areas/settings-admin): Admins with Admin or Super Admin
