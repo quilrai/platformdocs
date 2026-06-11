@@ -34,7 +34,8 @@ Common use cases:
 ## Applications
 
 The Applications page is the main app-management and app-intelligence surface. It includes an
-inventory view, a source view, KPI filters, trending apps, and app drilldowns.
+inventory view, a source view, KPI filters, trending apps, and app drilldowns. The default time
+range is 7 days.
 
 Common use cases:
 
@@ -48,6 +49,10 @@ Common use cases:
 Inline editable fields in the application table (such as category, risk level, or approval status)
 show a "Saving…" label and spinner while a change is being saved, confirming that the edit has
 been submitted.
+
+The AI lens and Generative AI category filter target the primary app category. When the page is
+reached via an insight or widget drilldown that pre-applies a business-category filter, the
+Category chip shows "Business" to reflect the narrower scope applied by the drilldown.
 
 ## Accounts
 
