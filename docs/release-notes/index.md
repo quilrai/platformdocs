@@ -8,6 +8,25 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## June 11, 2026
+
+- [Settings and Administration](/platform-areas/settings-admin): Admins with Admin or Super Admin
+  roles can now configure LLM Gateway app access when creating or editing a user with the AI Gateway
+  Admin role. A new App Access selector lets admins allow all LLM Gateway apps or restrict the user
+  to a specific subset. The selector appears in the users table and in the user details panel.
+- [LLM Gateway](/platform-areas/llm-gateway): Security Guardrails now includes a
+  **Set everything to default** button next to the Default Action selector. The button activates when
+  any data, EDM, custom, or adversarial category action differs from the current default, and
+  clicking it resets all categories to inherit that default. The selector label was also renamed from
+  "Default Risk Action" to "Default Action".
+- [LLM Gateway](/platform-areas/llm-gateway): Adversarial Risks in Security Guardrails now includes
+  an **Enable all / Disable all** bulk toggle that flips all adversarial risk categories on or off at
+  once while preserving each category's action and sensitivity settings.
+- [LLM Gateway](/platform-areas/llm-gateway): Adversarial risk sensitivity is now shown as a direct
+  label (High, Medium, or Low) matching the single configured level rather than a cumulative
+  threshold. Adversarial category actions that inherit from the Default Action are now visually
+  indicated with a green dot and an "Inherited from default risk action" label.
+
 ## June 10, 2026
 
 - [Settings and Administration](/platform-areas/settings-admin): The timezone display preference
