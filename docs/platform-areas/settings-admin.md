@@ -39,6 +39,18 @@ Organizational Context captures tenant-level configuration that helps QuilrAI in
 users, groups, and organizational priorities. It includes general settings, policies, smart groups,
 profile information, and user management where permitted.
 
+### Manage Users
+
+Manage Users lets administrators create, edit, and remove platform users and assign roles. In
+addition to name and role editing, admins with Admin or Super Admin roles can configure LLM Gateway
+app access for users assigned the AI Gateway Admin role. The **App Access** control appears inline
+when creating a new user or editing an existing one, and lets the admin choose between allowing all
+LLM Gateway apps or restricting access to a specific subset.
+
+The App Access control is also available directly in the users table — for AI Gateway Admin users,
+a compact selector shows the current access state and can be updated without opening the full edit
+panel.
+
 ### Timezone Display Preference
 
 Administrators can choose to display timestamps in UTC or local browser time. The selected
@@ -63,6 +75,7 @@ Administrators with write access can save and revoke registered keys.
 - [Browser Extension](./browser-extension.md)
 - [Endpoint Agent](./endpoint-agent.md)
 - [AI Gateway](./ai-gateway.md)
+- [LLM Gateway](./llm-gateway.md)
 - [Controls](./controls.md)
 - [Findings](./findings.md)
 

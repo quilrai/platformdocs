@@ -48,6 +48,8 @@ Use LLM Gateway when you need to:
 - View app-specific or global LLM Gateway logs with time range, user, category, subcategory, action,
   and request or response side filters.
 - Run V2 red team tests and review run history, summaries, and cases.
+- Configure per-user LLM Gateway app access for users with the AI Gateway Admin role, allowing all
+  apps or restricting access to a specific subset.
 - Review LLM Gateway keys from AI Inventory with request, blocked, anonymized, model, last-used,
   DLP action, Guardian Agent, and key-status context.
 
@@ -70,8 +72,9 @@ Each LLM Gateway app has a settings drawer with focused areas for:
 
 - **LLM Providers:** Primary provider, additional providers, credentials, endpoints, and selected
   models.
-- **Security Guardrails:** Default risk action, data risks, adversarial risks, scopes, actions, and
-  risk sensitivity.
+- **Security Guardrails:** Default action (with a **Set everything to default** shortcut that
+  resets all category actions to inherit the default), data risks, adversarial risks (including a
+  bulk **Enable all / Disable all** toggle), scopes, actions, and risk sensitivity.
 - **Additional Guardrails:** Specialized EDM patterns and per-pattern risk levels.
 - **Guardian Agent:** Coding helper checks and task-adherence behavior.
 - **Custom Detections:** Custom precision categories and custom intents.
@@ -120,7 +123,20 @@ case-level results.
 - [Applications](./users-accounts-applications.md)
 - [AI Inventory](./ai-inventory.md)
 
+## Per-User App Access
+
+Admins with Admin or Super Admin roles can configure which LLM Gateway apps a user with the
+AI Gateway Admin role is allowed to access. This setting is available when creating a new user or
+editing an existing one. Options are:
+
+- **All apps** — the user can access all current and future LLM Gateway apps (default).
+- **Specific apps** — the user can only access the explicitly selected LLM Gateway apps.
+
+The control appears in the users table (as a compact popover) and in the user details panel (as an
+inline selector). Changes are saved alongside the role assignment.
+
 ## Access Requirements
 
 LLM Gateway requires AI Gateway or LLM Gateway permissions depending on the action. Create, update,
-logs, and red teaming access are controlled by assigned scopes.
+logs, and red teaming access are controlled by assigned scopes. Configuring per-user LLM Gateway app
+access requires Admin or Super Admin role.
