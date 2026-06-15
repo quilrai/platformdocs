@@ -57,14 +57,11 @@ Administrators can select a timezone for displaying timestamps across the platfo
 is saved to the database and loaded on sign-in, so it persists across browsers and devices.
 
 The timezone selector in the Display section of General Settings provides a searchable dropdown of
-all available timezones. A Save button appears when the selection changes, and a toast notification
-confirms the update.
+all available timezones.
 
-The selected timezone applies across findings, audit logs, exports, apps, users, settings, gateway
-logs, MCP server cards, LLM Gateway API key cards, Browser Extension deployment-status drilldown
-timestamps, AI Gateway date range filter labels, MCP Connection Status last-activity and tool-call
-timestamps, Red Team run dates and case detail timestamps, and Controls listing timestamps. A hover
-tooltip shows the alternate time (UTC when a non-UTC timezone is active; local browser time when UTC
+The selected timezone applies across findings, users, applications, accounts, AI inventory, Browser Extensions, Controls, Audit Log, Exports, AI Gateway.
+
+A hover tooltip shows the alternate time (UTC when a non-UTC timezone is active; local browser time when UTC
 is selected) for any displayed timestamp.
 
 ## User Interaction Hub
