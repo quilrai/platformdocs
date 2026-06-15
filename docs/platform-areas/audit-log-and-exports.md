@@ -40,10 +40,18 @@ Exports provides export history and starts new exports for supported platform da
 - Start a new export.
 - Select a supported data source.
 - Choose CSV or JSON format.
+- Review the row limit hint in the export modal before confirming.
 - Receive notification when an export is ready.
 - Download completed exports from history.
 
 The current baseline export source is Browser Extension Deployment Status.
+
+### Row Limit
+
+Each export includes up to a tenant-configured maximum number of rows. The export modal displays
+an inline hint—for example, "Up to 5,000 rows will be exported."—so admins know the cap before
+confirming. The default limit is 5,000 rows. If a custom limit has been configured for the tenant,
+the modal reflects that value instead. The same row limit applies to Findings exports.
 
 ## Related Platform Areas
 
