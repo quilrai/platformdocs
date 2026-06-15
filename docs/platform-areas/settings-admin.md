@@ -61,9 +61,11 @@ all available timezones. A Save button appears when the selection changes, and a
 confirms the update.
 
 The selected timezone applies across findings, audit logs, exports, apps, users, settings, gateway
-logs, MCP server cards, and LLM Gateway API key cards. A hover tooltip shows the alternate time
-(UTC when a non-UTC timezone is active; local browser time when UTC is selected) for any displayed
-timestamp.
+logs, MCP server cards, LLM Gateway API key cards, Browser Extension deployment-status drilldown
+timestamps, AI Gateway date range filter labels, MCP Connection Status last-activity and tool-call
+timestamps, Red Team run dates and case detail timestamps, and Controls listing timestamps. A hover
+tooltip shows the alternate time (UTC when a non-UTC timezone is active; local browser time when UTC
+is selected) for any displayed timestamp.
 
 ## User Interaction Hub
 

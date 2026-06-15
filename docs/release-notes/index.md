@@ -8,6 +8,43 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## June 15, 2026
+
+### New
+
+- [AI Inventory](/platform-areas/ai-inventory): Added a **Discovery** view within the Endpoint Agent
+  source. Discovery lists applications observed on endpoints through asset inventory with name, users,
+  device count, OS type, privilege, category, source, and execution policy columns. Admins can filter
+  by app name, user email, category, source, OS type (macOS, Windows, Linux), approval status (Needs
+  Review, Approved, Blocked), and criticality (Critical, Not Critical), and toggle off OS system
+  processes. Execution policy (Allowed or Blocked) can be updated inline for each discovered
+  application.
+
+### Improved
+
+- [AI Inventory](/platform-areas/ai-inventory): Interaction drawers in the Browser Extension and
+  Endpoint Agent sources now include a time-range filter. Admins can scope visible interactions to a
+  preset or custom duration without leaving the inventory drawer.
+- [AI Inventory](/platform-areas/ai-inventory): The Browser Extension interactions table no longer
+  shows a Latency column. Account names in Browser Extension interactions are now displayed without
+  an internal account ID suffix.
+- [AI Inventory](/platform-areas/ai-inventory): Application management controls (status, criticality,
+  license, and blocked state) in the Browser Extension inventory source now enforce role-based access.
+  Admins without update permission see the current value as read-only.
+- [AI Inventory](/platform-areas/ai-inventory): The inventory table header now stays fixed at the
+  top of the screen while scrolling through large lists.
+- [Settings and Administration](/platform-areas/settings-admin): The tenant timezone preference now
+  covers additional screens: Browser Extension deployment-status drilldown timestamps, AI Gateway
+  date range filter labels, MCP Connection Status last-activity and last tool-call timestamps, Red
+  Team run dates and case detail timestamps, and Controls listing timestamps.
+
+### Fixed
+
+- [AI Inventory](/platform-areas/ai-inventory): Fixed a bug where the refresh button in the Browser
+  Extension and Endpoint Agent interaction tables was not working.
+- [AI Inventory](/platform-areas/ai-inventory): Fixed a bug where updating app criticality from the
+  Browser Extension inventory table did not save correctly.
+
 ## June 12, 2026
 
 - [MCP Gateway](/platform-areas/mcp-gateway): Admins can now add custom MCP servers using
