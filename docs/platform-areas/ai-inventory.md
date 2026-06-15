@@ -20,6 +20,8 @@ Use AI Inventory when you need to:
 - Inspect asset metadata, guardrails, tags, status, source, and integration points.
 - Investigate endpoint coding inventory such as agents, skills, MCP servers, models, hooks,
   permissions, plugins, and repositories when endpoint telemetry provides it.
+- Review all applications discovered on endpoints through asset inventory, inspect OS type,
+  privilege, approval status, and execution policy, and update execution policy inline.
 - Review LLM Gateway API keys and MCP Gateway servers from an inventory perspective.
 - Track adoption, request volume, blocked activity, sensitive activity, and source-specific trends.
 
@@ -36,6 +38,8 @@ Use AI Inventory when you need to:
   metrics.
 - Review endpoint coding inventory where available, including agents, skills, MCP servers, models,
   hooks, permissions, plugins, and repositories.
+- Review endpoint-discovered applications with the Discovery sub-view: filter by name, user email,
+  category, source, OS type, approval status, and criticality, and update execution policy inline.
 - Review LLM Gateway API keys with request, blocked, anonymized, model, last-used, and posture
   context.
 - Review MCP Gateway servers with tools, scopes, DLP action, status, and activity metrics.
@@ -56,6 +60,14 @@ The Endpoint Agent source focuses on endpoint-observed applications. It summariz
 sensitive activity, detections, blocked activity, and users. Where coding inventory is available,
 the detail view can also show related agents, skills, MCP servers, models, hooks, permissions,
 plugins, and repositories for the selected application group.
+
+A **Discovery** sub-view within the Endpoint Agent source lists all applications observed on
+endpoints through asset inventory, including applications that have not generated AI-specific
+activity. Discovery rows show application name, associated users, device count, OS type, privilege,
+category, source, and execution policy. Admins can filter by name, user email, category, source, OS
+type (macOS, Windows, Linux), approval status (Needs Review, Approved, Blocked), and criticality
+(Critical, Not Critical), and toggle off OS system processes. Execution policy (Allowed or Blocked)
+can be updated inline for each row.
 
 ### LLM Gateway
 
