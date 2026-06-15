@@ -12,6 +12,23 @@ hide_copy_dropdown: true
 
 ### New
 
+- [MCP Gateway](/platform-areas/mcp-gateway): Added a **Group & User Rules** tab to MCP server
+  settings, available from the Settings drawer and from AI Inventory MCP Gateway detail drawers.
+  Admins can create rules scoped to a smart group or an individual user that partially override tool
+  availability and guardrail actions for that MCP server. Rules are partial — anything not set
+  inherits the server's default settings. Smart-group rules are evaluated first; user rules apply
+  last and take final priority. Rules can be individually enabled or disabled and deleted. An
+  **Effective Settings** preview resolves the full configuration for a given user email across all
+  matched groups and user rules. A **Group & User Rules** shortcut is also available on each MCP
+  server card.
+
+- [MCP Gateway](/platform-areas/mcp-gateway): The **Access Control** section in MCP server settings
+  now supports smart group and per-user access rules. Each smart group can be set to **Allow**
+  (explicitly permit access), **Deny** (block access), or **Default** (inherit the server-level
+  behavior). Individual users can be added to an **Allowed Users** list, which can override a denied
+  smart group, or a **Denied Users** list, which is the highest-priority access rule. Previously,
+  Access Control only supported enabling or disabling predefined agent clients.
+
 - [AI Inventory](/platform-areas/ai-inventory): Added a **Discovery** view within the Endpoint Agent
   source. Discovery lists applications observed on endpoints through asset inventory with name, users,
   device count, OS type, privilege, category, source, and execution policy columns. Admins can filter
