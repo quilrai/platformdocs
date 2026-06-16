@@ -43,8 +43,9 @@ Use AI Inventory when you need to:
 - Review LLM Gateway API keys with request, blocked, anonymized, model, last-used, and posture
   context.
 - Review MCP Gateway servers with tools, scopes, DLP action, status, and activity metrics.
-- Review Compliance APIs inventory for supported provider data such as ChatGPT conversations, Codex
-  sessions, and workspace agents.
+- Review the Compliance APIs source through **Overview**, **Assets**, and **Usage** tabs to monitor
+  organization-wide metrics, browse ChatGPT conversations, Codex sessions, and workspace agents, and
+  analyze user adoption and model-usage rankings.
 
 ## Inventory Sources
 
@@ -85,9 +86,21 @@ analytics, interaction details, and embedded General, Guardrails, and Tools conf
 ### Compliance APIs
 
 The Compliance APIs source provides provider-specific inventory for compliance integrations. The
-current OpenAI Compliance view includes product-level tabs for ChatGPT conversations, Codex sessions,
-and workspace agents. Claude Compliance is represented as a provider option when available but may
-be disabled until configured for the tenant.
+OpenAI Compliance view is organized into three tabs:
+
+- **Overview**: Shows organization-level metrics for the selected time range — observed users,
+  events, ChatGPT conversations and messages, files, Codex sessions, agent runs, connector calls,
+  and total tokens — plus snapshot cards for ChatGPT inventory totals, Codex activity, and user
+  adoption highlights, and a data-freshness and source-status panel.
+- **Assets**: Lists inventory rows for each supported product with product-level tabs for ChatGPT
+  conversations, Codex sessions, and workspace agents. Supports search, filters, sort, pagination,
+  refresh, and source-aware detail drawers.
+- **Usage**: Provides **Users**, **Sources**, and **Rankings** sub-tabs with ChatGPT top-user lists
+  sorted by conversations, Codex top-user and model rankings, source adoption breakdowns, source
+  overlaps, and cross-source transition flows.
+
+The default time range for the Compliance APIs view is 7 days. Claude Compliance is represented as
+a provider option when available but may be disabled until configured for the tenant.
 
 ## Main Workflows
 
