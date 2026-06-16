@@ -29,12 +29,29 @@ Use Endpoint Agent when you need to:
 - Data-risk action dropdowns.
 - Windows and macOS browser monitoring toggles.
 - Dedicated endpoint policy rows for coding tools such as Cursor and Claude Code where configured.
+- Dangerous permission controls for Claude Code: per-permission block toggles that stop high-risk
+  actions on the endpoint before they run.
 
 ## Detection Configurations
 
 Endpoint configurations let administrators decide how the endpoint agent monitors specific apps and
 browsers. Browser monitoring toggles are shown as customer-facing on/off controls, while the
 platform preserves any backend exclusions that are outside the currently displayed browser labels.
+
+## Dangerous Permissions
+
+The **Dangerous Permissions** section appears in the Guardrails tab of a detection configuration
+card when the selected method tab is Claude Code. It lists high-risk actions that Claude Code can
+perform on the endpoint, such as file deletion or shell execution, each shown with a description
+and representative examples.
+
+Admins can set each permission to **Allowed** or **Blocked** using a per-row toggle. Blocked
+actions are intercepted by the endpoint agent before they execute. A badge in the section header
+shows the number of currently blocked permissions out of the total. Changes are saved automatically
+with debounced writes, and a status indicator confirms each save. If another admin updates the
+policy at the same time, the UI detects the conflict and reloads the latest state.
+
+Users without endpoint configuration update permission see the toggles in read-only mode.
 
 ## Main Workflows
 
@@ -44,7 +61,9 @@ platform preserves any backend exclusions that are outside the currently display
 4. Search for the app or browser configuration that needs adjustment.
 5. Enable or disable DLP, update data-risk action behavior, and adjust platform-specific browser
    monitoring.
-6. Save changes and review endpoint findings for operational impact.
+6. For Claude Code configurations, open the Guardrails tab and use **Dangerous Permissions** to
+   block high-risk actions on managed endpoints.
+7. Save changes and review endpoint findings for operational impact.
 
 ## Related Platform Areas
 

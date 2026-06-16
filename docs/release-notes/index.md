@@ -8,6 +8,17 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## June 16, 2026
+
+### New
+
+- [Endpoint Agent](/platform-areas/endpoint-agent): Added a **Dangerous Permissions** section to
+  the Guardrails tab for Claude Code endpoint configurations. Admins can individually toggle
+  high-risk actions that Claude Code may perform on managed endpoints between **Allowed** and
+  **Blocked**. Blocked actions are stopped before they execute. A badge in the section header shows
+  how many permissions are currently blocked out of the total, and inline status feedback confirms
+  saves as they are applied. Users without update permission see the toggles in read-only mode.
+
 ## June 15, 2026
 
 ### New
