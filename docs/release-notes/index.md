@@ -42,6 +42,22 @@ hide_copy_dropdown: true
   Gateway app list opens a cross-app view of config changes and pending requests, with a link to
   drill into each app's per-key Audit Log tab.
 
+### Improved
+
+- [AI Inventory](/platform-areas/ai-inventory): The OpenAI Compliance inventory view is now
+  organized into three tabs. **Overview** is the new default landing tab and shows
+  organization-level metrics for the selected period — observed users, events, ChatGPT
+  conversations and messages, files, Codex sessions, agent runs, connector calls, and total
+  tokens — alongside snapshot cards for ChatGPT inventory totals, Codex activity, and adoption
+  highlights, and a data-freshness and source-status panel. **Assets** is the existing inventory
+  table, with product tabs for ChatGPT conversations, Codex sessions, and workspace agents,
+  search, filters, sort, pagination, and detail drawers. **Usage** adds **Users**, **Sources**,
+  and **Rankings** sub-tabs with ChatGPT top-user lists sorted by conversations, Codex top users
+  and model rankings, source adoption breakdowns, source overlaps, and cross-source transition
+  flows. The default time range for the Compliance APIs view is now **7 days**. Loading states
+  inside compliance views are also more reliable; data requests are deferred until the Compliance
+  APIs tab is active, reducing background network calls when working in other inventory sources.
+
 ## June 15, 2026
 
 ### New
