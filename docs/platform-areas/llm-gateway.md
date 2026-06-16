@@ -50,6 +50,13 @@ Use LLM Gateway when you need to:
 - Run V2 red team tests and review run history, summaries, and cases.
 - Configure per-user LLM Gateway app access for users with the AI Gateway Admin role, allowing all
   apps or restricting access to a specific subset.
+- Configure self-service access per app: choose a credential mode (shared app key or named user
+  API keys) and set who can view the app, submit settings change requests, see credential values,
+  and view all-user logs.
+- Review saved configuration versions for any app, compare field-level diffs, and roll back to any
+  prior version with a confirmation step.
+- Manage settings change requests submitted by self-service users — approve, reject, or review
+  request history from a filterable change request queue.
 - Review LLM Gateway keys from AI Inventory with request, blocked, anonymized, model, last-used,
   DLP action, Guardian Agent, and key-status context.
 
@@ -83,6 +90,13 @@ Each LLM Gateway app has a settings drawer with focused areas for:
 - **Token Saving:** JSON, HTML, Markdown, and text compression controls.
 - **Routing Configurations:** Available providers, routing groups, token-based routing groups, and
   custom routing.
+- **Self-Service:** Credential mode (Shared Parent Key or Named User API Keys) and per-role access
+  control for viewer access, settings request access, API key visibility, and all-logs visibility —
+  each independently scoped to all users, specific email addresses, or smart groups.
+- **Audit Log:** Configuration version history with field-level diffs and immediate admin rollback
+  (with confirmation); a change request queue filtered by status (Pending, Approved, Rejected,
+  Failed, Stale) where admins approve or reject self-service settings requests. Requires update
+  access. A global Audit Log button on the app list provides a cross-app view.
 - **Identity Aware:** Header identity, JWT identity, identity enforcement, and allowed domains.
 - **Prompt Store:** Prompt creation, prompt management, required system prompts, and usage
   guidance.
@@ -106,6 +120,62 @@ attacks, grounded answering, hallucination, instruction following, knowledge, te
 and logic or reasoning. Runs are named, scoped to an app and provider, and include summaries plus
 case-level results.
 
+## Self-Service Dashboard
+
+Admins can grant end users controlled, non-admin access to LLM Gateway apps through a dedicated
+self-service surface. Users who sign in via OAuth with a self-service access mode are routed there
+automatically and cannot reach admin pages.
+
+The dashboard lists the LLM Gateway apps that self-service is enabled for, with search and
+refresh. Selecting an app opens three tabs:
+
+- **Settings** — visible when the user has request access. The full settings panel is displayed in
+  read-only/request mode: changes are submitted as approval requests rather than applied
+  immediately. The panel covers provider settings, tags, guardrails, custom detections, rate limits,
+  token saving, routing, identity settings, prompt store, and API integration. Users can review
+  their own submitted requests from an Audit Log view within the panel.
+- **Logs** — LLM Gateway request logs scoped to the signed-in user. When the admin grants All Logs
+  Access for the app, all app traffic is visible.
+- **Findings** — findings associated with the app, scoped the same way as logs.
+
+Credential access depends on the credential mode the admin configured for the app:
+- **Shared Parent Key** mode — users with API Key Access permission can copy the shared app key.
+- **Named User API Keys** mode — users can create named personal keys and revoke them.
+
+Platform admins can open the self-service surface from the **Self-service dashboard** link in the
+admin sidebar.
+
+### Configuring Self-Service Access
+
+Use the **Self-Service** tab in an app's settings drawer to enable self-service for that app.
+
+**Credential Mode** selects the type of key self-service users receive:
+- **Shared Parent Key** — users receive the existing app key.
+- **Named User API Keys** — users create and revoke their own personal keys.
+
+**Access** controls which users get each capability. Four roles are configured independently, each
+scoped to all users, specific email addresses, or smart groups:
+- **Viewer Access** — who can see and interact with the app in self-service.
+- **Request Access** — who can submit settings change requests for admin approval.
+- **API Key Access** — who can view credential values.
+- **All Logs Access** — who can view logs and findings for all users, not just their own.
+
+### Reviewing Change Requests And Config History
+
+Use the **Audit Log** tab in an app's settings drawer to review change requests and version
+history.
+
+**Config History** lists all saved configuration versions with actor and timestamp. Expanding a
+version shows a field-level diff. Admins can roll back to any prior version immediately with a
+confirmation step.
+
+**Change Requests** lists settings change requests submitted by self-service users. Status filters
+(Pending, Approved, Rejected, Failed, Stale) narrow the list. Admins can approve or reject pending
+requests from this panel.
+
+A global **Audit Log** button on the LLM Gateway app list opens a cross-app view of config changes
+and change requests, with a drill-through link into each app's per-key Audit Log tab.
+
 ## Main Workflows
 
 1. Create an app and select provider settings.
@@ -114,6 +184,7 @@ case-level results.
 4. Return to settings to tune providers, guardrails, routing, identity, token, and prompt settings.
 5. Use logs and Findings to review live behavior.
 6. Run red team tests before or after changing app settings.
+7. Optionally configure the Self-Service tab to grant end users controlled access to the app.
 
 ## Related Platform Areas
 
@@ -139,4 +210,5 @@ inline selector). Changes are saved alongside the role assignment.
 
 LLM Gateway requires AI Gateway or LLM Gateway permissions depending on the action. Create, update,
 logs, and red teaming access are controlled by assigned scopes. Configuring per-user LLM Gateway app
-access requires Admin or Super Admin role.
+access requires Admin or Super Admin role. The Audit Log tab — including change request approval,
+rejection, and config rollback — requires update access on the LLM Gateway resource.

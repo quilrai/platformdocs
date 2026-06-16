@@ -8,6 +8,40 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## June 16, 2026
+
+### New
+
+- [LLM Gateway](/platform-areas/llm-gateway): Added a **Self-Service Dashboard** — a dedicated web
+  surface for end users who have been granted self-service access to LLM Gateway apps. Users who
+  sign in via OAuth with a self-service access mode land here automatically and cannot reach admin
+  pages. The dashboard lists the apps they are allowed to use, with search and refresh. Selecting
+  an app opens **Settings**, **Logs**, and **Findings** tabs. In Settings, users with request
+  access can view the full configuration panel and submit change requests for admin approval rather
+  than writing config directly. Logs are scoped to the signed-in user by default; admins can grant
+  all-logs access to widen that scope. Credential access depends on the credential mode the admin
+  chose for the app: users with API key access can copy the shared app key, or create and revoke
+  named personal keys when the app is set to Named User API Keys mode. MCP Gateway support is
+  planned and shows a "Coming soon" notice. Platform admins can reach the dashboard from a new
+  **Self-service dashboard** link in the admin sidebar.
+
+- [LLM Gateway](/platform-areas/llm-gateway): Added a **Self-Service** tab to each LLM Gateway
+  API key settings drawer. The **Credential Mode** selector chooses between **Shared Parent Key**
+  (self-service users receive the existing app key) and **Named User API Keys** (each user creates
+  a personal key). The **Access** section lets admins grant four capabilities independently, each
+  scoped to all users, specific email addresses, or smart groups: viewer access to the app,
+  permission to submit settings change requests, visibility of API key values, and visibility of
+  all users' logs.
+
+- [LLM Gateway](/platform-areas/llm-gateway): Added an **Audit Log** tab to each LLM Gateway API
+  key settings drawer. **Config History** lists saved configuration versions with actor and
+  timestamp; expanding a version shows a field-level diff and lets an admin roll back to it
+  immediately with a confirmation step. **Change Requests** lists settings requests submitted by
+  self-service users, filtered by status (Pending, Approved, Rejected, Failed, Stale); admins can
+  approve or reject individual requests from this panel. A global **Audit Log** button on the LLM
+  Gateway app list opens a cross-app view of config changes and pending requests, with a link to
+  drill into each app's per-key Audit Log tab.
+
 ## June 15, 2026
 
 ### New
