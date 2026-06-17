@@ -8,6 +8,42 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## June 17, 2026
+
+### New
+
+- [Users, Applications, and Accounts](/platform-areas/users-accounts-applications): Added an
+  **Export** button to the Applications table toolbar. Clicking it opens an export modal where
+  admins choose a format (CSV) and a **Data Scope**: **Current filter** exports only records
+  matching the active search and filters; **Full range** exports all records without applying
+  filters. When rows are selected in the table, the button shows the selection count and the
+  export covers only those rows (no scope selector is shown in that mode). Active filters and a
+  row limit are displayed in the modal before the export starts. The export is queued in the
+  background; a notification confirms queuing and the completed file appears in export history
+  labeled **Applications**. This feature is labeled Beta.
+
+### Improved
+
+- [Audit Log and Exports](/platform-areas/audit-log-and-exports): The export history list now
+  automatically refreshes every 30 seconds while any export is still processing, so the status
+  and download link update without requiring a manual page reload.
+
+### Fixed
+
+- [Browser Extension](/platform-areas/browser-extension): Fixed the IDP User Status column in
+  the Browser Extension Deployment Status screen to correctly display **NA** when the status is
+  absent or contains only a placeholder dash. Previously a dash value could be treated as a valid
+  status indicator instead of a missing value.
+- [Users, Applications, and Accounts](/platform-areas/users-accounts-applications): Fixed the
+  IDP User Groups column in the Users table and Smart Groups drawer. Values no longer shift
+  horizontally on large screens.
+- [Users, Applications, and Accounts](/platform-areas/users-accounts-applications): Fixed the
+  notification bell being obscured by other page elements on the Applications screen. The
+  notification icon is now always visible above the toolbar.
+- [LLM Gateway](/platform-areas/llm-gateway): Fixed config change detection in Audit Log Config
+  History to use locale-aware key ordering, ensuring that configuration differences are
+  consistently detected and displayed regardless of key naming.
+
 ## June 16, 2026
 
 ### New
