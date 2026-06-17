@@ -1,0 +1,11 @@
+{
+  "label": "Google Ecosystem",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Connect QuilrAI to Google services such as Calendar and Drive for scheduling and cloud storage visibility."
+  },
+  "customProps": {
+    "icon": "Layers"
+  }
+}

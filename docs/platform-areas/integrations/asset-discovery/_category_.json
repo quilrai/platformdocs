@@ -1,0 +1,11 @@
+{
+  "label": "Asset Discovery",
+  "position": 8,
+  "link": {
+    "type": "generated-index",
+    "description": "Connect QuilrAI to your cloud and AI environments to discover and monitor AI/ML assets across hosted and self-hosted deployments."
+  },
+  "customProps": {
+    "icon": "Radar"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "label": "Identity Providers",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Connect QuilrAI to your identity providers to gain visibility into users, groups, applications, and authentication activity across your organization."
+  },
+  "customProps": {
+    "icon": "Fingerprint"
+  }
+}
