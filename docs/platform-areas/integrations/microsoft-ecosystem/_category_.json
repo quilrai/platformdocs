@@ -1,0 +1,11 @@
+{
+  "label": "Microsoft Ecosystem",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Connect QuilrAI to Microsoft services such as Purview and Calendar for data governance and scheduling visibility."
+  },
+  "customProps": {
+    "icon": "Boxes"
+  }
+}
