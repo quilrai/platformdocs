@@ -8,6 +8,18 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## June 18, 2026
+
+### New
+
+- [Endpoint Agent](/platform-areas/endpoint-agent): Added an **Access Control** section to the
+  Guardrails tab in the Detection Configurations drawer. When an application supports
+  access-control features, a card appears for each supported feature with an enable/disable toggle
+  and any configurable parameters (text, number, masked secret, dropdown, or boolean fields).
+  Required parameters must be filled before the page-level Save action will proceed. Only features
+  that are actively changed during a session are included in the save request; untouched features
+  keep their stored values. Admins without update permission see the section in read-only mode.
+
 ## June 17, 2026
 
 ### New
