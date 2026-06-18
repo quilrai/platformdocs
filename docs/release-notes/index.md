@@ -8,6 +8,27 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## June 18, 2026
+
+### Fixed
+
+- [Integrations](/platform-areas/integrations): Fixed a bug where saving changes to a
+  non-OAuth integration instance could incorrectly trigger OAuth authorization. The OAuth flow
+  is now only advanced for integrations that require it; non-OAuth instances save and close
+  without initiating an OAuth redirect.
+- [Integrations](/platform-areas/integrations): Fixed severity and checkbox fields in
+  integration configuration forms showing stale selections after an update. These fields now
+  always reflect the current saved state when the instance editor is reopened.
+
+### Improved
+
+- [Integrations](/platform-areas/integrations): Filter settings configured during new
+  integration instance creation are now saved automatically when the instance is created,
+  removing the need for a separate save step.
+- [Integrations](/platform-areas/integrations): The instance configuration form now reloads
+  fresh field values from the server after saving an existing instance, so the next open of
+  the editor always shows the latest saved configuration.
+
 ## June 17, 2026
 
 ### New
