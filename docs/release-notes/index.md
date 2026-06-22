@@ -8,6 +8,18 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## June 22, 2026
+
+### New
+
+- [LLM Gateway](/platform-areas/llm-gateway): Added **OpenAI Assistants** and **OpenAI Assistants
+  Azure** as provider options when creating or editing an LLM Gateway app. These providers connect
+  to the OpenAI Assistants API (threads and runs). A new **OpenAI Assistants** tab in the provider
+  selector lists both options. OpenAI Assistants requires an API key and accepts an optional base
+  URL. OpenAI Assistants Azure requires an API key and an Azure endpoint, and accepts an optional
+  Azure API version. Like embeddings and rerank providers, both are available for gateway use but
+  are not used as standard routing targets.
+
 ## June 17, 2026
 
 ### New
