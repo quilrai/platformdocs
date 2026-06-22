@@ -8,6 +8,29 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## June 22, 2026
+
+### New
+
+- [Endpoint Agent](/platform-areas/endpoint-agent): Added an **Access Control** section to the
+  Guardrails tab in Endpoint Detection Configurations. Admins can enable or disable each supported
+  access-control feature for a configuration and supply the required parameters — including text,
+  masked secret, numeric, toggle, and dropdown fields — directly within the drawer. The section
+  appears only when at least one access-control feature is supported for the configuration; it is
+  hidden automatically when no features apply. Required parameter values are validated inline, and
+  a validation error blocks saving until the value is corrected. The Access Control section is
+  available from both the Endpoint Configurations settings page and the Guardrails editor in
+  AI Inventory.
+
+### Improved
+
+- [Endpoint Agent](/platform-areas/endpoint-agent): Endpoint Detection Configurations now
+  auto-save. Changes are saved automatically after a short pause rather than requiring a manual
+  Save button. A status indicator in the toolbar shows **Autosave pending**, **Saving...**,
+  **Saved**, or **Save failed. Retrying...** so admins can track the save state at a glance. If a
+  save fails, it is retried automatically. Invalid Access Control parameter values block auto-save
+  until corrected.
+
 ## June 17, 2026
 
 ### New
