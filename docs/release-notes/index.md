@@ -38,6 +38,110 @@ hide_copy_dropdown: true
   workspace skills with creator, file count, agent cross-references, and skill name chips that
   link directly from conversation and agent run views. **Apps** is a new product showing OpenAI
   app activity, auth events, returned resources, and per-app user reach.
+## June 22, 2026
+
+### New
+
+- [Endpoint Agent](/platform-areas/endpoint-agent): Added an **Access Control** section to the
+  Guardrails tab in Endpoint Detection Configurations. Admins can enable or disable each supported
+  access-control feature for a configuration and supply the required parameters — including text,
+  masked secret, numeric, toggle, and dropdown fields — directly within the drawer. The section
+  appears only when at least one access-control feature is supported for the configuration; it is
+  hidden automatically when no features apply. Required parameter values are validated inline, and
+  a validation error blocks saving until the value is corrected. The Access Control section is
+  available from both the Endpoint Configurations settings page and the Guardrails editor in
+  AI Inventory.
+
+### Improved
+
+- [Endpoint Agent](/platform-areas/endpoint-agent): Endpoint Detection Configurations now
+  auto-save. Changes are saved automatically after a short pause rather than requiring a manual
+  Save button. A status indicator in the toolbar shows **Autosave pending**, **Saving...**,
+  **Saved**, or **Save failed. Retrying...** so admins can track the save state at a glance. If a
+  save fails, it is retried automatically. Invalid Access Control parameter values block auto-save
+  until corrected.
+- [Insights](/platform-areas/insights): Added an **LLM Gateway** chart to the AI Insights page.
+  The chart shows total request tokens, total response tokens, and a model-distribution donut chart
+  with a ranked legend for the selected time range. Use it to understand gateway throughput and
+  which models are driving token volume.
+
+- [Insights](/platform-areas/insights): Added an **MCP Usage** chart to the AI Insights page. The
+  chart shows total MCP requests, blocked request count, and a ranked list of top MCP servers by
+  traffic volume for the selected time range. Use it to spot which MCP servers are most active and
+  whether requests are being blocked.
+
+### Improved
+
+- [Insights](/platform-areas/insights): The AI Insights page has been redesigned with a new
+  responsive card grid. Charts now load in a clean, fixed-position layout that adapts to screen
+  size. The previous draggable widget grid has been removed.
+
+- [Insights](/platform-areas/insights): A **time range selector** is now available at the top of
+  the AI Insights page. Selecting a preset (for example, 7 days or 30 days) or a custom date range
+  updates all charts on the page simultaneously. Previously the charts loaded a fixed default period
+  with no visible duration control.
+
+- [Insights](/platform-areas/insights): Clicking a data point on an AI Insights chart now
+  navigates to the related platform area — Applications, Users, or Findings — with the selected
+  time range automatically applied. Previously charts had limited or no click-through navigation.
+
+- [Insights](/platform-areas/insights): All AI Insights charts now display a structured skeleton
+  loader while data is loading, a consistent empty state when no data exists for the selected
+  period, and a retry option when a data request fails.
+
+- [Insights](/platform-areas/insights): When a time range shorter than 24 hours is selected, chart
+  x-axis labels now show the full date and time instead of only the hour value, making it easier to
+  orient data points across days.
+- [LLM Gateway](/platform-areas/llm-gateway): Added **OpenAI Assistants** and **OpenAI Assistants
+  Azure** as provider options when creating or editing an LLM Gateway app. These providers connect
+  to the OpenAI Assistants API (threads and runs). A new **OpenAI Assistants** tab in the provider
+  selector lists both options. OpenAI Assistants requires an API key and accepts an optional base
+  URL. OpenAI Assistants Azure requires an API key and an Azure endpoint, and accepts an optional
+  Azure API version. Like embeddings and rerank providers, both are available for gateway use but
+  are not used as standard routing targets.
+## June 18, 2026
+
+### Fixed
+
+- [Findings](/platform-areas/findings): Finding Insights time-range presets (**3 days**, **7 days**,
+  **30 days**, **3 months**, **6 months**, and **1 year**) now align to calendar boundaries. The
+  range ends at the close of today and the start bound is aligned to the opening of the corresponding
+  past calendar day or month, so each preset covers complete days or months rather than a partial
+  rolling window. The **24-hour** preset continues to use a rolling window ending at the current
+  time.
+
+- [Findings](/platform-areas/findings): Clicking a data point on a Finding Insights chart to drill
+  into a specific period now selects the correct time window based on the active preset's
+  granularity: one hour for within-day views, one full calendar day for ranges up to 30 days, and
+  one full calendar month for ranges longer than 30 days. Previously the drilldown could apply a
+  mismatched time bucket.
+
+- [Findings](/platform-areas/findings): The **Posting** behavior type on findings cards now
+  correctly displays the interaction detail view. Previously, posting-type findings showed an
+  incorrect visual state on the card.
+
+- [Findings](/platform-areas/findings): The **Channel** field has been removed from findings card
+  details. The channel filter is no longer shown in the findings filter panel.
+
+- [Findings](/platform-areas/findings): For findings linked to guest accounts, the Login Email
+  field on a findings card now shows **Not Available** instead of attempting to display a value that
+  does not apply to guest accounts.
+- [Integrations](/platform-areas/integrations): Fixed a bug where saving changes to a
+  non-OAuth integration instance could incorrectly trigger OAuth authorization. The OAuth flow
+  is now only advanced for integrations that require it; non-OAuth instances save and close
+  without initiating an OAuth redirect.
+- [Integrations](/platform-areas/integrations): Fixed severity and checkbox fields in
+  integration configuration forms showing stale selections after an update. These fields now
+  always reflect the current saved state when the instance editor is reopened.
+
+### Improved
+
+- [Integrations](/platform-areas/integrations): Filter settings configured during new
+  integration instance creation are now saved automatically when the instance is created,
+  removing the need for a separate save step.
+- [Integrations](/platform-areas/integrations): The instance configuration form now reloads
+  fresh field values from the server after saving an existing instance, so the next open of
+  the editor always shows the latest saved configuration.
 
 ## June 17, 2026
 
