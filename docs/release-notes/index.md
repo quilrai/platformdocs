@@ -12,6 +12,29 @@ hide_copy_dropdown: true
 
 ### Fixed
 
+- [Findings](/platform-areas/findings): Finding Insights time-range presets (**3 days**, **7 days**,
+  **30 days**, **3 months**, **6 months**, and **1 year**) now align to calendar boundaries. The
+  range ends at the close of today and the start bound is aligned to the opening of the corresponding
+  past calendar day or month, so each preset covers complete days or months rather than a partial
+  rolling window. The **24-hour** preset continues to use a rolling window ending at the current
+  time.
+
+- [Findings](/platform-areas/findings): Clicking a data point on a Finding Insights chart to drill
+  into a specific period now selects the correct time window based on the active preset's
+  granularity: one hour for within-day views, one full calendar day for ranges up to 30 days, and
+  one full calendar month for ranges longer than 30 days. Previously the drilldown could apply a
+  mismatched time bucket.
+
+- [Findings](/platform-areas/findings): The **Posting** behavior type on findings cards now
+  correctly displays the interaction detail view. Previously, posting-type findings showed an
+  incorrect visual state on the card.
+
+- [Findings](/platform-areas/findings): The **Channel** field has been removed from findings card
+  details. The channel filter is no longer shown in the findings filter panel.
+
+- [Findings](/platform-areas/findings): For findings linked to guest accounts, the Login Email
+  field on a findings card now shows **Not Available** instead of attempting to display a value that
+  does not apply to guest accounts.
 - [Integrations](/platform-areas/integrations): Fixed a bug where saving changes to a
   non-OAuth integration instance could incorrectly trigger OAuth authorization. The OAuth flow
   is now only advanced for integrations that require it; non-OAuth instances save and close
