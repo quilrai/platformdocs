@@ -36,6 +36,24 @@ platform. It is the main place to move from summary signals into detailed eviden
 - Review Compliance Findings by provider, detection scope, user, category, and subcategory.
 - Open related conversations or interaction details from finding rows where available.
 
+## Finding Insights Time Ranges
+
+Finding Insights supports preset and custom time ranges. Preset behavior:
+
+- **24h** – rolling window ending at the current time.
+- **3 days / 7 days / 30 days** – range ends at the close of today; the start is aligned to the
+  opening of the appropriate number of calendar days in the past, so the window covers complete
+  days.
+- **3 months / 6 months / 1 year** – range ends at the close of today; the start is aligned to the
+  first day of the month the appropriate number of calendar months in the past.
+
+When clicking a data point on a Finding Insights chart to drill into a specific period, the platform
+selects a time window based on the active preset's granularity:
+
+- Within-day views: one hour from the selected point.
+- Ranges up to 30 days: the full calendar day of the selected point.
+- Ranges longer than 30 days: the full calendar month of the selected point.
+
 ## Main Workflows
 
 1. Start in Finding Insights to understand current risk themes.
