@@ -8,6 +8,36 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## June 23, 2026
+
+### Improved
+
+- [AI Inventory](/platform-areas/ai-inventory): Added two new top-level tabs to the OpenAI
+  Compliance view. **Governance** organizes compliance risk data across three sub-tabs:
+  **Token Governance** shows total token consumption, input/output/cached composition,
+  cache-efficiency ratio, token field coverage, a daily consumption trend, and consumption
+  rankings by user, model, source, and client. **Sharing Blast Radius** surfaces ChatGPT sharing
+  activity — conversation shares, GPT access grants, and scope-change signals — with risk
+  highlights and a paginated event log. **Egress** shows network egress data for the selected
+  period. **Security** organizes OpenAI admin-layer events across seven sub-tabs: **Audit Log**,
+  **Logins**, **Denied** (blocked and failed events), **Sessions**, **Admin Access**, **Anomalies**,
+  and **Egress**. Each event sub-tab includes a posture header with key stats, an action or outcome
+  composition bar, a filterable event table with per-row user and geographic context, and a
+  country-based signal callout.
+
+- [AI Inventory](/platform-areas/ai-inventory): Expanded the **Assets** tab in the OpenAI
+  Compliance view with new products and asset tabs. **ChatGPT** gains four additional tabs:
+  **GPT Inventory** lists stateful GPTs with visibility, sharing, capabilities, knowledge files,
+  and external actions, plus a full detail drawer with configuration sections and top-user lists;
+  **Knowledge Files** shows files linked to GPTs with link count, GPT count, and owner list;
+  **Conversation Files** lists files shared in conversations with appearance, conversation, message,
+  and user counts; **Users** shows per-user message, conversation, file, and DLP activity with a
+  360 detail view. **Codex** adds **Tasks** and **Environments** asset tabs alongside Sessions.
+  **Spreadsheets** is a new product covering Microsoft Excel add-in sessions with event counts,
+  content events, model usage, and token totals. **Agents** gains a **Skills** tab showing
+  workspace skills with creator, file count, agent cross-references, and skill name chips that
+  link directly from conversation and agent run views. **Apps** is a new product showing OpenAI
+  app activity, auth events, returned resources, and per-app user reach.
 ## June 22, 2026
 
 ### New
