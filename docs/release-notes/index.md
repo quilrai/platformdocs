@@ -12,6 +12,38 @@ hide_copy_dropdown: true
 
 ### New
 
+- [Insights](/platform-areas/insights): Added an **LLM Gateway** chart to the AI Insights page.
+  The chart shows total request tokens, total response tokens, and a model-distribution donut chart
+  with a ranked legend for the selected time range. Use it to understand gateway throughput and
+  which models are driving token volume.
+
+- [Insights](/platform-areas/insights): Added an **MCP Usage** chart to the AI Insights page. The
+  chart shows total MCP requests, blocked request count, and a ranked list of top MCP servers by
+  traffic volume for the selected time range. Use it to spot which MCP servers are most active and
+  whether requests are being blocked.
+
+### Improved
+
+- [Insights](/platform-areas/insights): The AI Insights page has been redesigned with a new
+  responsive card grid. Charts now load in a clean, fixed-position layout that adapts to screen
+  size. The previous draggable widget grid has been removed.
+
+- [Insights](/platform-areas/insights): A **time range selector** is now available at the top of
+  the AI Insights page. Selecting a preset (for example, 7 days or 30 days) or a custom date range
+  updates all charts on the page simultaneously. Previously the charts loaded a fixed default period
+  with no visible duration control.
+
+- [Insights](/platform-areas/insights): Clicking a data point on an AI Insights chart now
+  navigates to the related platform area — Applications, Users, or Findings — with the selected
+  time range automatically applied. Previously charts had limited or no click-through navigation.
+
+- [Insights](/platform-areas/insights): All AI Insights charts now display a structured skeleton
+  loader while data is loading, a consistent empty state when no data exists for the selected
+  period, and a retry option when a data request fails.
+
+- [Insights](/platform-areas/insights): When a time range shorter than 24 hours is selected, chart
+  x-axis labels now show the full date and time instead of only the hour value, making it easier to
+  orient data points across days.
 - [LLM Gateway](/platform-areas/llm-gateway): Added **OpenAI Assistants** and **OpenAI Assistants
   Azure** as provider options when creating or editing an LLM Gateway app. These providers connect
   to the OpenAI Assistants API (threads and runs). A new **OpenAI Assistants** tab in the provider
