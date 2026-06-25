@@ -8,6 +8,23 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## June 25, 2026
+
+### New
+
+- [LLM Gateway](/platform-areas/llm-gateway): Added an **Alerts** tab to each LLM Gateway app
+  settings drawer. Admins can configure failure-rate alerting at two independently-enableable
+  levels: an **App-level alert** that tracks the failure rate across all providers combined, and a
+  **Per-provider alert** that evaluates each provider label separately and fires on any label that
+  breaches the threshold. Each alert type has its own analysis window (5 minutes minimum, 24 hours
+  maximum), failure-rate threshold (0–100 %), minimum-request floor to suppress low-volume noise,
+  cooldown period to suppress repeat alerts during a sustained breach, and an optional **Notify on
+  recovery** setting that sends a follow-up when the failure rate drops back below the threshold.
+  Notification channels — Slack webhooks, generic webhooks, and email addresses — are shared across
+  both alert types. Webhook URLs are encrypted at rest. At least one channel must be configured
+  when an alert type is enabled; the drawer validates this on save and redirects to the Alerts tab
+  automatically if there is an error.
+
 ## June 23, 2026
 
 ### Improved

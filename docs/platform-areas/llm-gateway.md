@@ -57,6 +57,10 @@ Use LLM Gateway when you need to:
   prior version with a confirmation step.
 - Manage settings change requests submitted by self-service users — approve, reject, or review
   request history from a filterable change request queue.
+- Configure failure-rate alerts per app: set an app-level threshold across all providers, a
+  per-provider threshold per provider label, analysis windows, minimum-request floors, cooldown
+  periods, and recovery notifications, and deliver alerts to Slack webhooks, generic webhooks, or
+  email addresses.
 - Review LLM Gateway keys from AI Inventory with request, blocked, anonymized, model, last-used,
   DLP action, Guardian Agent, and key-status context.
 
@@ -93,6 +97,15 @@ Each LLM Gateway app has a settings drawer with focused areas for:
 - **Self-Service:** Credential mode (Shared Parent Key or Named User API Keys) and per-role access
   control for viewer access, settings request access, API key visibility, and all-logs visibility —
   each independently scoped to all users, specific email addresses, or smart groups.
+- **Alerts:** Failure-rate alerting with two independently-enableable rule types — **App-level**
+  (failure rate across all providers combined) and **Per-provider** (failure rate evaluated per
+  provider label). Each rule has an analysis window (minimum 5 minutes, maximum 24 hours), a
+  failure-rate threshold (0–100 %), a minimum-request floor that suppresses low-volume noise, a
+  cooldown period that suppresses repeated alerts while a breach persists, and a **Notify on
+  recovery** option that fires a follow-up when the rate drops back below the threshold.
+  Notification channels — Slack webhooks, generic webhooks, and email addresses — are shared
+  across both rule types. Webhook URLs are encrypted at rest. At least one channel is required
+  when either rule type is enabled.
 - **Audit Log:** Configuration version history with field-level diffs and immediate admin rollback
   (with confirmation); a change request queue filtered by status (Pending, Approved, Rejected,
   Failed, Stale) where admins approve or reject self-service settings requests. Requires update
@@ -176,6 +189,37 @@ requests from this panel.
 A global **Audit Log** button on the LLM Gateway app list opens a cross-app view of config changes
 and change requests, with a drill-through link into each app's per-key Audit Log tab.
 
+## Failure-Rate Alerts
+
+Use the **Alerts** tab in an app's settings drawer to receive notifications when gateway request
+failures exceed a configured threshold.
+
+Two alert types are available and can be enabled independently:
+
+- **App-level alert** — evaluates the failure rate across all providers combined for the app.
+- **Per-provider alert** — evaluates the failure rate for each provider label separately; fires on
+  any label that breaches the threshold.
+
+Each alert type exposes the following settings:
+
+| Setting | Description |
+|---|---|
+| **Analysis window** | Rolling time window over which the failure rate is calculated. Minimum 5 minutes, maximum 24 hours. |
+| **Failure-rate threshold** | Percentage of failed requests (0–100) that triggers an alert. |
+| **Minimum requests** | Skip alerting when the window contains fewer requests than this value, reducing noise during low-traffic periods. |
+| **Cooldown** | Suppress repeat alerts for this many minutes while a breach persists (minimum 1 minute). |
+| **Notify on recovery** | Send a follow-up notification when the failure rate drops back below the threshold. |
+
+**Notification channels** are shared between both alert types. Add any combination of:
+
+- **Slack webhook** — a Slack incoming-webhook URL.
+- **Generic webhook** — any HTTPS endpoint that accepts a POST request.
+- **Email addresses** — one or more comma-separated recipients.
+
+Webhook URLs must start with `https://`. They are encrypted at rest and used only to deliver
+alerts for the app where they are configured. At least one channel must be present when either
+alert type is enabled; saving is blocked until the requirement is met.
+
 ## Main Workflows
 
 1. Create an app and select provider settings.
@@ -185,6 +229,7 @@ and change requests, with a drill-through link into each app's per-key Audit Log
 5. Use logs and Findings to review live behavior.
 6. Run red team tests before or after changing app settings.
 7. Optionally configure the Self-Service tab to grant end users controlled access to the app.
+8. Optionally configure the Alerts tab to receive failure-rate notifications via webhook or email.
 
 ## Related Platform Areas
 
