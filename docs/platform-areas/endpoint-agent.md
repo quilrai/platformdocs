@@ -29,12 +29,33 @@ Use Endpoint Agent when you need to:
 - Data-risk action dropdowns.
 - Windows and macOS browser monitoring toggles.
 - Dedicated endpoint policy rows for coding tools such as Cursor and Claude Code where configured.
+- Access Control configuration per detection entry, enabling or disabling supported access-control
+  features and supplying their required parameters from the Guardrails tab.
+- Auto-save for detection configurations — changes are persisted automatically after a short pause
+  with a live status indicator in the toolbar.
 
 ## Detection Configurations
 
 Endpoint configurations let administrators decide how the endpoint agent monitors specific apps and
 browsers. Browser monitoring toggles are shown as customer-facing on/off controls, while the
 platform preserves any backend exclusions that are outside the currently displayed browser labels.
+
+Detection configurations auto-save. After any change, a status indicator in the page toolbar shows
+the current save state (**Autosave pending**, **Saving...**, **Saved**, or **Save failed.
+Retrying...**). If a save fails, it is retried automatically.
+
+### Guardrails Tab
+
+The Guardrails tab within each configuration drawer contains:
+
+- **DLP settings** — enable or disable DLP and set data-risk category actions.
+- **Desktop monitoring** — Windows and macOS browser monitoring controls.
+- **Access Control** — one card per supported access-control feature. Each card has an enable/
+  disable toggle and any required parameter fields (text, masked secret, numeric, toggle, or
+  dropdown). Required fields are validated inline; a validation error blocks auto-save until
+  corrected. The Access Control section is hidden entirely when no features apply to the selected
+  configuration. Only features the admin interacts with in the current session are included in the
+  save; untouched features remain at their previously saved values.
 
 ## Main Workflows
 
@@ -44,7 +65,10 @@ platform preserves any backend exclusions that are outside the currently display
 4. Search for the app or browser configuration that needs adjustment.
 5. Enable or disable DLP, update data-risk action behavior, and adjust platform-specific browser
    monitoring.
-6. Save changes and review endpoint findings for operational impact.
+6. If the configuration supports Access Control features, open the Guardrails tab, enable the
+   desired features, and supply any required parameters.
+7. Changes save automatically. Review the toolbar status indicator to confirm the save completed,
+   then review endpoint findings for operational impact.
 
 ## Related Platform Areas
 

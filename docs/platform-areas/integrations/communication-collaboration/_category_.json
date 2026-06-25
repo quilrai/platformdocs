@@ -1,0 +1,11 @@
+{
+  "label": "Communication & Collaboration",
+  "position": 7,
+  "link": {
+    "type": "generated-index",
+    "description": "Connect QuilrAI to your messaging platforms to deliver security alerts, notifications, and interactive workflows to your teams."
+  },
+  "customProps": {
+    "icon": "MessageSquareText"
+  }
+}

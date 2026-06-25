@@ -45,6 +45,7 @@ Common use cases:
 - Review LLM Gateway app activity through the gateway-specific drilldown.
 - Review endpoint or desktop app activity through the endpoint-source drilldown.
 - Update app classifications or approval-related settings when permitted.
+- Export application data as CSV using the **Export** button in the table toolbar.
 
 Inline editable fields in the application table (such as category, risk level, or approval status)
 show a "Saving…" label and spinner while a change is being saved, confirming that the edit has
@@ -53,6 +54,22 @@ been submitted.
 The AI lens and Generative AI category filter target the primary app category. When the page is
 reached via an insight or widget drilldown that pre-applies a business-category filter, the
 Category chip shows "Business" to reflect the narrower scope applied by the drilldown.
+
+### Exporting Application Data
+
+The **Export** button in the Applications table toolbar opens an export modal that lets admins
+download application records as CSV.
+
+- **Data Scope** controls what is exported when no rows are selected: **Current filter** includes
+  only records matching the active search and filters; **Full range** exports all records without
+  applying filters.
+- When one or more rows are selected in the table, the button shows the selection count and the
+  export is limited to those rows. The scope selector is not shown in selection mode.
+- Active filters and a maximum row limit are displayed in the modal before the export starts.
+- Exports are queued in the background and a notification is sent when the file is ready.
+  Completed exports appear in export history labeled **Applications**.
+
+This feature is currently in Beta.
 
 ## Accounts
 
@@ -80,6 +97,7 @@ Common use cases:
 - [Findings](./findings.md)
 - [AI Inventory](./ai-inventory.md)
 - [Controls](./controls.md)
+- [Audit Log And Exports](./audit-log-and-exports.md)
 
 ## Access Requirements
 

@@ -27,21 +27,19 @@ Quilr AI's support system is built on **Jira Service Management (JSM)** Cloud, g
 
 ---
 
-## For Customers: Getting Support
+## First Time Access
 
-### First Time Access
-
-#### Step 1: Navigate to the Support Portal
+### Step 1: Navigate to the Support Portal
 
 Go to [quilr.atlassian.net/helpcenter/CSM](https://quilr.atlassian.net/helpcenter/CSM) in your browser.
 
 ![Support portal login page](/img/customer-support/000.SignupLoginPage.png)
 
-#### Step 2: Enter Your Email Address
+### Step 2: Enter Your Email Address
 
 Type your email address in the field and click **Next**.
 
-#### Step 3: New vs. Returning User
+### Step 3: New vs. Returning User
 
 **If you're a new user:**
 
@@ -61,7 +59,7 @@ Type your email address in the field and click **Next**.
 - Click **I do not have a password** to receive a reset link
 - Click **Create password** if you haven't set one yet
 
-#### Step 4: Complete Your First Login
+### Step 4: Complete Your First Login
 
 Once your password is set:
 
@@ -69,7 +67,7 @@ Once your password is set:
 2. Enter your email and password
 3. Click to log in
 
-#### Step 5: Organization Assignment
+### Step 5: Organization Assignment
 
 ![Not assigned to organization error](/img/customer-support/001.PostSignupTheyDoNotGetAccessIfTheyAreNotAssignedToAnOrg.png)
 

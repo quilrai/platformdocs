@@ -26,9 +26,22 @@ Use Integrations when you need to:
 - Search and filter connectors.
 - Configure new instances.
 - Edit existing instances when permitted.
-- Connector-specific setup documentation for Okta, Jamf, ChatGPT, and AWS.
+- Connector-specific setup documentation, including required scopes, permissions, and configuration.
 - Separate advanced routes for OAuth, token flow, MCP clients, MCP servers, and tool policies where
   enabled.
+
+## Integration Catalog
+
+Connectors are organized into the following categories:
+
+- **Data Forwarding:** [Webhook](./data-forwarding/webhook.md), [Syslog](./data-forwarding/syslog.md), [Syslog Audit](./data-forwarding/syslog-audit.md), [Email](./data-forwarding/email.md).
+- **Identity Providers:** [Microsoft Entra ID](./identity-providers/microsoft-entra-id.md), [Google Workspace](./identity-providers/google-workspace.md), [Okta](./identity-providers/okta.md), [Ping Identity](./identity-providers/ping-identity.md).
+- **Authentication:** [SAML](./authentication/saml.md).
+- **Microsoft Ecosystem:** [Microsoft Purview](./microsoft-ecosystem/microsoft-purview.md), [Microsoft Calendar](./microsoft-ecosystem/microsoft-calendar.md).
+- **Google Ecosystem:** [Google Calendar](./google-ecosystem/google-calendar.md), [Google Drive](./google-ecosystem/google-drive.md).
+- **Mobile Device Management (MDM):** [Microsoft Intune](./mobile-device-management/microsoft-intune.md), [Jamf Pro](./mobile-device-management/jamf-pro.md).
+- **Communication & Collaboration:** [Microsoft Teams](./communication-collaboration/microsoft-teams.md), [Slack](./communication-collaboration/slack.md), [Zoom ChatBot](./communication-collaboration/zoom-chatbot.md).
+- **Asset Discovery:** [AWS Cloud](./asset-discovery/aws-cloud.md), [Azure Cloud](./asset-discovery/azure-cloud.md), [ChatGPT](./asset-discovery/chatgpt.md), [vLLM](./asset-discovery/vllm.md), [Ollama](./asset-discovery/ollama.md).
 
 ## Main Workflows
 
