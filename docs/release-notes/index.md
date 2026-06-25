@@ -25,6 +25,80 @@ hide_copy_dropdown: true
   **Usage by Department** chart or **AI Adoption Trend** chart received a large or empty dataset.
   Charts now handle edge-case data sizes without breaking the page layout.
 
+### New
+
+- [LLM Gateway](/platform-areas/llm-gateway): Added an **Agent Monitoring** panel to LLM Gateway
+  logs. When an LLM Gateway app has requests that carry agent observability metadata, a new panel
+  appears in the logs view showing coverage stats — requests with observability, distinct agent
+  runs, distinct agents, and risk events — alongside average and P95 latency. A breakdown panel
+  organizes traffic by Agents, Workflows, Workflow Runs, Frameworks, Apps, Models, Providers, and
+  Users. A paginated **Runs** table lists agent runs with sort options: newest first, oldest first,
+  most risky, most tokens, and most errors. Admins can filter both the monitoring panel and Recent
+  Logs using agent-specific filters: agent name, agent ID, framework, version, run ID, workflow ID,
+  workflow run ID, trace ID, and conversation ID. The panel appears automatically when observability
+  data is present or an agent filter is active; no additional configuration is required.
+
+- [LLM Gateway](/platform-areas/llm-gateway): Added an **Agent** tab to the LLM Gateway log
+  details drawer for requests that include agent observability metadata. The tab shows the agent
+  name, ID, run ID, framework, version, thread ID, span ID, parent span ID, step name, and step
+  type; workflow ID and workflow run ID; and correlation identifiers including trace ID,
+  conversation ID, external request ID, correlation ID, and session ID. Baggage, request metadata,
+  and gateway-level correlation fields are also displayed when present.
+
+- [LLM Gateway](/platform-areas/llm-gateway): Added **Provider Status** to LLM Gateway. A
+  **Provider Status** button on each LLM Gateway app card opens a view showing the health of each
+  provider credential configured or observed for that app. A **Provider Status** button on the
+  LLM Gateway apps list page opens a cross-app view across all apps. Each credential shows a status
+  badge — **Healthy**, **Degraded**, **Failing**, **No traffic**, **Disabled**, or **Not
+  configured** — along with request count, failure rate, error rate, input tokens, output tokens,
+  P95 latency, and latency normalized by input-token volume. Top HTTP status codes, top error
+  messages, and top models by request count are shown inline for each credential. Admins can
+  restrict the health window using From and To datetime pickers and refresh on demand.
+
+### Improved
+
+- [LLM Gateway](/platform-areas/llm-gateway): LLM Gateway log rows now display an **Agent** badge
+  when a request carries agent observability metadata. The badge shows the agent name, framework,
+  and workflow context when available. Agent fields are also included in the log row text search so
+  admins can find agent-linked requests by name, framework, or trace ID.
+
+### Fixed
+
+- [MCP Gateway](/platform-areas/mcp-gateway): The MCP Gateway user dashboard URL and OAuth
+  callback URL shown in the admin UI are now fetched from the API. Both values are hidden until the
+  API response is available, ensuring that the correct gateway endpoint is displayed rather than a
+  value derived from the page URL or deployment environment.
+
+- [LLM Gateway](/platform-areas/llm-gateway): Added an **Alerts** tab to each LLM Gateway app
+  settings drawer. Admins can configure failure-rate alerting at two independently-enableable
+  levels: an **App-level alert** that tracks the failure rate across all providers combined, and a
+  **Per-provider alert** that evaluates each provider label separately and fires on any label that
+  breaches the threshold. Each alert type has its own analysis window (5 minutes minimum, 24 hours
+  maximum), failure-rate threshold (0–100 %), minimum-request floor to suppress low-volume noise,
+  cooldown period to suppress repeat alerts during a sustained breach, and an optional **Notify on
+  recovery** setting that sends a follow-up when the failure rate drops back below the threshold.
+  Notification channels — Slack webhooks, generic webhooks, and email addresses — are shared across
+  both alert types. Webhook URLs are encrypted at rest. At least one channel must be configured
+  when an alert type is enabled; the drawer validates this on save and redirects to the Alerts tab
+  automatically if there is an error.
+
+### Improved
+
+- [LLM Gateway](/platform-areas/llm-gateway): LLM Gateway app cards now display a **Created by**
+  field showing the name of the admin who created the app. The creator name is captured
+  automatically at creation time (preferring full name, falling back to username then email). Apps
+  created before this change show **N/A**. The creation-time label on each card was also renamed
+  from **Created** to **Created at** for clarity. A new **Created By** filter dropdown is available
+  on the app list, letting admins narrow apps by creator. Active creator filters appear as removable
+  pills and are cleared by **Clear all filters**.
+
+## June 15, 2026
+
+- [Audit Log and Exports](/platform-areas/audit-log-and-exports): Findings and Audit Log export
+  modals now display an inline row limit hint showing the maximum number of rows that will be
+  included in the export. The limit is tenant-configured and defaults to 5,000 rows when no custom
+  configuration is set. Admins see the limit before confirming an export, so unexpectedly truncated
+  downloads are less likely.
 ## June 23, 2026
 
 ### Improved

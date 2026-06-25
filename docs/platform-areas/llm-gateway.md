@@ -27,7 +27,12 @@ Use LLM Gateway when you need to:
 
 ## Key Capabilities
 
-- Create LLM Gateway apps through a three-step flow: create app, add guardrails, and integrate.
+- Create LLM Gateway apps through a three-step flow: create app, add guardrails, and integrate. Each
+  app card shows the name of the admin who created it (**Created by**) alongside the creation
+  timestamp (**Created at**) and expiry date. Apps created before creator tracking was introduced
+  show **N/A** for the creator field.
+- Filter the app list by **Provider**, **Model**, **Tag**, or **Created By**. Active filters appear
+  as removable pills; all filters can be cleared at once with **Clear all filters**.
 - Configure provider credentials, selected models, manual model entries, and additional provider
   instances.
 - Use provider families for chat completions, Anthropic Messages, Bedrock Runtime, OpenAI
@@ -47,6 +52,14 @@ Use LLM Gateway when you need to:
 - Configure Guardian Agent behavior for coding helpers and task adherence.
 - View app-specific or global LLM Gateway logs with time range, user, category, subcategory, action,
   and request or response side filters.
+- Use **Agent Monitoring** in the logs view to track agent-instrumented requests: coverage stats,
+  breakdowns by agent, workflow, framework, model, provider, and user, a paginated runs table with
+  sort options, and agent-specific filters that apply across the monitoring panel and Recent Logs.
+- Review an **Agent** tab in log details for requests with agent observability metadata, showing
+  agent identity, workflow IDs, correlation identifiers, baggage, and request metadata.
+- Check **Provider Status** per app or across all apps: health badges, request counts, failure and
+  error rates, token volumes, P95 latency, latency per input-token, top status codes, top errors,
+  and top models per provider credential.
 - Run V2 red team tests and review run history, summaries, and cases.
 - Configure per-user LLM Gateway app access for users with the AI Gateway Admin role, allowing all
   apps or restricting access to a specific subset.
@@ -57,6 +70,10 @@ Use LLM Gateway when you need to:
   prior version with a confirmation step.
 - Manage settings change requests submitted by self-service users — approve, reject, or review
   request history from a filterable change request queue.
+- Configure failure-rate alerts per app: set an app-level threshold across all providers, a
+  per-provider threshold per provider label, analysis windows, minimum-request floors, cooldown
+  periods, and recovery notifications, and deliver alerts to Slack webhooks, generic webhooks, or
+  email addresses.
 - Review LLM Gateway keys from AI Inventory with request, blocked, anonymized, model, last-used,
   DLP action, Guardian Agent, and key-status context.
 
@@ -93,6 +110,15 @@ Each LLM Gateway app has a settings drawer with focused areas for:
 - **Self-Service:** Credential mode (Shared Parent Key or Named User API Keys) and per-role access
   control for viewer access, settings request access, API key visibility, and all-logs visibility —
   each independently scoped to all users, specific email addresses, or smart groups.
+- **Alerts:** Failure-rate alerting with two independently-enableable rule types — **App-level**
+  (failure rate across all providers combined) and **Per-provider** (failure rate evaluated per
+  provider label). Each rule has an analysis window (minimum 5 minutes, maximum 24 hours), a
+  failure-rate threshold (0–100 %), a minimum-request floor that suppresses low-volume noise, a
+  cooldown period that suppresses repeated alerts while a breach persists, and a **Notify on
+  recovery** option that fires a follow-up when the rate drops back below the threshold.
+  Notification channels — Slack webhooks, generic webhooks, and email addresses — are shared
+  across both rule types. Webhook URLs are encrypted at rest. At least one channel is required
+  when either rule type is enabled.
 - **Audit Log:** Configuration version history with field-level diffs and immediate admin rollback
   (with confirmation); a change request queue filtered by status (Pending, Approved, Rejected,
   Failed, Stale) where admins approve or reject self-service settings requests. Requires update
@@ -109,9 +135,37 @@ time range review, top users, token usage by model, action counts, category dist
 log rows. Recent logs can be narrowed by user, category, subcategory, action, and request or
 response side so filtered totals match the visible log set.
 
+Log rows show an **Agent** badge with agent name, framework, and workflow context when a request
+carries agent observability metadata. Agent fields are included in the log row text search so admins
+can locate agent-linked requests by name, trace ID, or framework.
+
 Log details show request and response content alongside detected entities and detection outcomes.
 When available, the details view includes both triggered detections and all enabled detections so an
-admin can see what was active even when a category did not trigger an action.
+admin can see what was active even when a category did not trigger an action. When a request carries
+agent observability metadata, an **Agent** tab appears in the details drawer showing the agent name,
+ID, run ID, framework, version, thread ID, span ID, parent span ID, step name, and step type;
+workflow ID and workflow run ID; and correlation identifiers including trace ID, conversation ID,
+external request ID, correlation ID, and session ID. Baggage, request metadata, and gateway-level
+correlation fields are displayed when present.
+
+### Agent Monitoring
+
+When a LLM Gateway app has requests that carry agent observability metadata, an **Agent Monitoring**
+panel appears in the logs view above the analytics charts. The panel requires no additional
+configuration; it is shown automatically when observability data is detected or an agent filter is
+active.
+
+The panel provides:
+
+- **Coverage stats** — requests with observability out of total requests, distinct agent runs,
+  distinct agents, risk events, and average and P95 latency.
+- **Breakdown tabs** — traffic broken down by Agents, Workflows, Workflow Runs, Frameworks, Apps,
+  Models, Providers, and Users, with request counts per row and drill-through filters.
+- **Runs table** — a paginated list of agent runs, sortable by newest first, oldest first, most
+  risky, most tokens, or most errors.
+- **Agent filters** — dropdowns for agent name, agent ID, framework, version, run ID, workflow ID,
+  workflow run ID, trace ID, and conversation ID. Selecting any filter updates both the Agent
+  Monitoring panel and the Recent Logs list simultaneously.
 
 ## Red Teaming
 
@@ -119,6 +173,34 @@ LLM Gateway red teaming helps teams test an app and provider model against suite
 attacks, grounded answering, hallucination, instruction following, knowledge, temporal knowledge,
 and logic or reasoning. Runs are named, scoped to an app and provider, and include summaries plus
 case-level results.
+
+## Provider Status
+
+Provider Status lets admins monitor the health of each provider credential configured or observed
+across LLM Gateway apps.
+
+**Access points:**
+- **Per-app** — the **Provider Status** button on each LLM Gateway app card opens the view scoped
+  to that app's credentials.
+- **Global** — the **Provider Status** button on the LLM Gateway apps list page opens a cross-app
+  view showing credentials across all apps.
+
+**Per-credential information:**
+- **Status badge** — one of **Healthy** (recent traffic is succeeding without notable error or
+  latency signals), **Degraded** (failures, non-2xx responses, rate limits, or high latency
+  detected), **Failing** (a large share of recent traffic is failing), **No traffic** (configured
+  but not observed in the sampled window), **Disabled** (the credential is disabled in app
+  configuration), or **Not configured** (observed in telemetry but not present in current app
+  configuration).
+- **Traffic metrics** — request count, failure rate, error rate, input tokens, output tokens, and
+  P95 latency.
+- **Efficiency metric** — latency normalized by input-token volume (ms per 1K input tokens).
+- **Status code breakdown** — top HTTP status codes and their request counts.
+- **Error summary** — top error messages with status code and occurrence count.
+- **Model breakdown** — top models routed through the credential by request count.
+
+The view header shows the sampled time window. Admins can restrict the health window with From and
+To datetime pickers and refresh on demand.
 
 ## Self-Service Dashboard
 
@@ -176,6 +258,37 @@ requests from this panel.
 A global **Audit Log** button on the LLM Gateway app list opens a cross-app view of config changes
 and change requests, with a drill-through link into each app's per-key Audit Log tab.
 
+## Failure-Rate Alerts
+
+Use the **Alerts** tab in an app's settings drawer to receive notifications when gateway request
+failures exceed a configured threshold.
+
+Two alert types are available and can be enabled independently:
+
+- **App-level alert** — evaluates the failure rate across all providers combined for the app.
+- **Per-provider alert** — evaluates the failure rate for each provider label separately; fires on
+  any label that breaches the threshold.
+
+Each alert type exposes the following settings:
+
+| Setting | Description |
+|---|---|
+| **Analysis window** | Rolling time window over which the failure rate is calculated. Minimum 5 minutes, maximum 24 hours. |
+| **Failure-rate threshold** | Percentage of failed requests (0–100) that triggers an alert. |
+| **Minimum requests** | Skip alerting when the window contains fewer requests than this value, reducing noise during low-traffic periods. |
+| **Cooldown** | Suppress repeat alerts for this many minutes while a breach persists (minimum 1 minute). |
+| **Notify on recovery** | Send a follow-up notification when the failure rate drops back below the threshold. |
+
+**Notification channels** are shared between both alert types. Add any combination of:
+
+- **Slack webhook** — a Slack incoming-webhook URL.
+- **Generic webhook** — any HTTPS endpoint that accepts a POST request.
+- **Email addresses** — one or more comma-separated recipients.
+
+Webhook URLs must start with `https://`. They are encrypted at rest and used only to deliver
+alerts for the app where they are configured. At least one channel must be present when either
+alert type is enabled; saving is blocked until the requirement is met.
+
 ## Main Workflows
 
 1. Create an app and select provider settings.
@@ -185,6 +298,7 @@ and change requests, with a drill-through link into each app's per-key Audit Log
 5. Use logs and Findings to review live behavior.
 6. Run red team tests before or after changing app settings.
 7. Optionally configure the Self-Service tab to grant end users controlled access to the app.
+8. Optionally configure the Alerts tab to receive failure-rate notifications via webhook or email.
 
 ## Related Platform Areas
 
