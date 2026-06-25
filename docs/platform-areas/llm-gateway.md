@@ -27,7 +27,12 @@ Use LLM Gateway when you need to:
 
 ## Key Capabilities
 
-- Create LLM Gateway apps through a three-step flow: create app, add guardrails, and integrate.
+- Create LLM Gateway apps through a three-step flow: create app, add guardrails, and integrate. Each
+  app card shows the name of the admin who created it (**Created by**) alongside the creation
+  timestamp (**Created at**) and expiry date. Apps created before creator tracking was introduced
+  show **N/A** for the creator field.
+- Filter the app list by **Provider**, **Model**, **Tag**, or **Created By**. Active filters appear
+  as removable pills; all filters can be cleared at once with **Clear all filters**.
 - Configure provider credentials, selected models, manual model entries, and additional provider
   instances.
 - Use provider families for chat completions, Anthropic Messages, Bedrock Runtime, OpenAI
