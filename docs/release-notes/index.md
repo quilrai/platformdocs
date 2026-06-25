@@ -8,6 +8,13 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## June 15, 2026
+
+- [Audit Log and Exports](/platform-areas/audit-log-and-exports): Findings and Audit Log export
+  modals now display an inline row limit hint showing the maximum number of rows that will be
+  included in the export. The limit is tenant-configured and defaults to 5,000 rows when no custom
+  configuration is set. Admins see the limit before confirming an export, so unexpectedly truncated
+  downloads are less likely.
 ## June 23, 2026
 
 ### Improved
