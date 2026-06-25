@@ -54,6 +54,36 @@ hide_copy_dropdown: true
   API response is available, ensuring that the correct gateway endpoint is displayed rather than a
   value derived from the page URL or deployment environment.
 
+- [LLM Gateway](/platform-areas/llm-gateway): Added an **Alerts** tab to each LLM Gateway app
+  settings drawer. Admins can configure failure-rate alerting at two independently-enableable
+  levels: an **App-level alert** that tracks the failure rate across all providers combined, and a
+  **Per-provider alert** that evaluates each provider label separately and fires on any label that
+  breaches the threshold. Each alert type has its own analysis window (5 minutes minimum, 24 hours
+  maximum), failure-rate threshold (0–100 %), minimum-request floor to suppress low-volume noise,
+  cooldown period to suppress repeat alerts during a sustained breach, and an optional **Notify on
+  recovery** setting that sends a follow-up when the failure rate drops back below the threshold.
+  Notification channels — Slack webhooks, generic webhooks, and email addresses — are shared across
+  both alert types. Webhook URLs are encrypted at rest. At least one channel must be configured
+  when an alert type is enabled; the drawer validates this on save and redirects to the Alerts tab
+  automatically if there is an error.
+
+### Improved
+
+- [LLM Gateway](/platform-areas/llm-gateway): LLM Gateway app cards now display a **Created by**
+  field showing the name of the admin who created the app. The creator name is captured
+  automatically at creation time (preferring full name, falling back to username then email). Apps
+  created before this change show **N/A**. The creation-time label on each card was also renamed
+  from **Created** to **Created at** for clarity. A new **Created By** filter dropdown is available
+  on the app list, letting admins narrow apps by creator. Active creator filters appear as removable
+  pills and are cleared by **Clear all filters**.
+
+## June 15, 2026
+
+- [Audit Log and Exports](/platform-areas/audit-log-and-exports): Findings and Audit Log export
+  modals now display an inline row limit hint showing the maximum number of rows that will be
+  included in the export. The limit is tenant-configured and defaults to 5,000 rows when no custom
+  configuration is set. Admins see the limit before confirming an export, so unexpectedly truncated
+  downloads are less likely.
 ## June 23, 2026
 
 ### Improved
