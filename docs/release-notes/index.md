@@ -8,6 +8,18 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## June 25, 2026
+
+### Improved
+
+- [LLM Gateway](/platform-areas/llm-gateway): LLM Gateway app cards now display a **Created by**
+  field showing the name of the admin who created the app. The creator name is captured
+  automatically at creation time (preferring full name, falling back to username then email). Apps
+  created before this change show **N/A**. The creation-time label on each card was also renamed
+  from **Created** to **Created at** for clarity. A new **Created By** filter dropdown is available
+  on the app list, letting admins narrow apps by creator. Active creator filters appear as removable
+  pills and are cleared by **Clear all filters**.
+
 ## June 15, 2026
 
 - [Audit Log and Exports](/platform-areas/audit-log-and-exports): Findings and Audit Log export
