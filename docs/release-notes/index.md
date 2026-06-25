@@ -10,6 +10,21 @@ hide_copy_dropdown: true
 
 ## June 25, 2026
 
+### Fixed
+
+- [Insights](/platform-areas/insights): Fixed the selected time range not being applied to the
+  Users table when navigating from an AI Insights chart. Clicking a data point and drilling into
+  Users now correctly scopes the table to the same period shown in Insights. Previously the Users
+  table loaded without the time range, showing unfiltered results.
+
+- [Insights](/platform-areas/insights): Fixed an overflow issue in the **Top AI Apps** chart when
+  more than five applications are listed. The chart body is now scrollable within the card, so all
+  entries remain accessible without the content breaking out of the chart container.
+
+- [Insights](/platform-areas/insights): Fixed the AI Insights page crashing when the
+  **Usage by Department** chart or **AI Adoption Trend** chart received a large or empty dataset.
+  Charts now handle edge-case data sizes without breaking the page layout.
+
 ### New
 
 - [LLM Gateway](/platform-areas/llm-gateway): Added an **Agent Monitoring** panel to LLM Gateway
