@@ -8,6 +8,29 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## June 26, 2026
+
+### Fixed
+
+- [AI Inventory](/platform-areas/ai-inventory): The agent configuration history section in
+  workspace agent detail drawers now renders correctly. Opening an agent row in the OpenAI
+  Compliance **Agents** tab shows a **Configuration** section with two tabs: **History** displays a
+  timeline of up to 10 configuration snapshots, each with the event action, actor, timestamp,
+  publish state, change reason, and expandable configuration detail (agent name, prompt or
+  instructions, connectors, skills, starter prompts, trigger rules, model, and technical version
+  identifiers); **Changes** summarizes what fields changed between consecutive snapshots. Previously
+  the section appeared blank even when configuration history was available.
+
+### Improved
+
+- [AI Inventory](/platform-areas/ai-inventory): Connector and skill chip lists in workspace agent
+  detail drawers now include a **Show all / Show fewer** toggle when the number of items exceeds the
+  display limit. Previously only a "+N more" count was shown with no way to reveal the hidden items.
+
+- [AI Inventory](/platform-areas/ai-inventory): Connector names shown in the agent detail side rail
+  are now sourced from the agent's most recent configuration snapshot, providing a more accurate
+  count and display of configured connectors for each agent.
+
 ## June 25, 2026
 
 ### Fixed
