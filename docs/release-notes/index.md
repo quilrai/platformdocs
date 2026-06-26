@@ -8,6 +8,28 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## June 26, 2026
+
+### New
+
+- [Smart Groups](/platform-areas/smart-groups): Added a dedicated **Smart Groups** screen for
+  centralized smart group lifecycle management. Admins can create a smart group and assign users at
+  creation time, create a smart group without assigning users initially, add users to any existing
+  smart group, remove users from any smart group, and delete a smart group. All smart group
+  operations are now available from one screen rather than being split across Settings and the
+  Users page.
+
+### Improved
+
+- [Settings and Administration](/platform-areas/settings-admin): Smart group management has been
+  removed from Settings. The Smart Groups section previously available under Organizational Context
+  in Settings has been deprecated; all create, update, and delete operations are now centralized in
+  the dedicated Smart Groups screen.
+
+- [Users, Applications, and Accounts](/platform-areas/users-accounts-applications): The Smart
+  Groups drawer on the Users screen has been removed. Smart group membership management is now
+  available from the dedicated Smart Groups screen.
+
 ## June 25, 2026
 
 ### Fixed

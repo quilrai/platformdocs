@@ -31,6 +31,10 @@ Common use cases:
 - Find users associated with sensitive uploads or coaching events.
 - Open user conversations for deeper review.
 
+The Smart Groups drawer previously available on the Users page has been removed. Smart group
+creation and membership management are now handled from the dedicated
+[Smart Groups](./smart-groups.md) screen.
+
 ## Applications
 
 The Applications page is the main app-management and app-intelligence surface. It includes an
@@ -95,6 +99,7 @@ Common use cases:
 
 - [Insights](./insights.md)
 - [Findings](./findings.md)
+- [Smart Groups](./smart-groups.md)
 - [AI Inventory](./ai-inventory.md)
 - [Controls](./controls.md)
 - [Audit Log And Exports](./audit-log-and-exports.md)

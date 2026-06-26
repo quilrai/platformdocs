@@ -17,6 +17,7 @@ import {
   Plug,
   ShieldCheck,
   Users,
+  UsersRound,
 } from 'lucide-react';
 
 # QuilrAI Platform Overview
@@ -38,6 +39,14 @@ QuilrAI helps security, governance, and IT teams discover AI usage, understand r
     <h2 className="m-0 text-lg font-semibold text-[#252018] dark:text-neutral-50">Users, Apps, Accounts</h2>
     <p className="mb-0 mt-2 text-sm leading-6 text-[#554c3f] dark:text-neutral-400">
       Review entity-level risk, usage, interactions, and findings with drilldowns for users, SaaS apps, endpoint apps, and accounts.
+    </p>
+  </div>
+  <div className="rounded-xl border border-[#c7b99f] bg-[#ebe1cf] p-5 dark:border-[#30343b] dark:bg-[#1f232a]">
+    <UsersRound className="mb-3 text-emerald-600 dark:text-emerald-400" size={24} />
+    <h2 className="m-0 text-lg font-semibold text-[#252018] dark:text-neutral-50">Smart Groups</h2>
+    <p className="mb-0 mt-2 text-sm leading-6 text-[#554c3f] dark:text-neutral-400">
+      Create and manage smart groups and group membership from one place. Smart groups are used to
+      scope access control and rules in MCP Gateway, LLM Gateway, and other platform areas.
     </p>
   </div>
   <div className="rounded-xl border border-[#c7b99f] bg-[#ebe1cf] p-5 dark:border-[#30343b] dark:bg-[#1f232a]">
@@ -84,6 +93,12 @@ Findings centralizes investigation work across the platform. Teams can move betw
 
 The Users, Applications, and Accounts pages show entity-level AI activity. These views combine KPI summaries, trending entities, searchable tables, drilldowns, conversations, findings links, and app intelligence so teams can understand who is using AI, where, and with what risk.
 
+### [Smart Groups](./platform-areas/smart-groups.md)
+
+Smart Groups is the dedicated screen for creating and managing user groups across the platform.
+Admins can create groups with or without initial members, add or remove users, and delete groups.
+Smart groups defined here are used to scope access control rules in MCP Gateway and LLM Gateway.
+
 ### [AI Inventory](./platform-areas/ai-inventory.md)
 
 AI Inventory helps teams track AI assets and AI activity sources from one place. Source views include Browser Extension applications, Endpoint Agent applications and coding inventory, LLM Gateway API keys, MCP Gateway servers, and Compliance APIs for supported providers.
@@ -113,7 +128,7 @@ Integrations help connect QuilrAI to identity providers, device management syste
 
 ### [Settings And Administration](./platform-areas/settings-admin.md)
 
-Settings provides organizational context, general settings, organizational policies, smart groups, user management, user-interaction customization, compliance setup, browser extension setup, endpoint setup, and AI Gateway setup.
+Settings provides organizational context, general settings, organizational policies, user management, user-interaction customization, compliance setup, browser extension setup, endpoint setup, and AI Gateway setup. Smart group management is available from the dedicated [Smart Groups](./platform-areas/smart-groups.md) screen.
 
 ### [Audit Log And Exports](./platform-areas/audit-log-and-exports.md)
 

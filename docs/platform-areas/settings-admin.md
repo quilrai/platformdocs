@@ -15,16 +15,18 @@ Use Settings when administrators need to:
 
 - Configure organizational context.
 - Manage organizational policies.
-- Create and maintain smart groups.
 - Manage platform users and access.
 - Configure Browser Extension, Endpoint Agent, and AI Gateway settings.
 - Customize end-user interaction content and links.
 - Configure compliance service credentials.
 
+To create, edit, or delete smart groups and manage group membership, use the dedicated
+[Smart Groups](./smart-groups.md) screen.
+
 ## Main Settings Areas
 
-- **Organizational Context:** General settings, organizational policies, smart groups, profile, and
-  manage users.
+- **Organizational Context:** General settings, organizational policies, profile, and manage users.
+  Smart group management has moved to the dedicated [Smart Groups](./smart-groups.md) screen.
 - **Browser Extension:** Deployment, deployment management, deployment status, and whitelist.
 - **Endpoint:** Deployment management, deployment status, and detection configurations.
 - **AI Gateway:** LLM Gateway and MCP Gateway settings.
@@ -36,8 +38,9 @@ Use Settings when administrators need to:
 ## Organizational Context
 
 Organizational Context captures tenant-level configuration that helps QuilrAI interpret policy,
-users, groups, and organizational priorities. It includes general settings, policies, smart groups,
-profile information, and user management where permitted.
+users, groups, and organizational priorities. It includes general settings, policies, profile
+information, and user management where permitted. Smart group creation and membership management
+have moved to the dedicated [Smart Groups](./smart-groups.md) screen.
 
 ### Manage Users
 
@@ -78,6 +81,7 @@ Administrators with write access can save and revoke registered keys.
 
 ## Related Platform Areas
 
+- [Smart Groups](./smart-groups.md)
 - [Browser Extension](./browser-extension.md)
 - [Endpoint Agent](./endpoint-agent.md)
 - [AI Gateway](./ai-gateway.md)
