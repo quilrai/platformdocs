@@ -8,6 +8,17 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## June 26, 2026
+
+### Fixed
+
+- [Controls](/platform-areas/controls): The enable and disable toggle on each control now enforces
+  separate Enable and Disable permission scopes. Admins who have only the Enable scope can activate
+  inactive controls; the toggle is grayed out on already-active controls for those users. Admins who
+  have only the Disable scope can deactivate active controls; the toggle is grayed out on inactive
+  controls for those users. Previously the toggle reflected only the general Update permission
+  regardless of whether the intended action was enabling or disabling.
+
 ## June 25, 2026
 
 ### Fixed
