@@ -55,6 +55,17 @@ The AI lens and Generative AI category filter target the primary app category. W
 reached via an insight or widget drilldown that pre-applies a business-category filter, the
 Category chip shows "Business" to reflect the narrower scope applied by the drilldown.
 
+### Applications KPI Rail
+
+The KPI rail at the top of the Applications page shows summary counts for the current view:
+
+- **Total Apps:** Total number of all discovered applications. This tile is informational and does
+  not apply a table filter when clicked.
+- **AI Apps in Use:** Applications classified as AI or Generative AI.
+- **Needs Review:** Applications pending review or classification.
+- **Critical:** Applications flagged as critical.
+- **Open Findings:** Applications with one or more open findings.
+
 ### Exporting Application Data
 
 The **Export** button in the Applications table toolbar opens an export modal that lets admins

@@ -39,6 +39,30 @@ Organizational Context captures tenant-level configuration that helps QuilrAI in
 users, groups, and organizational priorities. It includes general settings, policies, smart groups,
 profile information, and user management where permitted.
 
+### Smart Groups
+
+Smart Groups is a dedicated top-level page accessible from the main sidebar for admins with Smart
+Group permission. It provides a searchable, paginated table of all smart groups.
+
+From the Smart Groups page, admins can:
+
+- **Search** for groups by name using the search bar.
+- **Create** a new smart group using the **Create Smart Group** button (requires Create permission).
+  Groups can be created with or without an initial set of users.
+- **Delete** one or more groups by selecting them and clicking **Delete** (requires Delete
+  permission). A confirmation dialog shows which groups will be removed.
+- **Drill into a group** by clicking a row to open a per-group drawer. The drawer shows the group's
+  member users in a paginated, searchable table. Within the drawer, admins can:
+  - **Add users** to the group using **Add Users to Smart Group** — opens a modal that lists users
+    not already in the group and lets the admin select and add them.
+  - **Remove users** from the group using **Delete Users from Smart Group** — available when one or
+    more members are selected in the drawer table.
+
+Smart Groups is also reachable via the platform Cmd+K quick search.
+
+The Smart Groups submenu that was previously available in the Users page Actions dropdown has been
+removed. All smart group management is now handled from the dedicated Smart Groups page.
+
 ### Manage Users
 
 Manage Users lets administrators create, edit, and remove platform users and assign roles. In

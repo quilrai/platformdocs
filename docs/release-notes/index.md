@@ -8,6 +8,34 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## June 26, 2026
+
+### New
+
+- [Settings and Administration](/platform-areas/settings-admin): **Smart Groups** is now a
+  dedicated top-level page in the main navigation. Admins with Smart Group permission can open the
+  page directly from the sidebar to view a searchable, paginated table of all smart groups. From
+  this page they can create a new group using the **Create Smart Group** button, select one or more
+  groups and delete them, and open a per-group drilldown drawer that shows the group's member
+  users. Inside the drilldown, admins can add users who are not yet in the group or remove selected
+  members. The Smart Groups option that was previously accessible from the Users page Actions
+  dropdown has been removed; all smart group management is now centralized on the dedicated page.
+  Smart Groups is also reachable via the Cmd+K search.
+
+### Improved
+
+- [Users, Applications, and Accounts](/platform-areas/users-accounts-applications): Added a
+  **Total Apps** KPI tile to the Applications page. The tile is the first item in the KPI rail and
+  shows the total count of all discovered applications. It is informational and does not apply a
+  table filter when clicked.
+
+### Fixed
+
+- [Controls](/platform-areas/controls): Fixed a bug where creating or saving a control with
+  multiple trigger conditions could incorrectly include a logical operator on the first condition.
+  The first trigger condition's operator is now correctly cleared before every save, ensuring
+  controls are stored without an invalid leading operator.
+
 ## June 25, 2026
 
 ### Fixed
