@@ -35,6 +35,7 @@ Classify each release-note item into one primary platform area:
 - Insights
 - Findings
 - Users, Applications, and Accounts
+- Smart Groups
 - AI Inventory
 - Controls
 - Detection Models
