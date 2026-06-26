@@ -33,6 +33,9 @@ Use Endpoint Agent when you need to:
   features and supplying their required parameters from the Guardrails tab.
 - Auto-save for detection configurations — changes are persisted automatically after a short pause
   with a live status indicator in the toolbar.
+- Group & User Rules — per smart-group and per-user DLP overrides within each endpoint application
+  configuration, with an Effective Settings preview that resolves the full configuration for a
+  given user.
 
 ## Detection Configurations
 
@@ -57,6 +60,41 @@ The Guardrails tab within each configuration drawer contains:
   configuration. Only features the admin interacts with in the current session are included in the
   save; untouched features remain at their previously saved values.
 
+### Group & User Rules Tab
+
+The **Group & User Rules** tab lets admins create DLP override rules scoped to a smart group or an
+individual user within a specific endpoint application. Rules are partial: any field not set in a
+rule inherits the base endpoint guardrail configuration.
+
+**Creating a rule**:
+
+1. Open the configuration drawer for an endpoint app and select the **Group & User Rules** tab. A
+   **Group & User Rules** shortcut button on each app card opens this tab directly.
+2. Choose a **Target** — all methods in the app or a specific endpoint method.
+3. Choose a **Scope type** — Smart group or User.
+   - For smart groups, select from the searchable smart-group catalog.
+   - For users, enter the user's email address.
+4. Click **Create rule** to open the rule editor.
+
+**Rule editor**:
+
+- **DLP detections** — Enable or Disable the DLP detection state for this scope and target.
+  Selecting **Use inherited state** removes the override and falls back to the base configuration.
+- **Category overrides** — Switch between **Data risks** and **Adversarial risks** tabs to see
+  individual categories. For each category, admins can:
+  - Enable or Disable monitoring for this scope (or use the inherited state).
+  - Set the action to **Monitor**, **Block**, or **Justify** (or use the inherited action).
+- Each override shows the inherited value from the base configuration for reference.
+- Click **Save rule** to persist the rule. Scoped rules save independently and are not affected by
+  the page-level auto-save.
+
+**Effective Settings preview**:
+
+Enter a user email and, optionally, select an active smart group to preview how all saved rules
+resolve for that user. The preview shows the resolved DLP state, data-risk category actions,
+adversarial-risk category actions, and which rule scopes were applied. The preview uses saved rules
+only; unsaved drafts are not included.
+
 ## Main Workflows
 
 1. Configure endpoint deployment and tenant-level management settings.
@@ -69,6 +107,11 @@ The Guardrails tab within each configuration drawer contains:
    desired features, and supply any required parameters.
 7. Changes save automatically. Review the toolbar status indicator to confirm the save completed,
    then review endpoint findings for operational impact.
+8. To apply different DLP behavior for specific groups or users, open the **Group & User Rules**
+   tab (or click the **Group & User Rules** button on the app card). Create a rule, choose a smart
+   group or user scope, configure the desired DLP and category overrides, and click **Save rule**.
+   Use the **Effective Settings** preview to confirm the resolved configuration for a given user
+   before deploying.
 
 ## Related Platform Areas
 

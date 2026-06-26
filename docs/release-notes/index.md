@@ -8,6 +8,22 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## June 26, 2026
+
+### New
+
+- [Endpoint Agent](/platform-areas/endpoint-agent): Added a **Group & User Rules** tab to Endpoint
+  Detection Configurations. Admins can create DLP override rules scoped to a specific smart group or
+  individual user for each endpoint application. When creating a rule, admins choose a target — all
+  methods in the app or a specific method — then configure overrides for DLP detection state
+  (Enable or Disable), per-category data-risk monitoring and action (Monitor, Block, or Justify),
+  and per-category adversarial-risk monitoring and action. Rules are partial: any field not
+  explicitly set in the rule inherits from the base endpoint guardrail configuration. An **Effective
+  Settings** panel lets admins preview how saved rules resolve for a given user email and optional
+  active smart group. A **Group & User Rules** shortcut button appears on each app card in the
+  configurations list. Scoped rules save when the admin clicks **Save rule** and are not affected by
+  the page-level auto-save.
+
 ## June 25, 2026
 
 ### Fixed
