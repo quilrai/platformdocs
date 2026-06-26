@@ -54,5 +54,15 @@ Use Controls when you want to:
 
 ## Access Requirements
 
-Controls require Control permissions. Create, update, and delete actions depend on the user's
-assigned scopes.
+Controls require Control permissions. Available scopes and their effect:
+
+- **Create** — required to create a new control.
+- **Update** — required to edit an existing control or change its mode.
+- **Delete** — required to delete a control.
+- **Enable** — required to activate an inactive control using the toggle. Without this scope the
+  toggle is non-interactive on inactive controls.
+- **Disable** — required to deactivate an active control using the toggle. Without this scope the
+  toggle is non-interactive on active controls.
+
+Admins may hold any combination of scopes. Enable and Disable are evaluated independently based
+on the current state of each control.
