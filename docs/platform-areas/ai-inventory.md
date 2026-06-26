@@ -106,7 +106,12 @@ OpenAI Compliance view is organized into five tabs:
     model usage, and token totals.
   - *Agents*: Agents, Connectors, and Skills. Skills shows the workspace skill catalog with
     creator, file count, and agent cross-references; skill name chips in conversation and agent
-    run views link directly to the Skills tab.
+    run views link directly to the Skills tab. The agent detail drawer includes a **Configuration**
+    section with two tabs: **History** shows a timeline of up to 10 configuration snapshots (event
+    action, actor, timestamp, publish state, change reason, and expandable config details including
+    prompt or instructions, connectors, skills, starter prompts, trigger rules, model, and version
+    identifiers); **Changes** summarizes what fields changed between consecutive snapshots. Connector
+    and skill chip lists that exceed the display limit show a **Show all / Show fewer** toggle.
   - *Apps*: Apps — OpenAI app activity, auth events, returned resources, and per-app user reach.
 - **Usage**: Provides **Users**, **Sources**, and **Rankings** sub-tabs with ChatGPT top-user lists
   sorted by conversations, Codex top-user and model rankings, source adoption breakdowns, source
