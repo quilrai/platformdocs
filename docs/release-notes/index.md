@@ -8,6 +8,50 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## June 29, 2026
+
+### Improved
+
+- [AI Inventory](/platform-areas/ai-inventory): The workspace agent detail drawer in the OpenAI
+  Compliance view is now organized into three top-level tabs. **Runs** is the default and shows the
+  agent run list and run drill-down. **Configuration** shows agent config history. **Agent Prompts**
+  shows the agent tagline, description, system prompt, and starter prompts. Previously all sections
+  were stacked in a single scrolling view.
+
+- [AI Inventory](/platform-areas/ai-inventory): The agent runs table now shows **Status**,
+  **Events**, and **Failures** as separate columns instead of a combined Activity cell. Failure
+  counts are highlighted in red when non-zero, making it easier to spot runs with connector errors
+  at a glance.
+
+- [AI Inventory](/platform-areas/ai-inventory): A **Filter by user** search field is now available
+  above the agent runs table. Admins can search for a user by name or ID and narrow the run list to
+  only that user's runs. An active filter appears as a removable pill and can be cleared at any
+  time.
+
+- [AI Inventory](/platform-areas/ai-inventory): Drilling into an agent run now shows a structured
+  **Run Summary** with metric cards for events, messages, connector requests, successes, failures,
+  skill events, and memory reads/writes; a detail grid with run ID, agent ID, user ID, user email,
+  conversation IDs, first and last event timestamps, run status, and invoker display name; and an
+  expandable block showing the invoker prompt when present.
+
+- [AI Inventory](/platform-areas/ai-inventory): Agent run timeline events are now classified and
+  color-coded by role — user, assistant, system, or risk. Each event card surfaces structured signal
+  groups including status, phase, origin, model, connectors and actions, tools, skills, memory
+  paths, domains, elicitation, and token usage.
+
+- [AI Inventory](/platform-areas/ai-inventory): The **Configuration** tab in the agent detail
+  drawer now defaults to a **Current** view that shows the most recent agent configuration snapshot
+  organized into labeled cards: Status and edit metadata, Agent profile, Model, Prompt and
+  instructions, Tools and connectors, Skills/starters/triggers, and an expandable Returned fields
+  block. The **History** and **Changes** tabs remain available for reviewing earlier snapshots and
+  field-level diffs.
+
+- [AI Inventory](/platform-areas/ai-inventory): Agent profile details — including name, tagline,
+  description, category, model, skills, system prompt, and starter prompts — are now resolved from
+  both the top-level agent record and the latest configuration snapshot. Agents that previously
+  showed missing or incomplete data in the detail rail and prompt sections now display richer
+  information when it is available from either source.
+
 ## June 26, 2026
 
 ### New
