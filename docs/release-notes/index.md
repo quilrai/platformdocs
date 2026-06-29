@@ -8,6 +8,52 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## June 29, 2026
+
+### New
+
+- [MCP Gateway](/platform-areas/mcp-gateway): Added an **Upstream Auth** section to the General
+  settings tab for MCP servers configured with API key authentication. Admins can view the current
+  credential placement (bearer token, custom header, or query parameter), extra headers, and extra
+  query parameters; rotate or change the upstream key; update placement settings; and remove the
+  credential entirely. Removing a shared credential prompts for confirmation and warns that any
+  per-user upstream credentials will also be removed. For MCP servers in **User Required** mode,
+  the section also shows a **My upstream connection** panel. Each signed-in user can connect their
+  own upstream key, change it, or remove it from this panel without admin intervention. The Upstream
+  Auth section appears automatically for API key–authenticated MCP backends and is hidden for OAuth
+  and OAuth passthrough MCPs.
+
+- [MCP Gateway](/platform-areas/mcp-gateway): Added a **Require confirmation** toggle to each tool
+  in the **Tools** tab of MCP server settings. When confirmation is required for a tool, users must
+  explicitly approve the tool call before the gateway executes it. The setting can be configured at
+  the MCP server level for any tool and overridden per smart group or per user in the
+  **Group & User Rules** tab.
+
+### Improved
+
+- [MCP Gateway](/platform-areas/mcp-gateway): The **Group & User Rules** tab now supports
+  per-tool **Confirmation** overrides in addition to **Availability** overrides. Each tool in a
+  scoped rule shows separate **Availability** (Enable / Disable) and **Confirmation** (Require / Do
+  not require) selectors. Both can be set or cleared independently — clearing one does not affect
+  the other. The inherited confirmation state is displayed alongside the inherited availability
+  state in each tool row, and **Inherit availability** and **Inherit confirmation** links let admins
+  clear individual override fields without deleting the whole rule.
+
+- [MCP Gateway](/platform-areas/mcp-gateway): The **MCP Library** drawer now includes an **API
+  Key** filter pill to narrow the catalog to servers that require API key authentication. Catalog
+  items with API key auth display an amber **API Key** badge. Installing an API key MCP from the
+  library opens a credential form where admins provide the upstream key and, if needed, override
+  placement settings (bearer token, custom header, or query parameter) and extra upstream headers
+  or query parameters before confirming the install. If the server reports a missing field after
+  the install attempt, the form stays open with the field highlighted. Cards that require
+  configuration before install also show an **API key required** badge.
+
+### Fixed
+
+- [MCP Gateway](/platform-areas/mcp-gateway): Fixed the discard confirmation dialog in MCP server
+  settings not reliably detecting unsaved changes. The dialog now correctly tracks whether settings
+  have been modified and prompts for confirmation before discarding them.
+
 ## June 26, 2026
 
 ### New
