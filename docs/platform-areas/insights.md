@@ -60,3 +60,14 @@ Use Insights when you need to answer questions such as:
 
 Insights availability depends on tenant configuration and assigned permissions. If AI Axis is not
 enabled for the tenant, the platform routes users to Findings instead of the AI usage dashboard.
+
+Within Insights, visible content depends on the user's resource permissions:
+
+- **Full Insights permission:** All AI Insights charts are shown — AI Adoption Trend, Usage by
+  Department, Sensitive Data by Prompt, Top Users, Top AI Apps, Top Categories, AI Apps by
+  Approval Status, MCP Usage, and LLM Gateway.
+- **LLM Gateway or MCP Gateway permission only:** A limited view is shown containing only the
+  **LLM Gateway** and **MCP Usage** charts. Adoption, department, sensitive-data, user, and app
+  charts are not displayed.
+- **No Insights, LLM Gateway, or MCP Gateway permission:** The Insights sidebar item and
+  command-palette shortcuts are hidden and the Insights pages are not accessible.

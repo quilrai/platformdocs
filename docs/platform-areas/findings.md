@@ -84,6 +84,12 @@ to inspect the source and content evidence.
 
 ## Access Requirements
 
-Findings require access to the Findings resource. Endpoint-specific tabs are shown only when the
-endpoint agent capability is enabled for the tenant. Compliance findings depend on configured
-compliance integrations and the related Compliance permissions.
+Access to the Findings section and its individual tabs is controlled by role-based permissions.
+Each tab — Finding Insights, All Findings, Browser Extension, Endpoint Agent, LLM Gateway,
+Compliance, MCP Gateway, and Identity — requires READ permission for its corresponding
+FINDING sub-resource. Users see only the tabs their assigned role grants access to, and the
+Findings sidebar link automatically navigates to the first tab the user can reach.
+
+Endpoint Agent findings are additionally shown only when the endpoint agent capability is
+enabled for the tenant. Compliance findings depend on configured compliance integrations and
+the related Compliance permissions.
