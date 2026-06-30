@@ -62,6 +62,19 @@ selects a time window based on the active preset's granularity:
 4. Open details to review evidence.
 5. Decide whether to update controls, detection models, gateway settings, or user coaching.
 
+## Endpoint Agent Findings
+
+Finding cards sourced from the Endpoint Agent display a different set of fields compared to
+browser and gateway findings. The following fields are not shown on Endpoint Agent finding cards
+because they do not apply to endpoint-observed activity:
+
+- **Login Email**
+- **Account Usage Type**
+- **Auth Type**
+
+The filter in Endpoint Agent interaction views is labeled **Device Name** and queries by the
+device name reported by the endpoint agent.
+
 ## Gateway And Compliance Findings
 
 LLM Gateway Findings can use a logs-backed V2 view for gateway traffic. The V2 view supports app,

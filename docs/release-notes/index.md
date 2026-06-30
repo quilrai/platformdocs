@@ -8,6 +8,50 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## June 30, 2026
+
+### Improved
+
+- [Findings](/platform-areas/findings): Endpoint Agent finding cards no longer display the
+  **Login Email**, **Account Usage Type**, or **Auth Type** fields. These fields do not apply to
+  endpoint-observed activity; the card now surfaces only the fields relevant to endpoint findings.
+
+- [Insights](/platform-areas/insights): Chart legends on the **AI Apps by Approval**,
+  **Top AI Categories**, and **LLM Gateway** model distribution charts now show the absolute count
+  alongside the percentage — for example, `142 (42%)` — so admins can read exact numbers at a
+  glance without hovering or calculating.
+
+- [Insights](/platform-areas/insights): The **Top 10 AI Apps** chart has been redesigned. Each
+  app row now shows Prompts and Users as separate clickable values. Clicking the Prompts count
+  navigates to Applications filtered to that app; clicking the Users count navigates to Users
+  filtered to that app. Previously the entire row navigated only to Applications.
+
+- [Insights](/platform-areas/insights): Entries without a display name in the **Top 10 Users**
+  chart now appear as **Other users** instead of **Unknown**.
+
+- [Insights](/platform-areas/insights): The findings link on the **Sensitive Data by Prompt**
+  chart now navigates to **All Findings** instead of Finding Insights, giving direct access to
+  the filterable finding stream.
+
+- [Insights](/platform-areas/insights): Stacked bar segments in the **Department AI Usage** chart
+  no longer navigate to Users on click. The chart now presents department usage data as a
+  read-only view.
+
+### Fixed
+
+- [Findings](/platform-areas/findings): The Endpoint Agent interactions filter has been renamed
+  from **Device ID** to **Device Name** and now correctly queries by device name. Previously the
+  filter sent an incorrect API parameter and would not return results.
+
+- [Insights](/platform-areas/insights): Multi-line charts (such as AI Adoption Trend) now show a
+  disambiguation popover when two or more series have data points at nearly the same position.
+  The popover lists each overlapping series with its value so admins can select the exact line to
+  drill into. Previously clicking an overlapping position could trigger the wrong series drilldown.
+
+- [Insights](/platform-areas/insights): Drilling into Applications from any AI Insights chart now
+  clears stale application filter state, so the Applications page always opens with filters that
+  match only the current chart selection.
+
 ## June 26, 2026
 
 ### New
