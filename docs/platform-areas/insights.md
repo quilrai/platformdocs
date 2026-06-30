@@ -26,16 +26,23 @@ Use Insights when you need to answer questions such as:
 - Select a time range — choose a preset (for example, 7 days or 30 days) or a custom date range.
   All charts on the page update to reflect the selected period.
 - Track AI adoption trends over time: unique users and applications per period.
-- Review top AI applications, top categories, and top users by volume.
-- Understand the distribution of sensitive data detected in prompts.
-- Review department-level AI usage.
+- Review the **Top 10 AI Apps** by Prompts and Users. Each app row has two separate click
+  targets: clicking the Prompts count opens Applications filtered to that app; clicking the Users
+  count opens Users filtered to that app.
+- Review top AI categories and top users by volume. Donut chart legends for **AI Apps by
+  Approval**, **Top AI Categories**, and **LLM Gateway** model distribution show the absolute
+  count alongside the percentage for each slice.
+- Understand the distribution of sensitive data detected in prompts. The chart links to All
+  Findings for a filterable finding stream.
+- Review department-level AI usage in the **Department AI Usage** stacked bar chart (view-only).
 - Monitor AI applications by approval status.
 - View LLM Gateway token volume (request and response tokens) and model distribution for the
   selected period.
 - View MCP Gateway request volume, blocked request counts, and a ranked list of top MCP servers
   by traffic.
-- Click any chart data point to navigate to the related platform area — Applications, Users, or
-  Findings — with the selected time range carried over automatically.
+- Click chart data points to navigate to Applications, Users, or Findings with the selected time
+  range applied. When two or more series share a position on a multi-line chart, a selection
+  popover lists each overlapping series and its value so the correct drilldown can be chosen.
 
 ## Main Workflows
 
