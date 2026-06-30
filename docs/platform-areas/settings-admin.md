@@ -91,6 +91,19 @@ Administrators with write access can save and revoke registered keys.
 
 ## Access Requirements
 
-Settings visibility is permission-based. Each nested settings area has its own resource requirement,
-including Tenant, Organizational Policy, Smart Group, User Management, Extension, Endpoint Agent,
-AI Gateway, Template, and Compliance permissions.
+Settings visibility is permission-based. Each nested settings area has its own resource requirement.
+
+- **General Settings:** Accessible to users with Tenant or Organizational Policy permission.
+- **Organizational Policies:** Requires Organizational Policy permission.
+- **Manage Users:** Accessible to users with User, Group, Role, or RBAC Admin permission.
+- **Smart Groups:** Requires Smart Group permission.
+- **Browser Extension settings:** Requires Extension permission.
+- **AI Gateway settings (LLM Gateway):** Requires LLM Gateway permission.
+- **AI Gateway settings (MCP Gateway):** Requires MCP Gateway permission.
+- **User Interaction Hub:** Requires Template permission.
+- **Compliance:** Requires Compliance permission.
+
+The main navigation sidebar shows **Controls** only for users with Control permission and
+**Detection Models** only for users with Detection Models permission. The command palette (Cmd+K)
+applies the same permission checks, surfacing only the navigation shortcuts the signed-in user
+can actually reach.
