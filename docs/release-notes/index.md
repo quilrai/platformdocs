@@ -8,6 +8,31 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## July 2, 2026
+
+### Improved
+
+- [Settings and Administration](/platform-areas/settings-admin#user-interaction-hub): Redesigned
+  the Links tab in User Interaction Hub. Admins now add a policy link (posture, identifier, and
+  URL) through a single form and see saved links in a list below it, where each link can be edited
+  or deleted with a confirmation step before deletion. Every add, edit, or delete saves
+  immediately, and there is no longer a limit of three links — admins can configure as many policy
+  links as needed.
+
+- [Controls](/platform-areas/controls#control-configuration-location): Added a dismissible banner
+  for signed-in admins pointing to the upcoming location for browser-extension control
+  configuration, Settings → Browser Extension → Detection Configurations. The banner links directly
+  to the new location and reappears at the next sign-in until dismissed again; existing Controls
+  workflows are unchanged.
+
+### Fixed
+
+- [Insights](/platform-areas/insights): Fixed the AI Usage Insights duration filter overlapping
+  page content at the top of the screen.
+
+- Fixed the notification bell icon overlapping page content in some views by anchoring it
+  consistently to the top-right corner of the main content area.
+
 ## June 26, 2026
 
 ### New

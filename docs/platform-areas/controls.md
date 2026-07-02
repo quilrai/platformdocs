@@ -45,11 +45,19 @@ Use Controls when you want to:
 4. Review the trigger, behavior, criticality, status, and mode.
 5. Create, edit, duplicate, enable, disable, or change mode based on the desired policy outcome.
 
+## Control Configuration Location
+
+QuilrAI is consolidating browser-extension control configuration into Settings → Browser Extension
+→ Detection Configurations. Admins signed in to the platform see a dismissible banner pointing to
+the new location. The Controls screen and workflows described above are unaffected while this
+transition is in progress.
+
 ## Related Platform Areas
 
 - [Findings](./findings.md)
 - [Detection Models](./detection-models.md)
 - [Users, Applications, And Accounts](./users-accounts-applications.md)
+- [Browser Extension](./browser-extension.md)
 - [Settings And Administration](./settings-admin.md)
 
 ## Access Requirements

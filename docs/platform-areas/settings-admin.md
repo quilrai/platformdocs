@@ -73,6 +73,15 @@ User Interaction Hub lets teams customize what end users see in QuilrAI interact
 Administrators can review user responses and configure popup content, policy links, and visual
 styling that appear in user-facing prompts or justifications.
 
+### Links Tab
+
+The Links tab manages the policy links that can appear in user-facing popups. For each link,
+admins choose a posture, a document or link identifier, and a URL, then add it to the list. Admins
+can edit or delete any saved link directly from the list, with a confirmation step before deleting.
+Each add, edit, or delete saves immediately — there is no separate save step for link changes and
+no limit on the number of links that can be configured. A toggle controls whether these links are
+shown in user-facing popups.
+
 ## Compliance
 
 Compliance includes provider key setup and key management for compliance services. Current settings
