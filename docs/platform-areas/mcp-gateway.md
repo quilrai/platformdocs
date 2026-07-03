@@ -36,7 +36,8 @@ Use MCP Gateway when you need to:
 - Map agent clients to MCP backends.
 - Set per-smart-group and per-user rules that override tool availability and guardrail actions for a
   specific MCP server.
-- Review MCP logs with filters for time range, MCP, tool, agent, user domain, and DLP outcome.
+- Review MCP logs with multi-select filters for tool, MCP, agent, user, call path (individual or
+  Quilr OneMCP), and findings outcome, plus time range and duration sorting.
 - Use graph view to understand aggregate MCP workflows.
 - Configure web-search policy for system web-search MCPs where available.
 - Review MCP servers from AI Inventory with tools, scopes, DLP action, status, and activity context.
