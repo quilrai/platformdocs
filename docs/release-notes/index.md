@@ -8,6 +8,27 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## July 7, 2026
+
+### New
+
+- [AI Inventory](/platform-areas/ai-inventory): The Endpoint Agent detail drawer now includes
+  **Monitored Browsers** and **Group & User Rules** tabs alongside the existing **Guardrails** tab,
+  matching the configuration drawer in [Endpoint Agent](/platform-areas/endpoint-agent) Detection
+  Configurations. Monitored Browsers shows per-browser coverage for the selected app or method.
+  Group & User Rules lets admins scope DLP overrides to a specific smart group or individual user
+  directly from AI Inventory; it appears once tenant context is resolved and saves each rule
+  independently of the rest of the drawer.
+
+### Fixed
+
+- [Endpoint Agent](/platform-areas/endpoint-agent): Fixed Access Control changes made from the
+  Guardrails editor in AI Inventory not being persisted on save. Access Control toggles and
+  parameter values entered from the AI Inventory drawer are now included in the saved
+  configuration, with the same inline validation used in Settings — a validation error blocks the
+  manual Save action until it is corrected. When an app group has multiple detection rows, Access
+  Control changes are now saved once per group instead of being submitted redundantly for every row.
+
 ## June 26, 2026
 
 ### New
