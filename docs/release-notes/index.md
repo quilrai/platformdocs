@@ -8,6 +8,18 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## July 8, 2026
+
+### New
+
+- [AI Inventory](/platform-areas/ai-inventory): Added a **View conversation** action to the
+  Endpoint Agent interaction details drawer. When an interaction has an associated session or
+  conversation, admins can open the full conversation timeline — every turn with its prompt text,
+  tools called, files touched, and policy outcome (allowed, blocked, or denied), plus any detected
+  findings and entities. Turn-level detail such as skills, MCP servers, and full context metadata
+  is available behind a **Details** toggle, and session-wide user and device context is shown once
+  above the timeline. The conversation view can be refreshed on demand.
+
 ## June 26, 2026
 
 ### New
