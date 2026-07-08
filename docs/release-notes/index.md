@@ -8,6 +8,42 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## June 30, 2026
+
+### Improved
+
+- [Findings](/platform-areas/findings): Each Findings tab — **Finding Insights**, **All Findings**,
+  **Browser Extension**, **Endpoint Agent**, **LLM Gateway**, **Compliance**, **MCP Gateway**, and
+  **Identity** — is now independently gated by role-based permissions. Users see only the tabs
+  their assigned role grants READ access to. When navigating to Findings, the platform automatically
+  lands on the first tab the user can access rather than always defaulting to Finding Insights. The
+  Findings sidebar link follows the same logic.
+
+- [Insights](/platform-areas/insights): The Insights section now enforces explicit resource
+  permissions. Users with the **Insights** permission continue to see the full AI Insights page.
+  Users whose role grants access only to **LLM Gateway** or **MCP Gateway** can reach Insights but
+  see a limited view containing only the LLM Gateway and MCP Usage charts; adoption-trend,
+  department-usage, sensitive-data, top-users, top-apps, top-categories, and AI-apps-by-approval
+  charts are not shown. The Insights sidebar entry and command-palette shortcut are hidden
+  entirely for users who have none of these three permissions.
+
+### Admin And Configuration
+
+- [Settings and Administration](/platform-areas/settings-admin): The sidebar **Controls** and
+  **Detection Models** navigation items are now hidden for users who lack the corresponding
+  resource permissions, keeping the sidebar scoped to areas the signed-in user can actually reach.
+
+- [Settings and Administration](/platform-areas/settings-admin): The command palette (Cmd+K)
+  now filters all navigation shortcuts by the signed-in user's permissions. Every platform section
+  — Findings tabs, Users, Applications, Controls, Detection Models, AI Inventory, Audit Log,
+  Exports, Integrations, and Settings pages — only appears in search results when the user has
+  the required access.
+
+- [Settings and Administration](/platform-areas/settings-admin): The **General Settings** section
+  is now accessible to users with either Tenant or Organizational Policy permission (previously
+  Organizational Policy only). The **Manage Users** section is now accessible to users with User,
+  Group, Role, or RBAC Admin permission (previously RBAC Admin only).
+
 ## June 26, 2026
 
 ### New
