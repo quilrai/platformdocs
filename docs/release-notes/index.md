@@ -8,6 +8,16 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## July 1, 2026
+
+### Fixed
+
+- [Users, Applications, and Accounts](/platform-areas/users-accounts-applications): Fixed a crash
+  affecting the Accounts and Applications tables, related dashboard charts, and the Integrations
+  pages on older browsers (Chrome versions before 110). These screens now load and sort correctly
+  regardless of browser version, so admins on older browsers no longer see the dashboard fail to
+  load.
+
 ## June 26, 2026
 
 ### New
