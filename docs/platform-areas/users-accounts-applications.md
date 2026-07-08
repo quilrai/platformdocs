@@ -22,7 +22,9 @@ Use these views when you need to investigate activity from an entity perspective
 ## Users
 
 The Users page summarizes AI usage by user and department. It includes KPI summaries, top trending
-users, a searchable table, and conversation-level drilldowns.
+users, a searchable table, and conversation-level drilldowns. Search applies when you press **Enter**
+or select the **Search** button rather than automatically while typing; clearing the search field
+still updates the table right away.
 
 Common use cases:
 
@@ -77,7 +79,9 @@ This feature is currently in Beta.
 
 ## Accounts
 
-The Accounts page focuses on app accounts and account-level interaction data.
+The Accounts page focuses on app accounts and account-level interaction data. As with the Users
+table, search applies when you press **Enter** or select the **Search** button rather than
+automatically while typing.
 
 Common use cases:
 

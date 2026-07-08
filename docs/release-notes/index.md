@@ -8,6 +8,23 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## July 8, 2026
+
+### Improved
+
+- [Users, Applications, and Accounts](/platform-areas/users-accounts-applications): Search in the
+  Users and Accounts tables now applies on demand — press **Enter** or select the **Search** button
+  next to the search field to run the search, instead of the table refreshing automatically while
+  you type. Clearing the search field still updates the table immediately.
+
+- [Settings and Administration](/platform-areas/settings-admin): The "Controls have moved" notice
+  has been redesigned as a coachmark anchored to the **Settings** item in the sidebar, replacing the
+  earlier top-of-page banner. It explains that the Controls page now lives under **Settings →
+  Browser Extension → Detection Configurations**, and offers **Take me there** and **Don't show
+  again** actions in addition to a temporary dismiss. The notice now only appears for admins who
+  have Browser Extension access, and reappears a limited number of times across logins if
+  temporarily dismissed instead of being permanently dismissed.
+
 ## June 26, 2026
 
 ### New
