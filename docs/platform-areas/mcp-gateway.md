@@ -37,6 +37,11 @@ Use MCP Gateway when you need to:
 - Set per-smart-group and per-user rules that override tool availability and guardrail actions for a
   specific MCP server.
 - Review MCP logs with filters for time range, MCP, tool, agent, user domain, and DLP outcome.
+  Logs for requests that used a token-saving transform show a saved-token count and, when the
+  gateway reports one, a saved percentage; the log details tab breaks down saved tokens by method
+  alongside original and transformed token totals.
+- Configure Token Saving transforms per MCP server and monitor whether they are enabled from the
+  server card.
 - Use graph view to understand aggregate MCP workflows.
 - Configure web-search policy for system web-search MCPs where available.
 - Review MCP servers from AI Inventory with tools, scopes, DLP action, status, and activity context.
