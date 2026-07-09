@@ -26,8 +26,8 @@ Use AI Gateway when your organization wants to:
 - **LLM Gateway:** Provider configuration, API keys, guardrails, routing, rate limits, token saving,
   identity-aware controls, prompt-store enforcement, logs, and red teaming.
 - **MCP Gateway:** MCP server inventory, custom MCP creation, MCP library installs, OAuth and
-  passthrough auth, tools, access tokens, access control, guardrails, logs, graph view, and agent
-  configuration.
+  passthrough auth, tools, access tokens, access control, guardrails, token saving, logs, graph
+  view, and agent configuration.
 
 ## Main Workflows
 

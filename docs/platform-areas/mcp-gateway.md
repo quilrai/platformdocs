@@ -30,13 +30,14 @@ Use MCP Gateway when you need to:
 - Add a custom MCP with automatic auth probing, OAuth passthrough, or upstream API key injection.
 - Install MCPs from the MCP Library.
 - Request MCP installs when install permission is not available.
-- Configure MCP general settings, guardrails, and tools.
+- Configure MCP general settings, guardrails, token saving, and tools.
 - Create and revoke MCP access tokens for non-OAuth MCPs.
 - Configure access control for agent clients, smart groups, and individual users.
 - Map agent clients to MCP backends.
-- Set per-smart-group and per-user rules that override tool availability and guardrail actions for a
-  specific MCP server.
-- Review MCP logs with filters for time range, MCP, tool, agent, user domain, and DLP outcome.
+- Set per-smart-group and per-user rules that override tool availability, token-saving transforms,
+  and guardrail actions for a specific MCP server.
+- Review MCP logs with filters for time range, MCP, tool, agent, user domain, and DLP outcome, and
+  inspect token-saving details for requests where a transform reduced token usage.
 - Use graph view to understand aggregate MCP workflows.
 - Configure web-search policy for system web-search MCPs where available.
 - Review MCP servers from AI Inventory with tools, scopes, DLP action, status, and activity context.
@@ -68,6 +69,25 @@ access rules that are evaluated in order:
   list. An allowed user can override a denied smart group. A denied user is blocked regardless of
   smart group membership and is the highest-priority access rule.
 
+## Token Saving
+
+The **Token Saving** tab in an MCP server's settings reformats tool output before it is returned
+to clients, reducing token usage while preserving the original meaning. Four transforms can be
+enabled or disabled independently:
+
+- **Smart JSON Compression** — converts eligible JSON objects or arrays in tool output to a more
+  token-efficient format when doing so reduces token usage.
+- **HTML to Text** — strips HTML tags and extracts clean text from markup-heavy tool output.
+- **Markdown to Text** — converts Markdown formatting to plain text and removes syntax-only tokens.
+- **Text Compression** — compresses verbose plain text while preserving meaning.
+
+Each MCP server card shows whether token saving is enabled for that server. Token saving can also
+be overridden per smart group or per user from Group & User Rules.
+
+MCP Gateway logs show a **Token Saved** count on requests where a transform reduced token usage.
+Opening the log details drawer for those requests shows a **Token Saving** tab with saved tokens,
+original and transformed token counts, and a per-method breakdown.
+
 ## Group & User Rules
 
 The **Group & User Rules** tab in MCP server settings lets admins create partial setting overrides
@@ -77,6 +97,10 @@ rule inherits from the MCP's default settings.
 - **Scope types:** Smart group or individual user (by email).
 - **Tool overrides:** Enable or disable specific tools for the selected scope. Tools not overridden
   inherit the MCP-level tool configuration.
+- **Token-saving overrides:** Enable or disable each of the four token-saving transforms for the
+  selected scope. Transforms not overridden inherit the MCP-level token-saving settings.
+  Smart-group overrides for the same transform merge so that any enabled setting wins; a matching
+  user-level override applies last.
 - **Guardrail overrides:** Set data risk and adversarial risk category actions (Monitor, Redact, or
   Block) for the selected scope. Categories not overridden inherit the MCP-level guardrail settings.
 - **Rule evaluation order:** Smart-group rules for all groups the user belongs to are applied first.
