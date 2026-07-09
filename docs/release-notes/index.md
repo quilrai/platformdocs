@@ -49,6 +49,26 @@ hide_copy_dropdown: true
 
 ### New
 
+- [Findings](/platform-areas/findings): Added a **Policy Engine** provider to Compliance Findings.
+  When the Policy Engine license is active for the tenant, a **Policy Engine** button appears in the
+  Compliance Findings provider switcher alongside Claude and OpenAI. Selecting it opens the Policy
+  Engine Findings view with time-range presets (15 minutes to 30 days or custom range), a per-day
+  findings trend chart, severity filters (critical, high, medium, low), and a paginated findings
+  table showing rule name, severity badge, tags, matched-event count, and matched time. Opening a
+  finding row displays an evidence detail drawer with the configured evidence fields and raw event
+  data. The button does not appear for tenants without an active Policy Engine license.
+
+- [Settings and Administration](/platform-areas/settings-admin): Added a **Detection Policy**
+  section to the Settings → Compliance → OpenAI page. When the Policy Engine license is active, a
+  Detection Policy section appears below the OpenAI credential settings and embeds the Policy Engine
+  Rules editor. Admins can create, edit, enable or disable, and delete detection rules directly from
+  Compliance settings. Each rule is configured with a name, description, a QuilrQL query (with field
+  and operator autocompletion drawn from the connected datasource), severity level (critical, high,
+  medium, or low) with optional per-condition severity overrides, evidence fields, tags, a datasource
+  connector, and one or more response actions. Supported action types are API call, Slack message,
+  block, custom function, and syslog forward. Rules can be exported and imported in bulk. The section
+  does not appear for tenants without an active Policy Engine license.
+
 - [LLM Gateway](/platform-areas/llm-gateway): Added an **Agent Monitoring** panel to LLM Gateway
   logs. When an LLM Gateway app has requests that carry agent observability metadata, a new panel
   appears in the logs view showing coverage stats — requests with observability, distinct agent

@@ -79,6 +79,30 @@ Compliance includes provider key setup and key management for compliance service
 include OpenAI Compliance key management and Claude-related compliance configuration where enabled.
 Administrators with write access can save and revoke registered keys.
 
+### Detection Policy
+
+When the Policy Engine license is active for the tenant, a **Detection Policy** section appears on
+the Settings → Compliance → OpenAI page, below the credential settings. It embeds the Policy Engine
+Rules editor, giving admins a single place to manage custom detection rules that feed
+[Policy Engine Findings](./findings.md).
+
+Each rule supports:
+
+- **Name and description:** Human-readable label and intent note.
+- **QuilrQL query:** Event-query language expression evaluated against the connected datasource.
+  The query builder provides field and operator autocompletion sourced from the datasource schema.
+- **Severity:** Critical, high, medium, or low. Optional per-condition overrides allow a single
+  rule to emit different severities based on field values.
+- **Evidence fields:** The subset of event fields to surface in the finding detail drawer.
+- **Tags:** Free-form labels for filtering and grouping in the Findings view.
+- **Datasource connector:** The data source against which the rule evaluates.
+- **Actions:** One or more response actions executed when the rule matches. Supported types:
+  API call, Slack message, block, custom function, and syslog forward.
+
+Rules can be individually enabled or disabled, edited, deleted, and bulk exported or imported.
+
+The Detection Policy section does not appear for tenants without an active Policy Engine license.
+
 ## Related Platform Areas
 
 - [Smart Groups](./smart-groups.md)
