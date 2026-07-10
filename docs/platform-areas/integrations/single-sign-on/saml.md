@@ -64,7 +64,7 @@ In the **Configure SAML** step, set the following:
 | **Single sign-on URL** | `https://<your-quilr-domain>/bff/auth/auth/saml/callback` |
 | **Use this for Recipient URL and Destination URL** | ✓ Checked |
 | **Audience URI (SP Entity ID)** | `https://<your-quilr-domain>/bff/auth/saml/metadata/<tenant-id>` |
-| **Default RelayState** | Leave empty |
+| **Default RelayState** | `<tenant-id>` |
 | **Name ID format** | EmailAddress |
 | **Application username** | Email |
 
