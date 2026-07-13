@@ -8,6 +8,25 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## July 13, 2026
+
+### New
+
+- [MCP Gateway](/platform-areas/mcp-gateway): Added a **Send user claims to backend** toggle to the
+  general settings of non-OAuth MCPs (upstream API key or no-auth). When enabled, the gateway adds
+  a trusted `X-User-Claims` header — with the authenticated user's subject, email, tenant, and
+  authentication method when available — to direct MCP and OneMCP requests. Any client-supplied
+  `X-User-Claims` header is stripped and replaced with the gateway's trusted value, and shared
+  capability caching is disabled for the MCP while the setting is enabled. This setting is not
+  available for gateway-managed OAuth or OAuth passthrough MCPs.
+
+### Improved
+
+- [MCP Gateway](/platform-areas/mcp-gateway): The MCP Library now searches and filters the catalog
+  server-side and paginates results, showing up to 50 MCPs per page with **Previous** / **Next**
+  controls and a page indicator. Browsing and searching large catalogs is now faster and no longer
+  limited to what was loaded on the page.
+
 ## June 26, 2026
 
 ### New

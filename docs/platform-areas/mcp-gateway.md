@@ -28,10 +28,13 @@ Use MCP Gateway when you need to:
 
 - View MCP backends and enable or disable them.
 - Add a custom MCP with automatic auth probing, OAuth passthrough, or upstream API key injection.
-- Install MCPs from the MCP Library.
+- Install MCPs from the MCP Library, with server-side search, install-status and auth-type filters,
+  and pagination for large catalogs.
 - Request MCP installs when install permission is not available.
 - Configure MCP general settings, guardrails, and tools.
 - Create and revoke MCP access tokens for non-OAuth MCPs.
+- Enable a trusted user-claims header for non-OAuth MCPs so direct MCP and OneMCP backends can
+  identify the calling user.
 - Configure access control for agent clients, smart groups, and individual users.
 - Map agent clients to MCP backends.
 - Set per-smart-group and per-user rules that override tool availability and guardrail actions for a
@@ -53,6 +56,16 @@ Use MCP Gateway when you need to:
   This mode is selected explicitly or applied automatically when auth probing finds a server that
   requires credentials without OAuth support.
 - **No auth:** Used when the MCP does not require credentials.
+
+## User Claims Header
+
+For non-OAuth MCPs (upstream API key or no-auth), a **Send user claims to backend** toggle is
+available in the MCP's general settings. When enabled, the gateway adds a trusted `X-User-Claims`
+header — containing the authenticated user's subject, email, tenant, and authentication method
+when available — to direct MCP and OneMCP requests. Any client-supplied `X-User-Claims` header is
+stripped and replaced with the gateway's trusted value. Enabling this setting disables shared
+capability caching for the MCP. This setting is not shown for gateway-managed OAuth or OAuth
+passthrough MCPs.
 
 ## Access Control
 
