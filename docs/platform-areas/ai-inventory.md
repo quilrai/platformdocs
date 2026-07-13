@@ -54,7 +54,9 @@ Use AI Inventory when you need to:
 
 The Browser Extension source focuses on applications observed through browser activity. It uses the
 same app intelligence and app-management experience as the Applications page while keeping the
-inventory view scoped to browser-discovered apps.
+inventory view scoped to browser-discovered apps, including the same review-before-apply screen
+and background **Pending bulk actions** status indicator for bulk Approve, Unapprove, Block, and
+Unblock operations described in [Applications](./users-accounts-applications.md#bulk-actions-on-applications).
 
 ### Endpoint Agent
 

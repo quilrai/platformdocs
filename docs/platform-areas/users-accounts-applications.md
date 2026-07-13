@@ -59,6 +59,29 @@ The AI lens and Generative AI category filter target the primary app category. W
 reached via an insight or widget drilldown that pre-applies a business-category filter, the
 Category chip shows "Business" to reflect the narrower scope applied by the drilldown.
 
+### Bulk Actions On Applications
+
+Admins can select multiple rows in the Applications table and apply **Approve**, **Unapprove**,
+**Block**, or **Unblock** to all of them at once.
+
+- Choosing a bulk action opens a review screen listing every selected app, its current status,
+  and the change that will be applied. Admins can search the list and deselect individual apps
+  before confirming.
+- Apps that are already in the target state are automatically excluded, with a note explaining
+  why. Apps for which the action isn't supported (custom and red-teaming apps) are flagged with
+  an **Unsupported** badge and also excluded.
+- A single batch is limited to 100 apps.
+- Confirmed updates run in the background rather than applying immediately. A **Pending bulk
+  actions** button in the toolbar shows a live count of apps currently being updated; opening it
+  lists each pending app with its requested change, request time, and requester. A confirmation
+  toast appears once all pending updates finish.
+- The **Unselect** control in the toolbar clears the current selection, and selections are
+  cleared automatically after a bulk action is submitted.
+- Selecting all rows on the current page does not clear selections made on other pages, so a
+  bulk action can target apps selected across multiple pages.
+- **Activate Agent** is only available when exactly one app is selected, since agent activation
+  applies to a single app at a time.
+
 ### Exporting Application Data
 
 The **Export** button in the Applications table toolbar opens an export modal that lets admins
@@ -107,4 +130,5 @@ Common use cases:
 ## Access Requirements
 
 Users and Accounts use AI usage permissions. Applications use app-management permissions, with
-separate scopes for updates, allow/block operations, and agent-triggered actions.
+separate scopes for updates, allow/block operations, agent-triggered actions, and export.
+The **Export** button is only shown to admins holding the export scope.
