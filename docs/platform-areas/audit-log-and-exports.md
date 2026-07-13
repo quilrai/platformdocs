@@ -40,7 +40,7 @@ Exports provides export history and starts new exports for supported platform da
 - Start a new export.
 - Select a supported data source.
 - Choose CSV or JSON format.
-- Review the row limit hint in the export modal before confirming.
+- Review the export limit hint in the export modal before confirming.
 - Receive notification when an export is ready.
 - Download completed exports from history.
 
@@ -54,12 +54,23 @@ Supported export sources include:
 The export history list automatically refreshes every 30 seconds while any export is still
 processing, so the status and download link update without a manual page reload.
 
-### Row Limit
+### Export Limits
 
-Each export includes up to a tenant-configured maximum number of rows. The export modal displays
-an inline hint—for example, "Up to 5,000 rows will be exported."—so admins know the cap before
-confirming. The default limit is 5,000 rows. If a custom limit has been configured for the tenant,
-the modal reflects that value instead. The same row limit applies to Findings exports.
+Each export is bounded either by a maximum row count or by a maximum date-range duration,
+depending on tenant configuration.
+
+- **Row limit (default):** Each export includes up to a tenant-configured maximum number of rows.
+  The export modal displays an inline hint—for example, "Up to 5,000 rows will be exported."—so
+  admins know the cap before confirming. The default limit is 5,000 rows. If a custom limit has
+  been configured for the tenant, the modal reflects that value instead. The same row limit
+  applies to Findings exports.
+- **Duration limit (optional):** If a tenant has a maximum export duration configured, exports
+  are bounded by date range instead of row count. The export modal exports every record within the
+  selected date range and states this in the hint—for example, "All records within the selected
+  date range (up to 30 days) will be exported."—and the date-range picker in the modal is limited
+  to that same number of days.
+
+When no duration limit is configured, the export date-range picker defaults to a 14-day window.
 
 ## Related Platform Areas
 

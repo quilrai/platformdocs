@@ -8,6 +8,18 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## July 13, 2026
+
+### Improved
+
+- [Audit Log and Exports](/platform-areas/audit-log-and-exports): Audit Log and Findings exports
+  can now be capped by a configured maximum date range instead of a fixed row count. When a tenant
+  has a maximum export duration configured, the export modal exports every record within the
+  selected date range (up to that many days) rather than stopping at a row limit, and the date
+  range picker is bounded to that same window. Tenants without a configured duration limit see no
+  change: the date range defaults to a 14-day window and the export modal continues to show the
+  row-count cap (for example, "Up to 5,000 rows will be exported").
+
 ## June 26, 2026
 
 ### New
