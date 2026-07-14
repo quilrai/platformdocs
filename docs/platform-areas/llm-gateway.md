@@ -52,6 +52,8 @@ Use LLM Gateway when you need to:
 - Configure Guardian Agent behavior for coding helpers and task adherence.
 - View app-specific or global LLM Gateway logs with time range, user, category, subcategory, action,
   and request or response side filters.
+- Open a **Usage & Cost** view per app or across all apps to review request volume, token usage,
+  errors, and estimated cost by day, week, or month.
 - Use **Agent Monitoring** in the logs view to track agent-instrumented requests: coverage stats,
   breakdowns by agent, workflow, framework, model, provider, and user, a paginated runs table with
   sort options, and agent-specific filters that apply across the monitoring panel and Recent Logs.
@@ -108,8 +110,9 @@ Each LLM Gateway app has a settings drawer with focused areas for:
 - **Routing Configurations:** Available providers, routing groups, token-based routing groups, and
   custom routing.
 - **Self-Service:** Credential mode (Shared Parent Key or Named User API Keys) and per-role access
-  control for viewer access, settings request access, API key visibility, and all-logs visibility —
-  each independently scoped to all users, specific email addresses, or smart groups.
+  control for viewer access, settings request access, direct settings update access, API key
+  visibility, and all-logs visibility — each independently scoped to all users, specific email
+  addresses, or smart groups.
 - **Alerts:** Failure-rate alerting with two independently-enableable rule types — **App-level**
   (failure rate across all providers combined) and **Per-provider** (failure rate evaluated per
   provider label). Each rule has an analysis window (minimum 5 minutes, maximum 24 hours), a
@@ -167,6 +170,23 @@ The panel provides:
   workflow run ID, trace ID, and conversation ID. Selecting any filter updates both the Agent
   Monitoring panel and the Recent Logs list simultaneously.
 
+## Usage & Cost
+
+Admins can open **Usage & Cost** from the LLM Gateway apps list (a global view across all apps) or
+from an individual app card (scoped to that app). The view shows:
+
+- **KPI cards** for total requests, estimated cost, total tokens, and error count over the
+  selected window.
+- **App comparison** — a chart and table comparing requests, cost, tokens, and errors across apps
+  for the whole selected window.
+- **Period trend** — requests and cost over time for the selected app scope, viewable by day,
+  week, or month.
+
+Admins can filter by one or more apps and choose a quick range (last 7, 30, 90, or 365 days) or a
+custom date range up to 366 days. When a model in the window does not have pricing data configured,
+a warning banner lists the affected models, since cost for those models is not reflected in the
+totals shown.
+
 ## Red Teaming
 
 LLM Gateway red teaming helps teams test an app and provider model against suites such as prompt
@@ -211,11 +231,13 @@ automatically and cannot reach admin pages.
 The dashboard lists the LLM Gateway apps that self-service is enabled for, with search and
 refresh. Selecting an app opens three tabs:
 
-- **Settings** — visible when the user has request access. The full settings panel is displayed in
-  read-only/request mode: changes are submitted as approval requests rather than applied
-  immediately. The panel covers provider settings, tags, guardrails, custom detections, rate limits,
-  token saving, routing, identity settings, prompt store, and API integration. Users can review
-  their own submitted requests from an Audit Log view within the panel.
+- **Settings** — visible when the user has request access or direct update access. The full
+  settings panel covers provider settings, tags, guardrails, custom detections, rate limits, token
+  saving, routing, identity settings, prompt store, and API integration. Users with only request
+  access submit changes as approval requests rather than applying them immediately. Users with
+  direct update access have their changes applied immediately, recorded in the app's Audit Log
+  history; direct access takes priority when a user has both. Users can review their own submitted
+  requests from an Audit Log view within the panel.
 - **Logs** — LLM Gateway request logs scoped to the signed-in user. When the admin grants All Logs
   Access for the app, all app traffic is visible.
 - **Findings** — findings associated with the app, scoped the same way as logs.
@@ -235,10 +257,13 @@ Use the **Self-Service** tab in an app's settings drawer to enable self-service 
 - **Shared Parent Key** — users receive the existing app key.
 - **Named User API Keys** — users create and revoke their own personal keys.
 
-**Access** controls which users get each capability. Four roles are configured independently, each
+**Access** controls which users get each capability. Five roles are configured independently, each
 scoped to all users, specific email addresses, or smart groups:
 - **Viewer Access** — who can see and interact with the app in self-service.
 - **Request Access** — who can submit settings change requests for admin approval.
+- **Direct Settings Update** — who can update settings directly without admin approval. Changes
+  apply immediately and are recorded in the app's Audit Log history. When a user has both Request
+  Access and Direct Settings Update, direct update takes priority.
 - **API Key Access** — who can view credential values.
 - **All Logs Access** — who can view logs and findings for all users, not just their own.
 

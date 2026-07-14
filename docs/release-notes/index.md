@@ -8,6 +8,33 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## July 9, 2026
+
+### New
+
+- [LLM Gateway](/platform-areas/llm-gateway): Added a **Usage & Cost** page for LLM Gateway apps.
+  Admins can open it from the LLM Gateway apps list or from an individual app card to review
+  request volume, token usage, error counts, and estimated cost. KPI cards summarize totals for
+  the selected window; charts and tables compare usage across apps and across time. Results can be
+  viewed by day, week, or month and scoped to one or more apps using quick ranges (7, 30, 90, or
+  365 days) or a custom date range up to 366 days. A warning is shown when any model in the window
+  lacks pricing data, since cost for those models is not reflected in the totals.
+
+- [LLM Gateway](/platform-areas/llm-gateway): Added a **Direct Settings Update** self-service role.
+  Previously, self-service users could only submit settings changes as a request for admin
+  approval. Admins can now grant selected users, email addresses, or smart groups permission to
+  update an app's settings directly — changes apply immediately without requiring approval, and
+  are still recorded in the app's Audit Log history. Direct access takes priority over request-only
+  access when a user has both.
+
+- [MCP Gateway](/platform-areas/mcp-gateway): Added a **Token Saving** tab to MCP server settings.
+  Admins can enable Smart JSON Compression, HTML to Text, Markdown to Text, and Text Compression to
+  reduce token usage in MCP tool output before it reaches the client. Each MCP card shows whether
+  token saving is enabled. Token-saving controls can also be overridden per smart group or per user
+  from the **Group & User Rules** tab, alongside existing tool and guardrail overrides. MCP Gateway
+  logs show a **Token Saved** count on requests where a transform reduced token usage, with a
+  details tab breaking savings down by method.
+
 ## June 26, 2026
 
 ### New
