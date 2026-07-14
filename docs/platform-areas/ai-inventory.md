@@ -40,6 +40,8 @@ Use AI Inventory when you need to:
   hooks, permissions, plugins, and repositories.
 - Review endpoint-discovered applications with the Discovery sub-view: filter by name, user email,
   category, source, OS type, approval status, and criticality, and update execution policy inline.
+- Open the full conversation behind an endpoint agent interaction, including per-turn prompts,
+  tools, files, policy outcomes, findings, and entities.
 - Review LLM Gateway API keys with request, blocked, anonymized, model, last-used, and posture
   context.
 - Review MCP Gateway servers with tools, scopes, DLP action, status, and activity metrics.
@@ -62,6 +64,15 @@ The Endpoint Agent source focuses on endpoint-observed applications. It summariz
 sensitive activity, detections, blocked activity, and users. Where coding inventory is available,
 the detail view can also show related agents, skills, MCP servers, models, hooks, permissions,
 plugins, and repositories for the selected application group.
+
+Each row in the endpoint interactions table opens an interaction details drawer. When an interaction
+has an associated session or conversation, a **View conversation** action opens the full
+conversation in a dedicated drawer showing every turn in order — prompt text, tools called, files
+touched, and the resulting policy outcome (allowed, blocked, or denied) — along with any detected
+findings and entities per turn. Turn-level detail such as skills, MCP servers, and full context
+metadata is available behind a **Details** toggle on each turn. Session-wide facts (user, device,
+and app version) are shown once above the timeline. The conversation view can be refreshed on
+demand.
 
 A **Discovery** sub-view within the Endpoint Agent source lists all applications observed on
 endpoints through asset inventory, including applications that have not generated AI-specific
