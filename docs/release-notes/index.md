@@ -8,6 +8,19 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## July 9, 2026
+
+### Improved
+
+- [MCP Gateway](/platform-areas/mcp-gateway): The Token Saved indicator in MCP Gateway logs now
+  also shows a saved percentage alongside the saved token count when the gateway reports one. The
+  Token Saving details tab shows the same saved percentage next to saved, original, and transformed
+  token totals.
+
+- [LLM Gateway](/platform-areas/llm-gateway) and [MCP Gateway](/platform-areas/mcp-gateway): Added
+  a **New** highlight badge to call out recently added capabilities: the Usage & Cost view on LLM
+  Gateway API keys, and the Token Saving controls on MCP Gateway server cards.
+
 ## June 26, 2026
 
 ### New
