@@ -8,6 +8,19 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## July 13, 2026
+
+### New
+
+- [MCP Gateway](/platform-areas/mcp-gateway): Added an **OneMCP Settings** panel for tenant-wide
+  control over the Quilr OneMCP unified endpoint. Admins can set a Dynamic Tool Calling policy —
+  **User preference** (each user decides for themselves), **Force enabled**, or **Force disabled**
+  — that overrides individual user choices when set to one of the forced options. Admins can also
+  enable or disable cross-session Memories for the whole tenant; when disabled, no memories are
+  stored or retrieved for any user. Both settings show who last updated them and when. Changing
+  these settings requires MCP update permission; users without it see a read-only view of the
+  current policies.
+
 ## June 26, 2026
 
 ### New

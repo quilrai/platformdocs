@@ -40,6 +40,7 @@ Use MCP Gateway when you need to:
 - Use graph view to understand aggregate MCP workflows.
 - Configure web-search policy for system web-search MCPs where available.
 - Review MCP servers from AI Inventory with tools, scopes, DLP action, status, and activity context.
+- Set tenant-wide OneMCP admin policies for Dynamic Tool Calling and Memories.
 
 ## Auth Modes
 
@@ -89,6 +90,23 @@ The Group & User Rules tab is available from the MCP Settings drawer and from AI
 Gateway detail drawers. A **Group & User Rules** shortcut button is also shown on each MCP server
 card.
 
+## OneMCP Settings
+
+The **OneMCP Settings** panel sets tenant-wide policies for the Quilr OneMCP unified endpoint,
+opened from the MCP Gateway page:
+
+- **Dynamic Tool Calling:** Controls whether OneMCP dynamically selects the most relevant tools per
+  request across the tenant. Options are **User preference** (each user chooses for their own
+  agents), **Force enabled** (dynamic tool calling stays on for everyone, overriding individual
+  choices), and **Force disabled** (dynamic tool calling stays off for everyone, overriding
+  individual choices).
+- **Memories:** A tenant-wide toggle that lets OneMCP remember relevant context across sessions for
+  users in the tenant. When disabled, no memories are stored or retrieved for any user.
+
+Each policy shows who last updated it and when. Changing these settings requires MCP Gateway update
+permission; users without that permission see the panel in read-only mode with a notice explaining
+why they cannot make changes.
+
 ## Main Workflows
 
 1. Add or install an MCP backend.
@@ -98,7 +116,8 @@ card.
 5. Apply guardrails where needed.
 6. Create Group & User Rules to apply targeted tool or guardrail overrides for specific groups or
    users.
-7. Use logs and graph view to monitor activity and troubleshoot outcomes.
+7. Set tenant-wide OneMCP policies for Dynamic Tool Calling and Memories.
+8. Use logs and graph view to monitor activity and troubleshoot outcomes.
 
 ## Related Platform Areas
 
