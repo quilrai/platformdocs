@@ -17,15 +17,20 @@ platform. It is the main place to move from summary signals into detailed eviden
 
 ## Finding Views
 
-- **Finding Insights:** Summary view for high-level investigation trends.
-- **All Findings:** Cross-source finding stream.
-- **Browser Extension Findings:** Findings from browser extension activity.
-- **Endpoint Agent Findings:** Findings from endpoint agent telemetry, when endpoint is enabled.
-- **LLM Gateway Findings:** Findings from protected LLM Gateway traffic.
-- **MCP Gateway Findings:** Findings from protected MCP Gateway traffic.
-- **Compliance Findings:** Findings and no-risk interactions from compliance integrations such as
-  Claude Compliance and OpenAI Compliance, when configured.
-- **Identity Findings:** Status and identity-related findings.
+The finding tabs are labeled **Insights**, **All Findings**, **Browser Extension**, **Endpoint
+Agent**, **LLM Gateway**, **Compliance**, **MCP Gateway**, and **Identity**.
+
+- **Insights:** Summary view for high-level investigation trends.
+- **All Findings:** Cross-source finding stream. MFA and password-related identity findings are not
+  included in this view; a tooltip on the tab and on the Finding Type filter points to the
+  **Identity** tab for those findings.
+- **Browser Extension:** Findings from browser extension activity.
+- **Endpoint Agent:** Findings from endpoint agent telemetry, when endpoint is enabled.
+- **LLM Gateway:** Findings from protected LLM Gateway traffic.
+- **MCP Gateway:** Findings from protected MCP Gateway traffic.
+- **Compliance:** Findings and no-risk interactions from compliance integrations such as Claude
+  Compliance and OpenAI Compliance, when configured.
+- **Identity:** Status and identity-related findings, including MFA and password-related findings.
 
 ## Key Capabilities
 

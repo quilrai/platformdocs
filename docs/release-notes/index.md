@@ -8,6 +8,18 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## July 10, 2026
+
+### Improved
+
+- [Findings](/platform-areas/findings): Renamed the finding tabs to shorter labels — **Insights**,
+  **All Findings**, **Browser Extension**, **Endpoint Agent**, **LLM Gateway**, **Compliance**,
+  **MCP Gateway**, and **Identity**.
+
+- [Findings](/platform-areas/findings): Added a tooltip on the **All Findings** tab and on the
+  **Finding Type** filter clarifying that MFA and password-related identity findings are not
+  included in All Findings, and pointing to the **Identity** tab to review them.
+
 ## June 26, 2026
 
 ### New
