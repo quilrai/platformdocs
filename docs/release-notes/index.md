@@ -8,6 +8,54 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## July 13, 2026
+
+### New
+
+- [Users, Applications, and Accounts](/platform-areas/users-accounts-applications): Bulk
+  **Approve**, **Unapprove**, **Block**, and **Unblock** on the Applications table now open a
+  review screen listing every app that will be affected before the change is applied. Admins can
+  search the list and deselect individual apps. Apps that are already in the target state are
+  automatically excluded with an explanation, and apps where the action isn't supported (custom
+  and red-teaming apps) are flagged with an **Unsupported** badge and excluded. A single batch is
+  limited to 100 apps.
+
+- [Users, Applications, and Accounts](/platform-areas/users-accounts-applications): Bulk app
+  updates now run in the background. After confirming a bulk action, a **Pending bulk actions**
+  button appears in the table toolbar showing a live count of apps being updated. Opening it lists
+  each pending app with its requested change, request time, and requester, and a confirmation
+  toast appears once every pending update finishes.
+
+- [AI Inventory](/platform-areas/ai-inventory): Browser Extension inventory bulk actions
+  (Approve, Unapprove, Block, Unblock) now use the same review-before-apply screen and pending
+  bulk-action status indicator as the Applications page, giving admins a consistent workflow
+  across both screens.
+
+### Improved
+
+- [Users, Applications, and Accounts](/platform-areas/users-accounts-applications): Added an
+  **Unselect** control to the Applications table toolbar to clear all selected apps at once.
+  Selections are also cleared automatically after a bulk action is submitted.
+
+- [Users, Applications, and Accounts](/platform-areas/users-accounts-applications) and
+  [AI Inventory](/platform-areas/ai-inventory): **Activate Agent** is now disabled whenever more
+  than one app is selected, since agent activation applies to a single app at a time.
+
+- [Users, Applications, and Accounts](/platform-areas/users-accounts-applications): Selecting all
+  rows on the current page of the Applications table no longer clears selections made on other
+  pages, so admins can build a selection across multiple pages before running a bulk action.
+
+- [Users, Applications, and Accounts](/platform-areas/users-accounts-applications): The **Export**
+  button on the Applications table is now shown only to admins who have export permission for
+  applications.
+
+### Fixed
+
+- [Users, Applications, and Accounts](/platform-areas/users-accounts-applications): Fixed an
+  issue where the Applications table could appear empty after applying a search or filter that
+  returned fewer pages than the page currently being viewed. The table now returns to the first
+  page automatically instead of showing no results.
+
 ## June 26, 2026
 
 ### New
