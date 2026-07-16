@@ -8,6 +8,18 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## July 3, 2026
+
+### Improved
+
+- [MCP Gateway](/platform-areas/mcp-gateway): Reworked the MCP Gateway logs filters into a
+  multi-select filter bar with **Apply** and **Clear** actions. Admins can now select multiple
+  values for Tool, MCP, Agent, User, Called Via (Individual or Quilr OneMCP), and Findings, and
+  each option list is searchable. Filtering now runs against the full log history on the server
+  instead of only the rows currently loaded on the page, so filtered results reflect the true set
+  of matching logs rather than being limited to one page. The prior domain-only user filter has
+  been replaced with a full user selector.
+
 ## June 26, 2026
 
 ### New
