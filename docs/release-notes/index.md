@@ -16,6 +16,13 @@ hide_copy_dropdown: true
   coaching bot in Slack and Microsoft Teams. The guide covers interaction types (Findings, Coach,
   and User Initiated), where to review conversations in the platform, and main review workflows.
 
+- [LLM Gateway](/platform-areas/llm-gateway): Added a PDF **Export** option to red teaming. From
+  the Results (comparison) view or an individual run detail view, admins can export an **Overview**
+  report matching what's on screen, an **All data** report that adds run-level summary tables (or a
+  full case appendix on the run detail view), or, from the Results view, an **All data + every
+  case** report that pulls in every case from every selected run. A progress modal tracks export
+  stages and lets admins cancel a long-running export.
+
 ## June 26, 2026
 
 ### New
