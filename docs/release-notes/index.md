@@ -8,6 +8,14 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## July 16, 2026
+
+### New
+
+- [Quilly](/platform-areas/quilly): Added platform documentation for Quilly, Quilr's security
+  coaching bot in Slack and Microsoft Teams. The guide covers interaction types (Findings, Coach,
+  and User Initiated), where to review conversations in the platform, and main review workflows.
+
 ## June 26, 2026
 
 ### New
