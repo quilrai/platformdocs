@@ -8,6 +8,22 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## July 2, 2026
+
+### Improved
+
+- [Integrations](/platform-areas/integrations/authentication/saml): Added field-level validation
+  to the **SAML** setup form. The IdP SSO URL and IdP SLO URL must be valid HTTPS URLs, the IdP
+  Entity ID must be a valid URL or URN, and the IdP Signing Certificate is checked for a valid
+  certificate format — PEM headers and line breaks are stripped automatically so admins can paste
+  certificates as-is. The **Allow** button is disabled with an explanatory message until any SAML
+  configuration errors are fixed, preventing incomplete or malformed SSO setups from being saved.
+
+- [Integrations](/platform-areas/integrations/authentication/saml): The SAML **NameID Format**
+  field now shows friendly labels (Email Address, Unspecified, Persistent, Transient) instead of
+  raw URN values, and added a description clarifying that enabling **Enforce SSO** redirects
+  Microsoft and Google social login attempts to the configured SAML identity provider.
+
 ## June 26, 2026
 
 ### New
