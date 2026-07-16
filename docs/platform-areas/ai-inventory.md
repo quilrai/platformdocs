@@ -71,6 +71,14 @@ type (macOS, Windows, Linux), approval status (Needs Review, Approved, Blocked),
 (Critical, Not Critical), and toggle off OS system processes. Execution policy (Allowed or Blocked)
 can be updated inline for each row.
 
+The Endpoint Agent detail drawer includes the same endpoint configuration tabs available from
+[Endpoint Agent](./endpoint-agent.md) Detection Configurations: **Guardrails** (DLP, category
+actions, and Access Control), **Monitored Browsers** (per-browser coverage), and **Group & User
+Rules** (scoped overrides for a smart group or individual user, shown once tenant context is
+resolved). Access Control changes made from this drawer are validated inline, and saving is blocked
+until any validation error is corrected; Group & User Rules save independently of the rest of the
+drawer.
+
 ### LLM Gateway
 
 The LLM Gateway source lists protected LLM application keys. It shows gateway-native metrics such as

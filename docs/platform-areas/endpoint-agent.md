@@ -33,6 +33,8 @@ Use Endpoint Agent when you need to:
   features and supplying their required parameters from the Guardrails tab.
 - Auto-save for detection configurations — changes are persisted automatically after a short pause
   with a live status indicator in the toolbar.
+- Group & User Rules for scoping DLP behavior to a specific smart group or individual user.
+- A Monitored Browsers tab summarizing per-browser coverage for the selected app or method.
 
 ## Detection Configurations
 
@@ -44,6 +46,11 @@ Detection configurations auto-save. After any change, a status indicator in the 
 the current save state (**Autosave pending**, **Saving...**, **Saved**, or **Save failed.
 Retrying...**). If a save fails, it is retried automatically.
 
+Each configuration drawer is organized into tabs: **Guardrails**, **Monitored Browsers**, and
+**Group & User Rules**. The same drawer and tabs are available from Endpoint Detection
+Configurations in Settings and from an Endpoint Agent asset's detail drawer in
+[AI Inventory](./ai-inventory.md).
+
 ### Guardrails Tab
 
 The Guardrails tab within each configuration drawer contains:
@@ -52,10 +59,31 @@ The Guardrails tab within each configuration drawer contains:
 - **Desktop monitoring** — Windows and macOS browser monitoring controls.
 - **Access Control** — one card per supported access-control feature. Each card has an enable/
   disable toggle and any required parameter fields (text, masked secret, numeric, toggle, or
-  dropdown). Required fields are validated inline; a validation error blocks auto-save until
+  dropdown). Required fields are validated inline; a validation error blocks saving until
   corrected. The Access Control section is hidden entirely when no features apply to the selected
   configuration. Only features the admin interacts with in the current session are included in the
   save; untouched features remain at their previously saved values.
+
+### Monitored Browsers Tab
+
+The Monitored Browsers tab shows per-browser coverage for the selected app or method, broken out by
+Windows and macOS. Admins can turn monitoring on or off for each detected browser without leaving the
+tab.
+
+### Group & User Rules Tab
+
+The Group & User Rules tab lets admins create DLP overrides scoped to a specific smart group or
+individual user, for either all methods in an app group or a single method.
+
+- **Scope types:** Smart group or individual user (by email).
+- **Overrides:** DLP enabled state, and data-risk and adversarial-risk category enablement and
+  action (Monitor, Block, Justify) for the selected scope. Fields left unset inherit the app or
+  method's default configuration.
+- **Save behavior:** Each rule is created, edited, and deleted independently with its own save
+  action — rules do not save with the rest of the configuration drawer.
+- **Effective Settings preview:** Enter a user email or smart group to resolve the merged
+  configuration that scope would receive.
+- Available only when at least one tenant is resolved for the signed-in user.
 
 ## Main Workflows
 
@@ -67,7 +95,9 @@ The Guardrails tab within each configuration drawer contains:
    monitoring.
 6. If the configuration supports Access Control features, open the Guardrails tab, enable the
    desired features, and supply any required parameters.
-7. Changes save automatically. Review the toolbar status indicator to confirm the save completed,
+7. Use Monitored Browsers to confirm per-browser coverage, and Group & User Rules to scope
+   overrides to a smart group or individual user when needed.
+8. Changes save automatically. Review the toolbar status indicator to confirm the save completed,
    then review endpoint findings for operational impact.
 
 ## Related Platform Areas
