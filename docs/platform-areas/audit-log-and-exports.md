@@ -44,6 +44,10 @@ Exports provides export history and starts new exports for supported platform da
 - Receive notification when an export is ready.
 - Download completed exports from history.
 
+When an export finishes, the notification panel automatically opens from wherever the admin is in
+the platform, so the completed export is visible without navigating back to the Exports page or
+manually checking the notification bell.
+
 Supported export sources include:
 
 - **Browser Extension Deployment Status** — user, group, location, department, and extension state
