@@ -26,6 +26,7 @@ Use Browser Extension when you need to:
 - Deployment management for tenant-level enablement and update controls.
 - Deployment status tables with user, group, location, department, persona, and extension state.
 - Whitelisting configuration.
+- Detection Configuration for extension-specific controls, grouped by posture.
 - Support for managed deployment approaches such as Google Business Profile, MDM, Jamf, or Intune
   where configured.
 - Export support for deployment status.
@@ -34,7 +35,14 @@ Use Browser Extension when you need to:
 
 Deployment Management lets administrators control tenant-level behavior, including extension
 enablement, force update, selected mode, and persona-related options. Some persona capabilities
-depend on forced login and background tab reading.
+depend on forced login and background tab reading. A **Show Icon on Prompt** toggle controls
+whether the extension icon is displayed to end users when a persona prompt appears.
+
+## Detection Configuration
+
+The Detection Configuration tab lists the controls that apply to browser-extension activity,
+organized into an **All** view and posture-specific tabs. Admins can create, edit, enable, disable,
+and delete controls from this tab, subject to their assigned permissions.
 
 ## Main Workflows
 

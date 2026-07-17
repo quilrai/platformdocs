@@ -8,6 +8,38 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## July 17, 2026
+
+### New
+
+- [Browser Extension](/platform-areas/browser-extension): Added a **Show Icon on Prompt** toggle
+  to the Deployment Management tab. Admins can control whether the extension icon is shown to
+  users when a persona prompt is displayed, alongside the existing forced-login and background-tab
+  persona settings.
+
+### Improved
+
+- [Findings](/platform-areas/findings): The interactions eye icon on finding cards now also
+  appears for app-visit, AI-user-discovery, and sign-up/sign-in findings, not just findings tied to
+  a specific risky behavior. Admins can open the same **User Interactions** detail view for these
+  use cases to review the underlying user activity.
+
+- [Audit Log and Exports](/platform-areas/audit-log-and-exports): The notification panel now
+  automatically opens on any screen as soon as an export finishes, showing a brief "Preparing your
+  export..." state while the panel refreshes. Previously the auto-open behavior was inconsistent
+  across screens.
+
+### Fixed
+
+- [Browser Extension](/platform-areas/browser-extension): Fixed the Detection Configuration tab
+  in Deployment settings sometimes failing to load control data on first visit or when switching
+  between posture tabs. The tab now shows a loading state while results are fetched and reliably
+  displays data.
+
+- [Browser Extension](/platform-areas/browser-extension): Fixed a page-scrolling issue and
+  hydration errors on Browser Extension settings pages, including header alignment in the
+  Deployment Status device-info column.
+
 ## July 16, 2026
 
 ### New

@@ -36,6 +36,9 @@ platform. It is the main place to move from summary signals into detailed eviden
 - Review Compliance Findings by provider, detection scope, user, category, and subcategory.
 - Open related Quilly coaching conversations from finding cards where a **Quilly** badge is shown.
   See [Quilly](./quilly.md) for details on reviewing engagement history.
+- Open the **User Interactions** view from a finding card's eye icon to review the underlying user
+  activity. This is available for findings tied to a specific risky behavior as well as app-visit,
+  AI-user-discovery, and sign-up/sign-in use cases.
 
 ## Finding Insights Time Ranges
 
