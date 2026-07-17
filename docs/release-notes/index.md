@@ -8,6 +8,14 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## July 17, 2026
+
+### Fixed
+
+- [Findings](/platform-areas/findings): Fixed the finding details modal opening blank for
+  app-visit, sign-up, and AI-discovery findings when clicking the eye icon on a finding card. These
+  findings now correctly display the interaction details in the modal.
+
 ## July 16, 2026
 
 ### New
