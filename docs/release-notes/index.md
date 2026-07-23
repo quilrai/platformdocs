@@ -8,6 +8,25 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## July 23, 2026
+
+### New
+
+- [Integrations](/platform-areas/integrations/identity-providers/microsoft-entra-id): Added a
+  **Data collection scope** selector to the Microsoft Entra ID integration setup. Admins can
+  choose to collect **Users**, **Apps**, or both for each instance, and can opt in to a **Sync app
+  status details** switch that refreshes application approval status and criticality on every
+  sync. When left off, previously set approval status and criticality values are preserved between
+  syncs.
+
+### Fixed
+
+- [Integrations](/platform-areas/integrations/identity-providers/microsoft-entra-id): The
+  **Configure user condition** filter section no longer appears for Microsoft-ecosystem
+  integrations that share Microsoft Entra ID's connection configuration, such as Azure Cloud,
+  Microsoft Intune, Microsoft Calendar, and Microsoft Purview. It now correctly shows only for
+  Microsoft Entra ID.
+
 ## July 16, 2026
 
 ### New

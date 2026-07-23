@@ -20,6 +20,25 @@ Microsoft Entra ID (formerly Azure AD) secures identities and access, enhanced b
 3. Sign in with a Microsoft Entra ID administrator account and consent to the requested permissions.
 4. Click **Allow** to authorize the connection.
 
+## Configuration Options
+
+When creating or editing a Microsoft Entra ID instance, admins can control what the connector
+collects:
+
+- **Data collection scope:** Choose **Users**, **Apps**, or both. Selecting only Users skips
+  enterprise application discovery for that instance; selecting only Apps skips directory user
+  collection. Both scopes are selected by default, and at least one scope must always remain
+  selected.
+- **Sync app status details:** An opt-in switch available when **Apps** is selected. When on,
+  each sync refreshes application approval status and criticality from Microsoft Entra ID. When
+  off (the default), previously set approval status and criticality values are preserved between
+  syncs.
+- **Configure user condition:** When the instance's forwarding scope is not set to send all audit
+  events, an additional filter section lets admins add attribute-based conditions that scope which
+  users are collected. This section is specific to Microsoft Entra ID and is not shown for other
+  Microsoft-ecosystem integrations (Azure Cloud, Microsoft Intune, Microsoft Calendar, Microsoft
+  Purview) that share the same underlying connection.
+
 ## Required Scopes
 
 | Scope Group | Permissions | Purpose |
