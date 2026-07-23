@@ -8,6 +8,31 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## July 23, 2026
+
+### New
+
+- [Findings](/platform-areas/findings): Data-risk evidence snippets — copy/paste content and
+  snippets from uploaded or downloaded files — are now masked by default when reviewed from a
+  finding, with sensitive values shown as labeled pills. Admins with AI Usage Conversation read
+  access can use a **Mask/Unmask** toggle to reveal original values in the snippet view and in the
+  **All Snippets** view.
+
+### Improved
+
+- [Findings](/platform-areas/findings): Unmasking multiple evidence snippets in one view now sends
+  a single batched request instead of one request per snippet, and each unmask action is recorded
+  against the finding under review so audit history stays consolidated rather than fragmented
+  across snippets.
+- [Quilly](/platform-areas/quilly): Access to Quilly engagements — the Quilly badge on finding
+  cards, the Quilly Engagements drawer, and the Quilly Engagement tab in User Lens — is now
+  available to the **Admin** and **Platform Admin** roles in addition to **Super Admin**.
+  Previously this required the Super Admin role.
+- [Users, Applications, and Accounts](/platform-areas/users-accounts-applications): The
+  **Pending bulk actions** indicator on the Applications table no longer briefly shows a
+  "Checking bulk actions..." loader on initial page load or during background polling. The loader
+  now only appears while actively waiting on a bulk action the admin just started watching.
+
 ## July 16, 2026
 
 ### New

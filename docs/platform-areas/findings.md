@@ -36,6 +36,23 @@ platform. It is the main place to move from summary signals into detailed eviden
 - Review Compliance Findings by provider, detection scope, user, category, and subcategory.
 - Open related Quilly coaching conversations from finding cards where a **Quilly** badge is shown.
   See [Quilly](./quilly.md) for details on reviewing engagement history.
+- Review masked evidence snippets for data-risk findings and reveal them with the **Mask/Unmask**
+  toggle when permitted.
+
+## Masked Evidence Snippets
+
+Data-risk evidence — including copy/paste content and snippets from uploaded or downloaded files —
+is masked by default when reviewed from a finding. Each masked value is shown as a labeled pill (for
+example, a sensitive-data category name) instead of the underlying value, whether you are viewing a
+single snippet or the **All Snippets** view.
+
+Admins with AI Usage Conversation read access can use the **Mask/Unmask** toggle on a snippet view to
+reveal the original values:
+
+- Unmasking applies to every snippet shown in that view in one action, rather than one request per
+  snippet.
+- Each unmask action is recorded against the finding under review, so audit history reflects one
+  entry per action instead of one entry per snippet.
 
 ## Finding Insights Time Ranges
 
@@ -88,4 +105,5 @@ to inspect the source and content evidence.
 
 Findings require access to the Findings resource. Endpoint-specific tabs are shown only when the
 endpoint agent capability is enabled for the tenant. Compliance findings depend on configured
-compliance integrations and the related Compliance permissions.
+compliance integrations and the related Compliance permissions. Revealing unmasked values in
+data-risk evidence snippets requires AI Usage Conversation read access.
