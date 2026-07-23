@@ -75,6 +75,8 @@ finding and user.
 
 ## Access Requirements
 
-The **Super Admin** role is required to view Quilly engagements in the platform.
+The **Admin**, **Platform Admin**, or **Super Admin** role is required to view Quilly engagements
+in the platform, including the Quilly badge on finding cards, the Quilly Engagements drawer, and
+the Quilly Engagement tab in User Lens.
 
 End-user coaching delivery requires configured **Slack** and/or **Microsoft Teams** integrations.
