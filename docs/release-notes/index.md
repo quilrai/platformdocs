@@ -8,6 +8,15 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## July 24, 2026
+
+### Fixed
+
+- [MCP Gateway](/platform-areas/mcp-gateway): Fixed the **API Token Created** confirmation dialog
+  sometimes being hidden behind other dialogs when creating an MCP Gateway access token. The
+  confirmation, which displays the newly generated token for copying, now always appears above
+  other overlays.
+
 ## July 16, 2026
 
 ### New
