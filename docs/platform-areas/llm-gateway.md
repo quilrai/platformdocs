@@ -174,6 +174,37 @@ attacks, grounded answering, hallucination, instruction following, knowledge, te
 and logic or reasoning. Runs are named, scoped to an app and provider, and include summaries plus
 case-level results.
 
+**Human review of case verdicts:**
+- Every case shows an **effective verdict** (the current result: **Pass**, **Fail**, **Needs
+  Review**, or **Error**) alongside the original **machine verdict**, which never changes.
+- Reviewers can confirm or override the automated verdict from the case detail view, or use quick
+  review actions from the case list. A reason is required when a reviewer flips an established pass
+  to fail or fail to pass; a reason is optional when resolving a **Needs Review** case.
+- Each case keeps a chronological **review history** (reviewer, decision, reason, and timestamp)
+  available from a review-history view.
+- Cases with a human decision show a **Human Override** or **Human Confirmed** tag; error cases are
+  never reviewable.
+- Run summaries, the run list, and the results comparison view show effective pass/fail counts and
+  pass rate next to the underlying automated numbers, plus **Review Status** (**Not Started**, **In
+  Progress**, **Complete**) and an unresolved-review count. Review status is independent of the run's
+  execution status.
+- Case filters add **Unresolved** and **Human overrides** toggles, and cases can be sorted or grouped
+  to surface unresolved reviews.
+
+**Guardian evaluation:**
+- Each case now also runs a counterfactual Guardian Agent check, shown as a **Guardian** badge:
+  **Would Block**, **Allowed**, **Not Evaluated**, or **Evaluation Failed**. This shows whether
+  Guardian Agent would have intervened on the case's traffic — it runs automatically and does not
+  change the case's pass/fail verdict.
+- Run summaries and the results comparison view add **Guardian Prevented**, **Residual Failures**,
+  **Potential Overblocks**, and **Guardian Prevention Rate** to show how much of the observed risk
+  Guardian Agent would have stopped.
+- A **Guardian** filter on the case list lets reviewers narrow to cases by Guardian outcome.
+
+**Exports:** PDF exports of red teaming runs and case appendices include effective verdict, machine
+verdict, human-override marker, Guardian outcome, review status, unresolved-review and override
+counts, and Guardian prevention metrics alongside the existing run and case details.
+
 ## Provider Status
 
 Provider Status lets admins monitor the health of each provider credential configured or observed
