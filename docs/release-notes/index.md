@@ -8,6 +8,35 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## July 28, 2026
+
+### New
+
+- [LLM Gateway](/platform-areas/llm-gateway): Added human review to red teaming case results.
+  Admins can confirm or override the automated verdict on any case, with a required reason when
+  flipping an established pass to fail (or the reverse) and an optional reason when resolving a
+  **Needs Review** case. Every case keeps a chronological review history, and cases with a human
+  decision are tagged **Human Override** or **Human Confirmed**.
+- [LLM Gateway](/platform-areas/llm-gateway): Added a Guardian evaluation badge to red teaming
+  cases showing whether Guardian Agent would have blocked, allowed, skipped, or failed to evaluate
+  the traffic behind that case. Run summaries and the results comparison view now show **Guardian
+  Prevented**, **Residual Failures**, **Potential Overblocks**, and **Guardian Prevention Rate** so
+  teams can see how much observed risk Guardian Agent would have stopped.
+
+### Improved
+
+- [LLM Gateway](/platform-areas/llm-gateway): Red teaming run summaries, the run list, and the
+  results comparison view now show effective (post-review) pass/fail counts and pass rate next to
+  the underlying automated numbers, along with run-level **Review Status** (**Not Started**, **In
+  Progress**, **Complete**) and an unresolved-review count. Review status is tracked independently
+  of run execution status, so human review never overwrites the automated results.
+- [LLM Gateway](/platform-areas/llm-gateway): Red teaming case filters add **Unresolved**, **Human
+  overrides**, and **Guardian** filters, making it easier to find cases that still need a decision
+  or that a reviewer has already acted on.
+- [LLM Gateway](/platform-areas/llm-gateway): PDF exports of red teaming runs now include the
+  effective verdict, machine verdict, human-override marker, Guardian outcome, review status, and
+  Guardian prevention metrics.
+
 ## July 16, 2026
 
 ### New
