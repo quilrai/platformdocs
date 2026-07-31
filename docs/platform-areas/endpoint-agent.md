@@ -33,6 +33,8 @@ Use Endpoint Agent when you need to:
   features and supplying their required parameters from the Guardrails tab.
 - Auto-save for detection configurations — changes are persisted automatically after a short pause
   with a live status indicator in the toolbar.
+- Automatic read-only handling of the data-risk and adversarial-risk category grids when a tenant's
+  Policy Engine is enabled, so admins always know which system currently owns detection.
 
 ## Detection Configurations
 
@@ -56,6 +58,12 @@ The Guardrails tab within each configuration drawer contains:
   corrected. The Access Control section is hidden entirely when no features apply to the selected
   configuration. Only features the admin interacts with in the current session are included in the
   save; untouched features remain at their previously saved values.
+
+When a tenant's Policy Engine is enabled, the **Data risk categories** and **Adversarial risk
+categories** grids in the Guardrails tab switch to a read-only reference view: toggles and action
+controls are greyed out and can no longer be changed from Endpoint Agent. A banner above the grids
+explains that detection for the tenant is now managed by the Policy Engine and links to the Policy
+Engine settings and to Detection Models for the current configuration.
 
 ## Main Workflows
 
