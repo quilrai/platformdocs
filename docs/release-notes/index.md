@@ -8,6 +8,16 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## July 31, 2026
+
+### Improved
+
+- [Endpoint Agent](/platform-areas/endpoint-agent): For tenants with the Policy Engine enabled, the
+  **Data risk categories** and **Adversarial risk categories** grids in the Guardrails tab now
+  display as a read-only reference instead of editable controls, since detection is enforced by the
+  Policy Engine rather than these Endpoint settings. A banner links directly to the Policy Engine
+  settings and to Detection Models so admins know where to manage detection going forward.
+
 ## July 16, 2026
 
 ### New
