@@ -37,6 +37,23 @@ The Smart Groups drawer previously available on the Users page has been removed.
 creation and membership management are now handled from the dedicated
 [Smart Groups](./smart-groups.md) screen.
 
+### Exporting User Data
+
+An **Export** button in the Users table toolbar (shown when the table is grouped by **Users**)
+opens an export modal that lets admins download user records as CSV.
+
+- **Data Scope** controls what is exported when no rows are selected: **Current filter** includes
+  only records matching the active search, filters, and time range; **Full range** exports all
+  records without applying filters.
+- When one or more rows are selected in the table, the button shows the selection count and the
+  export is limited to those rows. The scope selector is not shown in selection mode.
+- Active filters and search text are displayed in the modal before the export starts.
+- Exports are queued in the background and a notification is sent when the file is ready.
+  Completed exports appear in export history labeled **Users**.
+- The Export button only appears for admins with export permission for user/AI usage data.
+
+This feature is currently in Beta.
+
 ## Applications
 
 The Applications page is the main app-management and app-intelligence surface. It includes an
@@ -109,5 +126,6 @@ Common use cases:
 
 ## Access Requirements
 
-Users and Accounts use AI usage permissions. Applications use app-management permissions, with
-separate scopes for updates, allow/block operations, and agent-triggered actions.
+Users and Accounts use AI usage permissions, with a separate export scope required to see the
+Export button on the Users table. Applications use app-management permissions, with separate
+scopes for updates, allow/block operations, and agent-triggered actions.

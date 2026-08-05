@@ -8,6 +8,36 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## August 5, 2026
+
+### New
+
+- [Users, Applications, and Accounts](/platform-areas/users-accounts-applications): Added an
+  **Export** button to the Users table toolbar (shown when the table is grouped by **Users**).
+  Clicking it opens an export modal where admins choose a format (CSV) and a **Data Scope**:
+  **Current filter** exports only records matching the active search, filters, and time range;
+  **Full range** exports all records without applying filters. When rows are selected in the
+  table, the button shows the selection count and the export covers only those rows (no scope
+  selector is shown in that mode). The export is queued in the background; a notification confirms
+  queuing and the completed file appears in export history labeled **Users**. The button only
+  appears for admins with export permission for user/AI usage data. This feature is labeled Beta.
+
+- [Browser Extension](/platform-areas/browser-extension): Added an optional note to whitelisted
+  domains. Admins can add a short description when whitelisting a new domain, or add, edit, and
+  remove the note for any existing domain from the whitelist list — for example, to record that a
+  site is an internal tool or was approved by security.
+
+### Improved
+
+- [Findings](/platform-areas/findings): Export modals that support a page date range now default
+  to a **Current filter** data scope, exporting exactly what the page is currently showing
+  (active filters, search text, and the page's own date range). A **Custom range** option is still
+  available for choosing an export date range independent of the current view.
+
+- [Browser Extension](/platform-areas/browser-extension): The Whitelisted Domains list now has a
+  dedicated search field and a separate **Add domain** form, and shows a note (or "No note added")
+  under each domain so admins can scan whitelist context without opening an edit view.
+
 ## July 16, 2026
 
 ### New

@@ -36,6 +36,14 @@ Deployment Management lets administrators control tenant-level behavior, includi
 enablement, force update, selected mode, and persona-related options. Some persona capabilities
 depend on forced login and background tab reading.
 
+## Domain Whitelisting
+
+The Whitelisted Domains card in whitelist settings lets admins search existing domains, add a new
+domain, and remove a domain. Each domain can optionally include a short note describing why it is
+whitelisted (for example, "internal tool" or "approved by security"). Notes can be added when a
+domain is created or edited later from the domain list, and are shown alongside the domain to give
+reviewers context without leaving the settings page.
+
 ## Main Workflows
 
 1. Connect the required identity or management integration.
