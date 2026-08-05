@@ -8,6 +8,21 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## August 5, 2026
+
+### Fixed
+
+- [Settings and Administration](/platform-areas/settings-admin): Fixed the **Use URLs in Popups**
+  toggle in User Interaction Hub not persisting. The toggle now saves as soon as it's changed and
+  correctly reflects the saved state after a page reload.
+
+### Improved
+
+- [Settings and Administration](/platform-areas/settings-admin): The Customize Links section of
+  User Interaction Hub now shows a loading state while saved policy links are being fetched, and a
+  clear error message if they fail to load. When no links have been saved yet, the default sample
+  links are labeled **Default values** so admins can tell them apart from saved entries.
+
 ## July 16, 2026
 
 ### New
