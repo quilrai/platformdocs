@@ -73,6 +73,11 @@ User Interaction Hub lets teams customize what end users see in QuilrAI interact
 Administrators can review user responses and configure popup content, policy links, and visual
 styling that appear in user-facing prompts or justifications.
 
+The **Use URLs in Popups** toggle in Customize Links saves immediately when changed and reflects
+the saved state after a reload. While saved policy links are loading, the list shows a loading
+state; if the load fails, an error message is shown instead of an empty list. When no links have
+been saved yet, sample links are shown and labeled **Default values** for reference.
+
 ## Compliance
 
 Compliance includes provider key setup and key management for compliance services. Current settings
