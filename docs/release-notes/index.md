@@ -8,6 +8,16 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## August 5, 2026
+
+### New
+
+- [AI Inventory](/platform-areas/ai-inventory): Endpoint Agent coding inventory now includes a
+  **Scheduled** category for coding assistants that support scheduled automations (such as
+  cron-style or recurring tasks). The Scheduled tab shows each automation's kind, schedule, and
+  matcher alongside the existing Agents, Skills, MCP Servers, Models, Hooks, Permissions, Plugins,
+  and Repos categories in the endpoint coding inventory detail view.
+
 ## July 16, 2026
 
 ### New
