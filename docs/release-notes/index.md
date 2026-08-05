@@ -8,6 +8,19 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## August 5, 2026
+
+### New
+
+- [LLM Gateway](/platform-areas/llm-gateway): Added Oracle Cloud Infrastructure (OCI) Generative AI
+  as a new provider family, available as an Oracle Generative AI (chat completions) provider and an
+  Oracle Responses provider for both primary and additional provider instances. Admins configure the
+  credential with an OCI region, Generative AI project OCID, and one of six authentication modes —
+  API key, gateway user principal, user principal, session principal, instance principal, or
+  resource principal — with mode-specific fields such as tenancy OCID, user OCID, key fingerprint,
+  private key, private key passphrase, or session token. The Oracle Generative AI provider also
+  requires a compartment OCID. Models are entered manually for these providers.
+
 ## July 16, 2026
 
 ### New

@@ -36,8 +36,9 @@ Use LLM Gateway when you need to:
 - Configure provider credentials, selected models, manual model entries, and additional provider
   instances.
 - Use provider families for chat completions, Anthropic Messages, Bedrock Runtime, OpenAI
-  Responses, OpenAI Assistants, OpenAI Realtime, Vertex AI, embeddings, rerank, and guardrails-only
-  integrations such as Quilr SDK and Microsoft Copilot Studio.
+  Responses, OpenAI Assistants, OpenAI Realtime, Vertex AI, Oracle Cloud Infrastructure (OCI)
+  Generative AI, embeddings, rerank, and guardrails-only integrations such as Quilr SDK and
+  Microsoft Copilot Studio.
 - Configure default risk actions and enabled guardrail categories.
 - Configure additional data guardrails for specialized EDM pattern groups, including device and
   network, telecom, and employee or HR data types.
@@ -89,6 +90,15 @@ Provider settings can include a primary provider and additional provider instanc
 instances use unique labels so routing rules can target the intended provider instance. Some
 provider families, such as embeddings, rerank, Bedrock Runtime, and OpenAI Assistants providers,
 are available for gateway use but are not used as routing targets.
+
+**Oracle OCI providers:** Oracle Generative AI (chat completions) and Oracle Responses are
+manual-entry providers backed by Oracle Cloud Infrastructure (OCI). Admins choose one of six
+authentication modes when adding or updating the credential — API key, gateway user principal, user
+principal, session principal, instance principal, or resource principal — and provide the OCI
+region and Generative AI project OCID (compartment OCID is also required for the Oracle Generative
+AI provider). Depending on the selected mode, additional fields such as tenancy OCID, user OCID, key
+fingerprint, private key, private key passphrase, or session token are required. When updating an
+existing Oracle credential, previously stored secrets remain in effect unless replaced.
 
 ## Settings Areas
 
