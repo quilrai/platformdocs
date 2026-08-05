@@ -50,6 +50,11 @@ Supported export sources include:
   records from the deployment status table.
 - **Applications** — application inventory records from the Applications page, with support for
   current-filter or full-range scope and selection-based export. Currently in Beta.
+- **Users** — user records from the Users table, with support for current-filter or full-range
+  scope and selection-based export. Currently in Beta.
+- **Findings** — finding records from finding views that expose an Export button, with support for
+  a current-filter scope (matching the page's active filters and date range) or a custom export
+  date range, and selection-based export.
 
 The export history list automatically refreshes every 30 seconds while any export is still
 processing, so the status and download link update without a manual page reload.

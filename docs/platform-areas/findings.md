@@ -74,6 +74,23 @@ OpenAI views share the same investigation pattern: select provider scope, choose
 no-risk, or all-interaction coverage, filter by user and DLP category, and open the details drawer
 to inspect the source and content evidence.
 
+## Exporting Findings
+
+Finding views that expose an **Export** button open an export modal for downloading finding
+records as CSV.
+
+- **Data Scope** appears when the page can supply its own current date range. **Current filter**
+  exports exactly what the page is currently showing, including active filters, search text, and
+  the page's own date range. **Custom range** lets you pick a different date range for the export,
+  independent of the page's current view.
+- When one or more rows are selected in the table, the export is limited to those rows and the
+  scope selector is not shown.
+- Active filters and the selected export range are displayed in the modal before the export
+  starts.
+- Exports are queued in the background and a notification is sent when the file is ready.
+- The same tenant-configured row limit that applies to other exports applies to Findings exports.
+  See [Audit Log And Exports](./audit-log-and-exports.md#row-limit).
+
 ## Related Platform Areas
 
 - [LLM Gateway](./llm-gateway.md)
@@ -83,6 +100,7 @@ to inspect the source and content evidence.
 - [Controls](./controls.md)
 - [Quilly](./quilly.md)
 - [Settings And Administration](./settings-admin.md)
+- [Audit Log And Exports](./audit-log-and-exports.md)
 
 ## Access Requirements
 
