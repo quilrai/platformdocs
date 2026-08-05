@@ -19,7 +19,8 @@ Use AI Inventory when you need to:
 - Compare browser, endpoint, gateway, MCP, and compliance API sources.
 - Inspect asset metadata, guardrails, tags, status, source, and integration points.
 - Investigate endpoint coding inventory such as agents, skills, MCP servers, models, hooks,
-  permissions, plugins, and repositories when endpoint telemetry provides it.
+  scheduled automations, permissions, plugins, and repositories when endpoint telemetry provides
+  it.
 - Review all applications discovered on endpoints through asset inventory, inspect OS type,
   privilege, approval status, and execution policy, and update execution policy inline.
 - Review LLM Gateway API keys and MCP Gateway servers from an inventory perspective.
@@ -37,7 +38,7 @@ Use AI Inventory when you need to:
 - Review Endpoint Agent application groups with request, sensitive, detection, blocked, and user
   metrics.
 - Review endpoint coding inventory where available, including agents, skills, MCP servers, models,
-  hooks, permissions, plugins, and repositories.
+  hooks, scheduled automations, permissions, plugins, and repositories.
 - Review endpoint-discovered applications with the Discovery sub-view: filter by name, user email,
   category, source, OS type, approval status, and criticality, and update execution policy inline.
 - Review LLM Gateway API keys with request, blocked, anonymized, model, last-used, and posture
@@ -60,8 +61,10 @@ inventory view scoped to browser-discovered apps.
 
 The Endpoint Agent source focuses on endpoint-observed applications. It summarizes requests,
 sensitive activity, detections, blocked activity, and users. Where coding inventory is available,
-the detail view can also show related agents, skills, MCP servers, models, hooks, permissions,
-plugins, and repositories for the selected application group.
+the detail view can also show related agents, skills, MCP servers, models, hooks, scheduled
+automations, permissions, plugins, and repositories for the selected application group. Scheduled
+automations list each automation's kind, schedule, and matcher for coding assistants that support
+recurring or time-based tasks.
 
 A **Discovery** sub-view within the Endpoint Agent source lists all applications observed on
 endpoints through asset inventory, including applications that have not generated AI-specific
