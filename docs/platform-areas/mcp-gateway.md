@@ -27,6 +27,10 @@ Use MCP Gateway when you need to:
 ## Key Capabilities
 
 - View MCP backends and enable or disable them.
+- View the original upstream MCP endpoint alongside the Quilr gateway endpoint on each MCP card.
+  Public, external provider endpoints are shown and copyable; Quilr-managed, localhost, loopback,
+  private-network, and internal-hostname endpoints are shown as **Quilr managed** to avoid exposing
+  internal infrastructure details.
 - Add a custom MCP with automatic auth probing, OAuth passthrough, or upstream API key injection.
 - Install MCPs from the MCP Library.
 - Request MCP installs when install permission is not available.

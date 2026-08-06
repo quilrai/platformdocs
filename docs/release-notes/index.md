@@ -8,6 +8,16 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## August 6, 2026
+
+### Improved
+
+- [MCP Gateway](/platform-areas/mcp-gateway): MCP cards now show the original upstream MCP
+  endpoint alongside the Quilr gateway endpoint. Public, external provider endpoints are visible
+  and copyable, so admins can confirm exactly which upstream server a Quilr-managed MCP connects
+  to. Quilr-managed, localhost, loopback, private-network, and common internal-hostname endpoints
+  continue to display as **Quilr managed** to avoid exposing internal infrastructure details.
+
 ## July 16, 2026
 
 ### New
