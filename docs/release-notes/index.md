@@ -8,6 +8,14 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## August 6, 2026
+
+### Improved
+
+- [Users, Applications, and Accounts](/platform-areas/users-accounts-applications): The Users
+  table now shows each user's email address beneath their display name, making it easier to
+  distinguish between users with similar or identical names.
+
 ## July 16, 2026
 
 ### New

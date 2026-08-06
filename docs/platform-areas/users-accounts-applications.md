@@ -33,6 +33,9 @@ Common use cases:
 - Review Quilly coaching interactions for a specific user from the **Quilly** tab in User Lens.
   See [Quilly](./quilly.md) for details on interaction types and review workflows.
 
+The Users table shows each user's email address under their display name, making it easier to
+identify the correct user when names are similar or ambiguous.
+
 The Smart Groups drawer previously available on the Users page has been removed. Smart group
 creation and membership management are now handled from the dedicated
 [Smart Groups](./smart-groups.md) screen.
