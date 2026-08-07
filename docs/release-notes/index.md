@@ -8,6 +8,16 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## August 7, 2026
+
+### Fixed
+
+- [LLM Gateway](/platform-areas/llm-gateway): Fixed **Get available models** returning an
+  "API key not found" error when fetching models for a provider that reuses stored, previously
+  saved credentials (for example, when editing an existing app's provider instance). The saved
+  app is now correctly included in the request, so model lists load without re-entering
+  credentials.
+
 ## July 16, 2026
 
 ### New
