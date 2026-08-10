@@ -31,6 +31,8 @@ Use Endpoint Agent when you need to:
 - Dedicated endpoint policy rows for coding tools such as Cursor and Claude Code where configured.
 - Access Control configuration per detection entry, enabling or disabling supported access-control
   features and supplying their required parameters from the Guardrails tab.
+- Dependency vulnerability scanning for supported coding agents, with enforcement settings and a
+  dedicated ADLC (Agent Detection Lifecycle) tab for reviewing scanned dependency events.
 - Auto-save for detection configurations — changes are persisted automatically after a short pause
   with a live status indicator in the toolbar.
 
@@ -56,6 +58,24 @@ The Guardrails tab within each configuration drawer contains:
   corrected. The Access Control section is hidden entirely when no features apply to the selected
   configuration. Only features the admin interacts with in the current session are included in the
   save; untouched features remain at their previously saved values.
+- **Dependency security** — shown for supported coding agents (Claude Code, Cursor, Codex, and
+  GitHub Copilot CLI/extension). Admins can enable dependency scanning, block dependencies with
+  known vulnerabilities, and inform users when a newer version of a dependency is available. These
+  settings save independently from the rest of the Guardrails tab.
+
+### ADLC Tab
+
+The ADLC (Agent Detection Lifecycle) tab appears alongside Guardrails for endpoint configurations
+that support dependency scanning. It is a read-only view of scanned dependency events for the
+selected application, including:
+
+- Summary cards for total dependencies, dependencies needing attention, vulnerable packages, scan
+  count, and last scan time.
+- A table of dependency events with package, version, ecosystem, scan status (vulnerable, clean,
+  lookup failed, unscanned), severity, advisory identifiers, the action taken (blocked, warned, or
+  allowed) and its trigger, the user who triggered the event, and when it was scanned.
+- Filters for package search, ecosystem, status, severity, and a **Needs attention only** toggle,
+  plus pagination.
 
 ## Main Workflows
 
@@ -67,7 +87,10 @@ The Guardrails tab within each configuration drawer contains:
    monitoring.
 6. If the configuration supports Access Control features, open the Guardrails tab, enable the
    desired features, and supply any required parameters.
-7. Changes save automatically. Review the toolbar status indicator to confirm the save completed,
+7. For supported coding agents, enable dependency scanning in the Guardrails tab and choose
+   whether to block vulnerable dependencies and inform users about newer versions, then open the
+   ADLC tab to review scanned dependency events and filter for items that need attention.
+8. Changes save automatically. Review the toolbar status indicator to confirm the save completed,
    then review endpoint findings for operational impact.
 
 ## Related Platform Areas
@@ -80,4 +103,5 @@ The Guardrails tab within each configuration drawer contains:
 ## Access Requirements
 
 Endpoint Agent pages require Endpoint Agent permissions. Endpoint tabs appear only when endpoint is
-enabled for the tenant.
+enabled for the tenant. The Dependency security controls and ADLC tab appear only for configurations
+for supported coding agents (Claude Code, Cursor, Codex, and GitHub Copilot CLI/extension).

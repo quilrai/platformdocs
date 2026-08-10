@@ -8,6 +8,19 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## August 10, 2026
+
+### New
+
+- [Endpoint Agent](/platform-areas/endpoint-agent): Added dependency vulnerability scanning for
+  supported coding agents (Claude Code, Cursor, Codex, and GitHub Copilot CLI/extension). A new
+  **Dependency security** section in the Guardrails tab lets admins enable dependency scanning,
+  block dependencies with known vulnerabilities, and inform users about newer available versions.
+  A new **ADLC** (Agent Detection Lifecycle) tab shows scanned dependency events for the app,
+  including package, version, ecosystem, status, severity, advisory details, the action taken, and
+  who triggered it, with search, filters, and pagination to help teams find and prioritize
+  vulnerable dependencies.
+
 ## July 16, 2026
 
 ### New
