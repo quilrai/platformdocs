@@ -25,6 +25,16 @@ Integrate SAML with Quilr for enterprise Single Sign-On (SSO) authentication.
 - SAML assertion consumer service (ACS) URL
 - Certificate configuration
 
+## Downloading Quilr SP Metadata
+
+Quilr's SP metadata (including the tenant-specific SP Entity ID) is only generated once a SAML integration exists for your tenant. You cannot download it beforehand.
+
+1. Go to **Integrations** and open the **Available** tab.
+2. Click **+ Add** on the **SAML** tile to create the integration.
+3. Fill in all required fields (Name, IDP Entity ID, IDP SSO URL, IDP Signing Certificate, Domain, etc.) and click **Allow** to save.
+4. Only after the integration is created, download the **Quilr SP Metadata** from the SAML integration.
+5. Use the downloaded SP metadata to complete the corresponding SP-side configuration in your identity provider (e.g., Audience/Entity ID, ACS URL).
+
 ## What This Integration Does
 
 - Enables SSO authentication for Quilr.
@@ -42,6 +52,10 @@ Configure Okta as your SAML identity provider for Quilr Single Sign-On (SSO).
 - Okta administrator access
 - Quilr administrator access
 - Your organization's email domain configured in Quilr
+
+:::note
+You'll need Quilr's SP metadata to complete the Okta side of this setup. See [Downloading Quilr SP Metadata](#downloading-quilr-sp-metadata) — this requires creating the SAML integration in Quilr first.
+:::
 
 ### Step 1: Create a New SAML Application in Okta
 
@@ -168,6 +182,10 @@ Configure OneLogin as your SAML identity provider for Quilr Single Sign-On (SSO)
 - OneLogin administrator access
 - Quilr administrator access
 - Your organization's email domain configured in Quilr
+
+:::note
+You'll need Quilr's SP metadata to complete the OneLogin side of this setup (e.g., the **Audience (EntityID)** field below). See [Downloading Quilr SP Metadata](#downloading-quilr-sp-metadata) — this requires creating the SAML integration in Quilr first.
+:::
 
 ### Step 1: Create a New Application in OneLogin
 
