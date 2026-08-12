@@ -8,6 +8,17 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## August 12, 2026
+
+### Security And Compliance
+
+- [Users, Applications, and Accounts](/platform-areas/users-accounts-applications): Viewing
+  unmasked prompts and conversation snippets now requires a dedicated **Unmask** permission on AI
+  Usage Conversations, separate from **Read** access. Previously, Read access alone was enough to
+  reveal unmasked sensitive content in conversation drilldowns and Lens views. Admins should confirm
+  that roles intended to see unmasked prompts, findings snippets, and conversation details are
+  explicitly granted the Unmask permission; users without it continue to see masked content.
+
 ## July 16, 2026
 
 ### New
