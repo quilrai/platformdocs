@@ -8,6 +8,16 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## August 12, 2026
+
+### Improved
+
+- [Integrations](/platform-areas/integrations/identity-providers/microsoft-entra-id#idp-to-smart-group):
+  The Entra groups picker in the **IDP to Smart Group** utility now loads groups a page at a time
+  and searches directly against Entra as you type, instead of loading the full group list up
+  front. This keeps the picker responsive for tenants with large numbers of Entra groups. Scroll
+  the list to load more results.
+
 ## July 16, 2026
 
 ### New
