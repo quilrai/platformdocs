@@ -111,3 +111,8 @@ Common use cases:
 
 Users and Accounts use AI usage permissions. Applications use app-management permissions, with
 separate scopes for updates, allow/block operations, and agent-triggered actions.
+
+Viewing masked prompts and conversation snippets in unmasked form requires a dedicated **Unmask**
+permission on AI Usage Conversations, in addition to Read access. Users with Read access but
+without Unmask permission can still open conversation drilldowns, but sensitive prompts and
+snippets remain masked and cannot be revealed.
