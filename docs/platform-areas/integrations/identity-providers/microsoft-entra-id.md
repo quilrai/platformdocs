@@ -63,13 +63,18 @@ not already exist as Quilr users are skipped.
    instance to load Entra groups.
 4. In the **Utilities** section, open **IDP to Smart Group**.
 5. Under **Entra groups**, either:
-   - Search and select individual groups, or
+   - Type in the search box to find groups by name, or scroll the list to load more groups, then
+     select individual groups, or
    - Choose **All groups** to mirror every Entra group, including groups created later.
 6. Click **Save**.
 
 Selected groups appear under **Smart groups to mirror**. After save, the mirrored groups are
 available on the [Smart Groups](../../smart-groups.md) screen with the label
 **Converted from IDP group**.
+
+Entra groups load a page at a time, with the next page loading automatically as you scroll. Search
+runs against Entra directly, so results include matches beyond the groups already loaded on
+screen — this keeps the picker responsive for tenants with large numbers of Entra groups.
 
 ### Important Behaviors
 
@@ -78,7 +83,7 @@ available on the [Smart Groups](../../smart-groups.md) screen with the label
 | One-way save | A group that has been saved stays mirrored. You can add groups later, but you cannot remove a saved mirrored group from this utility. |
 | All groups | When **All groups** is saved, every current and future Entra group is mirrored. The selection cannot be narrowed from the utility afterward. |
 | Membership matching | Members are matched by email. Emails with no matching Quilr user are skipped. |
-| Name conflicts | An Entra group cannot be selected if a Quilr smart group with the same display name already exists. Rename the existing smart group first, or choose a different Entra group. |
+| Name conflicts | An individually selected Entra group cannot be added if a Quilr smart group with the same display name already exists. Rename the existing smart group first, or choose a different Entra group. This check does not run against the full directory when **All groups** is chosen. |
 | Membership management | Membership for IDP-converted groups is managed through this utility, not by manually adding or removing users on the Smart Groups screen. |
 | Deletion | Groups converted from IDP cannot be deleted from the Smart Groups screen. |
 
