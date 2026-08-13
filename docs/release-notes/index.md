@@ -8,6 +8,16 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## August 13, 2026
+
+### Fixed
+
+- [AI Inventory](/platform-areas/ai-inventory): Fixed the **GitHub Copilot** row in endpoint
+  coding inventory showing zero coding assets. Copilot activity reported by Endpoint Agent's CLI
+  integration is now correctly grouped under GitHub Copilot, so agents, skills, MCP servers,
+  models, hooks, permissions, plugins, and repositories discovered through Copilot CLI now appear
+  in the coding inventory counts as expected.
+
 ## July 16, 2026
 
 ### New
