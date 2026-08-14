@@ -16,6 +16,7 @@ Use Smart Groups when administrators need to:
 
 - Create a new smart group with or without initial members.
 - Add one or more users to an existing smart group.
+- Bulk-add users to one or more smart groups from a CSV file.
 - Remove users from a smart group.
 - Delete a smart group that is no longer needed.
 - Manage group membership before applying smart groups to access control in MCP Gateway, LLM
@@ -39,6 +40,22 @@ known, or when access control rules should be configured before users are onboar
 Admins can add one or more users to any existing smart group. Users are searchable by email or
 name. Adding a user to a group takes effect immediately for access control evaluations in MCP
 Gateway, LLM Gateway, and any other area that references the group.
+
+### Bulk Add Users from a CSV File
+
+Admins can add many users to one or more smart groups at once by uploading a CSV file instead of
+selecting users individually.
+
+- **From the Smart Groups screen:** Use the **Bulk add from CSV** button to upload a CSV and
+  choose one or more target smart groups.
+- **From a single group's drilldown:** Open a smart group and use **Actions → Bulk add from CSV**
+  to add the CSV's users to only that group.
+- The CSV must include a column of user principal emails. Invalid email addresses, users who
+  aren't found in Quilr, and users already in the target group are skipped automatically.
+- Bulk add runs as a background job so large files don't block the UI. A **Pending bulk adds**
+  indicator shows jobs in progress, including the target groups, email count, status, requester,
+  and request time. A notification reports how many users were added and how many were skipped
+  once each job finishes.
 
 ### Remove Users from a Smart Group
 

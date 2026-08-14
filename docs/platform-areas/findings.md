@@ -29,13 +29,35 @@ platform. It is the main place to move from summary signals into detailed eviden
 
 ## Key Capabilities
 
-- Filter findings by application, user, finding type, source, category, and other dimensions.
+- Filter findings by application, user, finding type, source, category, finding status, and other
+  dimensions.
 - Drill into finding details and supporting context.
 - Navigate from app, user, and account pages into filtered finding views.
 - Review LLM Gateway findings from a logs-backed V2 view when enabled.
 - Review Compliance Findings by provider, detection scope, user, category, and subcategory.
 - Open related Quilly coaching conversations from finding cards where a **Quilly** badge is shown.
   See [Quilly](./quilly.md) for details on reviewing engagement history.
+- Change the status of a finding, or bulk-mark selected findings as False Positive, from the
+  findings stream. See [Finding Status](#finding-status) below.
+
+## Finding Status
+
+Each finding card in the findings stream shows a **Finding Status** pill (for example, Open or
+False Positive).
+
+- **Default view:** All Findings and the other finding stream tabs (Browser Extension, Endpoint
+  Agent, LLM Gateway, MCP Gateway) load showing **Open** findings by default. Use the **Finding
+  Status** filter to broaden the view to other statuses, or **Clear All Filters** to reset back to
+  the default scope.
+- **Change status on a single finding:** Open a finding card's action menu and choose **Change
+  Status**. In this release the only available action is marking an Open finding as **False
+  Positive**.
+- **Bulk change status:** From the findings stream, select one or more findings and use **Global
+  Actions → Change Status → False Positive**. Only findings that are currently Open in the
+  selection are updated; any findings already in another status are skipped, and the skipped
+  count is shown in the confirmation.
+- Changing finding status requires the Finding Status update permission. Without it, the Change
+  Status action is disabled.
 
 ## Finding Insights Time Ranges
 
@@ -88,4 +110,5 @@ to inspect the source and content evidence.
 
 Findings require access to the Findings resource. Endpoint-specific tabs are shown only when the
 endpoint agent capability is enabled for the tenant. Compliance findings depend on configured
-compliance integrations and the related Compliance permissions.
+compliance integrations and the related Compliance permissions. Changing finding status (single or
+bulk) requires the Finding Status update permission.
