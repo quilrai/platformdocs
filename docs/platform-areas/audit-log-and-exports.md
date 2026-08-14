@@ -54,6 +54,10 @@ Supported export sources include:
 The export history list automatically refreshes every 30 seconds while any export is still
 processing, so the status and download link update without a manual page reload.
 
+The notification bell shows a **Download** action only on notifications for completed exports.
+Other background-job notifications (for example, Smart Groups bulk-add completion) report status
+but do not show a download action.
+
 ### Row Limit
 
 Each export includes up to a tenant-configured maximum number of rows. The export modal displays

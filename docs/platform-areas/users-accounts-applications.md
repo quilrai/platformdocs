@@ -57,6 +57,12 @@ Inline editable fields in the application table (such as category, risk level, o
 show a "Saving…" label and spinner while a change is being saved, confirming that the edit has
 been submitted.
 
+Inline app-setting edits (Block/Unblock, Criticality, License, Approval Status, and the AI app
+posture editor) run asynchronously on the backend. When an edit is submitted, the UI confirms it
+was queued for processing. If another update for the same app is already pending, the UI shows an
+"already in progress" message and reverts the field instead of appearing to apply the new change
+immediately.
+
 The AI lens and Generative AI category filter target the primary app category. When the page is
 reached via an insight or widget drilldown that pre-applies a business-category filter, the
 Category chip shows "Business" to reflect the narrower scope applied by the drilldown.

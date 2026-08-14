@@ -8,6 +8,44 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## August 14, 2026
+
+### New
+
+- [Findings](/platform-areas/findings#finding-status): Added finding status management. Each
+  finding card now shows a **Finding Status** pill, and admins with the Finding Status permission
+  can change an Open finding to **False Positive** from the card's action menu or in bulk from
+  **Global Actions → Change Status** on the findings stream. Bulk changes apply only to the Open
+  findings in the current selection and report how many other findings were skipped.
+- [Findings](/platform-areas/findings#finding-status): All Findings and the other finding stream
+  tabs now default to showing **Open** findings, with a new **Finding Status** filter to broaden
+  or narrow the view.
+- [Smart Groups](/platform-areas/smart-groups#bulk-add-users-from-a-csv-file): Added **Bulk add
+  from CSV** for adding many users to one or more smart groups at once — available from the Smart
+  Groups screen for multiple groups, and from a single group's drilldown Actions menu. Invalid
+  emails, users not found in Quilr, and users already in the target group are skipped
+  automatically. A **Pending bulk adds** indicator tracks jobs in progress, and a notification
+  reports the number of users added and skipped once a job completes.
+
+### Fixed
+
+- [Findings](/platform-areas/findings): Fixed **Clear All Filters** not appearing or not fully
+  resetting filters when a Finding Status filter (or any filter holding an empty selection) was
+  active.
+- [Users, Applications, and Accounts](/platform-areas/users-accounts-applications): Fixed inline
+  app-setting edits (Block/Unblock, Criticality, License, Approval Status, and the AI app posture
+  editor) showing a premature "updated successfully" toast. These edits now confirm when a change
+  has been queued for processing, and show an "already in progress" message — reverting the
+  field — when another update for the same app is still pending.
+- [Smart Groups](/platform-areas/smart-groups): Fixed the smart group drilldown drawer leaving its
+  search and filter state applied to the main Smart Groups list after closing.
+- [Smart Groups](/platform-areas/smart-groups): Fixed pressing Enter in a filter search box
+  without a dedicated search button (used on the Smart Groups list) sometimes triggering the
+  field's clear control and wiping the typed search instead of applying it.
+- [Audit Log and Exports](/platform-areas/audit-log-and-exports): Fixed the notification bell
+  showing a Download action on non-export notifications, such as Smart Groups bulk-add completion
+  notifications. Download now appears only for completed export notifications.
+
 ## July 16, 2026
 
 ### New
