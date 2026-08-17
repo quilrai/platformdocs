@@ -8,6 +8,16 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## August 17, 2026
+
+### Fixed
+
+- [Endpoint Agent](/platform-areas/endpoint-agent): Fixed an issue where unsaved Dependency
+  Security changes in the endpoint agent guardrail editor — **Enable dependency scanning**,
+  **Block vulnerable dependencies**, and **Inform about newer versions** — could be reset back to
+  the last-saved values before an admin saved them. These settings are now preserved until the
+  admin explicitly saves, whether saved on their own or together with other guardrail changes.
+
 ## July 16, 2026
 
 ### New
