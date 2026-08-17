@@ -33,6 +33,10 @@ Use Endpoint Agent when you need to:
   features and supplying their required parameters from the Guardrails tab.
 - Auto-save for detection configurations — changes are persisted automatically after a short pause
   with a live status indicator in the toolbar.
+- A **Vulnerable Dependencies** tab for coding agents with dependency scanning support, listing
+  dependency risk events and scheduled inventory scans.
+- A **Context Savings** tab and Guardrails toggle for Claude Code that reduce verbose tool output
+  before it reaches the agent's context window, with savings analytics.
 
 ## Detection Configurations
 
@@ -56,6 +60,29 @@ The Guardrails tab within each configuration drawer contains:
   corrected. The Access Control section is hidden entirely when no features apply to the selected
   configuration. Only features the admin interacts with in the current session are included in the
   save; untouched features remain at their previously saved values.
+- **Tool output compression** — available for Claude Code. A toggle that token-reduces verbose
+  tool output (git, docker, cargo, npm) before it reaches the agent's context window. The toggle
+  saves with the same **Save** action as the rest of the Guardrails tab.
+
+### Vulnerable Dependencies Tab
+
+Available in the configuration drawer for coding agents with dependency scanning support (for
+example, Claude Code), the **Vulnerable Dependencies** tab lists dependency events for the app:
+package, version, ecosystem, status (vulnerable, clean, lookup failed, unscanned), severity,
+advisory identifiers, source repository, the action taken, owner, and scan time. Events triggered
+by a scheduled inventory scan are labeled **Inventory** / **Scheduled Scan** rather than a
+blocked/warned/allowed decision, distinguishing routine inventory snapshots from live
+install-time or manifest-write events. Summary cards show total dependencies, items needing
+attention, vulnerable packages, scan count, and the last scan time. Admins can search by package
+name and filter by ecosystem, status, severity, or a needs-attention-only toggle.
+
+### Context Savings Tab
+
+For Claude Code, a dedicated **Context Savings** tab shows the impact of tool output compression:
+total bytes saved, an estimated token count saved, the average compression ratio, the number of
+compression events, and a savings-over-time chart. The tab also surfaces the same **Tool output
+compression** toggle available on the Guardrails tab. Data appears once compression has run on at
+least one endpoint running the app; otherwise the tab shows an empty state.
 
 ## Main Workflows
 

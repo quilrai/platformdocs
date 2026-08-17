@@ -8,6 +8,35 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## August 17, 2026
+
+### New
+
+- [AI Inventory](/platform-areas/ai-inventory): Added skill blocking for Claude Code endpoint
+  agents. Each row in the Skills table for a Claude Code application group now includes inline
+  **Allow** and **Block** controls. Blocking a skill requires confirmation and scopes the block to
+  that skill and its owning user; the skill's status chip reflects **Blocked** immediately, and a
+  conflicting concurrent update prompts a retry instead of silently overwriting it. Skills without
+  a resolvable owner email remain read-only. Other coding agents and non-skill entity types are
+  unaffected.
+
+- [Endpoint Agent](/platform-areas/endpoint-agent): Added a **Vulnerable Dependencies** tab
+  (previously **ADLC**) to the endpoint configuration drawer for coding agents with dependency
+  scanning support. The tab lists dependency events with package, version, ecosystem, status,
+  severity, advisory identifiers, source repository, action taken, owner, and scan time, plus
+  summary cards for total dependencies, items needing attention, vulnerable packages, scan count,
+  and last scan time. Events from scheduled inventory scans are now included and labeled
+  **Inventory** / **Scheduled Scan**, separate from live install- or manifest-triggered
+  blocked/warned/allowed decisions. Admins can search by package name and filter by ecosystem,
+  status, severity, or a needs-attention-only toggle.
+
+- [Endpoint Agent](/platform-areas/endpoint-agent): Added tool output compression for Claude Code
+  endpoint agents. A new **Tool output compression** toggle on the Guardrails tab token-reduces
+  verbose tool output (git, docker, cargo, npm) before it reaches the agent's context window. A
+  companion **Context Savings** tab shows total bytes saved, an estimated token count saved,
+  average compression ratio, event count, and a savings-over-time chart, scoped to the app across
+  all endpoints running it.
+
 ## July 16, 2026
 
 ### New
