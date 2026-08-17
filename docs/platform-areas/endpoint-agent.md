@@ -31,6 +31,9 @@ Use Endpoint Agent when you need to:
 - Dedicated endpoint policy rows for coding tools such as Cursor and Claude Code where configured.
 - Access Control configuration per detection entry, enabling or disabling supported access-control
   features and supplying their required parameters from the Guardrails tab.
+- Dependency Security controls for supported coding agents (Claude Code, Cursor, Codex, and GitHub
+  Copilot), covering dependency vulnerability scanning, blocking vulnerable dependencies, and
+  upgrade notifications.
 - Auto-save for detection configurations — changes are persisted automatically after a short pause
   with a live status indicator in the toolbar.
 
@@ -56,6 +59,22 @@ The Guardrails tab within each configuration drawer contains:
   corrected. The Access Control section is hidden entirely when no features apply to the selected
   configuration. Only features the admin interacts with in the current session are included in the
   save; untouched features remain at their previously saved values.
+
+### Dependency Security
+
+For endpoint agent configurations that support coding tools (Claude Code, Cursor, Codex, and
+GitHub Copilot), the Guardrails tab also includes Dependency Security controls:
+
+- **Enable dependency scanning** — check project dependencies for known vulnerabilities and
+  available updates.
+- **Block vulnerable dependencies** — prevent the endpoint agent from using dependencies with
+  known vulnerabilities.
+- **Inform about newer versions** — notify users when a newer version of a dependency is
+  available.
+
+Dependency Security edits are held locally until saved and are not overwritten by other guardrail
+activity in the same session, so admins can safely adjust these settings alone or alongside other
+guardrail changes before saving.
 
 ## Main Workflows
 
