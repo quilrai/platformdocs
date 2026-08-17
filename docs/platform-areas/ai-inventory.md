@@ -63,6 +63,15 @@ sensitive activity, detections, blocked activity, and users. Where coding invent
 the detail view can also show related agents, skills, MCP servers, models, hooks, permissions,
 plugins, and repositories for the selected application group.
 
+For Claude Code, each row in the Skills table includes inline **Allow** and **Block** controls.
+Blocking a skill opens a confirmation prompt and, once confirmed, scopes a block policy to that
+skill and its owning user; the skill's status chip updates to **Blocked** immediately. Skills
+without a resolvable owner email remain read-only, since skill policy is scoped per user. This
+control only applies to Claude Code skill rows — other coding agents and entity types keep their
+existing read-only policy chip. The configuration drawer for the application group also exposes
+**Vulnerable Dependencies** and, for Claude Code, **Context Savings** tabs — see
+[Endpoint Agent](./endpoint-agent.md) for details.
+
 A **Discovery** sub-view within the Endpoint Agent source lists all applications observed on
 endpoints through asset inventory, including applications that have not generated AI-specific
 activity. Discovery rows show application name, associated users, device count, OS type, privilege,
