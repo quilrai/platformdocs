@@ -8,6 +8,33 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## August 17, 2026
+
+### Improved
+
+- [AI Inventory](/platform-areas/ai-inventory): The Endpoint Agent **Discovery** sub-view now lists
+  applications and software dependencies together in one unified table instead of applications
+  only. New columns show asset type (Application or Dependency), associated application, version,
+  users, where the asset was observed (device count for applications or repository count for
+  dependencies, with a repository list on hover), platform, a combined posture column (approval
+  status and criticality for applications; scan status, severity, and vulnerability count for
+  dependencies), and last-observed time. Signed applications show a shield indicator with the
+  signing authority on hover. Filters now include asset type, associated application, user,
+  platform, ecosystem, source, dependency status, dependency severity, and a "Needs attention"
+  toggle, alongside the existing approval status, criticality, and hide-system-processes controls.
+- [AI Inventory](/platform-areas/ai-inventory): The legacy top-level **Endpoint** tab under AI
+  Assets has been retired. Links to that tab now redirect to the AI Inventory **Endpoint Agent**
+  source, which remains the place to review endpoint application groups and endpoint Discovery.
+- [Endpoint Agent](/platform-areas/endpoint-agent): Endpoint Agent application groups with zero
+  requests are no longer listed in the Endpoint Agent inventory source, so the table only shows
+  groups with observed activity.
+
+### Known Limitations
+
+- [AI Inventory](/platform-areas/ai-inventory): Inline execution-policy (Allow/Block) editing has
+  been removed from the Discovery table as part of the unified application-and-dependency view.
+  Execution policy is not currently editable from Discovery rows.
+
 ## July 16, 2026
 
 ### New

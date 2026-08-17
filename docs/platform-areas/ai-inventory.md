@@ -20,8 +20,9 @@ Use AI Inventory when you need to:
 - Inspect asset metadata, guardrails, tags, status, source, and integration points.
 - Investigate endpoint coding inventory such as agents, skills, MCP servers, models, hooks,
   permissions, plugins, and repositories when endpoint telemetry provides it.
-- Review all applications discovered on endpoints through asset inventory, inspect OS type,
-  privilege, approval status, and execution policy, and update execution policy inline.
+- Review all applications and software dependencies discovered on endpoints through asset
+  inventory, including their platform, approval status, criticality, dependency vulnerability
+  status and severity, and signing information.
 - Review LLM Gateway API keys and MCP Gateway servers from an inventory perspective.
 - Track adoption, request volume, blocked activity, sensitive activity, and source-specific trends.
 
@@ -38,8 +39,10 @@ Use AI Inventory when you need to:
   metrics.
 - Review endpoint coding inventory where available, including agents, skills, MCP servers, models,
   hooks, permissions, plugins, and repositories.
-- Review endpoint-discovered applications with the Discovery sub-view: filter by name, user email,
-  category, source, OS type, approval status, and criticality, and update execution policy inline.
+- Review endpoint-discovered applications and software dependencies together with the Discovery
+  sub-view: filter by name, asset type, associated application, user, platform, ecosystem, source,
+  approval status, criticality, dependency status, dependency severity, and a "Needs attention"
+  toggle.
 - Review LLM Gateway API keys with request, blocked, anonymized, model, last-used, and posture
   context.
 - Review MCP Gateway servers with tools, scopes, DLP action, status, and activity metrics.
@@ -59,17 +62,28 @@ inventory view scoped to browser-discovered apps.
 ### Endpoint Agent
 
 The Endpoint Agent source focuses on endpoint-observed applications. It summarizes requests,
-sensitive activity, detections, blocked activity, and users. Where coding inventory is available,
-the detail view can also show related agents, skills, MCP servers, models, hooks, permissions,
-plugins, and repositories for the selected application group.
+sensitive activity, detections, blocked activity, and users, and only lists application groups that
+have observed request activity. Where coding inventory is available, the detail view can also show
+related agents, skills, MCP servers, models, hooks, permissions, plugins, and repositories for the
+selected application group.
 
-A **Discovery** sub-view within the Endpoint Agent source lists all applications observed on
-endpoints through asset inventory, including applications that have not generated AI-specific
-activity. Discovery rows show application name, associated users, device count, OS type, privilege,
-category, source, and execution policy. Admins can filter by name, user email, category, source, OS
-type (macOS, Windows, Linux), approval status (Needs Review, Approved, Blocked), and criticality
-(Critical, Not Critical), and toggle off OS system processes. Execution policy (Allowed or Blocked)
-can be updated inline for each row.
+The legacy top-level **Endpoint** tab under AI Assets has been retired; any links to it now redirect
+to AI Inventory with the Endpoint Agent source selected.
+
+A **Discovery** sub-view within the Endpoint Agent source lists applications and software
+dependencies observed on endpoints through asset inventory in one unified table, including
+applications and dependencies that have not generated AI-specific activity. Each row shows asset
+type (Application or Dependency), name, associated application, version, users, where the asset was
+observed (device count for applications, repository count with a repository list on hover for
+dependencies), platform, a combined posture column, and last-observed time. Posture shows approval
+status and criticality for applications, or scan status, severity, and vulnerability count for
+dependencies. Signed applications display a shield indicator with the signing authority on hover.
+
+Admins can filter Discovery by name, asset type (Application or Dependency), associated application,
+user, platform, ecosystem, source, approval status (Needs Review, Approved, Blocked), criticality
+(Critical, Not Critical), dependency status (Clean, Vulnerable, Lookup Failed, Unscanned), dependency
+severity (Critical, High, Moderate, Low), and a "Needs attention" toggle, and can toggle off OS
+system processes. Execution policy is not currently editable from Discovery rows.
 
 ### LLM Gateway
 
