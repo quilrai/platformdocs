@@ -37,6 +37,10 @@ platform. It is the main place to move from summary signals into detailed eviden
 - Open related Quilly coaching conversations from finding cards where a **Quilly** badge is shown.
   See [Quilly](./quilly.md) for details on reviewing engagement history.
 
+The search and filter panel stays pinned to the top of the view and scrolls independently as its
+own filter list grows, so search and active filters remain reachable while scrolling through a long
+list of findings.
+
 ## Finding Insights Time Ranges
 
 Finding Insights supports preset and custom time ranges. Preset behavior:
