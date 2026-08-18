@@ -8,6 +8,44 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## August 18, 2026
+
+### Security And Compliance
+
+- [Settings and Administration](/platform-areas/settings-admin): The email/password sign-in page
+  now accepts either a **username or email address** in the identity field. Sign-in cookies are now
+  always set with `SameSite=Lax`, and with `Secure` on HTTPS deployments. Deployments with CAPTCHA
+  enabled must complete a verification challenge before submitting sign-in. After repeated failed
+  sign-in attempts, the page shows attempts remaining, then temporarily locks the account and shows
+  a live countdown until it unlocks, instead of allowing unlimited blind retries.
+
+### Improved
+
+- [Users, Applications, and Accounts](/platform-areas/users-accounts-applications): User Lens
+  Events and Chat now open with the **Sensitivity** filter set to **Sensitive** by default, so
+  reviewers land on sensitive activity first. Switching to **All**/**Non sensitive**, removing the
+  chip, or clearing all filters turns the default off for the rest of that visit; it resets on the
+  next visit or page refresh. The Chat view's **Oldest** and **Latest** jump controls now disable
+  once the loaded conversation history reaches that end, so it's clear when there is nothing
+  further to load.
+
+- [Findings](/platform-areas/findings): The search and filter panel now stays pinned to the top of
+  the view and scrolls independently as the filter list grows, so search and active filters remain
+  reachable while scrolling through a long list of findings.
+
+- [AI Inventory](/platform-areas/ai-inventory): The SaaS trend chart in AI Inventory now renders
+  with the same gradient line-fill style used by other trend charts, for visual consistency.
+
+### Fixed
+
+- [Users, Applications, and Accounts](/platform-areas/users-accounts-applications): Fixed long,
+  unbreakable text such as base64 strings or signed URLs in conversation prompts and responses
+  overflowing and widening the conversation view. Long tokens now wrap within the message bubble.
+
+- [Detection Models](/platform-areas/detection-models): Fixed scrolling issues in the detection
+  configuration and use-case list views, including a case where the list would not scroll at all,
+  so long lists of detection configurations and use cases can be scrolled and reviewed reliably.
+
 ## July 16, 2026
 
 ### New

@@ -67,6 +67,19 @@ The selected timezone applies across findings, users, applications, accounts, AI
 A hover tooltip shows the alternate time (UTC when a non-UTC timezone is active; local browser time when UTC
 is selected) for any displayed timestamp.
 
+## Sign-In And Account Security
+
+For tenants that use email/password sign-in (in addition to or instead of Microsoft SSO), the
+sign-in page includes the following account-security behavior:
+
+- The **Username or Email** field accepts either a username or an email address to authenticate.
+- Sign-in cookies are always set with `SameSite=Lax`, and with `Secure` on HTTPS deployments.
+- When enabled for the tenant, a CAPTCHA challenge must be completed before the sign-in request is
+  submitted. CAPTCHA is configured per deployment and is not a per-admin toggle in the UI.
+- After repeated failed sign-in attempts, the platform shows the number of attempts remaining. Once
+  the limit is reached, the account is temporarily locked and the sign-in button shows a live
+  countdown until the account unlocks, instead of requiring the user to keep retrying blindly.
+
 ## User Interaction Hub
 
 User Interaction Hub lets teams customize what end users see in QuilrAI interactions.

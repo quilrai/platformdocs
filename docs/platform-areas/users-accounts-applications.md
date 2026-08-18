@@ -37,6 +37,20 @@ The Smart Groups drawer previously available on the Users page has been removed.
 creation and membership management are now handled from the dedicated
 [Smart Groups](./smart-groups.md) screen.
 
+### User Lens
+
+User Lens is the conversation-level drilldown opened from a user row, showing that user's Events
+and Chat activity.
+
+- Both the Events and Chat views open with the **Sensitivity** filter set to **Sensitive** by
+  default, so reviewers land on sensitive activity first. Selecting **All**, choosing
+  **Non sensitive**, removing the Sensitivity chip, or using **Clear all filters** turns the
+  default off for the rest of that visit; it resets to **Sensitive** the next time User Lens is
+  opened or the page is refreshed.
+- The Chat view has **Oldest** and **Latest** jump controls above and below the conversation
+  stream. Each control is disabled once the loaded history reaches that end, so reviewers can tell
+  when there is nothing further to load in that direction.
+
 ## Applications
 
 The Applications page is the main app-management and app-intelligence surface. It includes an
