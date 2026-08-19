@@ -20,6 +20,22 @@ hide_copy_dropdown: true
   interval. Saving is one-way: a mapped group stays mapped and cannot be removed or reassigned from
   this screen. This utility does not change Smart Groups.
 
+- [Settings and Administration](/platform-areas/settings-admin#groups-tab): Added a **Groups** tab
+  to Manage Users for creating, renaming, and deleting platform-access groups; assigning or
+  removing a role for a group; and managing group membership from a members drawer. Groups synced
+  from an identity provider show read-only membership. The Users tab now includes filters to narrow
+  the list by role or group, a Groups column showing each user's group membership, and a **Via
+  group** label in the Role column when a user's access comes from a group rather than a direct
+  role assignment. This is separate from [Smart Groups](/platform-areas/smart-groups).
+
+### Improved
+
+- [Settings and Administration](/platform-areas/settings-admin#username): Admins can now set a
+  custom username when creating or editing a platform user, with a **Same as email** default and a
+  live availability check as the username is typed. Saving or sending an invite is blocked while
+  availability is being checked or if the username is unavailable. Existing users' usernames can
+  also be updated inline from the users table.
+
 ## July 16, 2026
 
 ### New

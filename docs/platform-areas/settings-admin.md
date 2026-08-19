@@ -44,22 +44,64 @@ have moved to the dedicated [Smart Groups](./smart-groups.md) screen.
 
 ### Manage Users
 
-Manage Users lets administrators create, edit, and remove platform users and assign roles. In
-addition to name and role editing, admins with Admin or Super Admin roles can configure LLM Gateway
-app access for users assigned the AI Gateway Admin role. The **App Access** control appears inline
-when creating a new user or editing an existing one, and lets the admin choose between allowing all
-LLM Gateway apps or restricting access to a specific subset.
+Manage Users lets administrators create, edit, and remove platform users and assign roles. It has
+two tabs: **Users** and **Groups**. Which tabs are visible depends on the admin's User Management
+and Group permissions.
 
-Platform roles can also be assigned from Entra groups through the
-[IDP Group to Platform Roles](./integrations/manage-users/idp-group-to-platform-roles.md)
-integration. You can map a group to a system role or a custom role. Members of each mapped group
-receive the chosen role in 5 to 6 minutes and stay aligned as Entra membership changes. That
-workflow is one-way from the integration screen: a saved group cannot be unmapped or reassigned
-there. It does not affect [Smart Groups](./smart-groups.md).
+In addition to name and role editing, admins with Admin or Super Admin roles can configure LLM
+Gateway app access for users assigned the AI Gateway Admin role. The **App Access** control appears
+inline when creating a new user or editing an existing one, and lets the admin choose between
+allowing all LLM Gateway apps or restricting access to a specific subset.
 
 The App Access control is also available directly in the users table — for AI Gateway Admin users,
 a compact selector shows the current access state and can be updated without opening the full edit
 panel.
+
+#### Username
+
+When creating or editing a user, a **Username** field defaults to **Same as email**. Unchecking
+that option reveals a username input with a live availability check: as the admin types, the
+platform shows **Checking availability…**, then either confirms the username is available or shows
+why it isn't (for example, already taken). Saving or sending an invite is blocked while a check is
+in progress or if the chosen username is unavailable.
+
+Existing users' usernames can also be changed inline from the users table using the edit icon next
+to the username column, with the same "Same as email" toggle and availability check before the
+change is confirmed. This requires User Management update permission.
+
+#### Users Tab
+
+The Users tab lists platform users with search, plus **Role** and **Group** filters to narrow the
+table to users with a specific role or group membership. A **Groups** column shows which groups
+each user belongs to. In the **Role** column, a user who has no role assigned directly but belongs
+to a group with a role shows **Via group** instead of a blank role, making it clear the access comes
+from group membership rather than a direct assignment.
+
+Users who are managed by IDP group sync cannot be deleted from this screen; selecting one of these
+users for bulk deletion shows a message explaining that IDP-synced users are excluded.
+
+#### Groups Tab
+
+The Groups tab lets admins manage platform-access groups directly, alongside groups created through
+IDP sync:
+
+- **Create a group** with a name, optional description, and an optional role assigned at creation.
+- **Rename a group** inline, with validation to prevent an empty name.
+- **Assign or remove a role** for a group. Removing a role warns how many members will lose the
+  permissions that role granted until a new role is assigned.
+- **Manage members** from a drawer on each group: search current members, add users by name or
+  email, and remove members. IDP-synced groups show their membership as read-only, since it is kept
+  in sync automatically from the identity provider.
+- **Delete a group**, with a confirmation prompt. IDP-synced groups cannot be renamed or deleted
+  from this screen.
+
+Platform roles can also be assigned to Entra groups through the
+[IDP Group to Platform Roles](./integrations/manage-users/idp-group-to-platform-roles.md)
+integration. You can map a group to a system role or a custom role there, and members of each mapped
+group receive the chosen role in 5 to 6 minutes and stay aligned as Entra membership changes. That
+workflow is one-way from the integration screen: a saved group cannot be unmapped or reassigned
+there. Neither the Groups tab nor the IDP integration affects [Smart Groups](./smart-groups.md),
+which remain a separate, AI-usage-focused grouping used for policy and reporting.
 
 ### Timezone Display Preference
 
@@ -100,5 +142,7 @@ Administrators with write access can save and revoke registered keys.
 ## Access Requirements
 
 Settings visibility is permission-based. Each nested settings area has its own resource requirement,
-including Tenant, Organizational Policy, Smart Group, User Management, Extension, Endpoint Agent,
-AI Gateway, Template, and Compliance permissions.
+including Tenant, Organizational Policy, Smart Group, User Management, Group, Extension, Endpoint
+Agent, AI Gateway, Template, and Compliance permissions. Within Manage Users, the Users and Groups
+tabs are shown separately based on User Management and Group read permissions, and create, update,
+and delete actions in the Groups tab follow Group-specific permissions.
