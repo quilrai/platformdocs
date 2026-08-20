@@ -55,7 +55,11 @@ Common use cases:
 
 Inline editable fields in the application table (such as category, risk level, or approval status)
 show a "Saving…" label and spinner while a change is being saved, confirming that the edit has
-been submitted.
+been submitted. The confirmation toast reflects how the edit is processed: fields that apply
+immediately — Blocked, Criticality, License, and Approval Status — confirm with **Update applied
+successfully**, while Category, Type, and updates made from the AI Apps table or the user drawer
+are processed asynchronously and confirm with **Update accepted. Changes will be applied
+shortly.**
 
 The AI lens and Generative AI category filter target the primary app category. When the page is
 reached via an insight or widget drilldown that pre-applies a business-category filter, the
