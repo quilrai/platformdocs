@@ -8,6 +8,16 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## August 20, 2026
+
+### Fixed
+
+- [Insights](/platform-areas/insights): Fixed the Usage by Department chart (and related
+  horizontal stacked bar charts, including Top Users and DLP Actions by Enforcement Plan)
+  overflowing its container. Hover tooltips on these charts no longer get clipped or misaligned
+  when the chart scrolls, and now flip to the opposite side of the cursor when they would
+  otherwise run off the edge of the screen.
+
 ## August 19, 2026
 
 ### New
