@@ -8,6 +8,24 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## August 21, 2026
+
+### New
+
+- [Settings and Administration](/platform-areas/settings-admin#detection-policy): Added a
+  **Telemetry** view to Detection Policy. From the Rules screen, admins can select **View
+  Telemetry** to see the traffic reaching the detection engine in two modes: a live, auto-refreshing
+  **Realtime** tail of the most recent events, and a time-ranged, pageable **Persistent** history of
+  every request evaluated for the tenant, including the action taken (block, monitor, justify, or
+  allow) and whether the request was forwarded to the engine. Both modes support filtering by event
+  type and source, free-text search, a details view of the full event payload, and, for Persistent,
+  preset or custom time ranges. Available on tenants where Detection Policy is enabled.
+
+- [Settings and Administration](/platform-areas/settings-admin#detection-policy): Added a
+  **Policy Engine Findings** button to the Detection Policy Rules screen. Admins can now open the
+  matching findings for the current rule set in a quick, read-only view without leaving the rule
+  editor, making it faster to check the impact of a rule change.
+
 ## August 19, 2026
 
 ### New

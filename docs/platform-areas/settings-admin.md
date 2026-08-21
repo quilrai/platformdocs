@@ -34,6 +34,8 @@ To create, edit, or delete smart groups and manage group membership, use the ded
   styling, and user-facing links.
 - **Compliance:** Configure provider credentials used by compliance services, including OpenAI and
   Claude where enabled.
+- **Detection Policy:** Rule-based detection configuration and engine telemetry, on tenants where
+  the capability is enabled.
 
 ## Organizational Context
 
@@ -86,6 +88,29 @@ Compliance includes provider key setup and key management for compliance service
 include OpenAI Compliance key management and Claude-related compliance configuration where enabled.
 Administrators with write access can save and revoke registered keys.
 
+## Detection Policy
+
+Detection Policy is a rule-based detection engine for tenants with the capability enabled. It gives
+admins a Rules screen and a Telemetry screen for building and verifying detection coverage beyond
+the default [Detection Models](./detection-models.md) categories.
+
+- **Rules:** Build detection rules with a visual query builder, set severity overrides, choose
+  evidence fields to capture, and configure actions with conditions. Rules can be imported and
+  exported. A **Policy Engine Findings** button opens the matching findings for the current rule set
+  in a quick, read-only view without leaving the Rules screen.
+- **Telemetry:** Opened from **View Telemetry** on the Rules screen. Telemetry shows the traffic
+  reaching the detection engine in two modes:
+  - **Realtime:** A live, auto-refreshing tail of the most recent events the engine has received,
+    with filters for event type and source and a free-text search across event content.
+  - **Persistent:** A time-ranged, pageable history of every request evaluated for the tenant,
+    including the action taken (for example block, monitor, justify, or allow) and whether the
+    request was forwarded to the engine. Admins can select a preset range (1 hour up to 7 days) or a
+    custom start and end time.
+  - Selecting an event opens a details view with the full event payload for troubleshooting.
+
+Detection Policy findings also appear alongside other finding sources in
+[Findings](./findings.md).
+
 ## Related Platform Areas
 
 - [Smart Groups](./smart-groups.md)
@@ -95,6 +120,7 @@ Administrators with write access can save and revoke registered keys.
 - [AI Gateway](./ai-gateway.md)
 - [LLM Gateway](./llm-gateway.md)
 - [Controls](./controls.md)
+- [Detection Models](./detection-models.md)
 - [Findings](./findings.md)
 
 ## Access Requirements
