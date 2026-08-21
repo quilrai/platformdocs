@@ -26,6 +26,9 @@ platform. It is the main place to move from summary signals into detailed eviden
 - **Compliance Findings:** Findings and no-risk interactions from compliance integrations such as
   Claude Compliance and OpenAI Compliance, when configured.
 - **Identity Findings:** Status and identity-related findings.
+- **Policy Engine Findings:** Findings from Detection Policy rules, on tenants where the capability
+  is enabled. Also reachable from Settings > [Detection Policy](./settings-admin.md#detection-policy)
+  as a quick view alongside the rule editor.
 
 ## Key Capabilities
 
