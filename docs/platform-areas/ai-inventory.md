@@ -20,8 +20,9 @@ Use AI Inventory when you need to:
 - Inspect asset metadata, guardrails, tags, status, source, and integration points.
 - Investigate endpoint coding inventory such as agents, skills, MCP servers, models, hooks,
   permissions, plugins, and repositories when endpoint telemetry provides it.
-- Review all applications discovered on endpoints through asset inventory, inspect OS type,
-  privilege, approval status, and execution policy, and update execution policy inline.
+- Review applications, packages, and dependencies discovered on endpoints through asset
+  inventory, including their origin (Windows, macOS, or WSL distribution), resolved path,
+  code-signing status, and approval or vulnerability posture.
 - Review LLM Gateway API keys and MCP Gateway servers from an inventory perspective.
 - Track adoption, request volume, blocked activity, sensitive activity, and source-specific trends.
 
@@ -38,8 +39,11 @@ Use AI Inventory when you need to:
   metrics.
 - Review endpoint coding inventory where available, including agents, skills, MCP servers, models,
   hooks, permissions, plugins, and repositories.
-- Review endpoint-discovered applications with the Discovery sub-view: filter by name, user email,
-  category, source, OS type, approval status, and criticality, and update execution policy inline.
+- Review endpoint-discovered applications, packages, and dependencies with the Discovery
+  sub-view: filter by name, asset type, associated app, user email, origin, ecosystem, source,
+  approval status, criticality, vulnerability status, and severity; toggle **Needs Attention**
+  (shows a live count) and **Hide System** rows. Open any row for a details drawer with hash,
+  path, code-signing chain, and per-device/user observation history.
 - Review LLM Gateway API keys with request, blocked, anonymized, model, last-used, and posture
   context.
 - Review MCP Gateway servers with tools, scopes, DLP action, status, and activity metrics.
@@ -63,13 +67,38 @@ sensitive activity, detections, blocked activity, and users. Where coding invent
 the detail view can also show related agents, skills, MCP servers, models, hooks, permissions,
 plugins, and repositories for the selected application group.
 
-A **Discovery** sub-view within the Endpoint Agent source lists all applications observed on
-endpoints through asset inventory, including applications that have not generated AI-specific
-activity. Discovery rows show application name, associated users, device count, OS type, privilege,
-category, source, and execution policy. Admins can filter by name, user email, category, source, OS
-type (macOS, Windows, Linux), approval status (Needs Review, Approved, Blocked), and criticality
-(Critical, Not Critical), and toggle off OS system processes. Execution policy (Allowed or Blocked)
-can be updated inline for each row.
+A **Discovery** sub-view within the Endpoint Agent source lists applications, packages, and
+dependencies observed on endpoints through asset inventory, including items that have not
+generated AI-specific activity. It opens filtered to the Application type by default. Discovery
+rows show:
+
+- **Name**, with the resolved install path shown underneath (copy-to-clipboard, or a "path not
+  resolved" flag when the agent could not resolve it).
+- **Type** (Application, Package, or Dependency), associated app, version, and users.
+- **Observed In** — a device or repository count.
+- **Origin** — Windows, macOS, or the specific WSL Linux distribution a binary was seen on. When
+  a group spans more than one origin, the cell shows the primary origin plus a count, with the
+  full breakdown on hover.
+- **Signing** — a code-signing indicator (Signed, OS component, Ad-hoc, Unsigned, Not evaluated,
+  or Not applicable for WSL/Linux binaries and script-based packages), with the publisher, issuer,
+  root authority, signing ID, and certificate validity window on hover. An "identity unresolved"
+  marker appears instead when the enumerated and resolved paths disagree, since the two paths may
+  describe different applications; in that case, publisher, version, and signing details are
+  withheld rather than misattributed.
+- **Posture** — approval status and criticality for applications and packages, or vulnerability
+  status and severity (with an open-vulnerability count) for dependencies.
+- **Last Observed** date.
+
+Admins can filter by name, asset type, associated app, user email, origin, ecosystem, source,
+approval status (Needs Review, Approved, Blocked), criticality (Critical, Not Critical),
+vulnerability status (Clean, Vulnerable, Lookup Failed, Unscanned), and severity (Critical, High,
+Moderate, Low). A **Needs Attention** toggle shows a live count of matching rows, and **Hide
+System** removes OS system processes from the list.
+
+Selecting a row opens a details drawer with the SHA-256 hash, full enumerated and resolved paths,
+the code-signing chain and certificate validity window, and a table of individual observations —
+device, user, origin, signing state, publisher, path, command line, parent process, privilege,
+PIDs, source, and last-synced time — capped at the 200 most recent observations per group.
 
 ### LLM Gateway
 
