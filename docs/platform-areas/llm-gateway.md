@@ -87,8 +87,12 @@ credentials are not stored in QuilrAI.
 
 Provider settings can include a primary provider and additional provider instances. Additional
 instances use unique labels so routing rules can target the intended provider instance. Some
-provider families, such as embeddings, rerank, Bedrock Runtime, and OpenAI Assistants providers,
-are available for gateway use but are not used as routing targets.
+provider families, such as embeddings, rerank, and OpenAI Assistants providers, are available for
+gateway use but are not used as routing targets. Bedrock Runtime is a routable message type: its
+routing groups apply to Amazon Bedrock's native **Converse** and **ConverseStream** APIs, where the
+group name is sent as the `modelId`. Amazon Bedrock **InvokeModel** and
+**InvokeModelWithResponseStream** accept direct model IDs only and are not routed through Bedrock
+Runtime routing groups.
 
 ## Settings Areas
 
@@ -106,7 +110,10 @@ Each LLM Gateway app has a settings drawer with focused areas for:
   per-model limits.
 - **Token Saving:** JSON, HTML, Markdown, and text compression controls.
 - **Routing Configurations:** Available providers, routing groups, token-based routing groups, and
-  custom routing.
+  custom routing, scoped per message type (Chat Completions, Anthropic Messages, OpenAI Responses,
+  OpenAI Realtime, Vertex AI, and Bedrock Runtime). For Bedrock Runtime, the routing panel labels
+  the group identifier as `model_id` and shows a reminder that groups apply only to Converse and
+  ConverseStream requests.
 - **Self-Service:** Credential mode (Shared Parent Key or Named User API Keys) and per-role access
   control for viewer access, settings request access, API key visibility, and all-logs visibility —
   each independently scoped to all users, specific email addresses, or smart groups.
@@ -147,6 +154,11 @@ ID, run ID, framework, version, thread ID, span ID, parent span ID, step name, a
 workflow ID and workflow run ID; and correlation identifiers including trace ID, conversation ID,
 external request ID, correlation ID, and session ID. Baggage, request metadata, and gateway-level
 correlation fields are displayed when present.
+
+The **Info** tab shows which routing group and routing mode served a request when routing is
+configured, so admins can confirm that traffic followed the expected group. For Bedrock Runtime
+requests, the Info tab also shows the requested Bedrock model ID when it differs from the routing
+group used to serve the request.
 
 ### Agent Monitoring
 

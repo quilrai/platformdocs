@@ -8,6 +8,24 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## August 27, 2026
+
+### New
+
+- [LLM Gateway](/platform-areas/llm-gateway): Added **Bedrock Runtime** as a routable message type
+  in Routing Configurations. Admins can now create routing groups and token-based routing groups
+  for Amazon Bedrock's native **Converse** and **ConverseStream** APIs, using the group name as the
+  `modelId` on the request. Amazon Bedrock **InvokeModel** and **InvokeModelWithResponseStream**
+  continue to accept direct model IDs only and are not part of Bedrock Runtime routing groups.
+
+### Improved
+
+- [LLM Gateway](/platform-areas/llm-gateway): Log details now show the **Routing Group** and
+  **Routing Mode** that served a request when routing is configured, and show the **Requested
+  Bedrock Model ID** for Bedrock Runtime requests when it differs from the routing group used to
+  serve the request. This helps admins confirm that traffic is following the expected routing
+  configuration.
+
 ## August 19, 2026
 
 ### New
