@@ -8,6 +8,24 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## August 27, 2026
+
+### New
+
+- [AI Inventory](/platform-areas/ai-inventory): Added a **Skill blocks** filter to the Endpoint
+  Agent **Interactions** tab, alongside the existing **All interactions** and **Findings only**
+  filters. Skill-block rows show the blocked skill name and path inline, and opening a row's
+  details now surfaces skill vendor, hook event, block reason, reason code, device, and correlated
+  conversation context instead of the standard findings fields. Skill-block interactions always
+  display a **Blocked** outcome and **Prevented** execution status, and are included in
+  interaction search.
+
+### Improved
+
+- [AI Inventory](/platform-areas/ai-inventory): The Endpoint Agent **Vulnerable Dependencies** tab
+  now sorts by most recently scanned by default instead of severity, so newly discovered
+  vulnerabilities surface at the top of the list.
+
 ## August 19, 2026
 
 ### New
