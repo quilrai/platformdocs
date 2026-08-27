@@ -8,6 +8,30 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## August 27, 2026
+
+### New
+
+- [Insights](/platform-areas/insights#governance-reports): Added a **Governance Reports** tab to
+  Insights for reviewing AI usage-policy bypass activity. A **Summary Dashboard** shows
+  justification and total-bypass trend charts, key metrics (total events with percent justified,
+  justified/unjustified counts, blocked count, unique users, and distinct AI domains accessed), a
+  sensitive-data category breakdown, top AI domains, response-outcome distribution, and top
+  justification text. An **Incident Table** lists individual bypass events with search by email or
+  finding ID, risk level, sensitive-data categories, and the related finding ID. An
+  **Executive Summary** provides a narrative overview plus Critical Findings, Risk Indicators,
+  Positive Signals, and Immediate Next Steps for sharing with stakeholders. All three views share a
+  duration selector at the top of the tab.
+
+### Fixed
+
+- [Insights](/platform-areas/insights): Fixed timestamp parsing so more timestamp formats display
+  correctly, including timestamps with fractional seconds beyond milliseconds, offsets without a
+  colon (for example `+0530`), and timestamps with a trailing time-zone id. Previously, values in
+  these formats could fail to parse and show as blank or incorrect times.
+- [Insights](/platform-areas/insights): Fixed a tooltip in donut charts being visually covered by a
+  center label overlay in some layouts, including the Governance Reports response-outcome chart.
+
 ## August 19, 2026
 
 ### New

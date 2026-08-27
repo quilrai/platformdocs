@@ -36,6 +36,39 @@ Use Insights when you need to answer questions such as:
   by traffic.
 - Click any chart data point to navigate to the related platform area — Applications, Users, or
   Findings — with the selected time range carried over automatically.
+- Open the **Governance Reports** tab to review AI usage-policy bypass activity for a selected
+  time range: justification and no-justification outcomes, blocked events, sensitive-data category
+  breakdowns, and a searchable incident-level log.
+
+## Governance Reports
+
+Governance Reports is a tab within Insights that gives governance, security, and compliance teams a
+dedicated view of activity where users bypassed an AI usage-policy warning — for example, by
+submitting a justification, providing no justification, or being blocked outright. A duration
+selector at the top of the tab applies the selected time range to every view.
+
+The tab is organized into three views:
+
+- **Summary Dashboard**: Trend charts for justification outcomes and total bypass events (hourly,
+  daily, or monthly granularity based on the selected range), key metrics — total events with
+  percent justified, justified and unjustified event counts, blocked event count, unique users, and
+  distinct AI domains accessed — a sensitive-data category breakdown (PII/Identity,
+  Financial/Payment, PHI/Health, Auth/Secrets, Code/IP, and Adversarial Attacks), the top AI domains
+  involved in bypass activity, a breakdown of how users responded to policy warnings, and the top
+  justification text users submitted.
+- **Incident Table**: A paginated, searchable log of individual bypass events. Search by email or
+  finding ID. Each row shows the AI domain, user name and email, event time, activity type, the
+  user's justification text, risk level, sensitive-data categories detected, and the related
+  finding ID.
+- **Executive Summary**: A narrative summary of the reporting period plus grouped findings —
+  Critical Findings, Risk Indicators, Positive Signals, and Immediate Next Steps — for sharing with
+  leadership or compliance stakeholders.
+
+Governance Reports availability follows the same tenant configuration as the rest of Insights. The
+content shown in User Interaction Hub under
+[Settings and Administration](./settings-admin.md#user-interaction-hub) determines what end users
+see when they are prompted to justify or are blocked from an action; Governance Reports shows the
+resulting activity.
 
 ## Main Workflows
 
@@ -46,6 +79,9 @@ Use Insights when you need to answer questions such as:
 5. Click a chart data point to drill into Applications, Users, or Findings for details.
 6. Use Controls or Detection Models when the trend indicates that policy or detection coverage
    should change.
+7. Open the Governance Reports tab to review policy-bypass activity: start with the Summary
+   Dashboard for trends and key metrics, use the Incident Table to investigate individual events,
+   and use the Executive Summary to share findings with stakeholders.
 
 ## Related Platform Areas
 
@@ -55,6 +91,7 @@ Use Insights when you need to answer questions such as:
 - [MCP Gateway](./mcp-gateway.md)
 - [Controls](./controls.md)
 - [Detection Models](./detection-models.md)
+- [Settings And Administration](./settings-admin.md)
 
 ## Access Requirements
 
