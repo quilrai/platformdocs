@@ -63,6 +63,17 @@ sensitive activity, detections, blocked activity, and users. Where coding invent
 the detail view can also show related agents, skills, MCP servers, models, hooks, permissions,
 plugins, and repositories for the selected application group.
 
+The **Interactions** tab in the application group drawer lists individual endpoint interactions and
+can be filtered to **All interactions**, **Findings only**, or **Skill blocks**. Skill blocks are
+agent-skill invocations that were blocked before running; each row shows the blocked skill name and
+path, and the detail drawer adds skill vendor, hook event, block reason, reason code, device, and
+correlated conversation context in place of the standard findings fields. Skill-block interactions
+also appear in interaction search and always show a **Blocked** outcome and **Prevented** execution
+status.
+
+The **Vulnerable Dependencies** tab lists dependency findings for coding agents and sorts by most
+recently scanned by default, so newly discovered vulnerabilities surface first.
+
 A **Discovery** sub-view within the Endpoint Agent source lists all applications observed on
 endpoints through asset inventory, including applications that have not generated AI-specific
 activity. Discovery rows show application name, associated users, device count, OS type, privilege,
