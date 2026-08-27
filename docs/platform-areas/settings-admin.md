@@ -78,7 +78,9 @@ is selected) for any displayed timestamp.
 
 User Interaction Hub lets teams customize what end users see in QuilrAI interactions.
 Administrators can review user responses and configure popup content, policy links, and visual
-styling that appear in user-facing prompts or justifications.
+styling that appear in user-facing prompts or justifications. When a user submits a justification,
+provides no justification, or is blocked outright, that activity appears in the
+[Governance Reports](./insights.md#governance-reports) tab of Insights.
 
 ## Compliance
 
@@ -96,6 +98,7 @@ Administrators with write access can save and revoke registered keys.
 - [LLM Gateway](./llm-gateway.md)
 - [Controls](./controls.md)
 - [Findings](./findings.md)
+- [Insights](./insights.md)
 
 ## Access Requirements
 
