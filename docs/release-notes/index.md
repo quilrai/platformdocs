@@ -8,6 +8,16 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## August 27, 2026
+
+### Fixed
+
+- [LLM Gateway](/platform-areas/llm-gateway#self-service-dashboard): The self-service dashboard
+  now shows providers and models from every enabled provider on an app, including additional
+  providers used for multi-provider routing or fallback, not just the primary provider. Disabled
+  providers and their models are excluded from provider labels, model counts, and search, so
+  self-service users only see what is actually available to them.
+
 ## August 19, 2026
 
 ### New
