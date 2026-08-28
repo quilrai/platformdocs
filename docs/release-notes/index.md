@@ -8,6 +8,31 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## August 28, 2026
+
+### New
+
+- [AI Inventory](/platform-areas/ai-inventory): **Ollama** and **LM Studio** now appear as their
+  own coding-inventory entries under the Endpoint Agent source. Since these local model runners are
+  only observed through endpoint asset discovery, their detail drawer is streamlined to
+  discovery-only content — no request/sensitive/blocked metrics, no Actions section, and no
+  Guardrails, Vulnerable Dependencies, Context Savings, Scheduled, or Monitored Browsers tabs.
+
+### Improved
+
+- [AI Inventory](/platform-areas/ai-inventory): The Discovery sub-view's Name, Associated App, and
+  Last Observed columns are now sortable — click a column header to toggle ascending or descending
+  order. The table now loads sorted by most recently observed first, instead of alphabetically by
+  name.
+- [AI Inventory](/platform-areas/ai-inventory): The Discovery sub-view's origin filter now always
+  includes macOS, Windows, and WSL options, so admins can filter by an OS origin even before any
+  matching rows have loaded. A generic WSL origin value is now labeled and shown with a Linux icon.
+
+### Fixed
+
+- [AI Inventory](/platform-areas/ai-inventory): Abacus.ai and NemoClaw no longer appear as
+  zero-activity rows in the Endpoint Agent inventory list.
+
 ## August 19, 2026
 
 ### New
