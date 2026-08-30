@@ -8,6 +8,29 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## August 30, 2026
+
+### New
+
+- [AI Inventory](/platform-areas/ai-inventory): Added a **SaaS Cloud Inventory** view to the AI
+  Inventory SaaS source for tenants licensed for it. Admins connect AWS accounts (Bedrock,
+  SageMaker) or Microsoft Copilot Studio environments as datasources, then browse discovered agents
+  and models in Overview, Cards, Table, and Findings views, with a details drawer covering each
+  asset's inventory record and per-component configuration. Any connected datasource can be
+  resynced on demand — individually or all at once — instead of waiting for the scheduled sync.
+  Table columns can be dragged to resize. The view is opt-in per tenant license; tenants without the
+  license continue to see the existing SaaS view with no toggle shown.
+
+### Security And Compliance
+
+- [AI Inventory](/platform-areas/ai-inventory): SaaS Cloud Inventory now runs an automated
+  system-prompt security review for every discovered agent, flagging issues such as embedded
+  secrets, unbounded compliance grants, missing injection resistance, and unconstrained tool access
+  — including agents where the finding is that no system prompt exists at all. Findings drive a
+  prompt-risk indicator on cards and table rows, appear in a new estate-wide **System prompts**
+  findings table alongside runtime policy findings, and lead the **System prompt** tab in each
+  asset's details drawer with evidence and recommendations.
+
 ## August 19, 2026
 
 ### New
