@@ -7,28 +7,30 @@ sidebar_custom_props:
 # AI Inventory
 
 AI Inventory helps teams maintain visibility into AI assets and AI activity sources across Browser
-Extension, Endpoint Agent, LLM Gateway, MCP Gateway, and compliance API coverage. It shows where AI
-usage is happening, what assets or applications are involved, what guardrails apply, and where
-additional review may be needed.
+Extension, Endpoint Agent, LLM Gateway, MCP Gateway, SaaS cloud accounts, and compliance API
+coverage. It shows where AI usage is happening, what assets or applications are involved, what
+guardrails apply, and where additional review may be needed.
 
 ## When To Use It
 
 Use AI Inventory when you need to:
 
 - Review AI assets and applications discovered across the organization.
-- Compare browser, endpoint, gateway, MCP, and compliance API sources.
+- Compare browser, endpoint, gateway, MCP, SaaS cloud account, and compliance API sources.
 - Inspect asset metadata, guardrails, tags, status, source, and integration points.
 - Investigate endpoint coding inventory such as agents, skills, MCP servers, models, hooks,
   permissions, plugins, and repositories when endpoint telemetry provides it.
 - Review all applications discovered on endpoints through asset inventory, inspect OS type,
   privilege, approval status, and execution policy, and update execution policy inline.
 - Review LLM Gateway API keys and MCP Gateway servers from an inventory perspective.
+- Review AI agents and models discovered in connected AWS and Microsoft Copilot Studio accounts,
+  including each agent's system-prompt security posture.
 - Track adoption, request volume, blocked activity, sensitive activity, and source-specific trends.
 
 ## Key Capabilities
 
-- Switch between Browser Extension, Endpoint Agent, LLM Gateway, MCP Gateway, and Compliance APIs
-  source views.
+- Switch between Browser Extension, Endpoint Agent, LLM Gateway, MCP Gateway, SaaS, and Compliance
+  APIs source views.
 - Review source-specific counts and table metrics.
 - Search and filter inventory rows within the active source.
 - Open a source-aware details drawer for overview, interaction, and configuration context.
@@ -43,6 +45,9 @@ Use AI Inventory when you need to:
 - Review LLM Gateway API keys with request, blocked, anonymized, model, last-used, and posture
   context.
 - Review MCP Gateway servers with tools, scopes, DLP action, status, and activity metrics.
+- For tenants licensed for SaaS Cloud Inventory, review AI agents and models discovered in connected
+  AWS and Microsoft Copilot Studio accounts, including component-level detail, approval status, and
+  system-prompt security findings, and manage the connected datasources.
 - Review the Compliance APIs source through **Overview**, **Assets**, **Usage**, **Governance**, and
   **Security** tabs to monitor organization-wide metrics, browse ChatGPT conversations, Codex
   sessions, workspace agents, and apps, analyze user adoption and model-usage rankings, track token
@@ -83,6 +88,39 @@ embedded gateway configuration sections.
 The MCP Gateway source lists gateway-managed MCP servers. It shows server identity, transport,
 auth mode, tools, scopes, DLP action, status, and activity metrics. The drawer provides MCP logs,
 analytics, interaction details, and embedded General, Guardrails, and Tools configuration sections.
+
+### SaaS
+
+The SaaS source lists AI assets, models, and datasets discovered across SaaS. Tenants can filter by
+asset type (Models, Agents, RAG, Datasets) and review adoption, risk distribution, and trend widgets
+for the estate.
+
+Tenants licensed for **SaaS Cloud Inventory** (v2) see a toggle to switch this source to a cloud
+inventory view built for AWS and Microsoft Copilot Studio estates:
+
+- **Datasources**: Connect AWS accounts (read-only access key, scoped to Bedrock and SageMaker) or
+  Microsoft Copilot Studio environments (an Entra app registration with read-only Dataverse access).
+  Credentials are verified against the provider before they are stored, kept encrypted, and never
+  shown again. Any connected datasource can be resynced individually, and all datasources can be
+  resynced together, without waiting for the scheduled sync.
+- **Overview, Cards, Table, and Findings views**: Overview shows estate-wide headline stats,
+  approval breakdown by type, a prompt-security summary, and a merged estate-by-type and
+  record-completeness view. Cards and Table list every discovered asset with its source, approval
+  status, environment, risk tier, owner, and prompt-risk indicator; table columns can be dragged to
+  resize and double-clicked to reset. Findings lists estate-wide runtime policy findings — tool
+  calls a guardrail blocked or a rule flagged — alongside **System prompts** findings from the
+  system-prompt security review.
+- **Asset drawer**: Opening an asset shows its inventory record (or flags that no inventory record
+  exists), a **System prompt** tab with the full prompt text and the review's findings — evidence
+  and recommendations, including agents where the finding is that no system prompt exists at all —
+  and one tab per discovered component (for example topics, tools, and knowledge sources), when the
+  source provides component-level detail.
+- **System-prompt security review**: Every discovered agent's system prompt is reviewed for issues
+  such as embedded secrets, unbounded compliance grants, missing injection resistance, and
+  unconstrained tool access. Findings drive the prompt-risk indicator shown on cards and table rows.
+
+SaaS Cloud Inventory is opt-in per tenant license. Unlicensed tenants see only the default SaaS
+view, with no toggle shown.
 
 ### Compliance APIs
 
@@ -148,3 +186,5 @@ a provider option when available but may be disabled until configured for the te
 AI Inventory requires AI asset access. Source visibility depends on tenant configuration and
 permissions for the underlying source, such as Endpoint Agent, AI Gateway, MCP Gateway, or
 Compliance. Endpoint Agent inventory appears only when endpoint coverage is enabled for the tenant.
+The SaaS Cloud Inventory (v2) view requires the tenant license to include SaaS Cloud Inventory;
+without it, the SaaS source shows the default view only.
