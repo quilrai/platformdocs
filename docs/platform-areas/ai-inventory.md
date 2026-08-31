@@ -43,10 +43,11 @@ Use AI Inventory when you need to:
 - Review LLM Gateway API keys with request, blocked, anonymized, model, last-used, and posture
   context.
 - Review MCP Gateway servers with tools, scopes, DLP action, status, and activity metrics.
-- Review the Compliance APIs source through **Overview**, **Assets**, **Usage**, **Governance**, and
-  **Security** tabs to monitor organization-wide metrics, browse ChatGPT conversations, Codex
-  sessions, workspace agents, and apps, analyze user adoption and model-usage rankings, track token
-  consumption and sharing risk, and investigate security and audit events.
+- Review the Compliance APIs source through **Overview**, **Assets**, **Usage**, **Costs**,
+  **Governance**, and **Security** tabs to monitor organization-wide metrics, browse ChatGPT
+  conversations, Codex sessions, workspace agents, and apps, analyze user adoption and model-usage
+  rankings, track spend, token consumption, and sharing risk, and investigate security and audit
+  events.
 
 ## Inventory Sources
 
@@ -87,7 +88,7 @@ analytics, interaction details, and embedded General, Guardrails, and Tools conf
 ### Compliance APIs
 
 The Compliance APIs source provides provider-specific inventory for compliance integrations. The
-OpenAI Compliance view is organized into five tabs:
+OpenAI Compliance view is organized into six tabs:
 
 - **Overview**: Shows organization-level metrics for the selected time range — observed users,
   events, ChatGPT conversations and messages, files, Codex sessions, agent runs, connector calls,
@@ -111,6 +112,19 @@ OpenAI Compliance view is organized into five tabs:
 - **Usage**: Provides **Users**, **Sources**, and **Rankings** sub-tabs with ChatGPT top-user lists
   sorted by conversations, Codex top-user and model rankings, source adoption breakdowns, source
   overlaps, and cross-source transition flows.
+- **Costs**: Reports OpenAI spend and token usage from OpenAI's billing and usage data, using
+  **Overview**, **Explore**, and **Charges & rates** sub-tabs. **Overview** shows organization-wide
+  spend and token totals for the selected range with a bucketed (hourly, daily, or monthly) trend
+  chart by product, OpenAI surface, or model; top cost drivers by model, group, and OpenAI surface;
+  and a searchable usage-by-user breakdown. **Explore** is a guided drill-down that groups cost by
+  user, agent, or OpenAI surface, supports filtering by product, surface, model, service tier, and
+  reasoning effort, and can show the underlying usage facts behind any row. **Charges & rates**
+  lists billed SKUs with quantity, rate, and both exact and rounded charge amounts, filterable by
+  product, classification, and quantity unit, alongside a data-freshness indicator. Costs requires
+  at least one OpenAI Admin API key configuration enabled for cost reporting at the organization
+  scope; when more than one qualifying configuration exists, admins can switch between reporting
+  scopes. Costs uses its own date range and bucket controls rather than the shared duration used by
+  the other tabs.
 - **Governance**: Organizes compliance risk data across three sub-tabs. **Token Governance** shows
   total token consumption, input/output/cached composition, cache-efficiency ratio, token field
   coverage, a daily consumption trend, and consumption rankings by user, model, source, and client.

@@ -8,6 +8,29 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## August 31, 2026
+
+### New
+
+- [AI Inventory](/platform-areas/ai-inventory): Added a **Costs** tab to the Compliance APIs
+  source for OpenAI, reporting spend and token usage from OpenAI's billing and usage data.
+  **Overview** shows organization-wide spend and token totals with an hourly, daily, or monthly
+  trend chart, top cost drivers by model, group, and OpenAI surface, and a usage-by-user
+  breakdown. **Explore** is a guided drill-down by user, agent, or OpenAI surface with filters for
+  product, model, service tier, and reasoning effort, and can surface the underlying usage facts
+  behind any row. **Charges & rates** lists billed SKUs with quantity, rate, and exact and rounded
+  charge amounts, filterable by product, classification, and quantity unit. Costs appears once at
+  least one OpenAI Admin API key configuration is enabled for cost reporting at the organization
+  scope; admins can switch between reporting scopes when more than one qualifying configuration
+  exists.
+
+### Fixed
+
+- [AI Inventory](/platform-areas/ai-inventory): Fixed the Compliance APIs source appearing in the
+  inventory source switcher for users without Compliance APIs read access. Visibility of the
+  Compliance APIs source, including the new Costs tab, now consistently follows the same
+  permission as the rest of Compliance APIs.
+
 ## August 19, 2026
 
 ### New
