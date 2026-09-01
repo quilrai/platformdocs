@@ -48,6 +48,11 @@ coaching outcomes in [Quilly](./quilly.md).
 4. Review the trigger, behavior, criticality, status, and mode.
 5. Create, edit, duplicate, enable, disable, or change mode based on the desired policy outcome.
 
+Controls can also be reached from a Browser Extension finding: clicking the control name on the
+finding card opens the matching control in edit mode, or opens a new control form pre-filled with
+that name if no matching control exists yet. Editing requires control update permission; creating a
+new control requires control create permission. See [Findings](./findings.md) for the entry point.
+
 ## Related Platform Areas
 
 - [Findings](./findings.md)

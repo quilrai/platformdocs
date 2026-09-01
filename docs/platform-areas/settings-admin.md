@@ -80,6 +80,19 @@ User Interaction Hub lets teams customize what end users see in QuilrAI interact
 Administrators can review user responses and configure popup content, policy links, and visual
 styling that appear in user-facing prompts or justifications.
 
+Justification prompts configured here are the source of the action requests that end users submit
+for actions such as login, signup, prompt, copy, paste, upload, and visit. Admins review and decide
+those requests from the Action Requests inbox described in
+[Users, Applications, And Accounts](./users-accounts-applications.md#action-requests).
+
+## Sign-In Method Preference
+
+The sign-in page remembers the identity provider a user last signed in with, for up to 180 days.
+On return visits, that provider is shown as the default sign-in option, with the remaining
+configured providers collapsed behind an **Other sign-in options** toggle. If no successful login
+has been remembered yet, or the browser's stored preference is cleared, every configured provider
+is shown as before.
+
 ## Compliance
 
 Compliance includes provider key setup and key management for compliance services. Current settings

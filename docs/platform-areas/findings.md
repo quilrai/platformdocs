@@ -36,6 +36,10 @@ platform. It is the main place to move from summary signals into detailed eviden
 - Review Compliance Findings by provider, detection scope, user, category, and subcategory.
 - Open related Quilly coaching conversations from finding cards where a **Quilly** badge is shown.
   See [Quilly](./quilly.md) for details on reviewing engagement history.
+- On Browser Extension Findings, click the control name shown on a finding card to open that
+  control. If a control with that name already exists, it opens in edit mode; otherwise a new
+  control form opens pre-filled with that name. See [Controls](./controls.md) for control editing
+  and creation permissions.
 
 ## Finding Insights Time Ranges
 
