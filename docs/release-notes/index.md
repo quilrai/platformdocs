@@ -8,6 +8,23 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## September 1, 2026
+
+### New
+
+- [LLM Gateway](/platform-areas/llm-gateway): Added **Bedrock Runtime** as a custom routing API
+  group, alongside Chat Completion, Anthropic Messages, OpenAI Responses, and Vertex AI. Admins can
+  now define custom routing rules that target Bedrock Runtime providers. Custom routing applies to
+  Converse and ConverseStream calls; InvokeModel calls continue to route directly and are not
+  affected by custom routing rules.
+
+### Improved
+
+- [LLM Gateway](/platform-areas/llm-gateway): When opening the Custom Routing tab, the routing
+  configuration screen now automatically selects the first API group that already has custom
+  routing rules configured, instead of always defaulting to Chat Completion. Manually selecting a
+  different group tab is preserved for the rest of the session.
+
 ## August 19, 2026
 
 ### New
