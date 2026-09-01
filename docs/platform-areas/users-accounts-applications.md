@@ -37,6 +37,37 @@ The Smart Groups drawer previously available on the Users page has been removed.
 creation and membership management are now handled from the dedicated
 [Smart Groups](./smart-groups.md) screen.
 
+### Action Requests
+
+Admins with the Admin, Super Admin, or Platform Admin role see an **Action requests** button on the
+Users page. It opens a tenant-wide inbox for the justification-backed action requests that end
+users submit through prompts configured in [User Interaction Hub](./settings-admin.md#user-interaction-hub)
+(for actions such as login, signup, prompt, copy, paste, upload, and visit). The same review
+surface is also available, scoped to one user and view-only, from the **Action requests** tab in
+User Lens.
+
+The inbox has three sub-views:
+
+- **Requests** — pending and decided requests, with app, action, justification, requested time,
+  and status (**Pending**, **Approved**, or **Not approved**).
+- **Current grants** — previously approved access, with approved time and approver.
+- **Current denied** — requests that were denied or later revoked, with justification, denied
+  time, and denier. The status column distinguishes **Not approved** (denied) from **Revoked**.
+
+Each sub-view can be filtered by app and action type, and by user from the tenant-wide inbox; a
+duration picker (default 7 days) scopes the results by time.
+
+Admins with `APP_MANAGEMENT` `USER` `UPDATE` permission can:
+
+- Approve or deny a pending request, or select multiple pending requests and approve or deny them
+  in bulk.
+- Revoke a current grant. A short confirmation explains that the user must submit a new request to
+  regain access.
+
+Admins cannot approve, deny, or revoke their own requests or grants — the row shows an explanatory
+message instead of action buttons. The User Lens tab is view-only for all admins; decisions are
+made from the Users page inbox.
+
 ## Applications
 
 The Applications page is the main app-management and app-intelligence surface. It includes an
@@ -110,4 +141,6 @@ Common use cases:
 ## Access Requirements
 
 Users and Accounts use AI usage permissions. Applications use app-management permissions, with
-separate scopes for updates, allow/block operations, and agent-triggered actions.
+separate scopes for updates, allow/block operations, and agent-triggered actions. The Action
+requests inbox is visible to Admin, Super Admin, and Platform Admin roles; approving, denying, or
+revoking a request additionally requires app-management user-update permission.
