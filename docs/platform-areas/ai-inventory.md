@@ -87,7 +87,7 @@ analytics, interaction details, and embedded General, Guardrails, and Tools conf
 ### Compliance APIs
 
 The Compliance APIs source provides provider-specific inventory for compliance integrations. The
-OpenAI Compliance view is organized into five tabs:
+OpenAI Compliance view is organized into six tabs:
 
 - **Overview**: Shows organization-level metrics for the selected time range — observed users,
   events, ChatGPT conversations and messages, files, Codex sessions, agent runs, connector calls,
@@ -108,6 +108,17 @@ OpenAI Compliance view is organized into five tabs:
     creator, file count, and agent cross-references; skill name chips in conversation and agent
     run views link directly to the Skills tab.
   - *Apps*: Apps — OpenAI app activity, auth events, returned resources, and per-app user reach.
+- **Costs**: Reports OpenAI usage cost data across **Overview**, **Explore**, and **Charges &
+  rates** sub-views. Overview and Explore show totals, trend charts, and breakdowns (by model,
+  OpenAI surface, product, group, or agent) for three metrics — **Estimated spend**, **Credits
+  used**, and **Tokens** — with a toggle to switch the trend chart between metrics. Credits used
+  reports the exact credits recorded upstream rather than a modeled estimate. Both Estimated spend
+  and Credits used include a coverage indicator (for example, "42/50 records reported") showing
+  how many underlying COSTS records carried that financial field; records without a reported value
+  are excluded from the total rather than counted as zero, and chart points with no reported value
+  are omitted rather than shown as zero. Selecting a user opens a usage drawer with the same
+  metrics, trend chart, and the underlying COSTS records for that user. Charges & rates shows
+  billing line items with calculated and raw rates.
 - **Usage**: Provides **Users**, **Sources**, and **Rankings** sub-tabs with ChatGPT top-user lists
   sorted by conversations, Codex top-user and model rankings, source adoption breakdowns, source
   overlaps, and cross-source transition flows.

@@ -8,6 +8,19 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## September 1, 2026
+
+### Improved
+
+- [AI Inventory](/platform-areas/ai-inventory): The OpenAI Costs view (Overview, Explore, and the
+  per-user usage drawer) now reports **Credits used** alongside Estimated spend and Tokens, with a
+  toggle to switch trend charts between metrics. Credits used shows the exact credits recorded
+  upstream and a coverage indicator noting how many underlying COSTS records reported a credits
+  value; unreported records are excluded from totals and chart points instead of being shown as
+  zero. The Explore breakdown table and per-user table gained matching Credits used and Credits
+  coverage columns, and the raw COSTS record list's Spend column is now labeled **Cost totals** to
+  reflect that a record can report more than one financial total.
+
 ## August 19, 2026
 
 ### New
