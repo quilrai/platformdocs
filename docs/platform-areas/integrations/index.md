@@ -44,6 +44,9 @@ Connectors are organized into the following categories:
 - **Communication & Collaboration:** [Microsoft Teams](./communication-collaboration/microsoft-teams.md), [Slack](./communication-collaboration/slack.md), [Zoom ChatBot](./communication-collaboration/zoom-chatbot.md).
 - **Asset Discovery:** [AWS Cloud](./asset-discovery/aws-cloud.md), [Azure Cloud](./asset-discovery/azure-cloud.md), [ChatGPT](./asset-discovery/chatgpt.md), [vLLM](./asset-discovery/vllm.md), [Ollama](./asset-discovery/ollama.md).
 
+[Azure AI Foundry](./azure-ai-foundry.md) is documented as a standalone connector rather than under a
+category.
+
 ## Main Workflows
 
 1. Open Integrations.
