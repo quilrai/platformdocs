@@ -13,6 +13,11 @@ This connector integrates Azure AI Foundry and Azure Machine Learning Studio wit
 - **Integration Type:** OAuth 2.0
 - **Vendor:** Microsoft
 
+:::note
+For per-project control over Foundry agent inventory and agent conversation history using a
+service principal you own, use the [Azure AI Foundry](./azure-ai-foundry.md) connector instead.
+:::
+
 ## Setup
 
 1. Go to **Integrations** and open the **Available** tab.

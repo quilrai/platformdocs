@@ -41,7 +41,7 @@ Connectors are organized into the following categories:
 - **Google Ecosystem:** [Google Calendar](./google-ecosystem/google-calendar.md), [Google Drive](./google-ecosystem/google-drive.md).
 - **Mobile Device Management (MDM):** [Microsoft Intune](./mobile-device-management/microsoft-intune.md), [Jamf Pro](./mobile-device-management/jamf-pro.md).
 - **Communication & Collaboration:** [Microsoft Teams](./communication-collaboration/microsoft-teams.md), [Slack](./communication-collaboration/slack.md), [Zoom ChatBot](./communication-collaboration/zoom-chatbot.md).
-- **Asset Discovery:** [AWS Cloud](./asset-discovery/aws-cloud.md), [Azure Cloud](./asset-discovery/azure-cloud.md), [ChatGPT](./asset-discovery/chatgpt.md), [vLLM](./asset-discovery/vllm.md), [Ollama](./asset-discovery/ollama.md).
+- **Asset Discovery:** [AWS Cloud](./asset-discovery/aws-cloud.md), [Azure Cloud](./asset-discovery/azure-cloud.md), [Azure AI Foundry](./asset-discovery/azure-ai-foundry.md), [ChatGPT](./asset-discovery/chatgpt.md), [vLLM](./asset-discovery/vllm.md), [Ollama](./asset-discovery/ollama.md).
 
 ## Main Workflows
 
