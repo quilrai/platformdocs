@@ -25,6 +25,8 @@ Use Browser Extension when you need to:
 - Deployment setup for managed browser-extension rollout.
 - Deployment management for tenant-level enablement and update controls.
 - Deployment status tables with user, group, location, department, persona, and extension state.
+- Device info that shows each workstation's machine name alongside its operating system, so
+  machines with the same OS and browser can be told apart.
 - Whitelisting configuration.
 - Support for managed deployment approaches such as Google Business Profile, MDM, Jamf, or Intune
   where configured.
