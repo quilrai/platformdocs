@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 9
 sidebar_label: Azure AI Foundry
 sidebar_custom_props:
   icon: Sparkles
@@ -13,15 +13,14 @@ your own tenant, grant it three Azure roles, and choose which subscriptions and 
 watches. A background sync then keeps AI Inventory, the Overview dashboard, and — where you opt in —
 Conversations up to date.
 
-- **Category:** Asset Discovery
 - **Integration Type:** Microsoft Entra service principal (OAuth 2.0 client credentials)
 - **Vendor:** Microsoft
 
 :::note
-This connector is separate from [Azure Cloud](./azure-cloud.md). Azure Cloud uses an interactive
-Microsoft sign-in for broad Azure AI and Machine Learning Studio asset discovery. Azure AI Foundry
-uses a customer-owned service principal and adds per-project control over agent inventory and agent
-conversation history.
+This connector is separate from [Azure Cloud](./asset-discovery/azure-cloud.md). Azure Cloud uses an
+interactive Microsoft sign-in for broad Azure AI and Machine Learning Studio asset discovery. Azure
+AI Foundry uses a customer-owned service principal and adds per-project control over agent inventory
+and agent conversation history.
 :::
 
 ## How It Works
@@ -183,7 +182,7 @@ than metadata. Enable it only for the projects where you need agent-level activi
 
 ### AI Inventory
 
-Inventory-enabled projects produce these asset types in [AI Inventory](../../ai-inventory.md):
+Inventory-enabled projects produce these asset types in [AI Inventory](../ai-inventory.md):
 
 | Asset type | Source in Azure |
 |------------|-----------------|
@@ -197,7 +196,7 @@ Inventory-enabled projects produce these asset types in [AI Inventory](../../ai-
 Conversation-enabled projects appear in the Conversations view as agent thread history — prompts,
 tool calls, and run outcomes.
 
-Conversation data from this connector does not create entries in [Findings](../../findings.md). The
+Conversation data from this connector does not create entries in [Findings](../findings.md). The
 closest equivalent to a finding is a failed run outcome, which is visible on the thread itself.
 Content-safety and RAI policy information is inventory metadata attached to the Model asset, not
 part of the conversation pull.
@@ -281,9 +280,9 @@ immediate sync with **Refresh projects** in the wizard's Projects step.
 
 ## Related Platform Areas
 
-- [Azure Cloud](./azure-cloud.md)
-- [AI Inventory](../../ai-inventory.md)
-- [Microsoft Entra ID](../identity-providers/microsoft-entra-id.md)
-- [Insights](../../insights.md)
-- [Findings](../../findings.md)
-- [Integrations](../index.md)
+- [Azure Cloud](./asset-discovery/azure-cloud.md)
+- [AI Inventory](../ai-inventory.md)
+- [Microsoft Entra ID](./identity-providers/microsoft-entra-id.md)
+- [Insights](../insights.md)
+- [Findings](../findings.md)
+- [Integrations](./index.md)
