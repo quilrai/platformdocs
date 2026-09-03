@@ -122,9 +122,10 @@ Enter the following in Quilr:
 | Application (client) ID | The app registration's client ID. |
 | Client secret | The secret value you created in Step 1. |
 
-The credentials are submitted once and validated against the required audiences. If validation
-fails, the wizard reports which audience or role is missing so you can correct the assignment and
-retry.
+The credentials are submitted once and validated against the required audiences. If that validation
+fails outright — for example, an invalid tenant, client ID, or secret — the wizard reports which
+audience it could not reach. Missing role assignments do not fail this step. They show up instead as
+incomplete readiness indicators per subscription in Step 3.
 
 ### Step 3 — Subscriptions
 
@@ -217,8 +218,10 @@ contribute assets to AI Inventory but do not appear in these activity metrics.
 
 ## Sync Behavior And Status
 
-The connector runs an hourly bounded sweep of the enabled projects. You can also trigger an
-immediate sync with **Refresh projects** in the wizard's Projects step.
+The connector runs an hourly bounded sweep of the enabled projects: each connection resyncs about
+once an hour after a successful run. If a sync fails, that connection retries after 5 minutes rather
+than waiting for the next hourly window. You can also trigger an immediate sync with **Refresh
+projects** in the wizard's Projects step.
 
 ### Connection status
 
@@ -266,7 +269,7 @@ immediate sync with **Refresh projects** in the wizard's Projects step.
 | No projects discovered | Confirm the subscription actually contains a Foundry project and that **Azure AI Foundry User** is assigned at subscription scope. |
 | Conversations switch cannot be turned on | Enable **Inventory** for that project first. |
 | Project shows Partial | Part of the data plane was unreachable. Check the Foundry and Log Analytics role assignments for that subscription. |
-| Connection shows Action required | Most often an expired client secret. Rotate it in Azure and re-enter it in Quilr. |
+| Connection shows Action required | Caused by an expired secret or a missing or incomplete role assignment on a selected subscription. Check both. |
 | Overview tile shows no activity | The tile only counts conversation-enabled projects. Enable Conversations for the projects you want reflected there. |
 
 ## What This Integration Does
