@@ -8,6 +8,16 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## September 4, 2026
+
+### Improved
+
+- [Smart Groups](/platform-areas/smart-groups): Streamlined the group membership drilldown drawer.
+  The member table now shows Names, Departments, Smart Groups, and IDP User Groups; the IDP User
+  Status, User Risks, and Total Apps columns have been removed to keep the view focused on
+  membership and grouping details. Column spacing and widths were also fixed so long names and
+  group labels no longer clip or crowd adjacent columns.
+
 ## August 19, 2026
 
 ### New
