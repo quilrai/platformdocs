@@ -34,6 +34,12 @@ Admins can create a smart group without assigning any users at the time of creat
 added to the group later. This is useful when setting up a group structure before membership is
 known, or when access control rules should be configured before users are onboarded.
 
+### View Group Membership
+
+Clicking a smart group opens a drilldown drawer listing its members. The table shows each member's
+name, department, other smart groups they belong to, and their IDP user groups. Use the search and
+filter bar above the table to narrow the member list.
+
 ### Add Users to a Smart Group
 
 Admins can add one or more users to any existing smart group. Users are searchable by email or
