@@ -578,6 +578,7 @@ system they mean before assuming it is the Policy Engine covered here.
 
 ## Related Platform Areas
 
+- [Policy Engine — MCP Gateway](./mcp-gateway.md)
 - [Detection Models](../detection-models.md)
 - [LLM Gateway](../llm-gateway.md)
 - [AI Gateway](../ai-gateway.md)

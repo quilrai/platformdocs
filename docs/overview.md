@@ -106,6 +106,10 @@ that handles the traffic.
 - [LLM Gateway policies](./platform-areas/policy-engine/llm-gateway.md) cover chat and completions
   traffic, including sensitive-data handling, gateway access, identity and network trust, tool
   controls, allowed models, routing, limits, token savings, and prompt store enforcement.
+- [MCP Gateway policies](./platform-areas/policy-engine/mcp-gateway.md) cover agent-to-MCP-server
+  traffic across the session, discovery, request, and response stages, including server access,
+  capability visibility, human approval for tool calls, usage quotas and concurrency, managed
+  authentication, cache isolation, and web search security.
 
 ### [AI Gateway](./platform-areas/ai-gateway.md)
 
