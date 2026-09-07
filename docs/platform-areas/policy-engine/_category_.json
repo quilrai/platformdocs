@@ -1,0 +1,12 @@
+{
+  "label": "Policy Engine",
+  "position": 7,
+  "link": {
+    "type": "generated-index",
+    "title": "Policy Engine",
+    "description": "Author, test, and publish the rules that govern AI traffic. Policies are written in Policy Studio and enforced live by the gateway that handles the traffic."
+  },
+  "customProps": {
+    "icon": "Lock"
+  }
+}

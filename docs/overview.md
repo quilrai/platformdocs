@@ -96,6 +96,17 @@ Controls let teams operationalize policy. Customers can browse controls by postu
 
 Detection Models define what QuilrAI should detect. The data-risk experience supports out-of-box and custom detections, contextual and non-contextual data risks, and custom techniques such as precision, semantic, and intent-based detection. Additional adversarial and insider-risk tabs may appear when enabled for the tenant.
 
+### [Policy Engine](./platform-areas/policy-engine/llm-gateway.md)
+
+The Policy Engine is where admins write the rules that govern AI traffic: when traffic matches a
+condition, apply an effect such as allow, block, redact, throttle, or route elsewhere. Policies are
+authored, validated, simulated, and published from Policy Studio, then enforced live by the gateway
+that handles the traffic.
+
+- [LLM Gateway policies](./platform-areas/policy-engine/llm-gateway.md) cover chat and completions
+  traffic, including sensitive-data handling, gateway access, identity and network trust, tool
+  controls, allowed models, routing, limits, token savings, and prompt store enforcement.
+
 ### [AI Gateway](./platform-areas/ai-gateway.md)
 
 AI Gateway includes LLM Gateway and MCP Gateway.
@@ -125,5 +136,6 @@ Audit Log gives teams searchable, filterable event history with expandable snaps
 2. Review Users, Applications, Accounts, and AI Inventory to see what exists.
 3. Use Findings to investigate high-impact issues.
 4. Configure Detection Models and Controls to align enforcement with policy.
-5. Set up Browser Extension, Endpoint Agent, Integrations, and Gateways to expand coverage.
-6. Use Audit Log and Exports for reporting and operational review.
+5. Use the Policy Engine to turn that policy into rules the gateway enforces on live traffic.
+6. Set up Browser Extension, Endpoint Agent, Integrations, and Gateways to expand coverage.
+7. Use Audit Log and Exports for reporting and operational review.
