@@ -133,6 +133,10 @@ that handles the traffic.
 - [LLM Gateway policies](./platform-areas/policy-engine/llm-gateway.md) cover chat and completions
   traffic, including sensitive-data handling, gateway access, identity and network trust, tool
   controls, allowed models, routing, limits, token savings, and prompt store enforcement.
+- [MCP Gateway policies](./platform-areas/policy-engine/mcp-gateway.md) cover agent-to-MCP-server
+  traffic across the session, discovery, request, and response stages, including server access,
+  capability visibility, human approval for tool calls, usage quotas and concurrency, managed
+  authentication, cache isolation, and web search security.
 
 ### [AI Gateway](./platform-areas/ai-gateway.md)
 
@@ -153,6 +157,13 @@ Integrations help connect QuilrAI to identity providers, device management syste
 
 Settings provides organizational context, general settings, organizational policies, user management, user-interaction customization, compliance setup, browser extension setup, endpoint setup, and AI Gateway setup. Smart group management is available from the dedicated [Smart Groups](./platform-areas/smart-groups.md) screen.
 
+### [Data Retention](./platform-areas/data-retention.md)
+
+Data Retention sets how long each kind of LLM and MCP data stays visible in the console. A tenant-wide
+policy of ordered rules assigns an independent visibility window to eight data classes, from activity
+metadata through request and response content to finding evidence. It hides data from the console
+rather than deleting it, and an impact preview estimates what a draft would hide before you publish.
+
 ### [Audit Log And Exports](./platform-areas/audit-log-and-exports.md)
 
 Audit Log gives teams searchable, filterable event history with expandable snapshots. Exports provides export history and new CSV or JSON exports for supported platform tables.
@@ -165,4 +176,5 @@ Audit Log gives teams searchable, filterable event history with expandable snaps
 4. Configure Detection Models and Controls to align enforcement with policy.
 5. Use the Policy Engine to turn that policy into rules the gateway enforces on live traffic.
 6. Set up Browser Extension, Endpoint Agent, Integrations, and Gateways to expand coverage.
-7. Use Audit Log and Exports for reporting and operational review.
+7. Set Data Retention to match how long each kind of data should stay visible in the console.
+8. Use Audit Log and Exports for reporting and operational review.

@@ -1,4 +1,5 @@
 import {
+  Archive,
   BookOpen,
   Network,
   BrainCircuit,
@@ -37,6 +38,7 @@ import {
 } from "lucide-react";
 
 const iconMap = {
+  Archive,
   BookOpen,
   Network,
   BrainCircuit,

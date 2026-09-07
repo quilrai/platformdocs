@@ -297,14 +297,14 @@ A worked example, read top to bottom exactly as the editor shows it:
 runs on request · priority 900 · higher priority wins conflicts
 Scope shortcut:  [User]  [Smart group]  [Application]
 
-When  User email         is any of   manideep@quilr.ai
+When  User email         is any of   test@quilr.ai
 and   Active Smart Group is any of   CSM
-and   Application        is any of   gurmukh-test
+and   Application        is any of   test
 and   data found         is any of   Aadhaar Number   >= 10 occurrences
       + condition   + any-of group
 ```
 
-That reads as: *for manideep@quilr.ai, in the CSM Smart Group, using the gurmukh-test application,
+That reads as: *for test@quilr.ai, in the CSM Smart Group, using the test application,
 when 10 or more Aadhaar Numbers are found in the request — then apply the effect below.*
 
 ### 5. Set the effects under THEN
@@ -578,6 +578,7 @@ system they mean before assuming it is the Policy Engine covered here.
 
 ## Related Platform Areas
 
+- [Policy Engine — MCP Gateway](./mcp-gateway.md)
 - [Detection Models](../detection-models.md)
 - [LLM Gateway](../llm-gateway.md)
 - [AI Gateway](../ai-gateway.md)
