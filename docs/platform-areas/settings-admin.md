@@ -80,6 +80,15 @@ User Interaction Hub lets teams customize what end users see in QuilrAI interact
 Administrators can review user responses and configure popup content, policy links, and visual
 styling that appear in user-facing prompts or justifications.
 
+The template editor opens in the mode that matches a template's configured action, showing the
+prompt, justification, or block fields and preview accordingly.
+
+When editing popup content, the message header is limited to 50 characters. For templates tied to
+sensitive-data use cases — sharing sensitive data with an AI application, sharing sensitive data
+with a non-AI application, and posting sensitive data into a chatbot — the message body is limited
+to 125 characters and admins can define up to 4 predefined justification options. Templates for
+other use cases do not carry a body-length or predefined-option limit.
+
 ## Compliance
 
 Compliance includes provider key setup and key management for compliance services. Current settings
