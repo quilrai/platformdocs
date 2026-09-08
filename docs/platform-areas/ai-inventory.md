@@ -100,14 +100,20 @@ OpenAI Compliance view is organized into five tabs:
     knowledge files, and external actions; the detail drawer shows full configuration sections and
     top-user lists. Knowledge Files lists files linked to GPTs with link count, GPT count, and
     owners. Conversation Files lists files shared in conversations. Users shows per-user activity
-    with a 360 detail view.
+    with a 360 detail view. Selecting a user from the Agents Users tab or the Apps drawer's Users
+    section opens that same 360 view for the person selected.
   - *Codex*: Sessions, Tasks, and Environments.
   - *Spreadsheets*: Sessions — Microsoft Excel add-in sessions with event counts, content events,
     model usage, and token totals.
-  - *Agents*: Agents, Connectors, and Skills. Skills shows the workspace skill catalog with
-    creator, file count, and agent cross-references; skill name chips in conversation and agent
-    run views link directly to the Skills tab.
-  - *Apps*: Apps — OpenAI app activity, auth events, returned resources, and per-app user reach.
+  - *Agents*: Agents, Connectors, Skills, and Users. Skills shows the workspace skill catalog with
+    creator, file count, agent cross-references, and last-seen activity; skill name chips in
+    conversation and agent run views link directly to the Skills tab. Users lists each person's
+    runs, events, agents driven, and connector calls; opening a user shows the agents, connectors,
+    and skills they used, with each list sortable and paged independently. Agent and connector rows
+    opened from a user's detail open in place, with a control to return to that user.
+  - *Apps*: Apps — OpenAI app activity, auth events, returned resources, and per-app user reach. The
+    app detail drawer includes a Users section listing who is behind an app's events and returned
+    resources, and a Top users list capped at five names.
 - **Usage**: Provides **Users**, **Sources**, and **Rankings** sub-tabs with ChatGPT top-user lists
   sorted by conversations, Codex top-user and model rankings, source adoption breakdowns, source
   overlaps, and cross-source transition flows.
