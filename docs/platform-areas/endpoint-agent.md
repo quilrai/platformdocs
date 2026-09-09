@@ -33,6 +33,8 @@ Use Endpoint Agent when you need to:
   features and supplying their required parameters from the Guardrails tab.
 - Auto-save for detection configurations — changes are persisted automatically after a short pause
   with a live status indicator in the toolbar.
+- Application Configuration screen for allowing or blocking any discovered application, scoped to
+  everyone, a smart group, or a single user.
 
 ## Detection Configurations
 
@@ -57,6 +59,35 @@ The Guardrails tab within each configuration drawer contains:
   configuration. Only features the admin interacts with in the current session are included in the
   save; untouched features remain at their previously saved values.
 
+## Application Configuration
+
+The Application Configuration tab lets admins allow or block any discovered application at the
+endpoint level, independently of the per-app DLP and browser settings in Detection
+Configurations.
+
+- **Application** — chosen from discovered applications; the picker excludes system components,
+  which the agent refuses to terminate regardless of policy.
+- **Action** — Allow or Block. Block terminates the app and shows the agent's on-device popup
+  automatically; that behavior is not a per-rule setting.
+- **Scope** — one of:
+  - **Everyone** — applies tenant-wide.
+  - **Smart group** — applies to members of a selected [Smart Group](./smart-groups.md). Group
+    membership is managed on the Smart Groups screen, not here; changing membership re-targets the
+    rule without editing it.
+  - **User** — applies to a single user, matched against the email the device reports,
+    case-insensitively.
+
+Rules can be edited later — action and scope can change, but the application and OS are fixed for
+an existing rule; to change the application, remove the rule and add a new one. Rules can also be
+removed. The rules table supports search and filtering by action (All, Allow, Block).
+
+**Precedence** is user > smart group > everyone, applied per application. A user- or group-scoped
+Allow therefore overrides a tenant-wide Block, so scoped Allow rules should be used as deliberate
+exceptions. When a user belongs to two smart groups with conflicting rules for the same
+application, the rule whose action changed most recently wins; there is no ranking between groups.
+Rules authored earlier from the discovery screen, before scoped rules existed, continue to apply
+at the lowest precedence.
+
 ## Main Workflows
 
 1. Configure endpoint deployment and tenant-level management settings.
@@ -69,6 +100,9 @@ The Guardrails tab within each configuration drawer contains:
    desired features, and supply any required parameters.
 7. Changes save automatically. Review the toolbar status indicator to confirm the save completed,
    then review endpoint findings for operational impact.
+8. To allow or block an application outright, open Application Configuration, add a rule with the
+   desired action and scope, and review precedence before relying on a scoped Allow to override a
+   tenant-wide Block.
 
 ## Related Platform Areas
 
@@ -76,6 +110,7 @@ The Guardrails tab within each configuration drawer contains:
 - [Browser Extension](./browser-extension.md)
 - [AI Inventory](./ai-inventory.md)
 - [Detection Models](./detection-models.md)
+- [Smart Groups](./smart-groups.md)
 
 ## Access Requirements
 
