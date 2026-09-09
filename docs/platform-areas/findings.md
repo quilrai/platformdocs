@@ -21,6 +21,10 @@ platform. It is the main place to move from summary signals into detailed eviden
 - **All Findings:** Cross-source finding stream.
 - **Browser Extension Findings:** Findings from browser extension activity.
 - **Endpoint Agent Findings:** Findings from endpoint agent telemetry, when endpoint is enabled.
+  Finding cards for these findings include the OS User Name and, when available, a copyable
+  System ID, so admins can identify the specific employee session behind the finding when a
+  device is shared by multiple employees. See [Endpoint Agent](./endpoint-agent.md) for how the
+  same session identity appears in Deployment Status.
 - **LLM Gateway Findings:** Findings from protected LLM Gateway traffic.
 - **MCP Gateway Findings:** Findings from protected MCP Gateway traffic.
 - **Compliance Findings:** Findings and no-risk interactions from compliance integrations such as
