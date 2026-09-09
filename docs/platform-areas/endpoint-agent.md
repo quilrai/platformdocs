@@ -23,7 +23,8 @@ Use Endpoint Agent when you need to:
 ## Key Capabilities
 
 - Deployment management for endpoint agent rollout.
-- Deployment status for endpoint coverage.
+- Deployment status for endpoint coverage, with one row per employee session on devices shared
+  by multiple employees.
 - Detection configuration rows for applications and browsers.
 - Per-app DLP enabled state.
 - Data-risk action dropdowns.
@@ -33,6 +34,29 @@ Use Endpoint Agent when you need to:
   features and supplying their required parameters from the Guardrails tab.
 - Auto-save for detection configurations — changes are persisted automatically after a short pause
   with a live status indicator in the toolbar.
+
+## Deployment Status
+
+Deployment Status lists one row per employee session on a workstation, rather than one row per
+physical device. When a device is shared by more than one employee, each employee's session
+appears as its own row with its own device details, so admins can review and act on individual
+employees rather than the shared machine as a whole.
+
+Each row shows:
+
+- **Device** — device name, the OS account (**OS User Name**) signed in for that session, and the
+  device ID (truncated, with the full value on hover and a copy button).
+- **Session ID** — a per-session identifier that distinguishes rows belonging to the same shared
+  device. It is shown by default and can be hidden from **Configure Columns** like other optional
+  columns. Rows created before session tracking was added, or created through a CSV upload, show
+  no session ID.
+- Email, full name, IDP user status, OS, endpoint agent status, agent version, install date, and
+  last accessed time, as before.
+
+Selecting a row, editing its email or full name, and bulk enabling, disabling, or force-updating
+selected rows all act on the specific employee session for that row. On a device shared by
+multiple employees, acting on one employee's row does not affect the other employee's session on
+the same device.
 
 ## Detection Configurations
 
