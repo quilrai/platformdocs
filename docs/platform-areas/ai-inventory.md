@@ -87,7 +87,7 @@ analytics, interaction details, and embedded General, Guardrails, and Tools conf
 ### Compliance APIs
 
 The Compliance APIs source provides provider-specific inventory for compliance integrations. The
-OpenAI Compliance view is organized into five tabs:
+OpenAI Compliance view is organized into six tabs:
 
 - **Overview**: Shows organization-level metrics for the selected time range — observed users,
   events, ChatGPT conversations and messages, files, Codex sessions, agent runs, connector calls,
@@ -111,6 +111,14 @@ OpenAI Compliance view is organized into five tabs:
 - **Usage**: Provides **Users**, **Sources**, and **Rankings** sub-tabs with ChatGPT top-user lists
   sorted by conversations, Codex top-user and model rankings, source adoption breakdowns, source
   overlaps, and cross-source transition flows.
+- **Costs**: Provides **Overview**, **Explore**, and **Charges & rates** sub-tabs for OpenAI spend
+  reporting. Overview and Explore share a shared time-range and grouping control and let admins
+  filter usage by **Product** and **OpenAI surface** using the exact values OpenAI reports (for
+  example a specific product name or surface such as `chatgpt`, `codex`, or `mobile`), plus a
+  model filter; Explore adds drill-down by user, group, model, product, surface, and client, and a
+  per-user usage breakdown. Rows where OpenAI did not report a product or surface are labeled
+  **Unknown product** or **Unknown surface** and cannot be filtered on or drilled into. Charges &
+  rates shows the billing summary for the same scope.
 - **Governance**: Organizes compliance risk data across three sub-tabs. **Token Governance** shows
   total token consumption, input/output/cached composition, cache-efficiency ratio, token field
   coverage, a daily consumption trend, and consumption rankings by user, model, source, and client.
