@@ -8,6 +8,16 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## September 10, 2026
+
+### Fixed
+
+- [Endpoint Agent](/platform-areas/endpoint-agent): Fixed layout issues in the **Group & User
+  Rules** editor inside the Endpoint Detection Configurations drawer, where the rule list and rule
+  editor panes did not size correctly. Also renamed the optional label field on file upload
+  restriction rules from "Description" to **Control Name**, and made it directly editable on
+  existing rules instead of showing as static, truncated text.
+
 ## August 19, 2026
 
 ### New
