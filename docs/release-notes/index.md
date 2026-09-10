@@ -8,6 +8,15 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## September 10, 2026
+
+### Fixed
+
+- [Endpoint Agent](/platform-areas/endpoint-agent): Corrected the guidance text shown when adding a
+  **file extension** condition in File Restrictions rules. The hint no longer implies that compound
+  extensions such as `.tar.gz` are supported — extension matching always uses the single canonical
+  type detected from a file's own bytes, so a rule can only ever match one extension at a time.
+
 ## August 19, 2026
 
 ### New
