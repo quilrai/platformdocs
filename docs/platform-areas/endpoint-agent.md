@@ -33,6 +33,9 @@ Use Endpoint Agent when you need to:
   features and supplying their required parameters from the Guardrails tab.
 - Auto-save for detection configurations — changes are persisted automatically after a short pause
   with a live status indicator in the toolbar.
+- Conflict-safe saving — if the same configuration was updated elsewhere (another admin session or
+  tab) while a save was in flight, the platform reloads the latest saved version instead of
+  overwriting it.
 
 ## Detection Configurations
 
@@ -43,6 +46,11 @@ platform preserves any backend exclusions that are outside the currently display
 Detection configurations auto-save. After any change, a status indicator in the page toolbar shows
 the current save state (**Autosave pending**, **Saving...**, **Saved**, or **Save failed.
 Retrying...**). If a save fails, it is retried automatically.
+
+If the same configuration was changed elsewhere (for example, another admin session) while a save
+was in flight, the toolbar shows **Settings changed elsewhere. Latest version loaded.** and the
+table refreshes to the newest saved values rather than overwriting them. Re-apply any pending edit
+after reviewing the refreshed configuration.
 
 ### Guardrails Tab
 
@@ -56,6 +64,9 @@ The Guardrails tab within each configuration drawer contains:
   corrected. The Access Control section is hidden entirely when no features apply to the selected
   configuration. Only features the admin interacts with in the current session are included in the
   save; untouched features remain at their previously saved values.
+- If the configuration was updated elsewhere since the drawer was opened, saving reloads the latest
+  version instead of overwriting it, and the confirmation message notes that the settings changed
+  elsewhere so the admin can re-check and reapply any pending edit.
 
 ## Main Workflows
 

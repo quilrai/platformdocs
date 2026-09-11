@@ -8,6 +8,17 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## September 11, 2026
+
+### Fixed
+
+- [Endpoint Agent](/platform-areas/endpoint-agent): Fixed a race condition where saving endpoint
+  detection configurations (from the Detection Configurations page or the Guardrails drawer) could
+  silently overwrite a change made in another session or tab. Saves are now version-checked; if the
+  configuration changed elsewhere while a save was in flight, the toolbar shows **Settings changed
+  elsewhere. Latest version loaded.** and the newest saved values are loaded instead of being
+  overwritten.
+
 ## August 19, 2026
 
 ### New
