@@ -8,6 +8,17 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## September 11, 2026
+
+### Admin And Configuration
+
+- [Settings and Administration](/platform-areas/settings-admin#manage-users): Credential-based
+  sign-in (email and password, with MFA and forgot-password) is now off by default and managed as
+  a per-tenant configuration rather than being available to every tenant. Tenants that need
+  email/password sign-in can have QuilrAI enable it. When it is off, the **Auth Type** field is
+  hidden from the *Add User* form in Manage Users, since new users can only be created with
+  provider-based (OAuth) sign-in; editing an existing user still shows their current Auth Type.
+
 ## August 19, 2026
 
 ### New

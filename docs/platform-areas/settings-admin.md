@@ -61,6 +61,13 @@ The App Access control is also available directly in the users table — for AI 
 a compact selector shows the current access state and can be updated without opening the full edit
 panel.
 
+Credential-based sign-in (email and password, with MFA and forgot-password) is a tenant-level
+configuration that is off by default; QuilrAI enables it per tenant on request. When it is off, new
+users can only be created with provider-based (OAuth) sign-in, and the **Auth Type** field is
+hidden from the *Add User* form. When it is on, admins can choose **Auth Type** (OAuth or
+credentials) while adding a user. Editing an existing user always shows their current **Auth
+Type**, regardless of this setting.
+
 ### Timezone Display Preference
 
 Administrators can select a timezone for displaying timestamps across the platform. The preference
