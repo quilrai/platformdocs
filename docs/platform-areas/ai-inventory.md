@@ -61,7 +61,10 @@ inventory view scoped to browser-discovered apps.
 The Endpoint Agent source focuses on endpoint-observed applications. It summarizes requests,
 sensitive activity, detections, blocked activity, and users. Where coding inventory is available,
 the detail view can also show related agents, skills, MCP servers, models, hooks, permissions,
-plugins, and repositories for the selected application group.
+plugins, and repositories for the selected application group. For apps with dependency scanning
+support, the detail view also includes the [Vulnerable Dependencies
+tab](./endpoint-agent.md#vulnerable-dependencies-tab), with user and repository filters and CSV
+export.
 
 A **Discovery** sub-view within the Endpoint Agent source lists all applications observed on
 endpoints through asset inventory, including applications that have not generated AI-specific
