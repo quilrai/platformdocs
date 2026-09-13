@@ -8,6 +8,17 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## September 13, 2026
+
+### Improved
+
+- [Endpoint Agent](/platform-areas/endpoint-agent#vulnerable-dependencies-tab): Added **user** and
+  **repository** filters to the Vulnerable Dependencies tab, so admins can narrow dependency
+  results to a specific person or codebase alongside the existing search, ecosystem, status, and
+  severity filters. Added an **Export** action that downloads the currently filtered dependency
+  list as a CSV file. Filter state on this tab is now scoped per application, so switching between
+  applications no longer carries over filters left on a previously viewed app.
+
 ## August 19, 2026
 
 ### New
