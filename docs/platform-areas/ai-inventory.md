@@ -63,6 +63,16 @@ sensitive activity, detections, blocked activity, and users. Where coding invent
 the detail view can also show related agents, skills, MCP servers, models, hooks, permissions,
 plugins, and repositories for the selected application group.
 
+Where coding inventory is available, the detail view also includes a **Vulnerable Dependencies**
+tab summarizing dependency risk for the selected application group: total dependencies, dependencies
+needing attention, vulnerable packages, scan count, and the date of the last scan. Admins can filter
+by ecosystem, status, severity, user, and repository, and search by package name. Dependencies that
+have not completed a scan show a blank last-scan date rather than an invalid placeholder date.
+Filtered results can be exported; the export runs as a background job, keeps running if the drawer
+is closed, and notifies the admin when the file is ready in export history under **Vulnerable
+Dependencies**. See [Audit Log and Exports](./audit-log-and-exports.md) for more on the export
+workflow.
+
 A **Discovery** sub-view within the Endpoint Agent source lists all applications observed on
 endpoints through asset inventory, including applications that have not generated AI-specific
 activity. Discovery rows show application name, associated users, device count, OS type, privilege,
@@ -142,6 +152,7 @@ a provider option when available but may be disabled until configured for the te
 - [AI Gateway](./ai-gateway.md)
 - [Endpoint Agent](./endpoint-agent.md)
 - [Settings And Administration](./settings-admin.md)
+- [Audit Log and Exports](./audit-log-and-exports.md)
 
 ## Access Requirements
 
