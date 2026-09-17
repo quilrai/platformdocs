@@ -36,6 +36,9 @@ platform. It is the main place to move from summary signals into detailed eviden
 - Review Compliance Findings by provider, detection scope, user, category, and subcategory.
 - Open related Quilly coaching conversations from finding cards where a **Quilly** badge is shown.
   See [Quilly](./quilly.md) for details on reviewing engagement history.
+- Review the smart groups associated with a finding directly on the finding card. Up to four smart
+  groups display as pills; additional groups are collapsed behind a **+N** pill that reveals the
+  remaining groups on hover.
 
 ## Finding Insights Time Ranges
 
