@@ -50,8 +50,13 @@ Supported export sources include:
   records from the deployment status table.
 - **Applications** — application inventory records from the Applications page, with support for
   current-filter or full-range scope and selection-based export. Currently in Beta.
+- **Vulnerable Dependencies** — dependency risk records from the **Vulnerable Dependencies** tab of
+  the Endpoint Agent inventory drawer, scoped to the current ecosystem, status, severity, user,
+  repository, and search filters.
 
-The export history list automatically refreshes every 30 seconds while any export is still
+Exports run as background jobs: once started, an export keeps running even if the admin closes the
+originating panel or navigates to a different page, and a notification is delivered when the file is
+ready. The export history list automatically refreshes every 30 seconds while any export is still
 processing, so the status and download link update without a manual page reload.
 
 ### Row Limit
