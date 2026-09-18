@@ -38,6 +38,8 @@ Use AI Inventory when you need to:
   metrics.
 - Review endpoint coding inventory where available, including agents, skills, MCP servers, models,
   hooks, permissions, plugins, and repositories.
+- Review a **Model Usage** tab for supported endpoint coding tools (Claude Code, Codex, and
+  Cursor), showing token and cost totals, a usage trend chart, and a per-model breakdown.
 - Review endpoint-discovered applications with the Discovery sub-view: filter by name, user email,
   category, source, OS type, approval status, and criticality, and update execution policy inline.
 - Review LLM Gateway API keys with request, blocked, anonymized, model, last-used, and posture
@@ -70,6 +72,13 @@ category, source, and execution policy. Admins can filter by name, user email, c
 type (macOS, Windows, Linux), approval status (Needs Review, Approved, Blocked), and criticality
 (Critical, Not Critical), and toggle off OS system processes. Execution policy (Allowed or Blocked)
 can be updated inline for each row.
+
+For endpoint coding tools where model-level usage data is available today — Claude Code, Codex, and
+Cursor — the drawer includes a **Model Usage** tab. It shows total tokens, input/output tokens,
+cache read/create tokens, and estimated cost for the selected time range, a usage trend chart by
+day, week, or month, and a per-model table with request counts, token breakdowns, cost, and pricing
+coverage. Admins can filter by model, user email, and date range. Requests without complete token
+or pricing data are called out separately so totals are not misread as covering all activity.
 
 ### LLM Gateway
 
