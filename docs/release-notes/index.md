@@ -8,6 +8,20 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## September 18, 2026
+
+### New
+
+- [Endpoint Agent](/platform-areas/endpoint-agent): Added **Remote Log Collection**. A new
+  tenant-level toggle under Deployment Management lets admins turn on remote diagnostic log
+  collection for endpoint devices. Once enabled, a **Remote Logs** control appears on the
+  Deployment Status table: select up to 5 devices, trigger a remote pull, and download the
+  resulting log bundle once collection completes. A device that already has a pull in progress is
+  skipped and called out rather than failing the whole batch. Recent pulls show a live status
+  (waiting for device, device acknowledged, collecting logs, completed, failed, or expired) and
+  update automatically while a pull is in flight. Triggering a pull requires device-level update
+  permission for Endpoint Agent.
+
 ## August 19, 2026
 
 ### New
