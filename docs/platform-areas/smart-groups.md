@@ -37,8 +37,11 @@ known, or when access control rules should be configured before users are onboar
 ### Add Users to a Smart Group
 
 Admins can add one or more users to any existing smart group. Users are searchable by email or
-name. Adding a user to a group takes effect immediately for access control evaluations in MCP
-Gateway, LLM Gateway, and any other area that references the group.
+name. Selections persist while searching or paging through the user list, so admins can search for
+several users in sequence and add them all in one action. Selected users appear as removable chips
+above the list, and the add button shows the current selection count before it's confirmed. Adding
+a user to a group takes effect immediately for access control evaluations in MCP Gateway, LLM
+Gateway, and any other area that references the group.
 
 ### Remove Users from a Smart Group
 
