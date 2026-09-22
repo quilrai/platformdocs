@@ -8,6 +8,16 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## September 22, 2026
+
+### Improved
+
+- [Smart Groups](/platform-areas/smart-groups): The **Add users to a smart group** drawer now
+  keeps previously selected users checked while admins search for or page through additional
+  users. Selected users appear as removable chips above the list, and the add button shows the
+  current selection count, making it easier to build a membership list across multiple searches
+  before confirming.
+
 ## August 19, 2026
 
 ### New
