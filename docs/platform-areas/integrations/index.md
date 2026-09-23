@@ -25,7 +25,9 @@ Use Integrations when you need to:
 - Available integrations catalog.
 - Search and filter connectors.
 - Configure new instances.
-- Edit existing instances when permitted.
+- Edit existing instances when permitted. Editing a connected instance shows a single **Save**
+  action; saving persists the updated connection settings and returns directly to Connected
+  without re-running the connector's authorization flow.
 - Connector-specific setup documentation, including required scopes, permissions, and configuration.
 - Separate advanced routes for OAuth, token flow, MCP clients, MCP servers, and tool policies where
   enabled.
