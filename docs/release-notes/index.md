@@ -8,6 +8,23 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## September 28, 2026
+
+### New
+
+- [Endpoint Agent](/platform-areas/endpoint-agent): Added an **Endpoint Configuration** tab under
+  Settings > Endpoint for tenants licensed for it. Admins can manage the redirector an endpoint
+  uses to intercept AI-bound traffic (the user-mode packet redirector or the kernel-mode Quilr
+  redirector), the proxy auto-config (PAC) that tells browsers where to send that traffic, and the
+  upstream proxy that traffic is forwarded to next, including authentication (none, username and
+  password, Kerberos/SPNEGO, or NTLM). Saves that publish to endpoints show a live status and
+  version indicator, and a save that made no effective change is reported as "unchanged — nothing
+  to publish" rather than as a successful rollout. Tenants on a hand-written PAC script are told
+  that app monitoring cannot publish to it and are offered a guided import that previews what would
+  change before converting to a managed, auto-generated script. Access requires the endpoint agent
+  and a separate **Endpoint Configuration** license flag; the tab and route are hidden for
+  unlicensed tenants and read-only for viewers without update permission.
+
 ## August 19, 2026
 
 ### New
