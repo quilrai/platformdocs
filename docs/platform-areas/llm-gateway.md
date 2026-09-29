@@ -98,7 +98,10 @@ Each LLM Gateway app has a settings drawer with focused areas for:
   models.
 - **Security Guardrails:** Default action (with a **Set everything to default** shortcut that
   resets all category actions to inherit the default), data risks, adversarial risks (including a
-  bulk **Enable all / Disable all** toggle), scopes, actions, and risk sensitivity.
+  bulk **Enable all / Disable all** toggle), scopes, actions, and risk sensitivity. Most adversarial
+  categories are on by default and inherit the app's default action when left unset. A small number
+  of pilot categories, such as **Malicious Scripts**, ship off by default and fall back to
+  **Monitor** rather than the default action when no action is explicitly chosen for that category.
 - **Additional Guardrails:** Specialized EDM patterns and per-pattern risk levels.
 - **Guardian Agent:** Coding helper checks and task-adherence behavior.
 - **Custom Detections:** Custom precision categories and custom intents.
