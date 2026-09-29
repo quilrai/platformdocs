@@ -8,6 +8,28 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## September 29, 2026
+
+### New
+
+- [Audit Log and Exports](/platform-areas/audit-log-and-exports): Added an **Export** button to
+  the Incident Table on the Governance Reports tab in Insights. Clicking it opens an export modal
+  where admins choose a format (CSV) and a **Data Scope**: **Current filter** exports incidents
+  matching the active search and column filters; **Full range** exports all incidents in the
+  selected time range without applying filters. When rows are selected in the table, the button
+  shows the selection count and the export covers only those selected rows (no scope selector is
+  shown in that mode). Active filters or the selected-row count are displayed in the modal before
+  the export starts. The export is queued in the background; a notification confirms queuing and
+  the completed file appears in export history labeled **Incidents**. Requires the AI Usage export
+  permission. This feature is labeled Beta.
+
+### Fixed
+
+- [Audit Log and Exports](/platform-areas/audit-log-and-exports): Fixed exported CSV files showing
+  garbled special characters when opened in Excel. Downloaded CSV files now include a UTF-8
+  byte-order mark so Excel and similar applications correctly decode accented and non-ASCII
+  characters instead of misreading them with the system code page.
+
 ## August 19, 2026
 
 ### New
