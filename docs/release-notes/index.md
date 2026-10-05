@@ -8,6 +8,17 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## October 5, 2026
+
+### Fixed
+
+- [Users, Applications, and Accounts](/platform-areas/users-accounts-applications): Fixed the
+  **Source** filter in AI interaction/conversation drawers defaulting to "browser extension" even
+  when that source had no activity for the selected user, application, account, or finding. The
+  drawer now pre-selects "browser extension" when it has available data, and otherwise
+  automatically selects another available source, so the conversation list loads with results by
+  default instead of appearing empty.
+
 ## August 19, 2026
 
 ### New
