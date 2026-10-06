@@ -7,7 +7,7 @@ sidebar_custom_props:
 # Escalations
 
 Escalations gives SOC (Security Operations Center) and governance teams a structured way to raise
-a finding for internal review, discuss it privately among admins, and - when needed - ask the
+a finding for internal review, collaborate on it privately among admins, and - when needed - ask the
 finding's own user for a justification, all without leaving QuilrAI. Every escalation becomes a
 trackable **Case** with its own conversation history, status, and audit trail.
 
@@ -17,14 +17,67 @@ Use Escalations when a finding needs more than a status change - for example, a 
 exposure, a policy violation, or any activity where the SOC team wants a documented, auditable
 back-and-forth with the user involved before the finding is closed out.
 
+## Prerequisite: SOC Escalation Settings
+
+Before using Escalations, an admin must configure **Settings > SOC Escalation**:
+
+- **SOC Escalation Recipients** - the list of SOC admin emails CC'd on justification-request
+  emails. Optional, but recommended so the whole team sees outgoing requests.
+- **Connect Your Own Email Service** - required. There is no default Quilr sender for escalation
+  emails; a tenant must connect and verify their own SMTP mailbox before any admin can use
+  **Escalate to User**. Raising a case for internal review (Escalate, internal notes) does
+  not require this, since that step never sends an email.
+
+See [Settings: SOC Escalation](#settings-soc-escalation) below for full configuration details.
+
+## Workflow At A Glance
+
+```text
+[Case Creation]
+        │
+        │  • Admin opens the finding and selects "Escalate"
+        │  • A new Case is created, status: Escalated
+        │  • Admin can add an internal note on why it's being escalated
+        │  • No email sent yet - the finding's user is not notified
+        ▼
+[Escalated - Internal Analysis]
+        │
+        │  • SOC admins add internal analysis and notes on the case
+        │  • Admins review any justification the user has already submitted
+        │  • Notes stay visible to the SOC team only - never the user
+        │  • Admins can close here if no further justification is needed
+        ▼
+[Escalate to User]
+        │
+        │  • Admin writes the question/context the user should see
+        │  • Admin chooses which SOC recipients are CC'd
+        │  • Secure justification-request email sent to the user
+        │  • Status changes to: Escalated to User
+        ▼
+[User Justifies]
+        │
+        │  • User opens the secure link - no QuilrAI login required
+        │  • Sees only their own case context and the question asked
+        │  • Submits a written justification
+        │  • Status changes to: Justified
+        ▼
+[Admin Reviews The Justification]
+        │
+        │  • Admin reads the justification in the Case
+        │  • Either: ask a follow-up ──► loops back to "Escalate to User"
+        │  •     or: close the case
+        ▼
+[Closed]
+```
+
 ## How It Works, End To End
 
-1. **Escalate to SOC.** From any finding, an admin chooses **Escalate to SOC**. This creates a new
+1. **Escalate.** From any finding, an admin chooses **Escalate**. This creates a new
    Case for internal review only - no email is sent yet, and the finding's user is not notified.
    Admins can optionally add an internal note explaining why the finding was escalated.
-2. **Discuss internally.** The Case has its own private conversation thread. Any admin with access
-   can add internal notes at any time. Internal notes are never shown to the finding's user and
-   never go out by email - they are strictly for SOC-to-SOC discussion.
+2. **Internal Analysis.** The Case has its own private conversation thread. Any admin with
+   access can add internal notes at any time. Internal notes are never shown to the finding's user
+   and never go out by email - they are strictly for SOC-to-SOC discussion.
 3. **Escalate to User.** When the team is ready to ask the finding's user to explain themselves, an
    admin uses **Escalate to User** on the Case and writes the question or context the user should
    see. This is the only step that sends an email - a secure link is emailed to the finding's user
@@ -115,7 +168,7 @@ automatically, so they don't need to add themselves to this list.
 
 There is no default Quilr sender for escalation emails - a tenant must connect and verify their own
 SMTP mailbox (for example, `soc@yourcompany.com`) before any admin can use **Escalate to User**.
-Internal review (Escalate to SOC and internal notes) does not require this, since that step never
+Internal review (Escalate and internal notes) does not require this, since that step never
 sends an email. To connect a mailbox, an admin provides:
 
 - The "From" address that should appear on outgoing emails.
@@ -150,5 +203,5 @@ Settings.
 ## Access Requirements
 
 Escalations require access to the Findings/Escalation resource. Administrators without this
-permission do not see the Case Management view, the Escalate to SOC action on findings, or the SOC
+permission do not see the Case Management view, the Escalate action on findings, or the SOC
 Escalation settings pages.
