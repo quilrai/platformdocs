@@ -8,6 +8,17 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## October 6, 2026
+
+### New
+
+- [Integrations](/platform-areas/integrations/identity-providers/microsoft-entra-id): Added an
+  optional **Entra Tenant ID** field when creating a new Microsoft Entra ID instance. Admins can now
+  target a specific Entra tenant (directory) instead of defaulting to the tenant of the signed-in
+  account, which helps when the same account has access to multiple Entra tenants. Leaving the
+  field empty keeps the previous behavior. Re-consenting an existing instance automatically reuses
+  the tenant it was originally connected to.
+
 ## August 19, 2026
 
 ### New

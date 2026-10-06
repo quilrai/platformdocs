@@ -17,8 +17,16 @@ Microsoft Entra ID (formerly Azure AD) secures identities and access, enhanced b
 
 1. Go to **Integrations** and open the **Available** tab.
 2. Click **+ Add** on the **Microsoft Entra ID** tile.
-3. Sign in with a Microsoft Entra ID administrator account and consent to the requested permissions.
-4. Click **Allow** to authorize the connection.
+3. Optionally, enter an **Entra Tenant ID** (a tenant/directory GUID) if you need to connect a
+   specific Entra tenant other than the one associated with the signed-in account. Leave this field
+   empty to connect the directory of the account you sign in with.
+4. Sign in with a Microsoft Entra ID administrator account and consent to the requested permissions.
+5. Click **Allow** to authorize the connection.
+
+:::note
+The Entra Tenant ID field only appears when creating a new instance. Re-consenting an existing
+instance automatically targets the same Entra tenant the instance was originally connected to.
+:::
 
 ## Required Scopes
 
