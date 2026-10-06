@@ -8,6 +8,19 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## September 29, 2026
+
+### New
+
+- [LLM Gateway](/platform-areas/llm-gateway): Added a **Malicious Scripts** adversarial risk
+  category to Security Guardrails, covering requests to write or run scripts such as credential
+  stealers or backdoors. The category also appears in the [Detection
+  Models](/platform-areas/detection-models) Adversarial Risks catalog and in [Endpoint
+  Agent](/platform-areas/endpoint-agent) DLP category settings. It is a pilot category and ships
+  switched off; once enabled, a row left without an explicit action resolves to **Monitor**, even
+  when the app's default action is Block. Setting an explicit Monitor or Block action, or using
+  **Set everything to default**, still behaves the same as for other adversarial categories.
+
 ## August 19, 2026
 
 ### New

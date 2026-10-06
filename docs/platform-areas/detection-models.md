@@ -54,6 +54,11 @@ Data Risks is the default detection model experience. Adversarial Risks and Insi
 as additional tabs when enabled for the tenant. These tabs keep detection configuration grouped by
 risk domain while preserving Data Risks as the default landing page.
 
+Most Adversarial Risks categories ship enabled by default. A small number of pilot categories, such
+as **Malicious Scripts** (scripts like credential stealers or backdoors, and requests to write
+them), ship disabled and default to a Monitor action once enabled, so admins can evaluate them
+before opting into blocking.
+
 ## Related Platform Areas
 
 - [Findings](./findings.md)
