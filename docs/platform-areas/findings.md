@@ -77,8 +77,15 @@ to inspect the source and content evidence.
 ## Case Management And Escalations
 
 Findings includes a **Case Management** view for tracking findings that have been escalated to
-SOC for internal review and, when needed, a justification request to the finding's user. See
+SOC for internal review and, when needed, a justification request to the finding's user. The
+default status filter on the findings stream shows **Open** and **Escalated** findings together, so
+findings under active SOC review stay visible alongside new ones. Any finding with escalation
+history shows a **Case** indicator that opens its case directly from the findings stream. See
 [Escalations](./escalations.md) for the full escalation workflow, case statuses, and settings.
+
+Admins can close a finding directly from the **Change Status** menu on a finding card (**Open to
+Closed**, or **Escalated to Closed**, which also closes the finding's open case). This does not
+require opening Case Management first.
 
 ## Related Platform Areas
 
