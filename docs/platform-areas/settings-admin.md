@@ -34,6 +34,8 @@ To create, edit, or delete smart groups and manage group membership, use the ded
   styling, and user-facing links.
 - **Compliance:** Configure provider credentials used by compliance services, including OpenAI and
   Claude where enabled.
+- **SOC Escalation:** Configure SOC recipient emails and an optional custom email sender for the
+  findings-escalation workflow.
 
 ## Organizational Context
 
@@ -84,6 +86,13 @@ styling that appear in user-facing prompts or justifications.
 
 Compliance includes provider key setup and key management for compliance services. Current settings
 include OpenAI Compliance key management and Claude-related compliance configuration where enabled.
+
+## SOC Escalation
+
+SOC Escalation configures the findings-escalation workflow: the SOC recipient list CC'd on
+justification-request emails, and an optional custom SMTP mailbox so those emails can be sent from
+the tenant's own domain instead of Quilr's default address. See
+[Escalations](./escalations.md) for the full workflow and settings details.
 Administrators with write access can save and revoke registered keys.
 
 ## Related Platform Areas
@@ -96,6 +105,7 @@ Administrators with write access can save and revoke registered keys.
 - [LLM Gateway](./llm-gateway.md)
 - [Controls](./controls.md)
 - [Findings](./findings.md)
+- [Escalations](./escalations.md)
 
 ## Access Requirements
 
