@@ -17,6 +17,13 @@ Use Escalations when a finding needs more than a status change - for example, a 
 exposure, a policy violation, or any activity where the SOC team wants a documented, auditable
 back-and-forth with the user involved before the finding is closed out.
 
+:::note
+Escalation is currently available for **Browser Extension** and **Endpoint Agent** findings only,
+since those are the sources where the finding's own user can be identified and asked for a
+justification. The **Escalate** action is not yet available on LLM Gateway, MCP Gateway,
+compliance, or identity findings.
+:::
+
 ## Prerequisite: SOC Escalation Settings
 
 Before using Escalations, an admin must configure **Settings > SOC Escalation**:
@@ -116,6 +123,12 @@ provides:
 
 Selecting a case opens its detail view, showing the full finding context, the conversation thread,
 and the available actions for that case's current status.
+
+### Opening A Case From The Findings Stream
+
+Any finding with escalation history shows a **Case** indicator alongside its sensitive-data-type
+pills directly in the findings stream. Clicking it opens that case's detail view immediately,
+without navigating to Case Management first.
 
 ## Working A Case
 

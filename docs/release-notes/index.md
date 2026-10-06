@@ -8,6 +8,41 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## October 6, 2026
+
+### New
+
+- [Escalations](/platform-areas/escalations): Introduced **Case Management** (renamed from SOC
+  Workbench), a structured escalation workflow for SOC and governance teams. Escalating a finding
+  now creates a trackable **Case** for internal-only review — no email is sent at this step. SOC
+  admins discuss the case with internal notes, and a new, unified **Escalate to User** action is
+  the only step that emails the finding's user a secure justification-request link, for both the
+  first ask and any follow-up round. The finding's user responds through that secure link with no
+  QuilrAI sign-in required. Case Management adds summary counters (Total, Under Review, Open,
+  Awaiting Review, Closed), status filters, and a case list; any finding with escalation history
+  also shows a **Case** indicator on its card that opens the case directly from the findings
+  stream. Escalation is currently available for Browser Extension and Endpoint Agent findings.
+- [Settings and Administration](/platform-areas/settings-admin): Added **SOC Escalation** settings.
+  Admins can set SOC recipient emails to CC on justification-request emails and connect their own
+  SMTP mailbox under **Connect Your Own Email Service**, so escalation emails send from the
+  tenant's own domain instead of a default Quilr address. The connection is tested before saving,
+  and the mailbox shows as Active, Broken, or Not Connected.
+
+### Improved
+
+- [Findings](/platform-areas/findings): Admins can now close a finding directly from the
+  **Change Status** menu on a finding card — Open to Closed, and Escalated to Closed, which also
+  closes the finding's open case — without opening Case Management first. The default status
+  filter on the findings stream now shows **Escalated** findings alongside **Open** findings. To
+  keep close-out decisions independent, a SOC admin cannot close a case about their own flagged
+  activity; any other admin on the team can close it.
+
+### Fixed
+
+- [Endpoint Agent](/platform-areas/endpoint-agent): Fixed the Deployment Status table's bulk
+  enable/disable action buttons being gated by Browser Extension status instead of the endpoint
+  agent's own enabled state, which could leave the buttons incorrectly disabled.
+
 ## August 19, 2026
 
 ### New
