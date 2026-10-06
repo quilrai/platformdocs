@@ -8,6 +8,15 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## October 6, 2026
+
+### Fixed
+
+- [LLM Gateway](/platform-areas/llm-gateway): Self-service users with Request Access can now use
+  **Add model by name** when submitting a provider settings change request. Previously this action
+  was unexpectedly disabled for these users even though the rest of the Settings panel was
+  editable, blocking them from adding a model that was not returned by **Fetch available models**.
+
 ## August 19, 2026
 
 ### New
