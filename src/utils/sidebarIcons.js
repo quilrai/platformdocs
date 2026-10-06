@@ -35,6 +35,7 @@ import {
   FileText,
   Newspaper,
   Hash,
+  ShieldAlert,
 } from "lucide-react";
 
 const iconMap = {
@@ -73,6 +74,7 @@ const iconMap = {
   Settings,
   FileText,
   Newspaper,
+  ShieldAlert,
 };
 
 export function getSidebarIcon(name) {

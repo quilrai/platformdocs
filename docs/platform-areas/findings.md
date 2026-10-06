@@ -74,8 +74,15 @@ OpenAI views share the same investigation pattern: select provider scope, choose
 no-risk, or all-interaction coverage, filter by user and DLP category, and open the details drawer
 to inspect the source and content evidence.
 
+## Case Management And Escalations
+
+Findings includes a **Case Management** view for tracking findings that have been escalated to
+SOC for internal review and, when needed, a justification request to the finding's user. See
+[Escalations](./escalations.md) for the full escalation workflow, case statuses, and settings.
+
 ## Related Platform Areas
 
+- [Escalations](./escalations.md)
 - [LLM Gateway](./llm-gateway.md)
 - [MCP Gateway](./mcp-gateway.md)
 - [Browser Extension](./browser-extension.md)

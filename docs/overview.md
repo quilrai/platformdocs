@@ -97,6 +97,10 @@ Use Insights to understand how AI is being adopted across the organization. The 
 
 Findings centralizes investigation work across the platform. Teams can move between summary insights, all findings, browser extension findings, endpoint findings, LLM Gateway findings, MCP Gateway findings, Compliance Findings, and identity findings.
 
+### [Escalations](./platform-areas/escalations.md)
+
+Escalations lets SOC and governance teams raise a finding into a trackable Case, discuss it internally, and ask the finding's own user for a justification via a secure link, with full conversation history and close-out tracking.
+
 ### [Users, Applications, And Accounts](./platform-areas/users-accounts-applications.md)
 
 The Users, Applications, and Accounts pages show entity-level AI activity. These views combine KPI summaries, trending entities, searchable tables, drilldowns, conversations, findings links, and app intelligence so teams can understand who is using AI, where, and with what risk.
