@@ -50,9 +50,19 @@ Supported export sources include:
   records from the deployment status table.
 - **Applications** — application inventory records from the Applications page, with support for
   current-filter or full-range scope and selection-based export. Currently in Beta.
+- **AI Inventory Compliance APIs** — asset tables under the Compliance APIs source, plus the Costs
+  and Security views, where enabled for the tenant. See
+  [AI Inventory](./ai-inventory.md#exporting-compliance-data) for how to start one from those
+  screens.
 
 The export history list automatically refreshes every 30 seconds while any export is still
-processing, so the status and download link update without a manual page reload.
+processing, so the status and download link update without a manual page reload. History from
+Compliance APIs exports and from the other platform export sources above is combined into one list,
+sorted newest first, with the total row count summed across both. A compliance export's type links
+back to the Compliance APIs table it came from. Downloads are routed to whichever service produced
+the row; a compliance export owned by someone else shows "Owner only" instead of a download link,
+since compliance exports are private to the person who started them, while the other export sources
+are visible tenant-wide.
 
 ### Row Limit
 
@@ -65,6 +75,7 @@ the modal reflects that value instead. The same row limit applies to Findings ex
 
 - [Browser Extension](./browser-extension.md)
 - [Users, Applications, and Accounts](./users-accounts-applications.md)
+- [AI Inventory](./ai-inventory.md)
 - [Settings And Administration](./settings-admin.md)
 - [Findings](./findings.md)
 

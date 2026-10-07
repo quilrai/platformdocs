@@ -87,6 +87,41 @@ styling that appear in user-facing prompts or justifications.
 Compliance includes provider key setup and key management for compliance services. Current settings
 include OpenAI Compliance key management and Claude-related compliance configuration where enabled.
 
+### OpenAI Compliance Key Management
+
+Admins with the Compliance update permission can connect, review, and manage the OpenAI Compliance
+API keys that feed the [AI Inventory Compliance APIs](./ai-inventory.md) source. Admins with only
+read access to Compliance settings can view connected keys and what they collect, but cannot add,
+change, or revoke them.
+
+**Connecting a key** walks through three steps:
+
+1. Enter a Compliance API key from the OpenAI API Platform (not an Admin API key) and at least one
+   workspace ID, one organization ID, or both. Workspace and organization are two separate data
+   sources with no overlap: workspace access covers conversations, Codex, connected apps, admin and
+   sign-in activity, and the ChatGPT analytics reports; organization access adds cost reporting
+   plus apps and agents installed at the organization level. An in-modal guide walks through
+   creating a Compliance-scoped Service Account key with OpenAI, since Compliance scopes can only
+   be granted by OpenAI support and revoke every other scope already on that key.
+2. Review the check result: whether the key is valid, which workspace and organization IDs it
+   resolved, and — for each ID — which data sources are available, not permitted, or still being
+   confirmed. Each ID is labeled as newly **added**, **already connected**, or **unchanged** if it
+   was already registered elsewhere, and data sources this release cannot yet store are marked
+   **not supported** rather than left pending. If no organization ID succeeds, a placeholder section
+   shows what connecting one would add and, if one was tried, why it was rejected.
+3. Choose which available data sources to start collecting, grouped under the OpenAI permission
+   scope that grants them, and whether to automatically collect new data sources that become
+   available later for each workspace or organization ID. Data generally starts arriving within
+   about 30 minutes; cost data can take 3–5 hours.
+
+**Managing a connected key** (the **Manage** action on a registered key) shows, per workspace or
+organization ID, how many data sources are collecting versus available, lets you toggle individual
+data sources and the "collect new data sources automatically" default, and includes a **Recheck
+access** action that re-verifies what the key can currently reach with OpenAI and reports what
+newly became available or is no longer permitted. A badge indicates when OpenAI's answer for a
+data source has changed since it was last reviewed. Revoking a key stops further collection but
+keeps data already collected.
+
 ## SOC Escalation
 
 SOC Escalation configures the findings-escalation workflow: the SOC recipient list CC'd on
@@ -103,6 +138,7 @@ Administrators with write access can save and revoke registered keys.
 - [Endpoint Agent](./endpoint-agent.md)
 - [AI Gateway](./ai-gateway.md)
 - [LLM Gateway](./llm-gateway.md)
+- [AI Inventory](./ai-inventory.md)
 - [Controls](./controls.md)
 - [Findings](./findings.md)
 - [Escalations](./escalations.md)
