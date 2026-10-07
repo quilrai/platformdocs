@@ -26,6 +26,9 @@ Use Integrations when you need to:
 - Search and filter connectors.
 - Configure new instances.
 - Edit existing instances when permitted.
+- Sensitive credential fields — API keys, client secrets, passwords, tokens, and certificates — are
+  masked by default in configuration forms, with a show/hide toggle to reveal the value when
+  needed. Identifiers such as client IDs, usernames, domains, and URLs remain visible.
 - Connector-specific setup documentation, including required scopes, permissions, and configuration.
 - Separate advanced routes for OAuth, token flow, MCP clients, MCP servers, and tool policies where
   enabled.

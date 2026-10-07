@@ -8,6 +8,26 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## October 7, 2026
+
+### Improved
+
+- [Integrations](/platform-areas/integrations): Sensitive connector fields — API keys, client
+  secrets, passwords, tokens, and certificates — are now masked by default across integration
+  configuration screens, with a show/hide toggle to reveal the value when needed. Identifiers such
+  as client IDs, usernames, domains, and URLs continue to display in plain text.
+
+- [Controls](/platform-areas/controls): Control names can now include hyphens (`-`) and underscores
+  (`_`) in addition to letters, numbers, and spaces. The naming hint on the control form has been
+  updated to reflect the allowed characters.
+
+### Fixed
+
+- [Controls](/platform-areas/controls): Fixed the condition value search box losing its typed text
+  while scrolling to load more results, and fixed stale search text remaining after clicking outside
+  the dropdown. Search results now stay in sync with what's typed, and the field resets cleanly once
+  the dropdown closes.
+
 ## August 19, 2026
 
 ### New
