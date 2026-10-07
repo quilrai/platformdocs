@@ -47,6 +47,10 @@ Use AI Inventory when you need to:
   **Security** tabs to monitor organization-wide metrics, browse ChatGPT conversations, Codex
   sessions, workspace agents, and apps, analyze user adoption and model-usage rankings, track token
   consumption and sharing risk, and investigate security and audit events.
+- Find who used a specific agent, connector, or skill from the Agents Users list, and review a
+  single agent's users directly from its detail drawer.
+- Export Compliance APIs asset tables, and the Costs and Security views, where exports are enabled
+  for the tenant.
 
 ## Inventory Sources
 
@@ -104,9 +108,15 @@ OpenAI Compliance view is organized into five tabs:
   - *Codex*: Sessions, Tasks, and Environments.
   - *Spreadsheets*: Sessions — Microsoft Excel add-in sessions with event counts, content events,
     model usage, and token totals.
-  - *Agents*: Agents, Connectors, and Skills. Skills shows the workspace skill catalog with
+  - *Agents*: Agents, Connectors, Skills, and Users. Skills shows the workspace skill catalog with
     creator, file count, and agent cross-references; skill name chips in conversation and agent
-    run views link directly to the Skills tab.
+    run views link directly to the Skills tab. Users lists every user who drove activity across
+    the workspace's agents, searchable by user email or — using the **Search by** scope next to
+    the search box — by agent name, connector name, or skill name, so you can find everyone who
+    used one agent, connector, or skill without reading the whole list. An agent's detail drawer
+    also has its own **Users** tab, scoped to that agent, with runs, events, connector calls, and
+    skill-event counts per user; selecting a user there filters the drawer's Runs tab to that
+    person.
   - *Apps*: Apps — OpenAI app activity, auth events, returned resources, and per-app user reach.
 - **Usage**: Provides **Users**, **Sources**, and **Rankings** sub-tabs with ChatGPT top-user lists
   sorted by conversations, Codex top-user and model rankings, source adoption breakdowns, source
@@ -125,6 +135,19 @@ OpenAI Compliance view is organized into five tabs:
 
 The default time range for the Compliance APIs view is 7 days. Claude Compliance is represented as
 a provider option when available but may be disabled until configured for the tenant.
+
+#### Exporting Compliance Data
+
+Where compliance exports are enabled for the tenant, an **Export** action is available from the
+Compliance APIs toolbar on asset tables, and from the Costs and Security views. Export opens a
+dialog scoped to the table or view currently on screen: it lists the columns, formats, and filters
+that table supports, carries over the filters and date range already applied on screen, and names
+any current filter that the export cannot apply as not applied rather than dropping it silently. If
+the selected range starts earlier than the data the source holds, the export moves the start date
+forward automatically and the dialog and the finished export both say so. Recent exports for that
+table are listed in the dialog, five at a time, and completed files are also available from
+[Exports](./audit-log-and-exports.md). The Export action does not appear where the underlying
+export service is unavailable for the tenant (for example, if export storage is not configured).
 
 ## Main Workflows
 

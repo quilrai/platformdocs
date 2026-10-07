@@ -8,6 +8,39 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## October 7, 2026
+
+### New
+
+- [Settings and Administration](/platform-areas/settings-admin#openai-compliance-key-management):
+  Reworked connecting and managing OpenAI Compliance API keys. The connect flow now checks a key
+  against the workspace and organization IDs you provide, reports which data sources each ID can
+  read — including sources this release cannot yet store — and lets you choose what to start
+  collecting and whether new data sources are collected automatically going forward. The Manage
+  screen for a connected key adds a **Recheck access** action that re-verifies what the key can
+  reach with OpenAI, shows per-ID collecting/available/not-permitted counts, and badges data
+  sources whose access has changed since you last reviewed them.
+- [AI Inventory](/platform-areas/ai-inventory): Added a **Users** tab to the Compliance APIs agent
+  detail drawer, showing per-user runs, events, connector calls, and skill events for that agent,
+  with selection filtering the drawer's Runs tab to that user. The Agents **Users** list can now
+  also be searched by agent name, connector name, or skill name, in addition to user email, using a
+  **Search by** control next to the search box.
+- [AI Inventory](/platform-areas/ai-inventory#exporting-compliance-data) /
+  [Audit Log and Exports](/platform-areas/audit-log-and-exports): Added an **Export** action to
+  Compliance APIs asset tables and to the Costs and Security views, where exports are enabled for
+  the tenant. Exports started from Compliance APIs now appear alongside other platform exports in
+  one combined **Exports** history list, sorted newest first.
+
+### Improved
+
+- [Audit Log and Exports](/platform-areas/audit-log-and-exports): An export whose selected start
+  date is older than the data a source holds no longer fails; the export start date is moved
+  forward automatically, and the dialog and the finished export both say so. The export dialog
+  also no longer reports response-shaping options (such as whether raw JSON is included) as
+  dropped filters — only filters that actually narrow the exported rows are reported that way.
+  Export entry points are hidden rather than shown-and-failing when the export service is
+  unavailable for the tenant.
+
 ## August 19, 2026
 
 ### New
