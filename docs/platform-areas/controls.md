@@ -28,7 +28,8 @@ Use Controls when you want to:
 - Review control name, trigger condition, criticality, behavior, status, mode, creator, and actions.
 - Enable or disable controls directly from the table.
 - Change control mode directly from the table.
-- Create and edit controls through the control form.
+- Create and edit controls through the control form. Control names can include letters, numbers,
+  spaces, hyphens (`-`), and underscores (`_`); other special characters are not allowed.
 - Delete controls with options for how associated findings should be handled.
 
 ## Control Modes
