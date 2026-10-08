@@ -8,6 +8,22 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## October 8, 2026
+
+### Fixed
+
+- [Integrations](/platform-areas/integrations/identity-providers/microsoft-entra-id): Fixed
+  connecting an additional Microsoft Entra ID tenant from the **Available** tab. When a Microsoft
+  Entra ID tenant was already connected, the **Allow** button could be hidden after entering a
+  second tenant ID, blocking the consent flow for that tenant. **Allow** now stays available so a
+  second (or later) tenant can be authorized.
+
+- [Integrations](/platform-areas/integrations/identity-providers/microsoft-entra-id): Fixed an
+  issue where, while connecting an additional Microsoft Entra ID tenant, the **IDP to Smart Group**
+  and **IDP Group to Platform Roles** utilities could read from and save into the already-connected
+  tenant's instance instead of the new one. Utility data for Microsoft Entra ID now stays scoped to
+  the specific connected instance you are viewing.
+
 ## August 19, 2026
 
 ### New

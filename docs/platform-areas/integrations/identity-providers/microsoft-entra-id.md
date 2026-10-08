@@ -20,6 +20,23 @@ Microsoft Entra ID (formerly Azure AD) secures identities and access, enhanced b
 3. Sign in with a Microsoft Entra ID administrator account and consent to the requested permissions.
 4. Click **Allow** to authorize the connection.
 
+## Connecting Additional Entra Tenants
+
+Microsoft Entra ID supports more than one connected tenant. Each tenant you connect becomes its own
+instance under the **Connected** tab, with its own scopes, collection settings, and utilities
+(**IDP to Smart Group**, **IDP Group to Platform Roles**).
+
+1. Go to **Integrations** and open the **Available** tab. **Microsoft Entra ID** stays listed here
+   even after a tenant is already connected.
+2. Click **+ Add** on the **Microsoft Entra ID** tile.
+3. Under **Entra Tenant ID (optional)**, leave the field empty to reconnect the directory of the
+   account you are signing in with, or enter the tenant ID (GUID) of a different Entra tenant that
+   account can access.
+4. Click **Allow** and complete Microsoft consent for that tenant.
+5. The new tenant appears as a separate instance on the **Connected** tab. Utilities configured
+   from that instance's page apply only to that tenant; they do not affect groups or role mappings
+   already saved for a different connected tenant.
+
 ## Required Scopes
 
 | Scope Group | Permissions | Purpose |
