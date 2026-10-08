@@ -38,8 +38,10 @@ Use AI Inventory when you need to:
   metrics.
 - Review endpoint coding inventory where available, including agents, skills, MCP servers, models,
   hooks, permissions, plugins, and repositories.
-- Review endpoint-discovered applications with the Discovery sub-view: filter by name, user email,
-  category, source, OS type, approval status, and criticality, and update execution policy inline.
+- Review endpoint-discovered applications with the Discovery sub-view, including each
+  application's intelligence-derived category and AI capabilities: filter by name, user email,
+  category, AI capability, source, OS type, approval status, and criticality, and update execution
+  policy inline.
 - Review LLM Gateway API keys with request, blocked, anonymized, model, last-used, and posture
   context.
 - Review MCP Gateway servers with tools, scopes, DLP action, status, and activity metrics.
@@ -65,11 +67,18 @@ plugins, and repositories for the selected application group.
 
 A **Discovery** sub-view within the Endpoint Agent source lists all applications observed on
 endpoints through asset inventory, including applications that have not generated AI-specific
-activity. Discovery rows show application name, associated users, device count, OS type, privilege,
-category, source, and execution policy. Admins can filter by name, user email, category, source, OS
-type (macOS, Windows, Linux), approval status (Needs Review, Approved, Blocked), and criticality
+activity. Discovery rows show application name (with the vendor or code-signing publisher shown
+underneath), the application-intelligence category and category group, AI capabilities (LLM access,
+agentic behavior, MCP, and similar), associated users, device count, OS type, privilege, source, and
+execution policy. Admins can filter by name, user email, category, AI capability, source, OS type
+(macOS, Windows, Linux), approval status (Needs Review, Approved, Blocked), and criticality
 (Critical, Not Critical), and toggle off OS system processes. Execution policy (Allowed or Blocked)
-can be updated inline for each row.
+can be updated inline for each row. Opening a row shows an **Application intelligence** section with
+the full classification profile when the application has been analyzed — description, category,
+category group, secondary categories, deployment type, agentic status, vendor, homepage, audience,
+capabilities grouped by family, supporting technology, and the classification confidence and
+analysis date. Applications the intelligence service has not yet analyzed show as not yet analyzed
+instead.
 
 ### LLM Gateway
 
