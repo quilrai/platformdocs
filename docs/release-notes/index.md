@@ -8,6 +8,28 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## October 8, 2026
+
+### New
+
+- [AI Inventory](/platform-areas/ai-inventory): The Discovery sub-view (Endpoint Agent source) now
+  shows application intelligence. Rows display a **Category** column (with category group) and an
+  **AI capabilities** column (LLM access, agentic behavior, MCP, and similar) sourced from Quilr's
+  application-intelligence service, with a new **Category** filter and **AI capability** filter in
+  the toolbar. Opening a row adds an **Application intelligence** section to the drawer with the
+  full classification — description, category, secondary categories, deployment type, agentic
+  status, vendor, homepage, audience, capabilities grouped by family, supporting technology, and the
+  classification confidence and analysis date. Applications the service has not analyzed yet show as
+  not yet analyzed.
+
+### Improved
+
+- [AI Inventory](/platform-areas/ai-inventory): Discovery rows now show the application's vendor
+  (or, when no vendor is known, the code-signing publisher) under its name, and application names
+  are capitalized for readability.
+- [AI Inventory](/platform-areas/ai-inventory): The **Type** column and type filter have been
+  removed from Discovery — every row is an application, so the column no longer added information.
+
 ## August 19, 2026
 
 ### New
