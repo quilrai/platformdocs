@@ -36,6 +36,10 @@ platform. It is the main place to move from summary signals into detailed eviden
 - Review Compliance Findings by provider, detection scope, user, category, and subcategory.
 - Open related Quilly coaching conversations from finding cards where a **Quilly** badge is shown.
   See [Quilly](./quilly.md) for details on reviewing engagement history.
+- Review related events for a finding from the **Related Events** tab in the expanded finding
+  card. Each row's interaction icon opens that event's interaction detail; it is shown disabled
+  with a "No interactions" tooltip when the related event has no recorded interaction (for
+  example, endpoint agent findings without a summary or user justification).
 
 ## Finding Insights Time Ranges
 
