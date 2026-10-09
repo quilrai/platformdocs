@@ -26,7 +26,8 @@ Use Endpoint Agent when you need to:
 - Deployment status for endpoint coverage.
 - Detection configuration rows for applications and browsers.
 - Per-app DLP enabled state.
-- Data-risk action dropdowns.
+- Data-risk action controls — **Monitor**, **Block**, **Justify (fail-open)**, or
+  **Justify (fail-closed)** per category.
 - Windows and macOS browser monitoring toggles.
 - Dedicated endpoint policy rows for coding tools such as Cursor and Claude Code where configured.
 - Access Control configuration per detection entry, enabling or disabling supported access-control
@@ -48,7 +49,14 @@ Retrying...**). If a save fails, it is retried automatically.
 
 The Guardrails tab within each configuration drawer contains:
 
-- **DLP settings** — enable or disable DLP and set data-risk category actions.
+- **DLP settings** — enable or disable DLP and set data-risk category actions. Each category,
+  file-upload rule, and group/user-scoped override uses the same four actions:
+  - **Monitor** — record the activity without interrupting the user.
+  - **Block** — stop the activity.
+  - **Justify (fail-open)** — prompt the user for a justification; the activity proceeds if the
+    user does not respond.
+  - **Justify (fail-closed)** — prompt the user for a justification; the activity is blocked until
+    the user submits one.
 - **Desktop monitoring** — Windows and macOS browser monitoring controls.
 - **Access Control** — one card per supported access-control feature. Each card has an enable/
   disable toggle and any required parameter fields (text, masked secret, numeric, toggle, or
@@ -63,8 +71,8 @@ The Guardrails tab within each configuration drawer contains:
 2. Monitor Deployment Status for rollout progress.
 3. Open Detection Configurations.
 4. Search for the app or browser configuration that needs adjustment.
-5. Enable or disable DLP, update data-risk action behavior, and adjust platform-specific browser
-   monitoring.
+5. Enable or disable DLP, set each category's action to Monitor, Block, Justify (fail-open), or
+   Justify (fail-closed), and adjust platform-specific browser monitoring.
 6. If the configuration supports Access Control features, open the Guardrails tab, enable the
    desired features, and supply any required parameters.
 7. Changes save automatically. Review the toolbar status indicator to confirm the save completed,

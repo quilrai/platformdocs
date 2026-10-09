@@ -8,6 +8,23 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## October 9, 2026
+
+### New
+
+- [Endpoint Agent](/platform-areas/endpoint-agent): Added a **Justify (fail-closed)** action
+  alongside the existing Monitor, Block, and Justify (fail-open) options for endpoint data-risk
+  categories, file-upload rules, and group/user-scoped overrides. Fail-closed justification blocks
+  the activity until the user submits a justification, instead of allowing it through when no
+  justification is provided.
+
+### Improved
+
+- [Endpoint Agent](/platform-areas/endpoint-agent): Reworked the action selector in endpoint
+  configuration drawers into a single segmented control so Monitor, Block, and both Justify options
+  are easier to compare and select, and condensed the category list's State and Action columns into
+  one row for a more compact layout.
+
 ## August 19, 2026
 
 ### New
