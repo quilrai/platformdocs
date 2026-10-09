@@ -8,6 +8,23 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## October 9, 2026
+
+### New
+
+- [Users, Applications, and Accounts](/platform-areas/users-accounts-applications#action-requests-user-lens):
+  Requests and Denials in the **Action requests** tab of User Lens now show a **View Finding**
+  link when a finding triggered the request. Selecting it opens the full finding card in a popup
+  without leaving Action Requests, and the popup supports drilling into the related interaction or
+  conversation for that finding.
+
+### Fixed
+
+- [Findings](/platform-areas/findings): The interaction icon on the **Related Events** tab of an
+  expanded finding card is now disabled with a "No interactions" tooltip when the related event has
+  no recorded interaction (for example, some endpoint agent findings). Previously, clicking it
+  opened an empty interaction popup.
+
 ## August 19, 2026
 
 ### New

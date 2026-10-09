@@ -32,10 +32,26 @@ Common use cases:
 - Open user conversations for deeper review.
 - Review Quilly coaching interactions for a specific user from the **Quilly** tab in User Lens.
   See [Quilly](./quilly.md) for details on interaction types and review workflows.
+- Review a user's action approval history from the **Action requests** tab in User Lens.
 
 The Smart Groups drawer previously available on the Users page has been removed. Smart group
 creation and membership management are now handled from the dedicated
 [Smart Groups](./smart-groups.md) screen.
+
+### Action Requests (User Lens)
+
+Admins and Super Admins opening a user row see an **Action requests** tab in the User Lens drawer
+with three sub-views:
+
+- **Requests:** Pending and decided action approval requests for the user, with the option to
+  approve or deny from the table.
+- **Grants:** Approved actions and their effective windows.
+- **Denials:** Denied actions and who denied them.
+
+When a request or denial is linked to a finding, a **Finding** column shows a **View Finding**
+link. Selecting it opens the full finding card in a popup without leaving Action Requests, so
+reviewers can see the finding that prompted the request and, where available, drill into the
+related interaction or conversation from the same popup.
 
 ## Applications
 
