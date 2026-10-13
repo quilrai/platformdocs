@@ -8,6 +8,15 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## October 13, 2026
+
+### Fixed
+
+- [LLM Gateway](/platform-areas/llm-gateway): Added a **Global** region option for Vertex AI
+  provider configuration. Admins configuring a Vertex AI credential can now select **global**
+  alongside the existing regional options, matching Vertex AI deployments that use the global
+  endpoint instead of a specific region.
+
 ## August 19, 2026
 
 ### New
