@@ -23,7 +23,9 @@ Use Endpoint Agent when you need to:
 ## Key Capabilities
 
 - Deployment management for endpoint agent rollout.
-- Deployment status for endpoint coverage.
+- Deployment status for endpoint coverage, filterable by Endpoint Agent Status, Agent Version, OS
+  Name, and Session ID presence (has or without), to quickly surface workstations that are not
+  reporting a session.
 - Detection configuration rows for applications and browsers.
 - Per-app DLP enabled state.
 - Data-risk action dropdowns.

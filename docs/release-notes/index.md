@@ -8,6 +8,20 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## October 14, 2026
+
+### Improved
+
+- [Endpoint Agent](/platform-areas/endpoint-agent): Added a **Session ID** filter to the Deployment
+  Status workstation filters, alongside Endpoint Agent Status, Agent Version, and OS Name. The
+  filter is single-select (has / without) and helps admins quickly find workstations that are not
+  reporting a session.
+
+- [Users, Applications, and Accounts](/platform-areas/users-accounts-applications): Added a
+  **Finding** column to the Current Grants sub-tab of Action Requests in User Lens, matching the
+  Requests and Current Denied sub-tabs. When a grant originated from a finding, admins can select
+  **View Finding** to open it directly.
+
 ## August 19, 2026
 
 ### New

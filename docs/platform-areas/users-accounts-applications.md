@@ -32,6 +32,10 @@ Common use cases:
 - Open user conversations for deeper review.
 - Review Quilly coaching interactions for a specific user from the **Quilly** tab in User Lens.
   See [Quilly](./quilly.md) for details on interaction types and review workflows.
+- Review a user's access-approval activity from the **Action Requests** tab in User Lens, which
+  lists **Requests**, **Current grants**, and **Current denied** sub-tabs. Each row includes a
+  **Finding** column; when a request originated from a finding, admins can select **View Finding**
+  to open that finding without leaving User Lens.
 
 The Smart Groups drawer previously available on the Users page has been removed. Smart group
 creation and membership management are now handled from the dedicated
