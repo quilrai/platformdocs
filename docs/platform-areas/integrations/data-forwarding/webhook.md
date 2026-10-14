@@ -19,8 +19,12 @@ Forwards Extension findings and audit log events to your webhook endpoint.
 |-------|----------|-------------|
 | Webhook URL | Yes | The HTTPS endpoint Quilr will POST events to |
 | API Key | Yes | Passed as both `X-API-KEY` and `Authorization: Bearer` on every request |
+| Sources | No | Scopes which findings are forwarded by their originating source: **All**, **MCP Gateway**, **LLM Gateway**, **Endpoint Agent**, or **Browser Extension** |
 
 4. Click **Allow**.
+
+Deliveries can also be scoped by severity, event type, and sensitivity (sensitive findings only, or
+sensitive findings plus user interactions) from the same configuration screen.
 
 ## Payload
 

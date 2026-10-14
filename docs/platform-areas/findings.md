@@ -26,6 +26,7 @@ platform. It is the main place to move from summary signals into detailed eviden
 - **Compliance Findings:** Findings and no-risk interactions from compliance integrations such as
   Claude Compliance and OpenAI Compliance, when configured.
 - **Identity Findings:** Status and identity-related findings.
+- **Netskope Findings:** Sensitive DLP detections forwarded from Netskope.
 
 ## Key Capabilities
 
@@ -73,6 +74,11 @@ Compliance Findings provides a provider switcher for supported compliance source
 OpenAI views share the same investigation pattern: select provider scope, choose findings-only,
 no-risk, or all-interaction coverage, filter by user and DLP category, and open the details drawer
 to inspect the source and content evidence.
+
+Netskope Findings lists sensitive DLP detections forwarded from Netskope, with severity counts and a
+severity filter, free-text search across finding fields, and a details drawer showing evidence and
+the underlying raw detection events. Admins can remove findings that no longer need action and can
+activate agent-based follow-up for one or more selected findings.
 
 ## Case Management And Escalations
 
