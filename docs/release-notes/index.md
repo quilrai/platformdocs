@@ -8,6 +8,16 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## October 14, 2026
+
+### Fixed
+
+- [Settings and Administration](/platform-areas/settings-admin): Fixed the conditional severity
+  attribute picker in Detection Policy rules so it lists the fields available from the rule's
+  selected datasource. Admins setting up a severity override previously saw "No attributes
+  discovered yet" even after choosing a datasource, which blocked building condition-based
+  severity. Available for tenants with the Detection Policy feature enabled.
+
 ## August 19, 2026
 
 ### New
