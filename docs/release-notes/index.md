@@ -8,6 +8,23 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## October 14, 2026
+
+### New
+
+- [Findings](/platform-areas/findings): Added a **Netskope** tab to Findings for reviewing
+  sensitive DLP detections forwarded from Netskope. Admins can search findings, filter by
+  severity, open a finding to review evidence and the underlying raw detection events, remove
+  findings that no longer need action, and activate agent follow-up for one or more selected
+  findings.
+
+### Improved
+
+- [Integrations](/platform-areas/integrations/data-forwarding/webhook): Added a **Sources** filter
+  to the Webhook integration. Admins can scope forwarded findings to **All**, **MCP Gateway**,
+  **LLM Gateway**, **Endpoint Agent**, or **Browser Extension** sources, in addition to the
+  existing severity, event type, and sensitivity filters.
+
 ## August 19, 2026
 
 ### New
