@@ -8,6 +8,16 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## October 15, 2026
+
+### Fixed
+
+- [AI Inventory](/platform-areas/ai-inventory): Fixed the Discovery sub-tab count on the Endpoint
+  Agent source so it matches the number of rows in the Discovery table. The count previously came
+  from a separate, slower lookup that covered a different scope (all asset types over 30 days)
+  than the table (applications over 7 days), so the badge and the table could disagree. Loading the
+  Endpoint Agent view is also faster, since that extra lookup no longer runs on every visit.
+
 ## August 19, 2026
 
 ### New
