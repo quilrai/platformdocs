@@ -8,6 +8,16 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## October 16, 2026
+
+### Fixed
+
+- [Integrations](/platform-areas/integrations): Fixed the **Allow** step being skipped when
+  adding another instance of a non-OAuth integration (for example, a second Webhook connection)
+  while an existing instance already used the default connection name. The configuration screen
+  now correctly keeps offering **Allow** so the new instance can be connected, instead of
+  incorrectly behaving as if it were already allowed.
+
 ## August 19, 2026
 
 ### New
