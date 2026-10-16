@@ -63,6 +63,11 @@ The App Access control is also available directly in the users table — for AI 
 a compact selector shows the current access state and can be updated without opening the full edit
 panel.
 
+The users table also includes **Created By** and **Last Modified By** columns, showing the
+administrator who created or most recently updated each user record. Users created or updated
+through automated or system paths (for example, an SSO sign-in or system provisioning) show an
+internal marker instead of an admin email. A dash appears when no actor is recorded.
+
 ### Timezone Display Preference
 
 Administrators can select a timezone for displaying timestamps across the platform. The preference

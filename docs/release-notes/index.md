@@ -8,6 +8,16 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## October 16, 2026
+
+### New
+
+- [Settings and Administration](/platform-areas/settings-admin#manage-users): Added **Created By**
+  and **Last Modified By** columns to the Manage Users table. Admins can now see which
+  administrator created or last updated each user record directly from the table, without opening
+  the edit panel. Records created or updated through automated paths (such as SSO provisioning)
+  show an internal marker, and a dash appears when no actor is recorded.
+
 ## August 19, 2026
 
 ### New
