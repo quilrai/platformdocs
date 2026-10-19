@@ -71,6 +71,15 @@ type (macOS, Windows, Linux), approval status (Needs Review, Approved, Blocked),
 (Critical, Not Critical), and toggle off OS system processes. Execution policy (Allowed or Blocked)
 can be updated inline for each row.
 
+Where dependency scanning is supported for an endpoint application group, a **Vulnerable
+Dependencies** tab lists detected packages with status, severity, and scan history, and supports
+filtering, pagination, and export. The results table loads independently of the summary cards, so
+rows and paging are available as soon as they're ready even if the summary totals (current
+packages, needs attention, vulnerable, unscanned, scans, last scan) are still loading or
+temporarily unavailable. A **Summary as of** note indicates when summary data is stale, and overall
+counts can appear as an estimate ("about N") rather than an exact total. The same view is also
+available from the matching application's configuration in Settings.
+
 ### LLM Gateway
 
 The LLM Gateway source lists protected LLM application keys. It shows gateway-native metrics such as

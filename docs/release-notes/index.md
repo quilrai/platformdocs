@@ -8,6 +8,21 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## October 19, 2026
+
+### Improved
+
+- [AI Inventory](/platform-areas/ai-inventory): The **Vulnerable Dependencies** view (available from
+  the Endpoint Agent source drawer and from the matching panel in endpoint app configuration) now
+  loads the results table independently of the summary cards. Package and scan rows appear as soon
+  as they're ready instead of waiting on the summary counts to finish. While summary totals are
+  still being computed, the summary cards show a loading state; if the summary temporarily can't be
+  refreshed, the panel shows "Summary unavailable. Table results are live." instead of blocking the
+  view, and a **Summary as of** note flags when the shown totals are stale. Overall counts are
+  labeled as approximate ("about N") when they come from an estimate, and the **Next** page control
+  and **Export** action now track the live result set so paging and exporting stay available even
+  before the summary finishes loading.
+
 ## August 19, 2026
 
 ### New
