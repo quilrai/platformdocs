@@ -71,6 +71,11 @@ type (macOS, Windows, Linux), approval status (Needs Review, Approved, Blocked),
 (Critical, Not Critical), and toggle off OS system processes. Execution policy (Allowed or Blocked)
 can be updated inline for each row.
 
+For coding tools that support dependency scanning, the detail drawer also includes a **Vulnerable
+Dependencies** tab with Inventory and Activity views of package risk data. See
+[Endpoint Agent](./endpoint-agent.md#vulnerable-dependencies) for details, including how the
+Inventory and Summary freshness labels work.
+
 ### LLM Gateway
 
 The LLM Gateway source lists protected LLM application keys. It shows gateway-native metrics such as
