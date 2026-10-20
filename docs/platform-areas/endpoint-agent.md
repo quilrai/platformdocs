@@ -31,6 +31,8 @@ Use Endpoint Agent when you need to:
 - Dedicated endpoint policy rows for coding tools such as Cursor and Claude Code where configured.
 - Access Control configuration per detection entry, enabling or disabling supported access-control
   features and supplying their required parameters from the Guardrails tab.
+- Dependency security controls and a Vulnerable Dependencies view for supported coding tools,
+  covering package inventory, vulnerability status, and scan activity.
 - Auto-save for detection configurations — changes are persisted automatically after a short pause
   with a live status indicator in the toolbar.
 
@@ -56,6 +58,28 @@ The Guardrails tab within each configuration drawer contains:
   corrected. The Access Control section is hidden entirely when no features apply to the selected
   configuration. Only features the admin interacts with in the current session are included in the
   save; untouched features remain at their previously saved values.
+- **Dependency security** — shown for supported coding tools (Claude Code, Cursor, Codex, GitHub
+  Copilot CLI, and GitHub Copilot Extension). Admins can enable dependency scanning, block
+  dependencies with known vulnerabilities, and notify users when a newer version of a dependency is
+  available. The subordinate controls are disabled until dependency scanning is enabled.
+
+### Vulnerable Dependencies
+
+For apps where dependency scanning is supported, the configuration drawer includes a **Vulnerable
+Dependencies** tab with **Inventory** and **Activity** views:
+
+- **Inventory** lists current packages from the latest complete dependency scan.
+- **Activity** lists live dependency check observations as they occur.
+
+Both views show summary counts (current packages or observations, packages needing attention,
+vulnerable packages, unscanned packages, scan count, and last scan time), support search and
+filters by ecosystem, status, severity, user, and repository, and can be exported to CSV.
+
+Each view shows a data-freshness label — **Inventory as of** for the snapshot view and **Summary
+as of** for the activity view — with the time of the underlying data. Inventory updates can take up
+to five minutes to reflect the latest scan. If an inventory refresh is delayed, the label shows that
+refresh is delayed and that the view is showing the last complete inventory rather than marking the
+data stale without explanation.
 
 ## Main Workflows
 

@@ -8,6 +8,16 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## October 20, 2026
+
+### Improved
+
+- [Endpoint Agent](/platform-areas/endpoint-agent#vulnerable-dependencies): Clarified data
+  freshness in the Vulnerable Dependencies view. The **Inventory** view now shows **Inventory as
+  of** with a note that updates can take up to five minutes, and states when a refresh is delayed by
+  showing that the data is from the last complete inventory snapshot. The **Activity** view keeps
+  its existing **Summary as of** label and stale indicator.
+
 ## August 19, 2026
 
 ### New
