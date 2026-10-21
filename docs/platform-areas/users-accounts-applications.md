@@ -37,6 +37,11 @@ The Smart Groups drawer previously available on the Users page has been removed.
 creation and membership management are now handled from the dedicated
 [Smart Groups](./smart-groups.md) screen.
 
+The **IDP User Groups** filter in the Users table filter drawer looks up groups through a
+dedicated, searchable lookup rather than relying on the groups returned with the table data. Admins
+can type to search for a group and scroll to load more results, and the filter stays available even
+on views where the table response does not include a groups list.
+
 ## Applications
 
 The Applications page is the main app-management and app-intelligence surface. It includes an
