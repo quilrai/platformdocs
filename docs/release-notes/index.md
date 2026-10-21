@@ -8,6 +8,16 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## October 21, 2026
+
+### Improved
+
+- [Users, Applications, and Accounts](/platform-areas/users-accounts-applications): The **IDP User
+  Groups** filter on the Users page now looks up groups through a dedicated, searchable lookup
+  instead of the list returned with the table data. Admins can search by name and scroll to load
+  more groups, and the filter stays available even on views where the table response doesn't
+  include a groups list.
+
 ## August 19, 2026
 
 ### New
