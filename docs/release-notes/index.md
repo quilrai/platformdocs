@@ -8,6 +8,54 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## September 8, 2026
+
+### New
+
+- [AI Inventory](/platform-areas/ai-inventory): The Compliance APIs **Agents** view now includes a
+  **Users** tab alongside Agents, Connectors, and Skills. Each row names a person along with their
+  runs, events, agents driven, and connector calls. Opening a user lists the agents they drove, the
+  connectors they reached, and the skills they used, each sortable and paged from the server.
+  Selecting an agent or connector from that list opens its details in place, with a **Back** control
+  back to the person.
+- [AI Inventory](/platform-areas/ai-inventory): The **Apps** detail drawer in Compliance APIs now
+  includes a paged, sortable **Users** section showing who is behind an app's events and returned
+  resources, using the same table introduced for the Agents Users tab.
+- [AI Inventory](/platform-areas/ai-inventory): Selecting a user from the Agents or Apps drawers now
+  opens that person's ChatGPT **User 360** view, so activity for the same person can be reviewed
+  across products from one entry point.
+
+### Improved
+
+- [AI Inventory](/platform-areas/ai-inventory): Skills in the Compliance APIs Agents view now show a
+  **Last seen** metric, matching how the Skills list is sorted.
+- [AI Inventory](/platform-areas/ai-inventory): Returned-resource events in the Apps drawer now
+  collapse to a summary line and expand to show up to ten documents, keeping the panel readable
+  alongside the new Users section.
+- [AI Inventory](/platform-areas/ai-inventory): Event lists in the Spreadsheet Sessions drawer, the
+  ChatGPT conversation and project file drawers, and the connector drawer now page through
+  everything that was already loaded instead of stopping after eight events regardless of the count
+  shown.
+- [AI Inventory](/platform-areas/ai-inventory): The Apps detail drawer's **Top users** list is now
+  limited to the top five users for readability.
+
+### Fixed
+
+- [AI Inventory](/platform-areas/ai-inventory): Fixed the Apps and Connectors detail drawers in
+  Compliance APIs, which showed empty **Users** counts, **Top users**, **Recent app events**, and
+  **Recent connector events** panels even when activity existed for the app or connector.
+- [AI Inventory](/platform-areas/ai-inventory): Fixed the Egress panel tiles (Destinations,
+  Egressing users, GPT action domains, and Public share links) on the Governance and Security tabs,
+  which showed the page size limit instead of the real total count.
+- [AI Inventory](/platform-areas/ai-inventory): Fixed user activity lists on the Usage tab and in
+  the adoption members drawer that showed "0 events" for users who did have activity; the event
+  count is now hidden instead of shown as zero when it isn't available.
+- [AI Inventory](/platform-areas/ai-inventory): Fixed the ChatGPT **User 360** view, which showed
+  empty top-users, conversations, and messages sections, and zeroed-out runtime usage counts, even
+  though the underlying data was available.
+- [AI Inventory](/platform-areas/ai-inventory): Fixed the connector detail **Events** tile, which
+  showed 0 for connectors that had recorded events.
+
 ## August 19, 2026
 
 ### New
