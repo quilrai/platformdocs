@@ -209,7 +209,11 @@ self-service surface. Users who sign in via OAuth with a self-service access mod
 automatically and cannot reach admin pages.
 
 The dashboard lists the LLM Gateway apps that self-service is enabled for, with search and
-refresh. Selecting an app opens three tabs:
+refresh. Each app's provider and model summary reflects every enabled provider on the app —
+the primary provider plus any additional providers configured for multi-provider routing or
+fallback. A provider that has been disabled, and any models under it, is left out of that summary
+and out of search, so self-service users only see providers and models that are actually
+available to them. Selecting an app opens three tabs:
 
 - **Settings** — visible when the user has request access. The full settings panel is displayed in
   read-only/request mode: changes are submitted as approval requests rather than applied
