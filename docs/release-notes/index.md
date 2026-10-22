@@ -8,6 +8,26 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## September 24, 2026
+
+### Fixed
+
+- [Insights](/platform-areas/insights): Fixed overlapping row labels in horizontal stacked bar
+  charts, including **Usage by Department**, **Top 10 Users by Number Of Prompts**, and **DLP
+  Actions by Enforcement Plan**. The label column now sizes itself to the widest visible label, and
+  long labels are truncated with an ellipsis and shown in full on hover instead of overlapping the
+  bars.
+
+### Improved
+
+- [Findings](/platform-areas/findings): The action buttons in the Activate Agent workflow now
+  display side by side instead of stacked, making it quicker to review and confirm agent
+  configuration while activating an agent from Findings, Apps, Accounts, or Users.
+
+- [Endpoint Agent](/platform-areas/endpoint-agent): Removed the **Force Update** control from the
+  Deployment Management tab. Endpoint agent updates continue to roll out through the standard
+  deployment process; a manual force-update action is no longer exposed in this screen.
+
 ## August 19, 2026
 
 ### New
