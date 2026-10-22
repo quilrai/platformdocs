@@ -8,6 +8,19 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## September 10, 2026
+
+### Fixed
+
+- [AI Inventory](/platform-areas/ai-inventory): Fixed the **Product** and **OpenAI surface**
+  filters on the Compliance APIs **Costs** tab. Filters, chart legends, and drill-downs now use the
+  exact product and surface values reported by OpenAI instead of grouped categories, so selecting a
+  filter chip, hovering a chart series, and clicking a row in Explore all reference the same value.
+  Product and surface colors are also consistent across the Product chart, Surface chart, and
+  tooltips. Usage rows where OpenAI did not report a product or surface are labeled **Unknown
+  product** or **Unknown surface** and are no longer selectable or clickable, avoiding drill-downs
+  into a value that cannot be filtered.
+
 ## August 19, 2026
 
 ### New
