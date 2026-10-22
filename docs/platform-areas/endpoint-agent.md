@@ -31,6 +31,10 @@ Use Endpoint Agent when you need to:
 - Dedicated endpoint policy rows for coding tools such as Cursor and Claude Code where configured.
 - Access Control configuration per detection entry, enabling or disabling supported access-control
   features and supplying their required parameters from the Guardrails tab.
+- File Restrictions tab for controlling uploads by file extension or file label, with Monitor,
+  Block, or Justify actions.
+- Group & User Rules tab for overriding DLP and file-restriction behavior for specific smart groups
+  or users.
 - Auto-save for detection configurations — changes are persisted automatically after a short pause
   with a live status indicator in the toolbar.
 
@@ -57,6 +61,30 @@ The Guardrails tab within each configuration drawer contains:
   configuration. Only features the admin interacts with in the current session are included in the
   save; untouched features remain at their previously saved values.
 
+### File Restrictions Tab
+
+The File Restrictions tab within each app's configuration drawer controls file upload behavior:
+
+- A tenant-level **File upload restrictions** toggle turns enforcement on or off for the app. Rules
+  can be created and saved while the toggle is off; they are stored but not enforced until it is
+  turned on.
+- Rules match on **file extension** or on a **file label** carried inside the file, with an action
+  of **Monitor**, **Block**, or **Justify** (upload allowed only after the user provides a
+  justification).
+  - File extension matching uses the single canonical type detected from the file's own bytes, not
+    the file name — so a rule can only match one extension at a time and does not match compound
+    patterns such as `.tar.gz`.
+- Rules apply to the upload event across every monitored surface of the app and run independently
+  of sensitive-data (DLP) detections. When both a file rule and a data-risk detection apply to the
+  same upload, the more restrictive action wins.
+- Rule order matters — evaluation is first-match-wins — and the editor flags any rule that is fully
+  shadowed by an earlier rule so it can be reordered or removed.
+
+### Group & User Rules Tab
+
+The Group & User Rules tab lets admins override DLP and file-restriction behavior for specific
+smart groups or users, inheriting the app's tenant-level configuration by default.
+
 ## Main Workflows
 
 1. Configure endpoint deployment and tenant-level management settings.
@@ -67,7 +95,9 @@ The Guardrails tab within each configuration drawer contains:
    monitoring.
 6. If the configuration supports Access Control features, open the Guardrails tab, enable the
    desired features, and supply any required parameters.
-7. Changes save automatically. Review the toolbar status indicator to confirm the save completed,
+7. To restrict uploads by file type, open the File Restrictions tab, turn on file upload
+   restrictions, and add rules by file extension or file label.
+8. Changes save automatically. Review the toolbar status indicator to confirm the save completed,
    then review endpoint findings for operational impact.
 
 ## Related Platform Areas
