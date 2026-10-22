@@ -33,6 +33,8 @@ Use Endpoint Agent when you need to:
   features and supplying their required parameters from the Guardrails tab.
 - Auto-save for detection configurations — changes are persisted automatically after a short pause
   with a live status indicator in the toolbar.
+- Vulnerable Dependencies tab for supported apps, with search, user, repository, ecosystem, status,
+  and severity filters, plus a filtered CSV export.
 
 ## Detection Configurations
 
@@ -56,6 +58,27 @@ The Guardrails tab within each configuration drawer contains:
   corrected. The Access Control section is hidden entirely when no features apply to the selected
   configuration. Only features the admin interacts with in the current session are included in the
   save; untouched features remain at their previously saved values.
+
+### Vulnerable Dependencies Tab
+
+For applications with dependency scanning support, the configuration drawer includes a
+**Vulnerable Dependencies** tab. It summarizes dependency security posture for the app — total
+dependencies, packages needing attention, vulnerable packages, scan count, and last scan time — and
+lists individual dependencies with their advisories, severity, status, and scan details.
+
+Admins can narrow the dependency list by:
+
+- Package search.
+- User — the person associated with the dependency's introducing activity.
+- Repository.
+- Ecosystem, status (vulnerable, clean, lookup failed, unscanned), and severity (critical, high,
+  moderate, low).
+- A **Needs attention** toggle to show only dependencies that require review.
+
+The current filtered view can be exported to CSV from the **Export** action in the tab header, for
+sharing a dependency snapshot with other teams or feeding it into external tracking. Filters and
+search state on this tab are scoped per application, so switching between applications in the same
+session does not carry over filters from a previously viewed app.
 
 ## Main Workflows
 
