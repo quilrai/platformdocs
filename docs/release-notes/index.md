@@ -8,6 +8,33 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## September 1, 2026
+
+### New
+
+- [Users, Applications, and Accounts](/platform-areas/users-accounts-applications#action-requests):
+  Added **Action Requests**. A new **Action requests** button on the Users page opens a
+  tenant-wide inbox of the justification-backed requests end users submit for actions like login,
+  signup, prompt, copy, paste, upload, and visit. A matching, view-only **Action requests** tab is
+  also available in User Lens, scoped to one user. The inbox has **Requests**, **Current grants**,
+  and **Current denied** views, each filterable by app and action type (and by user from the
+  tenant-wide inbox), with a duration picker. Admins with app-management user-update permission can
+  approve or deny requests — individually or in bulk — and revoke a current grant, with a short
+  confirmation before revoking. Denied and revoked items both show as **Not approved** in Requests;
+  **Current denied** distinguishes **Revoked** from **Not approved**. Admins can't approve, deny,
+  or revoke their own requests or grants.
+
+### Improved
+
+- Sign-in: The sign-in page now remembers the identity provider used for the last successful login,
+  for up to 180 days, and shows it as the default option on return visits. The remaining configured
+  providers stay available behind a new **Other sign-in options** toggle.
+
+- [Findings](/platform-areas/findings): On Browser Extension Findings, the control name shown on a
+  finding card is now a link. It opens the matching control in
+  [Controls](/platform-areas/controls) in edit mode, or opens a new control form pre-filled with
+  that name if no matching control exists yet.
+
 ## August 19, 2026
 
 ### New
