@@ -19,8 +19,16 @@ Forwards Extension findings and audit log events to your webhook endpoint.
 |-------|----------|-------------|
 | Webhook URL | Yes | The HTTPS endpoint Quilr will POST events to |
 | API Key | Yes | Passed as both `X-API-KEY` and `Authorization: Bearer` on every request |
+| Event Type | No | Which event types to forward. Select one or more, or select **All** to receive both `FINDING` and `AUDIT_LOG` events. |
+| Sensitive | No | Which finding events to forward. **All** forwards sensitive findings and user interactions. **Sensitive** forwards only sensitive findings; user interactions are not included. Hover the info icon next to each option for details. |
 
 4. Click **Allow**.
+
+## Editing A Webhook Instance
+
+Open a connected Webhook instance from the **Connected** tab to change the URL, API key, event
+type, or sensitivity filter. Editing shows a single **Save** action — updating an existing instance
+does not re-trigger authorization. Saving returns you to the **Connected** tab.
 
 ## Payload
 

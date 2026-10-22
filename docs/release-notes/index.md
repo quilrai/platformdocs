@@ -8,6 +8,20 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## September 23, 2026
+
+### Improved
+
+- [Integrations](/platform-areas/integrations): Editing a connected integration instance now
+  shows a single **Save** action instead of separate connection and filter save controls. Saving
+  persists the updated settings and returns directly to the **Connected** tab, and no longer
+  re-triggers the connector's OAuth authorization flow.
+
+- [Integrations](/platform-areas/integrations/data-forwarding/webhook): Added **Event Type** and
+  **Sensitive** checkbox filters to the Webhook connector. Admins can scope deliveries to specific
+  event types (or all events) and choose whether user-interaction events are included alongside
+  sensitive findings. An info tooltip on each Sensitive option explains what it forwards.
+
 ## August 19, 2026
 
 ### New
