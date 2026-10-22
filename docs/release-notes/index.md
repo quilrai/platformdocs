@@ -8,6 +8,17 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## September 18, 2026
+
+### New
+
+- [AI Inventory](/platform-areas/ai-inventory): Added a **Model Usage** tab to the Endpoint Agent
+  inventory drawer for Claude Code, Codex, and Cursor. Admins can view total tokens, input/output
+  tokens, cache read/create tokens, and estimated cost for a selected date range, a usage trend
+  chart by day, week, or month, and a per-model breakdown table with request counts and pricing
+  coverage. Filters are available for model and user email. The tab appears only for coding tools
+  with model-level usage data available; other endpoint sources are unaffected.
+
 ## August 19, 2026
 
 ### New
