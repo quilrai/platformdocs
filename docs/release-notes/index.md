@@ -8,6 +8,19 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## September 1, 2026
+
+### Improved
+
+- [AI Inventory](/platform-areas/ai-inventory): Improved the **Tool Calls** view for ChatGPT and
+  Codex application groups under the Endpoint Agent source. Rows now show separate **Tool Name**
+  and **Arguments** columns, shell commands display the underlying program (for example,
+  `Bash:git`), and each tool is tagged with a category chip such as Shell, Network, Read, Write,
+  Modify, Delete, Search, Image, or MCP. Long arguments can be expanded inline with a **Show full
+  command** toggle. File tool calls and the file chips in the conversation turn view are labeled
+  Created, Modified, or Deleted with matching color coding, making it easier to scan what an agent
+  changed.
+
 ## August 19, 2026
 
 ### New

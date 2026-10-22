@@ -63,6 +63,15 @@ sensitive activity, detections, blocked activity, and users. Where coding invent
 the detail view can also show related agents, skills, MCP servers, models, hooks, permissions,
 plugins, and repositories for the selected application group.
 
+The **Tool Calls** tab in the application group drawer lists individual tool invocations captured
+from the endpoint. For ChatGPT desktop and Codex application groups, the table shows dedicated
+**Tool Name** and **Arguments** columns: shell commands display the underlying program (for
+example, `Bash:git` or `Bash:curl`), each row carries a category chip (Shell, Network, Read, Write,
+Modify, Delete, Search, Image, MCP, or Other), and long arguments can be expanded inline with a
+**Show full command** toggle. File-related tool calls and file chips in the conversation turn view
+are labeled Created, Modified, or Deleted with matching color coding, and MCP-backed tool calls are
+tagged with an MCP badge. Other application groups continue to use a single combined Tool column.
+
 A **Discovery** sub-view within the Endpoint Agent source lists all applications observed on
 endpoints through asset inventory, including applications that have not generated AI-specific
 activity. Discovery rows show application name, associated users, device count, OS type, privilege,
