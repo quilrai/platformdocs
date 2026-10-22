@@ -174,6 +174,21 @@ attacks, grounded answering, hallucination, instruction following, knowledge, te
 and logic or reasoning. Runs are named, scoped to an app and provider, and include summaries plus
 case-level results.
 
+### Exporting Red Team Reports
+
+An **Export** button on both the Results (comparison) view and the individual run detail view
+generates a PDF report of what's currently on screen. Available export options:
+
+- **Overview (PDF)** — stat tiles, charts, taxonomy and temporal knowledge breakdowns, and the run
+  leaderboard exactly as shown on screen.
+- **All data (PDF)** — the overview plus run-level summary tables for every selected run (Results
+  view) or an appendix listing every case in the run (run detail view).
+- **All data + every case (PDF)** — Results view only. Also fetches and appends every case from
+  every selected run; large exports can take longer to generate.
+
+A progress modal shows export stages and lets admins cancel an in-progress export before it
+completes.
+
 ## Provider Status
 
 Provider Status lets admins monitor the health of each provider credential configured or observed
