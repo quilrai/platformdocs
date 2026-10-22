@@ -33,6 +33,8 @@ Use Endpoint Agent when you need to:
   features and supplying their required parameters from the Guardrails tab.
 - Auto-save for detection configurations — changes are persisted automatically after a short pause
   with a live status indicator in the toolbar.
+- Remote log collection — a tenant-level toggle that lets admins trigger and download diagnostic
+  log bundles from selected devices, directly from the Deployment Status table.
 
 ## Detection Configurations
 
@@ -57,6 +59,31 @@ The Guardrails tab within each configuration drawer contains:
   configuration. Only features the admin interacts with in the current session are included in the
   save; untouched features remain at their previously saved values.
 
+## Remote Log Collection
+
+Remote log collection lets admins pull diagnostic logs from a device's endpoint agent on demand,
+without waiting on the user, for troubleshooting deployment or detection issues.
+
+- **Enable the capability:** Under Deployment Management, the **Remote Log Collection** card has an
+  **Enable Remote Log Collection** toggle. This is off by default and controls the feature for the
+  whole tenant. When it is off, the Deployment Status table shows no remote-log controls.
+- **Trigger a pull:** Once enabled, a **Remote Logs** button appears in the Deployment Status
+  table toolbar. Select up to 5 devices in the table, then choose **Trigger Remote Pull**. Each
+  selected device receives one collection request; a device that already has a pull in progress is
+  skipped automatically and reported separately so a batch selection is never silently dropped.
+- **Track progress:** The **Remote Logs** menu lists recent pulls with a status for each: waiting
+  for device, device acknowledged, collecting logs, completed, failed, or expired. A pull that gets
+  no response from the device after about 15 minutes is called out as such. The list refreshes
+  automatically while a pull is in progress and also updates when the page regains focus, so
+  another admin's pull or one started earlier is reflected without a manual refresh.
+- **Download the result:** Completed pulls can be downloaded as a zip bundle directly from the
+  **Remote Logs** menu. Collected logs cover a 72-hour window and exclude raw request/response
+  bodies by default.
+
+Triggering a pull requires device-level update permission for Endpoint Agent; the tenant toggle
+requires tenant-level update permission. Without the required permission, the trigger option is
+shown disabled rather than hidden.
+
 ## Main Workflows
 
 1. Configure endpoint deployment and tenant-level management settings.
@@ -69,6 +96,9 @@ The Guardrails tab within each configuration drawer contains:
    desired features, and supply any required parameters.
 7. Changes save automatically. Review the toolbar status indicator to confirm the save completed,
    then review endpoint findings for operational impact.
+8. To troubleshoot a specific device, enable Remote Log Collection under Deployment Management,
+   select the device on the Deployment Status table, trigger a remote pull, and download the
+   bundle once it completes.
 
 ## Related Platform Areas
 
@@ -80,4 +110,5 @@ The Guardrails tab within each configuration drawer contains:
 ## Access Requirements
 
 Endpoint Agent pages require Endpoint Agent permissions. Endpoint tabs appear only when endpoint is
-enabled for the tenant.
+enabled for the tenant. Enabling or disabling Remote Log Collection for the tenant requires
+tenant-level update permission; triggering a remote pull requires device-level update permission.
