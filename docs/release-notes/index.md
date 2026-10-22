@@ -8,6 +8,20 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## September 9, 2026
+
+### New
+
+- [Endpoint Agent](/platform-areas/endpoint-agent): Added an **Application Configuration**
+  screen under Settings → Endpoint for allowing or blocking discovered applications by endpoint
+  policy. Admins can add a rule for any discovered application, choose **Allow** or **Block**,
+  and scope it to everyone in the tenant, a smart group, or a single user by email. Rules can be
+  edited or removed, and the table can be searched and filtered by action. Precedence is
+  **user > smart group > everyone** applied per application, so a scoped Allow overrides a
+  tenant-wide Block; use scoped Allow rules as deliberate exceptions. System components never
+  appear here and cannot be blocked. Rules authored earlier from the discovery screen continue to
+  apply, at the lowest precedence.
+
 ## August 19, 2026
 
 ### New
