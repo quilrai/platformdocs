@@ -8,6 +8,28 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## September 3, 2026
+
+### New
+
+- [Findings](/platform-areas/findings): Marking a finding as **False Positive** now requires a
+  short reason. The reason is saved with the status change and shown on the finding card next to
+  the status pill — hover or click the comment icon to read it. This applies to single and bulk
+  status changes and helps reviewers understand why a finding was dismissed.
+
+- [Smart Groups](/platform-areas/smart-groups): Re-enabled **Bulk add from CSV**. From the Smart
+  Groups toolbar, or from the Actions menu inside a smart group's drilldown, admins can upload a
+  CSV of user emails to add members to one or more smart groups at once. A pending-upload status
+  indicator tracks in-progress uploads and reports how many users were added or skipped once
+  processing completes.
+
+### Improved
+
+- [Browser Extension](/platform-areas/browser-extension): Deployment Status now shows each
+  workstation's machine name alongside its operating system in the device info column, so admins
+  can tell apart machines that share the same OS and browser. Exports of deployment status include
+  the same machine-name detail when grouping duplicate devices.
+
 ## August 19, 2026
 
 ### New

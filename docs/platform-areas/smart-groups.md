@@ -52,6 +52,16 @@ it, including MCP Gateway access control rules and LLM Gateway self-service acce
 deletion carefully — any access rules or gateway configurations that target the group will no longer
 have a matching group to evaluate.
 
+### Bulk Add Users From CSV
+
+Admins can add many users to one or more smart groups at once by uploading a CSV of user emails.
+The **Bulk add from CSV** action is available from the Smart Groups toolbar and from the Actions
+menu inside a smart group's drilldown. Users in the CSV are matched to existing Quilr users by
+email; rows that do not match a known user are skipped.
+
+A pending-upload status indicator tracks uploads that are still processing. Once an upload
+completes, it reports how many users were added and how many were skipped for that group.
+
 ### Groups Converted from Microsoft Entra ID
 
 Smart groups can also be created by mirroring Microsoft Entra ID groups through the

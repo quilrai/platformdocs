@@ -32,6 +32,7 @@ platform. It is the main place to move from summary signals into detailed eviden
 - Filter findings by application, user, finding type, source, category, and other dimensions.
 - Drill into finding details and supporting context.
 - Navigate from app, user, and account pages into filtered finding views.
+- Change a finding's status, including marking it as a false positive with a required reason.
 - Review LLM Gateway findings from a logs-backed V2 view when enabled.
 - Review Compliance Findings by provider, detection scope, user, category, and subcategory.
 - Open related Quilly coaching conversations from finding cards where a **Quilly** badge is shown.
@@ -54,6 +55,13 @@ selects a time window based on the active preset's granularity:
 - Within-day views: one hour from the selected point.
 - Ranges up to 30 days: the full calendar day of the selected point.
 - Ranges longer than 30 days: the full calendar month of the selected point.
+
+## Changing Finding Status
+
+Reviewers can change a finding's status from a finding card, including for multiple findings at
+once. Marking a finding as **False Positive** requires entering a short reason before the change
+can be confirmed. The reason is saved with the status change and appears on the finding card next
+to the status pill: hover or click the comment icon next to a false-positive status to read it.
 
 ## Main Workflows
 
