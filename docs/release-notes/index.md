@@ -8,6 +8,45 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## August 25, 2026
+
+### New
+
+- [AI Inventory](/platform-areas/ai-inventory): Discovery rows can now be opened for a details
+  drawer that shows the SHA-256 hash, full enumerated and resolved paths, the code-signing chain
+  (publisher, issuer, root authority, signing ID) with certificate validity dates, and a
+  per-device/user observation table (device, user, origin, signing state, publisher, path,
+  command line, parent process, privilege, PIDs, source, and last-synced time), capped at the 200
+  most recent observations per group.
+
+- [AI Inventory](/platform-areas/ai-inventory): Discovery now recognizes **Package** as its own
+  asset type alongside Application and Dependency, and can be filtered accordingly.
+
+### Improved
+
+- [AI Inventory](/platform-areas/ai-inventory): The Discovery **Platform** filter and column are
+  now **Origin**, and detect the specific WSL Linux distribution a binary was observed on (in
+  addition to Windows and macOS). Origin is a dropdown built from every origin seen so far rather
+  than free text, and a row that spans multiple origins shows a count with the full breakdown on
+  hover.
+
+- [AI Inventory](/platform-areas/ai-inventory): Discovery rows now show the resolved install path
+  under the application name, with a one-click copy action. Paths the agent could not resolve are
+  flagged as "path not resolved" instead of showing an empty cell.
+
+- [AI Inventory](/platform-areas/ai-inventory): The Discovery signing indicator now distinguishes
+  Signed, OS component, Ad-hoc, Unsigned, Not evaluated, and Not applicable states (instead of a
+  single "signed" checkmark), with the certificate chain available on hover. Rows where the
+  enumerated and resolved paths disagree are flagged as "identity unresolved," and publisher,
+  version, and signing details are withheld rather than attributed to the wrong application.
+
+- [AI Inventory](/platform-areas/ai-inventory): The Discovery **Needs Attention** filter now shows
+  a live count of matching rows and applies to both application/package and dependency asset
+  types; it previously reset when switching to a dependency-only filter.
+
+- [AI Inventory](/platform-areas/ai-inventory): Discovery now opens filtered to the Application
+  type by default instead of showing all asset types.
+
 ## August 19, 2026
 
 ### New
