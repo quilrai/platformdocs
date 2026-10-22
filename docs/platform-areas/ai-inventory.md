@@ -39,7 +39,8 @@ Use AI Inventory when you need to:
 - Review endpoint coding inventory where available, including agents, skills, MCP servers, models,
   hooks, permissions, plugins, and repositories.
 - Review endpoint-discovered applications with the Discovery sub-view: filter by name, user email,
-  category, source, OS type, approval status, and criticality, and update execution policy inline.
+  category, source, OS type, approval status, and criticality; sort by name, associated app, or
+  last observed date; and update execution policy inline.
 - Review LLM Gateway API keys with request, blocked, anonymized, model, last-used, and posture
   context.
 - Review MCP Gateway servers with tools, scopes, DLP action, status, and activity metrics.
@@ -63,13 +64,24 @@ sensitive activity, detections, blocked activity, and users. Where coding invent
 the detail view can also show related agents, skills, MCP servers, models, hooks, permissions,
 plugins, and repositories for the selected application group.
 
+Locally-run model runners **Ollama** and **LM Studio** appear as their own coding-inventory rows.
+Because these tools are only observed through endpoint asset discovery and do not generate
+gateway or DLP activity, their detail drawer is discovery-only: it omits the Requests, Sensitive,
+and Blocked metric cards, the Actions section, the Scheduled tab, and the Guardrails, Vulnerable
+Dependencies, Context Savings, and Monitored Browsers configuration tabs, and its Coding Inventory
+metric cards only show categories with related entities.
+
 A **Discovery** sub-view within the Endpoint Agent source lists all applications observed on
 endpoints through asset inventory, including applications that have not generated AI-specific
 activity. Discovery rows show application name, associated users, device count, OS type, privilege,
 category, source, and execution policy. Admins can filter by name, user email, category, source, OS
-type (macOS, Windows, Linux), approval status (Needs Review, Approved, Blocked), and criticality
-(Critical, Not Critical), and toggle off OS system processes. Execution policy (Allowed or Blocked)
-can be updated inline for each row.
+type (macOS, Windows, Linux, and WSL), approval status (Needs Review, Approved, Blocked), and
+criticality (Critical, Not Critical), and toggle off OS system processes. The origin filter always
+offers macOS, Windows, and WSL options so admins can select an origin even before matching rows
+have loaded. The Name, Associated App, and Last Observed columns are sortable — click a column
+header to toggle ascending or descending order — and the table loads with the most recently
+observed applications first by default. Execution policy (Allowed or Blocked) can be updated inline
+for each row.
 
 ### LLM Gateway
 
