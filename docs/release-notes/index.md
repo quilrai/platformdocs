@@ -8,6 +8,27 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## August 20, 2026
+
+### Improved
+
+- [Users, Applications, and Accounts](/platform-areas/users-accounts-applications): Confirmation
+  toasts for inline app-setting edits now reflect how the change is processed. Edits that apply
+  immediately — Blocked, Criticality, License, and Approval Status — confirm with **Update applied
+  successfully**. Edits that are processed asynchronously — Category, Type, and updates made from
+  the AI Apps table or the user drawer — confirm with **Update accepted. Changes will be applied
+  shortly.**
+
+- [Audit Log and Exports](/platform-areas/audit-log-and-exports): Increased how long the Exports
+  status check waits before reporting a timeout, from 5 minutes to 15 minutes. Large exports now
+  have more time to finish before the UI shows an "Export timed out" message.
+
+### Known Limitations
+
+- [Smart Groups](/platform-areas/smart-groups): **Bulk add from CSV** is temporarily hidden from
+  the Smart Groups screen and from the actions menu in the Smart Groups drilldown while the
+  workflow is refined. Use **Add Users** to add members individually in the meantime.
+
 ## August 19, 2026
 
 ### New
