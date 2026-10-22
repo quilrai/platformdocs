@@ -8,6 +8,15 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## September 25, 2026
+
+### Fixed
+
+- [Controls](/platform-areas/controls): Fixed the condition builder saving an incorrect AND/OR
+  operator on the first row of a trigger condition after other rows or groups were removed. The
+  leading condition or group in a control's trigger now always saves with no operator, so custom
+  controls no longer evaluate with an unintended extra AND/OR baked into the saved condition.
+
 ## August 19, 2026
 
 ### New
