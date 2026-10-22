@@ -43,7 +43,11 @@ Use LLM Gateway when you need to:
   network, telecom, and employee or HR data types.
 - Create and manage custom detections for precision categories and custom intents.
 - Manage provider instances and model selections.
-- Configure routing groups, token-based routing, and custom routing.
+- Configure routing groups, token-based routing, and custom routing. Custom routing is configured
+  per API group — Chat Completion, Anthropic Messages, OpenAI Responses, Vertex AI, and Bedrock
+  Runtime — and routes requests to configured models based on request context. For Bedrock Runtime,
+  custom routing applies to Converse and ConverseStream calls; InvokeModel calls always route
+  directly and are not affected by custom routing rules.
 - Configure rate limits, per-model rate limits, concurrency, response timeouts, allowed source IPs,
   key expiry, and token limits.
 - Enable token saving controls where available.
