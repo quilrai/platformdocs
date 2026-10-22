@@ -8,6 +8,23 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## September 16, 2026
+
+### Improved
+
+- [AI Inventory](/platform-areas/ai-inventory): Vulnerable Dependencies exports, started from the
+  **Vulnerable Dependencies** tab of the Endpoint Agent inventory drawer, now run as background
+  jobs instead of downloading immediately. Starting an export shows a confirmation that the export
+  has started, keeps running even if the drawer is closed or the admin navigates away, and
+  notifies the admin when it is ready. Completed files are downloaded from export history, where
+  they are labeled **Vulnerable Dependencies**.
+
+### Fixed
+
+- [AI Inventory](/platform-areas/ai-inventory): Fixed the **Last scan** summary in the Vulnerable
+  Dependencies panel showing an invalid date when a dependency scan has not run yet. Dependencies
+  without a completed scan now show **-** instead of an incorrect date.
+
 ## August 19, 2026
 
 ### New
