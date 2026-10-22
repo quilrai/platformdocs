@@ -8,6 +8,15 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## September 10, 2026
+
+### Fixed
+
+- [AI Inventory](/platform-areas/ai-inventory): Fixed the **Add datasource** dialog for SaaS
+  connectors so its contents scroll within the dialog instead of overflowing the browser window.
+  Admins adding a SaaS datasource on smaller screens or with longer forms can now reach and use all
+  fields and actions without the dialog extending past the viewport.
+
 ## August 19, 2026
 
 ### New
