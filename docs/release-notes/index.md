@@ -8,6 +8,22 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## September 9, 2026
+
+### Improved
+
+- [Endpoint Agent](/platform-areas/endpoint-agent#deployment-status): Deployment Status now shows
+  one row per employee session instead of one row per physical device. On a workstation shared by
+  multiple employees, each employee's session is now its own row, with its own **OS User Name**
+  and a new **Session ID** column (shown by default, hideable from Configure Columns) for telling
+  those rows apart. Selecting a row, editing its email or full name, and bulk enabling, disabling,
+  or force-updating now act only on that employee's session — previously, acting on a shared
+  device could affect every employee's session on it.
+
+- [Findings](/platform-areas/findings): Endpoint Agent Findings cards now show **OS User Name**
+  and, when available, a copyable **System ID** alongside Persona Email, so admins can identify
+  the specific employee session behind a finding on a shared device.
+
 ## August 19, 2026
 
 ### New
