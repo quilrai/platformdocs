@@ -50,9 +50,16 @@ Supported export sources include:
   records from the deployment status table.
 - **Applications** — application inventory records from the Applications page, with support for
   current-filter or full-range scope and selection-based export. Currently in Beta.
+- **Incidents** — governance incident records from the Incident Table on the Governance Reports
+  tab in Insights, with support for current-filter or full-range scope and selection-based export.
+  Requires the AI Usage export permission. Currently in Beta.
 
 The export history list automatically refreshes every 30 seconds while any export is still
 processing, so the status and download link update without a manual page reload.
+
+Downloaded CSV exports include a UTF-8 byte-order mark so spreadsheet applications such as Excel
+correctly display accented and non-ASCII characters instead of decoding them with the system code
+page.
 
 ### Row Limit
 
