@@ -33,6 +33,8 @@ Use Endpoint Agent when you need to:
   features and supplying their required parameters from the Guardrails tab.
 - Auto-save for detection configurations — changes are persisted automatically after a short pause
   with a live status indicator in the toolbar.
+- Export of Deployment Status rows to CSV, for all filtered rows or only the rows selected in the
+  table. See [Audit Log and Exports](./audit-log-and-exports.md) for shared export behavior.
 
 ## Detection Configurations
 
@@ -76,6 +78,7 @@ The Guardrails tab within each configuration drawer contains:
 - [Browser Extension](./browser-extension.md)
 - [AI Inventory](./ai-inventory.md)
 - [Detection Models](./detection-models.md)
+- [Audit Log and Exports](./audit-log-and-exports.md)
 
 ## Access Requirements
 

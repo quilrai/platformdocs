@@ -8,6 +8,15 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## September 13, 2026
+
+### New
+
+- [Endpoint Agent](/platform-areas/endpoint-agent): Added an **Export** button to the Endpoint
+  Agent Deployment Status screen. Admins can export the current deployment status list — either
+  all rows matching the applied filters or a specific set of selected rows — as a CSV download,
+  matching the export workflow already available for Browser Extension deployment status.
+
 ## August 19, 2026
 
 ### New

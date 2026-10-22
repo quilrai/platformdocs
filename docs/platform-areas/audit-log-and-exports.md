@@ -48,6 +48,9 @@ Supported export sources include:
 
 - **Browser Extension Deployment Status** — user, group, location, department, and extension state
   records from the deployment status table.
+- **Endpoint Agent Deployment Status** — device, user, and agent state records from the Endpoint
+  Agent deployment status table, with support for exporting all filtered rows or only the rows
+  selected in the table.
 - **Applications** — application inventory records from the Applications page, with support for
   current-filter or full-range scope and selection-based export. Currently in Beta.
 
