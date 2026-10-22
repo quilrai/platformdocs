@@ -8,6 +8,18 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## September 10, 2026
+
+### New
+
+- [Endpoint Agent](/platform-areas/endpoint-agent): Added **File Restrictions**, a new tab in the
+  endpoint configuration drawer (next to Guardrails) for controlling file uploads by extension or
+  by a sensitivity label carried inside the file. Rules use Monitor, Block, or Justify actions and
+  are evaluated first-match-wins, independently of DLP detections — when both apply to one upload,
+  the more restrictive action wins. Admins set tenant-wide rules directly in the tab (auto-saved
+  with the rest of the configuration) and can override them for a specific smart group or user
+  from the **Group & User Rules** tab.
+
 ## August 19, 2026
 
 ### New
