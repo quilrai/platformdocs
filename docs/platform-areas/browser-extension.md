@@ -24,7 +24,8 @@ Use Browser Extension when you need to:
 
 - Deployment setup for managed browser-extension rollout.
 - Deployment management for tenant-level enablement and update controls.
-- Deployment status tables with user, group, location, department, persona, and extension state.
+- Deployment status tables with user, group, location, department, persona, device name, and
+  extension state.
 - Whitelisting configuration.
 - Support for managed deployment approaches such as Google Business Profile, MDM, Jamf, or Intune
   where configured.
@@ -35,6 +36,11 @@ Use Browser Extension when you need to:
 Deployment Management lets administrators control tenant-level behavior, including extension
 enablement, force update, selected mode, and persona-related options. Some persona capabilities
 depend on forced login and background tab reading.
+
+Deployment Management also includes **Workstation Retention**, which controls how many days an
+inactive workstation is kept before the scheduled cleanup job removes it. Admins can choose 30, 60,
+or 90 days; the default is 90 days. Changing this setting requires extension update permission and
+takes effect immediately for the next cleanup cycle.
 
 ## Main Workflows
 

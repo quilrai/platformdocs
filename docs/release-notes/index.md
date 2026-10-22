@@ -8,6 +8,24 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## September 17, 2026
+
+### New
+
+- [Browser Extension](/platform-areas/browser-extension#deployment-management): Added
+  **Workstation Retention** to Deployment Management. Admins can choose how many days an inactive
+  workstation is kept — 30, 60, or 90 days, default 90 — before the scheduled cleanup job removes
+  it. Changes take effect immediately and require extension update permission.
+
+### Improved
+
+- [Findings](/platform-areas/findings): Finding cards now show up to four smart groups as pills.
+  Additional smart groups are collapsed behind a **+N** pill that reveals the rest on hover, so
+  cards with many smart groups stay readable.
+
+- [Browser Extension](/platform-areas/browser-extension): Renamed the **Machine Name** column to
+  **Device Name** in the Deployment Status table for consistency with other device-facing labels.
+
 ## August 19, 2026
 
 ### New
