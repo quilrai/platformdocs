@@ -8,6 +8,27 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## September 7, 2026
+
+### Improved
+
+- [Settings and Administration](/platform-areas/settings-admin#user-interaction-hub): Popup
+  content templates for the sensitive-data use cases — sharing sensitive data with an AI
+  application, sharing sensitive data with a non-AI application, and posting sensitive data into a
+  chatbot — now enforce stricter limits when admins customize the message body and predefined
+  justification options. The message body is capped at 125 characters (previously 200), and admins
+  can add up to 4 predefined justification options per template. The header limit of 50 characters
+  is unchanged. Templates for other use cases are not affected by these limits.
+
+### Fixed
+
+- [Settings and Administration](/platform-areas/settings-admin#user-interaction-hub): Fixed the
+  template editor and preview sometimes opening in the wrong mode (prompt, justification, or block)
+  for templates whose assigned action was a compound action such as "Allow original prompt with
+  mandatory justification." The editor now correctly detects justification and block actions
+  regardless of the exact action name, so the fields and preview shown always match the template's
+  configured action.
+
 ## August 19, 2026
 
 ### New
