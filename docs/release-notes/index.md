@@ -8,6 +8,45 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## September 4, 2026
+
+### New
+
+- [AI Inventory](/platform-areas/ai-inventory): Added a third findings class, **Configuration**,
+  to the SaaS AI Assets Findings view. It reviews how each connected AWS, Microsoft Copilot
+  Studio, or Google Vertex AI asset is configured against benchmark-derived rules — including AWS
+  Foundational Security Best Practices checks for SageMaker notebooks, missing guardrail
+  attachment, Copilot authentication, and unapproved agents with live tools — and shows severity,
+  quoted configuration evidence, the framework the rule derives from, and a recommendation for
+  each finding. The asset drawer's Overview tab now leads with the same configuration review for
+  the selected asset, and **System prompts** findings in both the estate table and the drawer now
+  also show the framework each rule derives from.
+
+- [AI Inventory](/platform-areas/ai-inventory): Added a search and filter bar above the SaaS AI
+  Assets Cards and Table views. Admins can search by name, ID, owner, model, or component name,
+  and filter by Type, Provider, Approval, Risk, and inventory-record status. Filter options are
+  generated from the connected estate, any search or filter change returns to the first page, an
+  active filter shows how many assets currently match, and an empty result clarifies that the
+  filters — not a shrinking estate — are hiding the assets. Headline tiles and charts continue to
+  summarize the full estate regardless of active filters.
+
+- [AI Inventory](/platform-areas/ai-inventory): **Google Vertex AI** joins AWS and Microsoft
+  Copilot Studio as a SaaS AI Assets connector. Connect with a service account key, project ID,
+  and location to discover Agent Engine and Agent Builder assets, and Conversational Agents when
+  the optional Dialogflow reader role is also granted.
+
+### Improved
+
+- [AI Inventory](/platform-areas/ai-inventory): The SaaS AI Assets datasource dialog now shows a
+  per-provider **Setup & required permissions** guide with the exact provider-side setup steps and
+  the read (and, for the approval workflow, write) permissions each credential needs, so a failed
+  verification no longer sends admins hunting through documentation.
+
+- [AI Inventory](/platform-areas/ai-inventory): AWS SaaS AI Assets connections can now cover an
+  entire AWS Organization. Admins can enter an optional Organization role name (default
+  `OrganizationAccountAccessRole`) and the connection discovers assets from every member account
+  the credential can list; single-account credentials continue to behave exactly as before.
+
 ## August 19, 2026
 
 ### New

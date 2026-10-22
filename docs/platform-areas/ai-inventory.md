@@ -27,8 +27,8 @@ Use AI Inventory when you need to:
 
 ## Key Capabilities
 
-- Switch between Browser Extension, Endpoint Agent, LLM Gateway, MCP Gateway, and Compliance APIs
-  source views.
+- Switch between Browser Extension, Endpoint Agent, LLM Gateway, MCP Gateway, Compliance APIs, and
+  (where licensed) SaaS AI Assets source views.
 - Review source-specific counts and table metrics.
 - Search and filter inventory rows within the active source.
 - Open a source-aware details drawer for overview, interaction, and configuration context.
@@ -43,6 +43,9 @@ Use AI Inventory when you need to:
 - Review LLM Gateway API keys with request, blocked, anonymized, model, last-used, and posture
   context.
 - Review MCP Gateway servers with tools, scopes, DLP action, status, and activity metrics.
+- Where licensed, review SaaS AI Assets discovered directly from connected AWS, Microsoft Copilot
+  Studio, and Google Vertex AI accounts, including runtime, system-prompt, and configuration
+  findings with framework citations.
 - Review the Compliance APIs source through **Overview**, **Assets**, **Usage**, **Governance**, and
   **Security** tabs to monitor organization-wide metrics, browse ChatGPT conversations, Codex
   sessions, workspace agents, and apps, analyze user adoption and model-usage rankings, track token
@@ -83,6 +86,49 @@ embedded gateway configuration sections.
 The MCP Gateway source lists gateway-managed MCP servers. It shows server identity, transport,
 auth mode, tools, scopes, DLP action, status, and activity metrics. The drawer provides MCP logs,
 analytics, interaction details, and embedded General, Guardrails, and Tools configuration sections.
+
+### SaaS AI Assets
+
+The SaaS AI Assets source discovers AI agents and models directly from connected cloud accounts —
+AWS, Microsoft Copilot Studio, and Google Vertex AI — independent of Browser Extension, Endpoint
+Agent, or Gateway telemetry. It is a licensed capability; unlicensed tenants see a default SaaS
+assets view instead.
+
+- **Connect a datasource.** Add an AWS, Microsoft Copilot Studio, or Google Vertex AI connection
+  from the datasource dialog. Each provider shows a foldable **Setup & required permissions**
+  guide with the exact provider-side setup steps and the read (and, for the approval workflow,
+  write) permissions the credential needs, so a failed verification does not require leaving the
+  dialog. Credentials are verified against the provider before they are stored, kept encrypted, and
+  never returned by the API.
+  - **AWS** connections can optionally cover an entire AWS Organization: enter an Organization role
+    name (default `OrganizationAccountAccessRole`) and the connector assumes that role into every
+    member account the credential can list. Leaving the role blank keeps the connection scoped to a
+    single account, as before. AWS assets come from Bedrock and SageMaker.
+  - **Microsoft Copilot Studio** connections use an Entra ID app registration and an
+    organization-level read role on the Chatbot tables in Dataverse.
+  - **Google Vertex AI** connections use a service account key, project ID, and location, and
+    discover Agent Engine and Agent Builder assets. Granting the credential an additional
+    Dialogflow reader role also surfaces Conversational Agents, including their prompts and tools.
+- **Browse the estate.** Discovered assets appear as Cards or a Table. A search and filter bar
+  above the list lets admins search by name, ID, owner, model, or component name — searching a
+  component's name surfaces its parent agent — and filter by Type, Provider, Approval, Risk, and
+  whether the asset has an inventory record. Filter options are generated from the connected
+  estate. Any search or filter change returns the view to the first page; an active filter shows
+  how many assets currently match, with a **Clear** action; an empty result explains that the
+  filters are hiding the estate rather than the estate being empty. Headline tiles and charts
+  always summarize the full estate, regardless of active filters.
+- **Review findings.** The Findings view has three classes, each covering the same estate from a
+  different angle:
+  - **Runtime** — events the guardrails or policy engine caught during execution.
+  - **System prompts** — a static review of each asset's system prompt.
+  - **Configuration** — how each asset is configured, checked against benchmark-derived rules such
+    as AWS Foundational Security Best Practices checks for SageMaker notebooks, missing guardrail
+    attachment, Copilot authentication, and unapproved agents with live tools.
+
+  Each finding shows severity, the affected asset, quoted evidence from the prompt or
+  configuration, the framework the rule derives from (for example AWS FSBP, OWASP LLM, NIST AI
+  RMF, or the EU AI Act), and a recommendation. The asset drawer's Overview tab leads with the same
+  configuration review for that asset, ahead of its declared attributes.
 
 ### Compliance APIs
 
@@ -148,3 +194,5 @@ a provider option when available but may be disabled until configured for the te
 AI Inventory requires AI asset access. Source visibility depends on tenant configuration and
 permissions for the underlying source, such as Endpoint Agent, AI Gateway, MCP Gateway, or
 Compliance. Endpoint Agent inventory appears only when endpoint coverage is enabled for the tenant.
+The SaaS AI Assets cloud inventory view is a separately licensed capability; tenants without the
+license see the default SaaS assets view instead.
