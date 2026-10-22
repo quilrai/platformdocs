@@ -8,6 +8,16 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## September 23, 2026
+
+### Improved
+
+- [AI Inventory](/platform-areas/ai-inventory): Improved load times for the Endpoint Agent
+  Discovery table. Rows now show a distinct-user count right away instead of waiting on every
+  associated email address to load. Hovering or focusing a count loads the matching user emails
+  on demand, scoped to the table's recency filter, so applications used by large numbers of
+  people no longer slow down the table.
+
 ## August 19, 2026
 
 ### New

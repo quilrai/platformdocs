@@ -65,11 +65,13 @@ plugins, and repositories for the selected application group.
 
 A **Discovery** sub-view within the Endpoint Agent source lists all applications observed on
 endpoints through asset inventory, including applications that have not generated AI-specific
-activity. Discovery rows show application name, associated users, device count, OS type, privilege,
-category, source, and execution policy. Admins can filter by name, user email, category, source, OS
-type (macOS, Windows, Linux), approval status (Needs Review, Approved, Blocked), and criticality
-(Critical, Not Critical), and toggle off OS system processes. Execution policy (Allowed or Blocked)
-can be updated inline for each row.
+activity. Discovery rows show application name, a distinct-user count, device count, OS type,
+privilege, category, source, and execution policy. The user count reflects the recency filter
+applied to the table; hovering or focusing the count loads the matching user emails for that
+application, so applications used by large numbers of people stay fast to browse. Admins can
+filter by name, user email, category, source, OS type (macOS, Windows, Linux), approval status
+(Needs Review, Approved, Blocked), and criticality (Critical, Not Critical), and toggle off OS
+system processes. Execution policy (Allowed or Blocked) can be updated inline for each row.
 
 ### LLM Gateway
 
