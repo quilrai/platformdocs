@@ -33,6 +33,8 @@ Use Endpoint Agent when you need to:
   features and supplying their required parameters from the Guardrails tab.
 - Auto-save for detection configurations — changes are persisted automatically after a short pause
   with a live status indicator in the toolbar.
+- Endpoint Configuration (separately licensed) for managing the redirector, proxy auto-config
+  (PAC), and upstream proxy that route an endpoint's traffic to inspection.
 
 ## Detection Configurations
 
@@ -57,6 +59,34 @@ The Guardrails tab within each configuration drawer contains:
   configuration. Only features the admin interacts with in the current session are included in the
   save; untouched features remain at their previously saved values.
 
+## Endpoint Configuration
+
+Endpoint Configuration is a separately licensed tab under Settings > Endpoint that controls the
+three pieces of remote state deciding how an endpoint's traffic reaches inspection. The tab, its
+route, and its data fetch are all gated on the same license flag, so an unlicensed tenant sees no
+tab and generates no traffic to the underlying service.
+
+- **Redirector** — choose between the user-mode packet redirector (WinDivert-based capture of
+  egress traffic on monitored ports) and the kernel-mode Quilr redirector (a WFP driver that
+  redirects AI-bound HTTPS to the local inspection proxy). Each has its own enable state and
+  version, so switching between them never disturbs the other's stored configuration.
+- **Proxy auto-config (PAC)** — controls what the PAC script hands to browsers. A tenant is either
+  **Managed**, where the script is generated from app monitoring's published host sets and cannot
+  be hand-edited, or **Manual**, a legacy hand-written script that app monitoring can no longer
+  publish to. Manual tenants are offered a guided import that previews the host vocabulary it found
+  before converting to Managed.
+- **Upstream proxy** — where the endpoint sends traffic it has re-originated, including the
+  authentication method: none, username and password, Kerberos/SPNEGO, or NTLM. Clearing the
+  address is the supported way to go direct.
+
+Saves publish a new version to endpoints. A save that resolves to no effective change is reported
+as unchanged rather than as a successful rollout, both in the toast and inline, so admins are never
+told a rollout happened when it did not. Admins without update permission for the endpoint agent
+see the panels in read-only mode.
+
+Endpoint Configuration requires the endpoint agent plus a separate **Endpoint Configuration**
+license flag; having the endpoint agent alone does not grant access.
+
 ## Main Workflows
 
 1. Configure endpoint deployment and tenant-level management settings.
@@ -80,4 +110,5 @@ The Guardrails tab within each configuration drawer contains:
 ## Access Requirements
 
 Endpoint Agent pages require Endpoint Agent permissions. Endpoint tabs appear only when endpoint is
-enabled for the tenant.
+enabled for the tenant. The Endpoint Configuration tab additionally requires its own tenant license
+flag; it does not appear for tenants that only have the endpoint agent.
