@@ -80,7 +80,9 @@ is selected) for any displayed timestamp.
 
 User Interaction Hub lets teams customize what end users see in QuilrAI interactions.
 Administrators can review user responses and configure popup content, policy links, and visual
-styling that appear in user-facing prompts or justifications.
+styling that appear in user-facing prompts or justifications. The logo shown in user-facing prompts
+is managed from the Visual Styling tab; saving changes from other tabs (such as Policies or Links)
+preserves the existing logo rather than clearing it.
 
 ## Compliance
 
