@@ -8,6 +8,15 @@ hide_copy_dropdown: true
 
 # Release Notes
 
+## October 27, 2026
+
+### Fixed
+
+- [Settings and Administration](/platform-areas/settings-admin#user-interaction-hub): Fixed an
+  issue in User Interaction Hub where saving changes on the Policies or Links tab could clear the
+  configured logo. The logo now persists correctly when saving from any tab; it is only changed
+  when updated from the Visual Styling tab.
+
 ## August 19, 2026
 
 ### New
